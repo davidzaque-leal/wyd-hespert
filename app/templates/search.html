@@ -1,0 +1,137 @@
+{% extends "base.html" %}
+{% import 'components.html' as components %}
+
+{% block title %}Buscar Players - WYD Ranking System{% endblock %}
+
+{% block hero %}
+<div class="hero">
+    <h1>🔍 Buscar Players</h1>
+    <p>Encontre jogadores por linhagem, guilda ou ambas</p>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="info-box">
+    <h3>ℹ️ Como usar</h3>
+    <p>Selecione os critérios de busca nos formulários abaixo e clique em "Buscar" para visualizar os resultados.</p>
+</div>
+
+<!-- Form 1: Por Linhagem -->
+<div class="card mb-20">
+    <div class="card-header">
+        <h3>Buscar por Linhagem</h3>
+    </div>
+    <div class="card-body">
+        <form method="get" action="/search-lineage">
+            <div class="filters-section">
+                <div class="filter-group">
+                    <label for="lineage">Selecione a Linhagem:</label>
+                    <select id="lineage" name="lineage" required>
+                        <option value="">-- Escolha uma linhagem --</option>
+                        {% for lin in lineages %}
+                            <option value="{{ lin.name }}">{{ lin.name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="filter-buttons">
+                    <button type="submit" class="btn btn-primary">🔍 Buscar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Form 2: Por Guilda -->
+<div class="card mb-20">
+    <div class="card-header">
+        <h3>Buscar por Guilda</h3>
+    </div>
+    <div class="card-body">
+        <form method="get" action="/search-guild">
+            <div class="filters-section">
+                <div class="filter-group">
+                    <label for="guild">Selecione a Guilda:</label>
+                    <select id="guild" name="guild_id" required>
+                        <option value="">-- Escolha uma guilda --</option>
+                        {% for guild in guilds %}
+                            <option value="{{ guild.id }}">Guild {{ guild.external_id }} ({{ guild.player_count }} players)</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="filter-buttons">
+                    <button type="submit" class="btn btn-primary">🔍 Buscar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Form 3: Por Linhagem + Guilda -->
+<div class="card mb-20">
+    <div class="card-header">
+        <h3>Buscar por Guilda e Linhagem</h3>
+    </div>
+    <div class="card-body">
+        <form method="get" action="/search-guild-lineage">
+            <div class="filters-section">
+                <div class="filter-group">
+                    <label for="guild_lineage">Selecione a Guilda:</label>
+                    <select id="guild_lineage" name="guild_id" required>
+                        <option value="">-- Escolha uma guilda --</option>
+                        {% for guild in guilds %}
+                            <option value="{{ guild.id }}">Guild {{ guild.external_id }} ({{ guild.player_count }} players)</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="lineage_guild">Selecione a Linhagem:</label>
+                    <select id="lineage_guild" name="lineage" required>
+                        <option value="">-- Escolha uma linhagem --</option>
+                        {% for lin in lineages %}
+                            <option value="{{ lin.name }}">{{ lin.name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="filter-buttons">
+                    <button type="submit" class="btn btn-primary">🔍 Buscar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Resultados -->
+{% if results %}
+    <div class="search-results">
+        <div class="results-header">
+            <h2>Resultados da Busca</h2>
+            <span class="results-count">{{ results|length }} players encontrados</span>
+        </div>
+        <div class="ranking-container">
+            {% for player in results %}
+                <div class="player-item">
+                    <div>
+                        <div class="player-name">{{ player.name }}</div>
+                        {{ components.render_lineages(player.celestial_lineage, player.subclass_lineage) }}
+                    </div>
+                    <div class="player-stat">
+                        <div class="player-stat-value">{{ player.celestial_lineage or '—' }}</div>
+                        <div class="player-stat-label">Linhagem Celestial</div>
+                    </div>
+                    <div class="player-stat">
+                        <div class="player-stat-value">{{ player.subclass_lineage or '—' }}</div>
+                        <div class="player-stat-label">Linhagem Sub</div>
+                    </div>
+                    {{ components.render_guild(player.guild_external_id) }}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% elif search_performed %}
+    <div class="search-results">
+        <div class="no-results">
+            ❌ Nenhum player encontrado com os critérios de busca.
+        </div>
+    </div>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% import 'components.html' as components %}
+
+{% block title %}Ranking de Level - WYD Ranking System{% endblock %}
+
+{% block hero %}
+<div class="hero">
+    <h1>📊 Ranking de Level</h1>
+    <p>Top players por nível total alcançado</p>
+</div>
+{% endblock %}
+
+{% block content %}
+{{ components.render_search_filters() }}
+
+<div class="ranking-container">
+    {% for p in players %}
+    <div class="player-item">
+        <div>
+            <div class="player-name">{{ p.name }}</div>
+            {{ components.render_lineages(p.celestial_lineage, p.subclass_lineage) }}
+        </div>
+        {{ components.render_stat(p.level, 'Nível Celestial') }}
+        {{ components.render_stat(p.levelSub, 'Nível Sub') }}
+        {{ components.render_stat(p["Soma Level"], 'Total', '--success-color') }}
+        {{ components.render_guild(p.guild) }}
+    </div>
+    {% endfor %}
+</div>
+
+<p style="margin-top: 20px; text-align: center; color: var(--light-text);">Total de {{ players|length }} players</p>
+{% endblock %}

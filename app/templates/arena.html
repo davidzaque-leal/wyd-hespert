@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% import 'components.html' as components %}
+
+{% block title %}Arena - WYD Ranking System{% endblock %}
+
+{% block hero %}
+<div class="hero">
+    {% if category == 'champion' %}
+        <h1>👑 Arena Champion</h1>
+        <p>Os guerreiros mais poderosos do servidor</p>
+    {% else %}
+        <h1>🌟 Arena Aspirante</h1>
+        <p>Novos talentos em ascensão</p>
+    {% endif %}
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="filters-section">
+    <div class="filter-group">
+        <label for="search">🔍 Buscar por Nome:</label>
+        <input type="text" id="search" placeholder="Digite o nome do player..." onkeyup="filterPlayersByName()">
+    </div>
+    <div style="display: flex; gap: 10px; align-items: flex-end;">
+        <a href="/arena/champion" class="btn {% if category == 'champion' %}btn-primary{% else %}btn-secondary{% endif %}" style="text-decoration: none;">👑 Champion</a>
+        <a href="/arena/aspirant" class="btn {% if category == 'aspirant' %}btn-primary{% else %}btn-secondary{% endif %}" style="text-decoration: none;">🌟 Aspirant</a>
+    </div>
+</div>
+
+<div class="ranking-container">
+    {% for p in players %}
+    <div class="player-item">
+        <div>
+            <div class="player-name">{{ p.charName }}</div>
+            <div class="player-title">
+                Pontos: {{ p.total }} | Kill Rating: {{ p.killValue }}
+            </div>
+        </div>
+        {{ components.render_stat(p.winCount, 'Vitórias') }}
+        {{ components.render_stat(p.killValue, 'Kills', '--success-color') }}
+        {{ components.render_stat(p.deathValue, 'Deaths', '--accent-color') }}
+        {{ components.render_stat(p.total, 'Total Score', '--warning-color') }}
+    </div>
+    {% endfor %}
+</div>
+
+<p style="margin-top: 20px; text-align: center; color: var(--light-text);">Total de {{ players|length }} players</p>
+{% endblock %}

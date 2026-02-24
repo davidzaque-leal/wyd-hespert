@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+
+{% block title %}WYD Ranking System - Home{% endblock %}
+
+{% block hero %}
+<div class="hero">
+    <h1>🏆 WYD Ranking System</h1>
+    <p>Acompanhe os melhores jogadores do servidor</p>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="stats-grid">
+    <div class="stat-box">
+        <div class="stat-box-value">732</div>
+        <div class="stat-box-label">Total de Players</div>
+    </div>
+    <div class="stat-box">
+        <div class="stat-box-value">42</div>
+        <div class="stat-box-label">Guildas Ativas</div>
+    </div>
+    <div class="stat-box">
+        <div class="stat-box-value">12</div>
+        <div class="stat-box-label">Linhagens</div>
+    </div>
+    <div class="stat-box">
+        <div class="stat-box-value">{{ last_update or 'Carregando...' }}</div>
+        <div class="stat-box-label">Última Atualização</div>
+    </div>
+</div>
+
+<div class="grid-2">
+    <div class="card">
+        <div class="card-header">
+            <h3>📊 Ranking de Level</h3>
+        </div>
+        <div class="card-body">
+            <p>Visualize o ranking dos players por nível total alcançado no jogo.</p>
+            <p style="font-size: 12px; color: var(--light-text); margin-top: 10px;">Atualizado a cada hora diretamente do servidor.</p>
+            <a href="/ranking" class="btn btn-primary" style="display: inline-block; margin-top: 15px; text-decoration: none;">
+                🔗 Acessar Ranking
+            </a>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <h3>⚔️ Arena PvP</h3>
+        </div>
+        <div class="card-body">
+            <p>Acompanhe os melhores lutadores da Arena em categorias Champion e Aspirante.</p>
+            <p style="font-size: 12px; color: var(--light-text); margin-top: 10px;">Dados de combate em tempo real.</p>
+            <div style="display: flex; gap: 10px; margin-top: 15px;">
+                <a href="/arena/champion" class="btn btn-primary" style="flex: 1; text-decoration: none; text-align: center;">
+                    👑 Champion
+                </a>
+                <a href="/arena/aspirant" class="btn btn-primary" style="flex: 1; text-decoration: none; text-align: center;">
+                    🌟 Aspirant
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <h3>🔍 Buscar Players</h3>
+        </div>
+        <div class="card-body">
+            <p>Procure jogadores por:</p>
+            <ul style="margin-left: 20px; margin-top: 10px;">
+                <li>Linhagem de classe</li>
+                <li>Guilda</li>
+                <li>Combinação de ambos</li>
+            </ul>
+            <a href="/search" class="btn btn-primary" style="display: inline-block; margin-top: 15px; text-decoration: none;">
+                🔗 Buscar
+            </a>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <h3>ℹ️ Sobre</h3>
+        </div>
+        <div class="card-body">
+            <p>Este sistema coleta e organiza dados dos rankings de Level e Arena, permitindo buscas avançadas por linhagem e guilda.</p>
+            <p style="font-size: 12px; color: var(--light-text); margin-top: 10px;">Sincronizado automaticamente a cada hora.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

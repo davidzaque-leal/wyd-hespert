@@ -1,0 +1,48 @@
+{# Componentes reutilizáveis para exibição de dados #}
+
+{# Exibe as linhagens de um player (Celestial e Sub) #}
+{% macro render_lineages(lineage_celestial, lineage_subclass) %}
+<div class="player-lineages">
+    <div class="lineage-info">
+        <div class="lineage-label">🌟 Celestial</div>
+        <div class="lineage-name">{{ lineage_celestial or 'Desconhecida' }}</div>
+    </div>
+    <div class="lineage-info">
+        <div class="lineage-label">⚡ Sub</div>
+        <div class="lineage-name">{{ lineage_subclass or 'Desconhecida' }}</div>
+    </div>
+</div>
+{% endmacro %}
+
+{# Exibe informação de guilda #}
+{% macro render_guild(guild_id, show_icon=true) %}
+<div class="player-guild {% if not guild_id %}no-guild{% endif %}">
+    {% if guild_id %}
+        {% if show_icon %}🏰{% endif %} Guild {{ guild_id }}
+    {% else %}
+        Sem Guilda
+    {% endif %}
+</div>
+{% endmacro %}
+
+{# Exibe um stat em box #}
+{% macro render_stat(value, label, color="--secondary-color") %}
+<div class="player-stat">
+    <div class="player-stat-value" {% if color %}style="color: var({{ color }});"{% endif %}>{{ value }}</div>
+    <div class="player-stat-label">{{ label }}</div>
+</div>
+{% endmacro %}
+
+{# Exibe entrada de filtro e botão #}
+{% macro render_search_filters(search_id="search", guild_id="guildFilter") %}
+<div class="filters-section">
+    <div class="filter-group">
+        <label for="{{ search_id }}">🔍 Buscar por Nome:</label>
+        <input type="text" id="{{ search_id }}" placeholder="Digite o nome do player..." onkeyup="filterPlayers()">
+    </div>
+    <div class="filter-group">
+        <label for="{{ guild_id }}">🏰 Filtrar por Guild:</label>
+        <input type="text" id="{{ guild_id }}" placeholder="Digite o ID da guild..." onkeyup="filterPlayers()">
+    </div>
+</div>
+{% endmacro %}
