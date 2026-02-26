@@ -16,12 +16,33 @@
 <div class="ranking-container">
     {% for p in players %}
     <div class="player-item">
+        <div class="rank-badge">
+            {% if p.rank_position == 1 %}
+            🥇 {{ p.rank_position }}º
+            {% elif p.rank_position == 2 %}
+            🥈 {{ p.rank_position }}º
+            {% elif p.rank_position == 3 %}
+            🥉 {{ p.rank_position }}º
+            {% else %}
+            #{{ p.rank_position }}
+            {% endif %}
+        </div>
         <div>
             <div class="player-name">{{ p.name }}</div>
             {{ components.render_lineages(p.celestial_lineage, p.subclass_lineage) }}
         </div>
-        {{ components.render_stat(p.level, 'Nível Celestial') }}
-        {{ components.render_stat(p.levelSub, 'Nível Sub') }}
+        <div style="display: flex; align-items: center; gap: 8px;">
+            {{ components.render_stat(p.level, 'Nível Celestial') }}
+            {% if p.level_changes and p.level_changes.celestial_active %}
+                {{ components.render_level_change_indicator(p.level_changes.celestial_change, p.level_changes.celestial_arrow, p.level_changes.celestial_active) }}
+            {% endif %}
+        </div>
+        <div style="display: flex; align-items: center; gap: 8px;">
+            {{ components.render_stat(p.levelSub, 'Nível Sub') }}
+            {% if p.level_changes and p.level_changes.subclass_active %}
+                {{ components.render_level_change_indicator(p.level_changes.subclass_change, p.level_changes.subclass_arrow, p.level_changes.subclass_active) }}
+            {% endif %}
+        </div>
         {{ components.render_stat(p["Soma Level"], 'Total', '--success-color') }}
         {{ components.render_guild(p.guild) }}
     </div>

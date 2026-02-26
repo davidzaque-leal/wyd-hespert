@@ -4,6 +4,7 @@ import json
 import os
 from app.services.api import get_level_ranking, get_arena_ranking
 from app.services.sync_service import SyncService
+from app.services.ranking_history_service import save_level_ranking_history, save_arena_ranking_history
 from app.database import SessionLocal
 from app.models import LevelRanking, ArenaRanking, Player
 from app.repositories.level_repository import LevelRepository
@@ -66,6 +67,14 @@ class DataStore:
                     ]
 
                     self.last_update = time.strftime("%Y-%m-%d %H:%M:%S")
+
+                # Salvar histórico de rankings
+                try:
+                    save_level_ranking_history(session, self.level_ranking)
+                    save_arena_ranking_history(session, self.arena_champion, "champion")
+                    save_arena_ranking_history(session, self.arena_aspirant, "aspirant")
+                except Exception as e:
+                    print(f"⚠ Erro ao salvar histórico de rankings: {e}")
 
                 self._save_backup()
 

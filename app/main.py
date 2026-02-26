@@ -1,14 +1,17 @@
 import threading
 import time
-from fastapi import FastAPI, Request, HTTPException
+from fastapi import FastAPI, Request, HTTPException, Response, Form
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
+from fastapi.responses import RedirectResponse
 from app.services.data_store import data_store
 from app.database import SessionLocal
 from app.repositories.player_repository import PlayerRepository
-from app.models import Class, ClassLineage
+from app.models import Class, ClassLineage, User
 from app.utils.lineage_utils import LineageUtils
 from app.services.player_serializer import PlayerSerializer
+from app.services.auth_service import authenticate_user, create_user_admin
+from app.services.session_service import get_current_user, require_admin
 
 app = FastAPI()
 
@@ -20,19 +23,146 @@ app.mount("/static", StaticFiles(directory="app/static"), name="static")
 # Background updater
 # ===============================
 def background_updater():
-    time.sleep(3600)  # Wait 1 hour before first sync
+    """
+    Background updater com timer para as arenas
+    Horários de atualização GMT-3 (Brasília):
+    - 13:31 - Arena 1
+    - 19:31 - Arena 2
+    - 20:31 - Arena 3
+    - 23:31 - Arena 4
+    
+    Level ranking atualiza apenas uma vez por dia
+    """
+    from datetime import datetime, timezone, timedelta
+    
+    # Aguardar próximo horário de sincronização
+    time.sleep(60)
+    
     while True:
-        data_store.update_data()
-        time.sleep(3600)  # Sincroniza a cada 1 hora
+        try:
+            # Converter para GMT-3 (Brasília)
+            brasilia_tz = timezone(timedelta(hours=-3))
+            now = datetime.now(brasilia_tz)
+            
+            hour = now.hour
+            minute = now.minute
+            
+            # Arena schedule nos minutos específicos com janela de tolerância
+            arena_times = [13, 19, 20, 23]  # Horas
+            arena_minute = 31
+            tolerance = 2  # ±2 minutos
+            
+            # Verificar se estamos em um dos horários de arena
+            is_arena_time = any(
+                hour == h and (arena_minute - tolerance) <= minute <= (arena_minute + tolerance)
+                for h in arena_times
+            )
+            
+            # Sincronizar a cada 1 hora ou no horário de arena
+            if is_arena_time:
+                print(f"⏰ Sincronizando em horário de arena: {hour:02d}:{minute:02d}")
+                data_store.update_data()
+            
+        except Exception as e:
+            print(f"⚠ Erro no background_updater: {e}")
+        
+        time.sleep(60)  # Checar a cada minuto
 
 
-@app.on_event("startup")
+# ===============================
+# Authentication Routes
+# ===============================
+@app.get("/login")
+def login_page(request: Request):
+    """Página de login"""
+    # Se já está logado, redireciona para search
+    user = get_current_user(request)
+    if user:
+        return RedirectResponse(url="/search", status_code=302)
+    
+    return templates.TemplateResponse("login.html", {
+        "request": request,
+        "error": None
+    })
+
+
+@app.post("/login")
+def login(request: Request, username: str = Form(...), password: str = Form(...)):
+    """Processa o login"""
+    session = SessionLocal()
+    try:
+        user = authenticate_user(session, username, password)
+        if not user:
+            return templates.TemplateResponse("login.html", {
+                "request": request,
+                "error": "Invalid username or password"
+            }, status_code=401)
+        
+        # Criar resposta com cookie de sessão
+        response = RedirectResponse(url="/search", status_code=302)
+        response.set_cookie(
+            key="user_id",
+            value=str(user.id),
+            max_age=86400,  # 24 horas
+            httponly=True
+        )
+        return response
+    except Exception as e:
+        return templates.TemplateResponse("login.html", {
+            "request": request,
+            "error": f"Erro ao fazer login: {str(e)}"
+        }, status_code=500)
+    finally:
+        session.close()
+
+
+@app.get("/logout")
+def logout():
+    """Faz logout do usuário"""
+    response = RedirectResponse(url="/", status_code=302)
+    response.delete_cookie(key="user_id")
+    return response
+
+
+
 def startup_event():
     # Ensure DB tables exist and perform first sync
     from app.database import engine, Base
     from app import models
 
     Base.metadata.create_all(bind=engine)
+
+    # Create default admin user if doesn't exist
+    session = SessionLocal()
+    try:
+        admin = session.query(User).filter(User.username == "admin").first()
+        if not admin:
+            create_user_admin(session, "admin", "admin@wyd.com", "admin123")
+            print("✓ Usuário admin padrão criado (username: admin, password: admin123)")
+    except Exception as e:
+        print("⚠ Erro ao criar admin:", e)
+    finally:
+        session.close()
+    
+    # Garantir snapshots de histórico para hoje
+    session = SessionLocal()
+    try:
+        from app.services.ranking_history_service import (
+            ensure_today_level_ranking_snapshot, 
+            ensure_today_arena_ranking_snapshot
+        )
+        
+        print("📅 Verificando snapshots de histórico para hoje...")
+        ensure_today_level_ranking_snapshot(session)
+        ensure_today_arena_ranking_snapshot(session, "champion")
+        ensure_today_arena_ranking_snapshot(session, "aspirant")
+        
+    except Exception as e:
+        print(f"⚠ Erro ao garantir snapshots de hoje: {e}")
+        import traceback
+        traceback.print_exc()
+    finally:
+        session.close()
 
     # Seed classes and lineages (needed before syncing players)
     try:
@@ -44,6 +174,10 @@ def startup_event():
     # Start background updater (will wait 1 hour before first sync)
     thread = threading.Thread(target=background_updater, daemon=True)
     thread.start()
+
+
+# Registrar startup event
+app.add_event_handler("startup", startup_event)
 
 
 # ===============================
@@ -60,18 +194,39 @@ def home(request: Request):
 # ===============================
 # Ranking de Level
 # ===============================
+# ===============================
+# Ranking de Level
+# ===============================
 @app.get("/ranking")
 def ranking(request: Request):
+    from app.services.ranking_history_service import get_level_changes
+    
     players = sorted(
         data_store.level_ranking,
         key=lambda x: x.get("Soma Level", 0),
         reverse=True
     )
+    
+    session = SessionLocal()
+    try:
+        # Adicionar índices de posição e mudanças de level
+        for idx, player in enumerate(players, 1):
+            player["rank_position"] = idx
+            
+            # Calcular mudanças de level
+            level_changes = get_level_changes(session, player.get("name"), {
+                'level_celestial': player.get("level"),
+                'level_subclass': player.get("levelSub"),
+            })
+            player["level_changes"] = level_changes
+    finally:
+        session.close()
 
     return templates.TemplateResponse("ranking.html", {
         "request": request,
         "players": players,
-        "last_update": data_store.last_update
+        "last_update": data_store.last_update,
+        "user": get_current_user(request)
     })
 
 
@@ -80,6 +235,8 @@ def ranking(request: Request):
 # ===============================
 @app.get("/arena/{category}")
 def arena(request: Request, category: str):
+    from app.services.ranking_history_service import get_position_changes
+    
     if category not in ["champion", "aspirant"]:
         raise HTTPException(status_code=404, detail="Categoria inválida")
 
@@ -90,12 +247,25 @@ def arena(request: Request, category: str):
     )
 
     players = sorted(players, key=lambda x: x.get("total", 0), reverse=True)
+    
+    session = SessionLocal()
+    try:
+        # Adicionar índices de posição e mudanças de posição
+        for idx, player in enumerate(players, 1):
+            player["rank_position"] = idx
+            
+            # Calcular mudanças de posição
+            pos_changes = get_position_changes(session, player.get("charName"), idx)
+            player["position_change"] = pos_changes
+    finally:
+        session.close()
 
     return templates.TemplateResponse("arena.html", {
         "request": request,
         "players": players,
         "category": category,
-        "last_update": data_store.last_update
+        "last_update": data_store.last_update,
+        "user": get_current_user(request)
     })
 
 
@@ -111,6 +281,59 @@ def ranking_combined(request: Request):
         "players": players,
         "last_update": data_store.last_update
     })
+
+
+# ===============================
+# Ranking Histórico
+# ===============================
+@app.get("/ranking-history")
+def ranking_history(request: Request):
+    """Página com histórico de evolução de rankings"""
+    from app.services.ranking_history_service import (
+        get_level_ranking_history, 
+        get_position_changes,
+        get_level_changes
+    )
+    
+    session = SessionLocal()
+    try:
+        # Buscar últimos snapshots de histórico
+        history_records = get_level_ranking_history(session, limit=100)
+        
+        # Agrupar por data e calcular mudanças
+        history_by_date = {}
+        for record in history_records:
+            date_key = record.recorded_at.strftime("%Y-%m-%d %H:%M") if record.recorded_at else "Unknown"
+            if date_key not in history_by_date:
+                history_by_date[date_key] = []
+            
+            # Calcular mudanças de posição e level
+            pos_changes = get_position_changes(session, record.player_name, record.rank_position)
+            level_changes = get_level_changes(session, record.player_name, {
+                'level_celestial': record.level_celestial,
+                'level_subclass': record.level_subclass,
+            })
+            
+            history_by_date[date_key].append({
+                "rank": record.rank_position,
+                "name": record.player_name,
+                "level": record.level_total,
+                "level_celestial": record.level_celestial,
+                "level_subclass": record.level_subclass,
+                "points": record.points,
+                "position_change": pos_changes,
+                "level_changes": level_changes,
+            })
+        
+        return templates.TemplateResponse("ranking_history.html", {
+            "request": request,
+            "last_update": data_store.last_update,
+            "user": get_current_user(request),
+            "history_by_date": history_by_date,
+            "total_snapshots": len(history_by_date)
+        })
+    finally:
+        session.close()
 
 
 # ===============================
@@ -137,13 +360,18 @@ def _get_search_context(session, results=None, search_performed=False):
 
 @app.get("/search")
 def search_page(request: Request):
-    """Página de busca com formulários"""
+    """Página de busca com formulários - APENAS ADMIN"""
+    user = get_current_user(request)
+    if not user:
+        return RedirectResponse(url="/login", status_code=302)
+    
     session = SessionLocal()
     try:
         context = _get_search_context(session)
         return templates.TemplateResponse("search.html", {
             "request": request,
             "last_update": data_store.last_update,
+            "user": user,
             **context
         })
     finally:
@@ -152,7 +380,11 @@ def search_page(request: Request):
 
 @app.get("/search-lineage")
 def search_lineage(request: Request, lineage: str = None):
-    """Buscar players por linhagem"""
+    """Buscar players por linhagem - APENAS ADMIN"""
+    user = get_current_user(request)
+    if not user:
+        return RedirectResponse(url="/login", status_code=302)
+    
     session = SessionLocal()
     try:
         results = []
@@ -163,6 +395,7 @@ def search_lineage(request: Request, lineage: str = None):
         return templates.TemplateResponse("search.html", {
             "request": request,
             "last_update": data_store.last_update,
+            "user": user,
             **context
         })
     finally:
@@ -171,7 +404,11 @@ def search_lineage(request: Request, lineage: str = None):
 
 @app.get("/search-guild")
 def search_guild(request: Request, guild_id: int = None):
-    """Buscar players por guilda"""
+    """Buscar players por guilda - APENAS ADMIN"""
+    user = get_current_user(request)
+    if not user:
+        return RedirectResponse(url="/login", status_code=302)
+    
     session = SessionLocal()
     try:
         results = []
@@ -182,6 +419,7 @@ def search_guild(request: Request, guild_id: int = None):
         return templates.TemplateResponse("search.html", {
             "request": request,
             "last_update": data_store.last_update,
+            "user": user,
             **context
         })
     finally:
@@ -190,7 +428,11 @@ def search_guild(request: Request, guild_id: int = None):
 
 @app.get("/search-guild-lineage")
 def search_guild_lineage(request: Request, guild_id: int = None, lineage: str = None):
-    """Buscar players por guilda e linhagem"""
+    """Buscar players por guilda e linhagem - APENAS ADMIN"""
+    user = get_current_user(request)
+    if not user:
+        return RedirectResponse(url="/login", status_code=302)
+    
     session = SessionLocal()
     try:
         results = []
@@ -201,6 +443,7 @@ def search_guild_lineage(request: Request, guild_id: int = None, lineage: str = 
         return templates.TemplateResponse("search.html", {
             "request": request,
             "last_update": data_store.last_update,
+            "user": user,
             **context
         })
     finally:

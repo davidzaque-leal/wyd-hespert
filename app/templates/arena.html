@@ -30,10 +30,26 @@
 <div class="ranking-container">
     {% for p in players %}
     <div class="player-item">
+        <div style="display: flex; align-items: center; gap: 8px;">
+            <div class="rank-badge">
+                {% if p.rank_position == 1 %}
+                🥇 {{ p.rank_position }}º
+                {% elif p.rank_position == 2 %}
+                🥈 {{ p.rank_position }}º
+                {% elif p.rank_position == 3 %}
+                🥉 {{ p.rank_position }}º
+                {% else %}
+                #{{ p.rank_position }}
+                {% endif %}
+            </div>
+            {% if p.position_change and p.position_change.active %}
+                {{ components.render_position_change_indicator(p.position_change.position_change, p.position_change.direction, p.position_change.active) }}
+            {% endif %}
+        </div>
         <div>
             <div class="player-name">{{ p.charName }}</div>
             <div class="player-title">
-                Pontos: {{ p.total }} | Kill Rating: {{ p.killValue }}
+                Pontos: {{ p.total or 0 }} | Kill Rating: {{ p.killValue or 0 }}
             </div>
         </div>
         {{ components.render_stat(p.winCount, 'Vitórias') }}

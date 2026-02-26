@@ -14,10 +14,21 @@
             <ul class="nav-links">
                 <li><a href="/">Home</a></li>
                 <li><a href="/ranking">Ranking Level</a></li>
+                <li><a href="/ranking-history">📈 Histórico</a></li>
                 <li><a href="/arena/champion">Arena Champion</a></li>
                 <li><a href="/arena/aspirant">Arena Aspirant</a></li>
+                {% if user %}
                 <li><a href="/search">Buscar</a></li>
+                {% endif %}
             </ul>
+            <div class="nav-user">
+                {% if user %}
+                <span class="username">👤 {{ user.username }}</span>
+                <a href="/logout" class="logout-btn">Logout</a>
+                {% else %}
+                <a href="/login" class="login-btn">Admin Login</a>
+                {% endif %}
+            </div>
         </nav>
     </header>
 

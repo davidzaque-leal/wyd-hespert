@@ -28,7 +28,7 @@
 {# Exibe um stat em box #}
 {% macro render_stat(value, label, color="--secondary-color") %}
 <div class="player-stat">
-    <div class="player-stat-value" {% if color %}style="color: var({{ color }});"{% endif %}>{{ value }}</div>
+    <div class="player-stat-value" {% if color %}style="color: var({{ color }});"{% endif %}>{{ value or 0 }}</div>
     <div class="player-stat-label">{{ label }}</div>
 </div>
 {% endmacro %}
@@ -45,4 +45,24 @@
         <input type="text" id="{{ guild_id }}" placeholder="Digite o ID da guild..." onkeyup="filterPlayers()">
     </div>
 </div>
+{% endmacro %}
+
+{# Indicador de mudança de level #}
+{% macro render_level_change_indicator(change_value, arrow, active=False) %}
+{% if active %}
+<span class="level-change-indicator {% if change_value > 0 %}positive{% else %}negative{% endif %}" title="Mudança de {{ change_value }}">
+    <span class="arrow">{{ arrow }}</span>
+    <span class="value">{{ change_value|abs }}</span>
+</span>
+{% endif %}
+{% endmacro %}
+
+{# Indicador de mudança de posição #}
+{% macro render_position_change_indicator(change_value, direction, active=False) %}
+{% if active %}
+<span class="position-change-indicator {% if direction == 'up' %}up{% else %}down{% endif %}" title="{% if direction == 'up' %}Subiu{% else %}Desceu{% endif %} {{ change_value }} posições">
+    <span class="arrow">{% if direction == 'up' %}↑{% else %}↓{% endif %}</span>
+    <span class="value">{{ change_value }}</span>
+</span>
+{% endif %}
 {% endmacro %}
