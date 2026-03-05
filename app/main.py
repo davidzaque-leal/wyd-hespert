@@ -1,5 +1,6 @@
 import threading
 import time
+import os
 from fastapi import FastAPI, Request, HTTPException, Response, Form
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
@@ -135,10 +136,14 @@ def startup_event():
     # Create default admin user if doesn't exist
     session = SessionLocal()
     try:
-        admin = session.query(User).filter(User.username == "admin").first()
+        admin_username = os.environ.get("ADMIN_USERNAME", "lider_supermo")
+        admin_email = os.environ.get("ADMIN_EMAIL", "admin@wyd.com")
+        admin_password = os.environ.get("ADMIN_PASSWORD", "Imperi0")
+
+        admin = session.query(User).filter(User.username == admin_username).first()
         if not admin:
-            create_user_admin(session, "admin", "admin@wyd.com", "admin123")
-            print("✓ Usuário admin padrão criado (username: admin, password: admin123)")
+            create_user_admin(session, admin_username, admin_email, admin_password)
+            print(f"✓ Usuário admin padrão criado (username: {admin_username}, password: {admin_password})")
     except Exception as e:
         print("⚠ Erro ao criar admin:", e)
     finally:
@@ -235,7 +240,7 @@ def ranking(request: Request):
 # ===============================
 @app.get("/arena/{category}")
 def arena(request: Request, category: str):
-    from app.services.ranking_history_service import get_position_changes
+    from app.services.ranking_history_service import get_position_changes, get_arena_changes
     
     if category not in ["champion", "aspirant"]:
         raise HTTPException(status_code=404, detail="Categoria inválida")
@@ -250,13 +255,31 @@ def arena(request: Request, category: str):
     
     session = SessionLocal()
     try:
-        # Adicionar índices de posição e mudanças de posição
+        # Adicionar índices de posição e mudanças de posição/kills/vitórias
         for idx, player in enumerate(players, 1):
             player["rank_position"] = idx
-            
-            # Calcular mudanças de posição
-            pos_changes = get_position_changes(session, player.get("charName"), idx)
-            player["position_change"] = pos_changes
+
+            # Calcular mudanças de posição (usando histórico de arena) e stat changes
+            arena_changes = get_arena_changes(session, player.get("charName"), {
+                'kill_value': player.get('killValue', 0),
+                'win_count': player.get('winCount', 0)
+            }, category, idx)
+
+            # mapear para compatibilidade com templates
+            player["position_change"] = {
+                'position_change': arena_changes.get('position_change', 0),
+                'direction': arena_changes.get('direction', 'neutral'),
+                'active': arena_changes.get('active', False),
+            }
+
+            player['arena_stat_changes'] = {
+                'kill_change': arena_changes.get('kill_change', 0),
+                'kill_arrow': arena_changes.get('kill_arrow', ''),
+                'kill_active': arena_changes.get('kill_active', False),
+                'win_change': arena_changes.get('win_change', 0),
+                'win_arrow': arena_changes.get('win_arrow', ''),
+                'win_active': arena_changes.get('win_active', False),
+            }
     finally:
         session.close()
 
@@ -287,50 +310,30 @@ def ranking_combined(request: Request):
 # Ranking Histórico
 # ===============================
 @app.get("/ranking-history")
-def ranking_history(request: Request):
-    """Página com histórico de evolução de rankings"""
+def ranking_history(request: Request, days: int = 7):
+    """Página com histórico de evolução de rankings
+
+    Parâmetro `days` permite comparar com snapshot de ~7/15/30 dias atrás.
+    """
     from app.services.ranking_history_service import (
-        get_level_ranking_history, 
-        get_position_changes,
-        get_level_changes
+        get_top_level_gainers_for_range,
     )
-    
+
+    if days not in (7, 15, 30):
+        days = 7
+
     session = SessionLocal()
     try:
-        # Buscar últimos snapshots de histórico
-        history_records = get_level_ranking_history(session, limit=100)
-        
-        # Agrupar por data e calcular mudanças
-        history_by_date = {}
-        for record in history_records:
-            date_key = record.recorded_at.strftime("%Y-%m-%d %H:%M") if record.recorded_at else "Unknown"
-            if date_key not in history_by_date:
-                history_by_date[date_key] = []
-            
-            # Calcular mudanças de posição e level
-            pos_changes = get_position_changes(session, record.player_name, record.rank_position)
-            level_changes = get_level_changes(session, record.player_name, {
-                'level_celestial': record.level_celestial,
-                'level_subclass': record.level_subclass,
-            })
-            
-            history_by_date[date_key].append({
-                "rank": record.rank_position,
-                "name": record.player_name,
-                "level": record.level_total,
-                "level_celestial": record.level_celestial,
-                "level_subclass": record.level_subclass,
-                "points": record.points,
-                "position_change": pos_changes,
-                "level_changes": level_changes,
-            })
-        
+        # Mostrar top gainers por default (quem mais upou levels no período)
+        players = get_top_level_gainers_for_range(session, days, limit=500)
+
         return templates.TemplateResponse("ranking_history.html", {
             "request": request,
             "last_update": data_store.last_update,
             "user": get_current_user(request),
-            "history_by_date": history_by_date,
-            "total_snapshots": len(history_by_date)
+            "players": players,
+            "days": days,
+            "total_snapshots": 0,
         })
     finally:
         session.close()

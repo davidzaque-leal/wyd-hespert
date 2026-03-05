@@ -313,6 +313,120 @@ def get_level_changes(session: Session, player_name: str, current_data: dict) ->
         }
 
 
+def get_level_changes_for_range(session: Session, days: int = 7):
+    """
+    Gera a lista de players do snapshot mais recente e compara com o snapshot
+    de aproximadamente `days` dias atrás.
+
+    Retorna lista ordenada pela posição atual (rank_position asc), cada item:
+    {
+        'rank_position': int,
+        'name': str,
+        'level_total': int,
+        'level_change': int,
+        'level_arrow': '↑'|'↓'|'',
+        'level_active': bool,
+        'position_change': int,
+        'position_direction': 'up'|'down'|'neutral',
+        'position_active': bool,
+        'points': int
+    }
+    """
+    try:
+        from sqlalchemy import func, desc
+        from app.models import LevelRankingHistory
+        from datetime import timedelta
+
+        # Data/hora do snapshot mais recente (considerando todos registros)
+        latest_dt = session.query(func.max(LevelRankingHistory.recorded_at)).scalar()
+        if not latest_dt:
+            return []
+
+        # Buscar snapshot atual — usar janela pequena em torno do latest_dt para
+        # evitar problemas de precisão de timestamps ao comparar igualdade exata.
+        from datetime import timedelta
+        window = timedelta(seconds=5)
+        current_rows = session.query(LevelRankingHistory).filter(
+            LevelRankingHistory.recorded_at >= (latest_dt - window),
+            LevelRankingHistory.recorded_at <= (latest_dt + window)
+        ).order_by(LevelRankingHistory.rank_position).all()
+
+        target_date = latest_dt - timedelta(days=days)
+
+        result = []
+        for cur in current_rows:
+            # Buscar o registro mais próximo ao target_date (pode ser antes ou depois)
+            prev_before = session.query(LevelRankingHistory).filter(
+                LevelRankingHistory.player_name == cur.player_name,
+                LevelRankingHistory.recorded_at <= target_date
+            ).order_by(desc(LevelRankingHistory.recorded_at)).first()
+
+            prev_after = session.query(LevelRankingHistory).filter(
+                LevelRankingHistory.player_name == cur.player_name,
+                LevelRankingHistory.recorded_at >= target_date
+            ).order_by(LevelRankingHistory.recorded_at).first()
+
+            # Escolher o mais próximo (menor delta absoluto)
+            prev = None
+            if prev_before and prev_after:
+                before_diff = abs((prev_before.recorded_at - target_date).total_seconds())
+                after_diff = abs((prev_after.recorded_at - target_date).total_seconds())
+                prev = prev_before if before_diff <= after_diff else prev_after
+            elif prev_before:
+                prev = prev_before
+            elif prev_after:
+                prev = prev_after
+
+            prev_level = prev.level_total if prev else None
+            prev_rank = prev.rank_position if prev else None
+
+            level_change = (cur.level_total or 0) - (prev_level or 0) if prev_level is not None else 0
+            pos_diff = (prev_rank or cur.rank_position) - cur.rank_position if prev_rank is not None else 0
+
+            result.append({
+                'player_id': cur.player_id,
+                'rank_position': cur.rank_position,
+                'name': cur.player_name,
+                'level_total': cur.level_total or 0,
+                'level_celestial': cur.level_celestial or 0,
+                'level_subclass': cur.level_subclass or 0,
+                'celestial_lineage': cur.celestial_lineage_name or '',
+                'subclass_lineage': cur.subclass_lineage_name or '',
+                'level_change': level_change,
+                'level_arrow': '↑' if level_change > 0 else ('↓' if level_change < 0 else ''),
+                'level_active': level_change != 0,
+                'position_change': abs(pos_diff),
+                'position_direction': 'up' if pos_diff > 0 else ('down' if pos_diff < 0 else 'neutral'),
+                'position_active': pos_diff != 0,
+                'points': cur.points or 0,
+            })
+
+        # Ordenar por posição atual (1,2,3...) e limitar ao top 500
+        result.sort(key=lambda x: x['rank_position'])
+        return result[:500]
+    except Exception as e:
+        print(f"⚠ Erro ao gerar comparativos por range: {e}")
+        return []
+
+
+def get_top_level_gainers_for_range(session: Session, days: int = 7, limit: int = 100):
+    """
+    Retorna players ordenados por maior ganho de níveis no intervalo `days`.
+    Usa `get_level_changes_for_range` e classifica por `level_change` desc.
+    """
+    try:
+        rows = get_level_changes_for_range(session, days)
+        # Filtrar apenas quem subiu (level_change > 0)
+        gainers = [r for r in rows if (r.get('level_change') or 0) > 0]
+        # Ordenar por maior ganho, depois por level_total desc
+        gainers.sort(key=lambda x: ((x.get('level_change') or 0), x.get('level_total') or 0), reverse=True)
+        return gainers[:limit]
+    except Exception as e:
+        print(f"⚠ Erro ao gerar top gainers: {e}")
+        return []
+
+
+
 def get_position_changes(session: Session, player_name: str, current_position: int) -> dict:
     """
     Compara posição atual com snapshot de ontem
@@ -331,9 +445,6 @@ def get_position_changes(session: Session, player_name: str, current_position: i
         }
     """
     try:
-        from sqlalchemy import desc
-        
-        # Buscar snapshot de ontem (não de hoje)
         today = datetime.now(timezone.utc).date()
         yesterday = today - timedelta(days=1)
         
@@ -374,6 +485,77 @@ def get_position_changes(session: Session, player_name: str, current_position: i
             'arrow_color': '',
             'active': False,
             'direction': 'neutral',
+        }
+
+
+def get_arena_changes(session: Session, player_name: str, current_data: dict, category: str, current_position: int) -> dict:
+    """
+    Compara dados atuais de uma arena com o último snapshot gravado para a mesma categoria.
+
+    Args:
+        session: SQLAlchemy Session
+        player_name: Nome do player
+        current_data: dict com chaves 'kill_value' e 'win_count'
+        category: 'champion' ou 'aspirant'
+        current_position: posição atual no ranking (1-based)
+
+    Returns:
+        dict com chaves: position_change, direction, active, kill_change, kill_arrow,
+                        kill_active, win_change, win_arrow, win_active
+    """
+    try:
+        from sqlalchemy import desc
+        from app.models import ArenaRankingHistory
+
+        # Pegar o snapshot mais recente para essa categoria (última arena registrada)
+        last_record = session.query(ArenaRankingHistory).filter(
+            ArenaRankingHistory.player_name == player_name,
+            ArenaRankingHistory.category == category
+        ).order_by(desc(ArenaRankingHistory.recorded_at)).first()
+
+        if not last_record:
+            return {
+                'position_change': 0,
+                'direction': 'neutral',
+                'active': False,
+                'kill_change': 0,
+                'kill_arrow': '',
+                'kill_active': False,
+                'win_change': 0,
+                'win_arrow': '',
+                'win_active': False,
+            }
+
+        # posição: positivo = subiu (ex: ontem 5 -> hoje 3 => 2)
+        pos_diff = (last_record.rank_position or 0) - current_position
+
+        kill_change = (current_data.get('kill_value') or 0) - (last_record.kill_value or 0)
+        win_change = (current_data.get('win_count') or 0) - (last_record.win_count or 0)
+
+        return {
+            'position_change': abs(pos_diff),
+            'direction': 'up' if pos_diff > 0 else ('down' if pos_diff < 0 else 'neutral'),
+            'active': pos_diff != 0,
+            'kill_change': kill_change,
+            'kill_arrow': '↑' if kill_change > 0 else ('↓' if kill_change < 0 else ''),
+            'kill_active': kill_change != 0,
+            'win_change': win_change,
+            'win_arrow': '↑' if win_change > 0 else ('↓' if win_change < 0 else ''),
+            'win_active': win_change != 0,
+        }
+
+    except Exception as e:
+        print(f"⚠ Erro ao comparar arena: {e}")
+        return {
+            'position_change': 0,
+            'direction': 'neutral',
+            'active': False,
+            'kill_change': 0,
+            'kill_arrow': '',
+            'kill_active': False,
+            'win_change': 0,
+            'win_arrow': '',
+            'win_active': False,
         }
 
 def ensure_today_level_ranking_snapshot(session: Session) -> bool:

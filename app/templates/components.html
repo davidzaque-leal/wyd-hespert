@@ -57,6 +57,16 @@
 {% endif %}
 {% endmacro %}
 
+{# Indicador genérico pequeno para mostrar mudanças em kills/vitórias #}
+{% macro render_small_change_indicator(change_value, arrow, active=False) %}
+{% if active %}
+<span class="small-change-indicator {% if change_value > 0 %}positive{% else %}negative{% endif %}" title="Mudança: {{ change_value }}">
+    <span class="arrow">{{ arrow }}</span>
+    <span class="value">{{ change_value|abs }}</span>
+</span>
+{% endif %}
+{% endmacro %}
+
 {# Indicador de mudança de posição #}
 {% macro render_position_change_indicator(change_value, direction, active=False) %}
 {% if active %}

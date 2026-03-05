@@ -234,10 +234,12 @@ nav {
     font-size: 18px;
     color: var(--warning-color);
     background: rgba(243, 156, 18, 0.1);
-    padding: 8px 12px;
-    border-radius: 6px;
+    /* Fixed width to fit up to 3-digit ranks + medal consistently */
+    width: 90px;
+    min-width: 90px;
+    padding: 8px 0;
+    border-radius: 8px;
     text-align: center;
-    min-width: 60px;
     border: 2px solid var(--warning-color);
     display: flex;
     align-items: center;
@@ -250,11 +252,40 @@ nav {
     border-radius: 8px;
     border-left: 4px solid var(--secondary-color);
     display: grid;
-    grid-template-columns: auto 2fr 1fr 1.5fr 1.5fr 1fr;
+    /* Fix first column width so optional indicators don't shift the grid */
+     /* First column wide enough for 3-digit ranks + medal/indicator to avoid layout shifts.
+         Use minmax for middle columns so they can grow to fit icons/labels without wrapping. */
+     grid-template-columns: 150px minmax(260px, 3fr) minmax(140px, 1.6fr) minmax(140px, 1.6fr) minmax(140px, 1.6fr) 1fr;
     align-items: center;
     gap: 20px;
     box-shadow: var(--shadow);
     transition: all 0.3s ease;
+}
+
+/* Ensure the second grid column (player name + inline indicators) reserves space
+   and arranges its children with consistent gap so indicators never overlap name */
+.player-item > *:nth-child(2) {
+    /* Stack player name and lineages vertically so lineages keep their grid */
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding-left: 6px;
+    min-width: 0; /* allow proper truncation inside grid */
+}
+
+/* Keep player-name and its inline indicators on a single row */
+.player-item > *:nth-child(2) > .player-name {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px; /* spacing between name and inline indicators */
+}
+
+/* Ensure first column (badge + optional indicator) lays out with sufficient gap */
+.player-item > *:nth-child(1) {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* space between badge and indicator */
+    min-width: 0;
 }
 
 .player-item:hover {
@@ -304,29 +335,71 @@ nav {
 }
 
 .player-stat {
-    display: flex;
-    flex-direction: column;
+    display: inline-flex;
+    flex-direction: row;
     align-items: center;
+    gap: 8px;
+    white-space: nowrap; /* keep number and label on one line */
 }
 
 .player-stat-value {
     font-size: 20px;
     font-weight: bold;
     color: var(--secondary-color);
+    min-width: 70px; /* reserve space for up to 3 digits and avoid wrap */
+    text-align: center;
+}
+
+.player-name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+/* Prevent inline stat groups from wrapping (limit to stats and titles only) */
+.player-item .player-stat,
+.player-item .player-title {
+    white-space: nowrap;
 }
 
 .player-stat-label {
     font-size: 12px;
     color: var(--light-text);
-    margin-top: 4px;
+    margin: 0;
+    padding: 0 !important;
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    width: auto !important;
 }
 
-.player-guild {
-    background: var(--light-bg);
-    padding: 8px 12px;
-    border-radius: 4px;
-    font-size: 13px;
-    font-weight: 500;
+/* Make sure stat labels have no orange box in any ranking list (higher specificity) */
+.ranking-container .player-item .player-stat-label,
+.ranking-container .player-item .player-stat {
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    width: auto !important;
+    white-space: nowrap !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+}
+
+/* Extra global override to ensure no orange boxes remain on stats */
+.player-stat-label,
+.player-item .player-stat-label,
+.ranking-container .player-stat-label,
+.player-stat .player-stat-label,
+.player-stat > .player-stat-label {
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    width: auto !important;
+    display: inline-block !important;
 }
 
 .player-guild.no-guild {
@@ -398,6 +471,73 @@ nav {
 }
 
 /* ===== STATS ===== */
+
+/* ===== INDICATORS: level, position, small changes ===== */
+.level-change-indicator,
+.position-change-indicator,
+.small-change-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 8px;
+    border-radius: 14px;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--dark-text);
+    background: rgba(0,0,0,0.02);
+    border: 1px solid rgba(0,0,0,0.06);
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+
+.level-change-indicator.positive,
+.position-change-indicator.up,
+.small-change-indicator.positive {
+    background: rgba(39,174,96,0.08);
+    border-color: rgba(39,174,96,0.18);
+    color: var(--success-color);
+}
+
+.level-change-indicator.negative,
+.position-change-indicator.down,
+.small-change-indicator.negative {
+    background: rgba(231,76,60,0.06);
+    border-color: rgba(231,76,60,0.14);
+    color: var(--accent-color);
+}
+
+.level-change-indicator .arrow,
+.position-change-indicator .arrow,
+.small-change-indicator .arrow {
+    font-size: 14px;
+    line-height: 1;
+}
+
+.level-change-indicator .value,
+.position-change-indicator .value,
+.small-change-indicator .value {
+    font-weight: 800;
+    font-size: 13px;
+}
+
+/* Smaller variant for inline stat changes */
+.small-change-indicator {
+    padding: 4px 6px;
+    border-radius: 10px;
+    font-size: 12px;
+    gap: 4px;
+    /* space between player name and indicator when inline */
+    margin-left: 12px;
+}
+
+.position-change-indicator.up { color: var(--success-color); }
+.position-change-indicator.down { color: var(--accent-color); }
+
+/* Tooltip hint small improvement */
+.level-change-indicator[title],
+.position-change-indicator[title],
+.small-change-indicator[title] {
+    cursor: help;
+}
 .stats-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -456,9 +596,10 @@ nav {
     border-left: 4px solid var(--accent-color);
     color: var(--accent-color);
     padding: 20px;
-    border-radius: 4px;
-    text-align: center;
-}
+    display: grid;
+    /* Fix first column width so optional indicators don't shift the grid.
+       Use a width large enough to hold 3-digit ranks + medal without wrapping. */
+    grid-template-columns: 110px 2fr 1fr 1fr 1fr 1fr;
 
 /* ===== INFO BOX ===== */
 .info-box {
@@ -548,7 +689,7 @@ footer {
     border-radius: 3px;
     font-size: 12px;
     font-weight: 600;
-    margin-left: 5px;
+    margin-left: 12px;
 }
 
 .level-change-indicator.positive {
@@ -578,7 +719,7 @@ footer {
     border-radius: 4px;
     font-size: 13px;
     font-weight: 700;
-    margin-left: 8px;
+    margin-left: 12px;
 }
 
 .position-change-indicator.up {
