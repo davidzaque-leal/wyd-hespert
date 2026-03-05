@@ -386,8 +386,8 @@ def _get_search_context(session, results=None, search_performed=False):
     # Build results using PlayerSerializer
     formatted_results = []
     if results:
-        for player in results:
-            formatted_results.append(PlayerSerializer.serialize_player_search(player, session))
+        for idx, player in enumerate(results, 1):
+            formatted_results.append(PlayerSerializer.serialize_player_search(player, session, rank_position=idx))
     
     return {
         "lineages": lineages,

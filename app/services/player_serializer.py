@@ -52,13 +52,14 @@ class PlayerSerializer:
         }
     
     @staticmethod
-    def serialize_player_search(player, session: Session) -> dict:
+    def serialize_player_search(player, session: Session, rank_position: int = None) -> dict:
         """
         Serializa dados de um Player para a página de busca
         
         Args:
             player: Objeto Player
             session: SQLAlchemy session
+            rank_position: Posição opcional no ranking de busca
             
         Returns:
             Dicionário padronizado com dados do player
@@ -70,4 +71,5 @@ class PlayerSerializer:
             "guild_external_id": player.guild.external_id if player.guild else None,
             "celestial_lineage": lineages.get("celestial"),
             "subclass_lineage": lineages.get("subclass"),
+            "rank_position": rank_position,
         }
