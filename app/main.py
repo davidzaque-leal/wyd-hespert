@@ -190,10 +190,46 @@ app.add_event_handler("startup", startup_event)
 # ===============================
 @app.get("/")
 def home(request: Request):
-    return templates.TemplateResponse("index.html", {
-        "request": request,
-        "last_update": data_store.last_update
-    })
+    # Compute dashboard metrics
+    session = SessionLocal()
+    try:
+        # Count directly from DB to reflect real stored records
+        from app.models import Guild, ClassLineage, Player
+
+        total_players = session.query(Player).count()
+        active_guilds = session.query(Guild).count()
+        lineages_count = session.query(ClassLineage).count()
+
+        # Calculate lineage distribution (count occurrences from celestial and subclass)
+        from app.utils.lineage_utils import LineageUtils
+
+        lineage_counts = {}
+        players = session.query(Player).all()
+        for p in players:
+            lineages = LineageUtils.get_all_lineages(session, p)
+            for key in ("celestial", "subclass"):
+                name = lineages.get(key)
+                if name:
+                    lineage_counts[name] = lineage_counts.get(name, 0) + 1
+
+        # Build percent over total players (a player may contribute up to 2 counts)
+        lineage_list = [
+            {"name": name, "count": cnt, "percent": round((cnt / (total_players or 1)) * 100, 2)}
+            for name, cnt in lineage_counts.items()
+        ]
+        lineage_list.sort(key=lambda x: x["count"], reverse=True)
+        top3_lineages = lineage_list[:3]
+
+        return templates.TemplateResponse("index.html", {
+            "request": request,
+            "last_update": data_store.last_update,
+            "total_players": total_players,
+            "active_guilds": active_guilds,
+            "lineages_count": lineages_count,
+            "top3_lineages": top3_lineages,
+        })
+    finally:
+        session.close()
 
 
 # ===============================
