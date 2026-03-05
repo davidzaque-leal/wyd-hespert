@@ -52,7 +52,7 @@ def get_arena_number_by_time() -> int:
     arena_times = [
         (13, 31),  # Arena 1
         (19, 31),  # Arena 2
-        (20, 31),  # Arena 3
+        (21, 00),  # Arena 3
         (23, 31),  # Arena 4
     ]
     
