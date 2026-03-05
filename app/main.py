@@ -355,13 +355,13 @@ def ranking_combined(request: Request):
 def ranking_history(request: Request, days: int = 7):
     """Página com histórico de evolução de rankings
 
-    Parâmetro `days` permite comparar com snapshot de ~7/15/30 dias atrás.
+    Parâmetro `days` permite comparar com snapshot de ~1/7/15/30 dias atrás.
     """
     from app.services.ranking_history_service import (
         get_top_level_gainers_for_range,
     )
 
-    if days not in (7, 15, 30):
+    if days not in (1, 7, 15, 30):
         days = 7
 
     session = SessionLocal()

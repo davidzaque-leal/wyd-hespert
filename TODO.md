@@ -1,12 +1,10 @@
-# TODO - Tornar o Site Responsivo
+# TODO - Melhorias no Sistema de Ranking
 
-## Tarefas:
-- [x] 1. Analisar estrutura atual do CSS e templates
-- [x] 2. Adicionar breakpoints de tablet (992px) e melhorar mobile
-- [x] 3. Adicionar menu hamburger para navegação mobile
-- [x] 4. Redesenhar player items para stacking vertical no mobile
-- [x] 5. Melhorar filtros e grids responsivos
-- [x] 6. Verificar melhorias e testar
+## Concluído:
+- [x] 1. Adicionar filtro de 1 dia (1d) na página de histórico
+- [x] 2. Corrigir lógica para ignorar hora/minuto/segundo - comparar apenas por dia
+- [x] 3. Se não existir registro do dia anterior, buscar último registro disponível
+- [x] 4. Tornar o site responsivo (CSS com sidebar e menu hamburger)
 
 ## Progresso: 100%
 

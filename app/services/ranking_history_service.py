@@ -360,40 +360,52 @@ def get_level_changes_for_range(session: Session, days: int = 7):
         if not latest_dt:
             return []
 
-        # Buscar snapshot atual — usar janela pequena em torno do latest_dt para
-        # evitar problemas de precisão de timestamps ao comparar igualdade exata.
-        from datetime import timedelta
-        window = timedelta(seconds=5)
+        # Buscar snapshot atual - usar janela de 1 hora para garantir que pega os registros
+        # já que os snapshots podem ter sido salvos em horários diferentes
+        window = timedelta(hours=1)
         current_rows = session.query(LevelRankingHistory).filter(
             LevelRankingHistory.recorded_at >= (latest_dt - window),
             LevelRankingHistory.recorded_at <= (latest_dt + window)
-        ).order_by(LevelRankingHistory.rank_position).all()
+        ).order_by(LevelRankingHistory.recorded_at.desc(), LevelRankingHistory.rank_position).all()
 
-        target_date = latest_dt - timedelta(days=days)
+        # Se não encontrou com janela de 1 hora, pegar diretamente o mais recente
+        if not current_rows:
+            current_rows = session.query(LevelRankingHistory).filter(
+                LevelRankingHistory.recorded_at == latest_dt
+            ).order_by(LevelRankingHistory.rank_position).all()
+        
+        if not current_rows:
+            return []
+
+        # Usar a data do snapshot mais recente encontrado
+        latest_dt = current_rows[0].recorded_at
+
+        # Calcular a data alvo (apenas data, ignorar hora/minuto/segundo)
+        target_date = latest_dt.date() - timedelta(days=days)
+
+        # Buscar snapshots do dia alvo (ignorando hora/minuto/segundo)
+        target_start = datetime(target_date.year, target_date.month, target_date.day, 0, 0, 0, tzinfo=timezone.utc)
+        target_end = datetime(target_date.year, target_date.month, target_date.day, 23, 59, 59, tzinfo=timezone.utc)
+        
+        target_rows = session.query(LevelRankingHistory).filter(
+            LevelRankingHistory.recorded_at >= target_start,
+            LevelRankingHistory.recorded_at <= target_end
+        ).order_by(LevelRankingHistory.recorded_at.desc()).all()
+
+        # Se não encontrou registro do dia alvo, buscar o último registro disponível antes do dia atual
+        if not target_rows:
+            # Buscar o registro mais antigo que não seja do mesmo dia do snapshot atual
+            target_rows = session.query(LevelRankingHistory).filter(
+                LevelRankingHistory.recorded_at < latest_dt.replace(hour=0, minute=0, second=0, microsecond=0)
+            ).order_by(LevelRankingHistory.recorded_at.desc()).limit(500).all()
+
+        # Criar dicionário de referência para comparações rápidas
+        target_dict = {r.player_name: r for r in target_rows}
 
         result = []
         for cur in current_rows:
-            # Buscar o registro mais próximo ao target_date (pode ser antes ou depois)
-            prev_before = session.query(LevelRankingHistory).filter(
-                LevelRankingHistory.player_name == cur.player_name,
-                LevelRankingHistory.recorded_at <= target_date
-            ).order_by(desc(LevelRankingHistory.recorded_at)).first()
-
-            prev_after = session.query(LevelRankingHistory).filter(
-                LevelRankingHistory.player_name == cur.player_name,
-                LevelRankingHistory.recorded_at >= target_date
-            ).order_by(LevelRankingHistory.recorded_at).first()
-
-            # Escolher o mais próximo (menor delta absoluto)
-            prev = None
-            if prev_before and prev_after:
-                before_diff = abs((prev_before.recorded_at - target_date).total_seconds())
-                after_diff = abs((prev_after.recorded_at - target_date).total_seconds())
-                prev = prev_before if before_diff <= after_diff else prev_after
-            elif prev_before:
-                prev = prev_before
-            elif prev_after:
-                prev = prev_after
+            # Buscar registro do dia alvo para este player
+            prev = target_dict.get(cur.player_name)
 
             prev_level = prev.level_total if prev else None
             prev_rank = prev.rank_position if prev else None
@@ -424,6 +436,8 @@ def get_level_changes_for_range(session: Session, days: int = 7):
         return result[:500]
     except Exception as e:
         print(f"⚠ Erro ao gerar comparativos por range: {e}")
+        import traceback
+        traceback.print_exc()
         return []
 
 
