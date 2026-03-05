@@ -351,54 +351,62 @@ def get_level_changes_for_range(session: Session, days: int = 7):
     }
     """
     try:
-        from sqlalchemy import func, desc
+        from sqlalchemy import func, desc, extract
         from app.models import LevelRankingHistory
         from datetime import timedelta
 
-        # Data/hora do snapshot mais recente (considerando todos registros)
-        latest_dt = session.query(func.max(LevelRankingHistory.recorded_at)).scalar()
-        if not latest_dt:
+        # 1. Buscar o snapshot mais recente (usar a data/hora mais recente)
+        latest_record = session.query(LevelRankingHistory).order_by(
+            LevelRankingHistory.recorded_at.desc()
+        ).first()
+        
+        if not latest_record:
             return []
-
-        # Buscar snapshot atual - usar janela de 1 hora para garantir que pega os registros
-        # já que os snapshots podem ter sido salvos em horários diferentes
-        window = timedelta(hours=1)
+        
+        latest_dt = latest_record.recorded_at
+        latest_date = latest_dt.date() if hasattr(latest_dt, 'date') else latest_dt
+        
+        print(f"DEBUG: latest_dt={latest_dt}, latest_date={latest_date}")
+        
+        # 2. Buscar todos os registros do dia mais recente
+        current_date_start = datetime(latest_date.year, latest_date.month, latest_date.day, 0, 0, 0, tzinfo=timezone.utc)
+        current_date_end = datetime(latest_date.year, latest_date.month, latest_date.day, 23, 59, 59, tzinfo=timezone.utc)
+        
         current_rows = session.query(LevelRankingHistory).filter(
-            LevelRankingHistory.recorded_at >= (latest_dt - window),
-            LevelRankingHistory.recorded_at <= (latest_dt + window)
-        ).order_by(LevelRankingHistory.recorded_at.desc(), LevelRankingHistory.rank_position).all()
-
-        # Se não encontrou com janela de 1 hora, pegar diretamente o mais recente
-        if not current_rows:
-            current_rows = session.query(LevelRankingHistory).filter(
-                LevelRankingHistory.recorded_at == latest_dt
-            ).order_by(LevelRankingHistory.rank_position).all()
+            LevelRankingHistory.recorded_at >= current_date_start,
+            LevelRankingHistory.recorded_at <= current_date_end
+        ).order_by(LevelRankingHistory.rank_position).all()
+        
+        print(f"DEBUG: current_rows count = {len(current_rows)}")
         
         if not current_rows:
             return []
-
-        # Usar a data do snapshot mais recente encontrado
-        latest_dt = current_rows[0].recorded_at
-
-        # Calcular a data alvo (apenas data, ignorar hora/minuto/segundo)
-        target_date = latest_dt.date() - timedelta(days=days)
-
-        # Buscar snapshots do dia alvo (ignorando hora/minuto/segundo)
-        target_start = datetime(target_date.year, target_date.month, target_date.day, 0, 0, 0, tzinfo=timezone.utc)
-        target_end = datetime(target_date.year, target_date.month, target_date.day, 23, 59, 59, tzinfo=timezone.utc)
+        
+        # 3. Calcular a data alvo para comparação
+        # Se days=1, procurar do dia anterior ao snapshot mais recente
+        target_date = latest_date - timedelta(days=days)
+        
+        print(f"DEBUG: target_date = {target_date}, days = {days}")
+        
+        # 4. Buscar registros do dia alvo
+        target_date_start = datetime(target_date.year, target_date.month, target_date.day, 0, 0, 0, tzinfo=timezone.utc)
+        target_date_end = datetime(target_date.year, target_date.month, target_date.day, 23, 59, 59, tzinfo=timezone.utc)
         
         target_rows = session.query(LevelRankingHistory).filter(
-            LevelRankingHistory.recorded_at >= target_start,
-            LevelRankingHistory.recorded_at <= target_end
+            LevelRankingHistory.recorded_at >= target_date_start,
+            LevelRankingHistory.recorded_at <= target_date_end
         ).order_by(LevelRankingHistory.recorded_at.desc()).all()
-
-        # Se não encontrou registro do dia alvo, buscar o último registro disponível antes do dia atual
+        
+        print(f"DEBUG: target_rows count = {len(target_rows)}")
+        
+        # 5. Se não encontrou registros do dia alvo, buscar o último registro disponível ANTES do dia atual
         if not target_rows:
-            # Buscar o registro mais antigo que não seja do mesmo dia do snapshot atual
+            print(f"DEBUG: Não encontrou registros de {target_date}, buscando último registro antes de {latest_date}")
             target_rows = session.query(LevelRankingHistory).filter(
-                LevelRankingHistory.recorded_at < latest_dt.replace(hour=0, minute=0, second=0, microsecond=0)
+                LevelRankingHistory.recorded_at < current_date_start
             ).order_by(LevelRankingHistory.recorded_at.desc()).limit(500).all()
-
+            print(f"DEBUG: fallback target_rows count = {len(target_rows)}")
+        
         # Criar dicionário de referência para comparações rápidas
         target_dict = {r.player_name: r for r in target_rows}
 
@@ -433,6 +441,7 @@ def get_level_changes_for_range(session: Session, days: int = 7):
 
         # Ordenar por posição atual (1,2,3...) e limitar ao top 500
         result.sort(key=lambda x: x['rank_position'])
+        print(f"DEBUG: returning {len(result)} results")
         return result[:500]
     except Exception as e:
         print(f"⚠ Erro ao gerar comparativos por range: {e}")
