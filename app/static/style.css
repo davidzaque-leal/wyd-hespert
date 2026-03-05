@@ -16,6 +16,7 @@
     --border-color: #bdc3c7;
     --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     --shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.2);
+    --sidebar-width: 260px;
 }
 
 body {
@@ -23,99 +24,183 @@ body {
     background: linear-gradient(135deg, #ecf0f1 0%, #bdc3c7 100%);
     color: var(--dark-text);
     line-height: 1.6;
+    min-height: 100vh;
 }
 
-/* ===== HEADER / NAVBAR ===== */
-header {
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+/* ===== SIDEBAR LAYOUT ===== */
+.sidebar-header {
+    background: linear-gradient(180deg, var(--primary-color) 0%, #1a252f 100%);
     color: white;
-    padding: 0;
-    box-shadow: var(--shadow-lg);
-    position: sticky;
+    width: var(--sidebar-width);
+    height: 100vh;
+    position: fixed;
+    left: 0;
     top: 0;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--shadow-lg);
     z-index: 100;
 }
 
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 40px;
-    height: 70px;
+.sidebar-logo {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 25px 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
-.logo {
-    font-size: 28px;
-    font-weight: bold;
+.sidebar-logo span {
+    color: var(--warning-color);
+}
+
+.sidebar-nav {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px 0;
+}
+
+/* Navigation Sections */
+.nav-section {
+    margin-bottom: 10px;
+}
+
+.nav-section-title {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--warning-color);
+    padding: 10px 20px 8px;
+    opacity: 0.9;
+}
+
+.sidebar-nav .nav-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 0 10px;
+}
+
+.sidebar-nav .nav-links a {
+    color: rgba(255,255,255,0.85);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 12px 15px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    display: block;
+    font-size: 15px;
+}
+
+.sidebar-nav .nav-links a:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    transform: translateX(5px);
+}
+
+/* User section in sidebar - first position */
+.nav-user-section {
+    padding: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    margin-bottom: 10px;
+}
+
+.nav-user-section .user-info {
     display: flex;
     align-items: center;
     gap: 10px;
+    margin-bottom: 12px;
+    padding: 10px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 8px;
 }
 
-.logo span {
-    color: var(--warning-color);
+.nav-user-section .user-icon {
+    font-size: 24px;
 }
 
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 30px;
-    align-items: center;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
-    padding: 8px 12px;
-    border-radius: 4px;
-}
-
-.nav-links a:hover {
-    color: var(--warning-color);
-    background: rgba(255, 255, 255, 0.1);
-}
-
-/* ===== NAV USER (LOGIN/LOGOUT) ===== */
-.nav-user {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-left: auto;
-}
-
-.username {
+.nav-user-section .username {
     color: white;
     font-weight: 500;
     font-size: 14px;
 }
 
-.login-btn,
-.logout-btn {
+.nav-user-section .login-btn,
+.nav-user-section .logout-btn {
     background: var(--warning-color);
     color: white;
-    padding: 8px 16px;
-    border-radius: 4px;
+    padding: 10px 20px;
+    border-radius: 6px;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 14px;
     transition: background 0.3s ease;
     border: none;
     cursor: pointer;
+    width: 100%;
+    text-align: center;
+    display: block;
 }
 
-.login-btn:hover,
-.logout-btn:hover {
+.nav-user-section .login-btn:hover,
+.nav-user-section .logout-btn:hover {
     background: #e67e22;
-    color: white;
+}
+
+/* ===== MAIN CONTENT ===== */
+.main-content {
+    margin-left: var(--sidebar-width);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content .container {
+    flex: 1;
+}
+
+/* ===== HAMBURGER MENU (mobile only) ===== */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 10px;
+    background: none;
+    border: none;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 200;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
 }
 
 /* ===== CONTAINER ===== */
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 40px 30px;
 }
 
 /* ===== FILTERS ===== */
@@ -150,6 +235,7 @@ nav {
     font-size: 14px;
     font-family: inherit;
     transition: border-color 0.3s ease;
+    width: 100%;
 }
 
 .filter-group select:focus,
@@ -163,6 +249,7 @@ nav {
     display: flex;
     gap: 10px;
     align-items: flex-end;
+    flex-wrap: wrap;
 }
 
 .btn {
@@ -174,6 +261,8 @@ nav {
     cursor: pointer;
     transition: all 0.3s ease;
     font-family: inherit;
+    text-decoration: none;
+    display: inline-block;
 }
 
 .btn-primary {
@@ -234,7 +323,6 @@ nav {
     font-size: 18px;
     color: var(--warning-color);
     background: rgba(243, 156, 18, 0.1);
-    /* Fixed width to fit up to 3-digit ranks + medal consistently */
     width: 90px;
     min-width: 90px;
     padding: 8px 0;
@@ -252,39 +340,31 @@ nav {
     border-radius: 8px;
     border-left: 4px solid var(--secondary-color);
     display: grid;
-    /* Fix first column width so optional indicators don't shift the grid */
-     /* First column wide enough for 3-digit ranks + medal/indicator to avoid layout shifts.
-         Use minmax for middle columns so they can grow to fit icons/labels without wrapping. */
-     grid-template-columns: 150px minmax(260px, 3fr) minmax(140px, 1.6fr) minmax(140px, 1.6fr) minmax(140px, 1.6fr) 1fr;
+    grid-template-columns: 150px minmax(260px, 3fr) minmax(140px, 1.6fr) minmax(140px, 1.6fr) minmax(140px, 1.6fr) 1fr;
     align-items: center;
     gap: 20px;
     box-shadow: var(--shadow);
     transition: all 0.3s ease;
 }
 
-/* Ensure the second grid column (player name + inline indicators) reserves space
-   and arranges its children with consistent gap so indicators never overlap name */
 .player-item > *:nth-child(2) {
-    /* Stack player name and lineages vertically so lineages keep their grid */
     display: flex;
     flex-direction: column;
     gap: 6px;
     padding-left: 6px;
-    min-width: 0; /* allow proper truncation inside grid */
+    min-width: 0;
 }
 
-/* Keep player-name and its inline indicators on a single row */
 .player-item > *:nth-child(2) > .player-name {
     display: inline-flex;
     align-items: center;
-    gap: 12px; /* spacing between name and inline indicators */
+    gap: 12px;
 }
 
-/* Ensure first column (badge + optional indicator) lays out with sufficient gap */
 .player-item > *:nth-child(1) {
     display: flex;
     align-items: center;
-    gap: 12px; /* space between badge and indicator */
+    gap: 12px;
     min-width: 0;
 }
 
@@ -339,14 +419,14 @@ nav {
     flex-direction: row;
     align-items: center;
     gap: 8px;
-    white-space: nowrap; /* keep number and label on one line */
+    white-space: nowrap;
 }
 
 .player-stat-value {
     font-size: 20px;
     font-weight: bold;
     color: var(--secondary-color);
-    min-width: 70px; /* reserve space for up to 3 digits and avoid wrap */
+    min-width: 70px;
     text-align: center;
 }
 
@@ -357,7 +437,6 @@ nav {
     max-width: 100%;
 }
 
-/* Prevent inline stat groups from wrapping (limit to stats and titles only) */
 .player-item .player-stat,
 .player-item .player-title {
     white-space: nowrap;
@@ -374,7 +453,6 @@ nav {
     width: auto !important;
 }
 
-/* Make sure stat labels have no orange box in any ranking list (higher specificity) */
 .ranking-container .player-item .player-stat-label,
 .ranking-container .player-item .player-stat {
     border: none !important;
@@ -388,7 +466,6 @@ nav {
     gap: 8px !important;
 }
 
-/* Extra global override to ensure no orange boxes remain on stats */
 .player-stat-label,
 .player-item .player-stat-label,
 .ranking-container .player-stat-label,
@@ -471,8 +548,34 @@ nav {
 }
 
 /* ===== STATS ===== */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
 
-/* ===== INDICATORS: level, position, small changes ===== */
+.stat-box {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+.stat-box-value {
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--secondary-color);
+    margin-bottom: 5px;
+}
+
+.stat-box-label {
+    font-size: 14px;
+    color: var(--light-text);
+}
+
+/* ===== INDICATORS ===== */
 .level-change-indicator,
 .position-change-indicator,
 .small-change-indicator {
@@ -519,50 +622,21 @@ nav {
     font-size: 13px;
 }
 
-/* Smaller variant for inline stat changes */
 .small-change-indicator {
     padding: 4px 6px;
     border-radius: 10px;
     font-size: 12px;
     gap: 4px;
-    /* space between player name and indicator when inline */
     margin-left: 12px;
 }
 
 .position-change-indicator.up { color: var(--success-color); }
 .position-change-indicator.down { color: var(--accent-color); }
 
-/* Tooltip hint small improvement */
 .level-change-indicator[title],
 .position-change-indicator[title],
 .small-change-indicator[title] {
     cursor: help;
-}
-.stats-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    margin-bottom: 30px;
-}
-
-.stat-box {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: var(--shadow);
-}
-
-.stat-box-value {
-    font-size: 32px;
-    font-weight: bold;
-    color: var(--secondary-color);
-    margin-bottom: 5px;
-}
-
-.stat-box-label {
-    font-size: 14px;
-    color: var(--light-text);
 }
 
 /* ===== SEARCH RESULTS ===== */
@@ -577,6 +651,8 @@ nav {
     margin-bottom: 20px;
     padding-bottom: 15px;
     border-bottom: 2px solid var(--secondary-color);
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .results-header h2 {
@@ -596,10 +672,8 @@ nav {
     border-left: 4px solid var(--accent-color);
     color: var(--accent-color);
     padding: 20px;
-    display: grid;
-    /* Fix first column width so optional indicators don't shift the grid.
-       Use a width large enough to hold 3-digit ranks + medal without wrapping. */
-    grid-template-columns: 110px 2fr 1fr 1fr 1fr 1fr;
+    border-radius: 8px;
+}
 
 /* ===== INFO BOX ===== */
 .info-box {
@@ -627,57 +701,6 @@ footer {
     text-align: center;
     padding: 20px;
     margin-top: 60px;
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
-    nav {
-        padding: 0 20px;
-        height: auto;
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-    }
-
-    .player-item {
-        grid-template-columns: 1fr;
-        border-left: none;
-        border-top: 4px solid var(--secondary-color);
-    }
-
-    .filters-section {
-        grid-template-columns: 1fr;
-    }
-
-    .hero {
-        padding: 40px 20px;
-    }
-
-    .hero h1 {
-        font-size: 28px;
-    }
-}
-
-/* ===== ANIMATIONS ===== */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.card,
-.player-item {
-    animation: fadeIn 0.3s ease;
 }
 
 /* ===== CHANGE INDICATORS ===== */
@@ -756,8 +779,6 @@ footer {
     }
 }
 
-
-
 /* ===== UTILITY CLASSES ===== */
 .text-center {
     text-align: center;
@@ -774,3 +795,420 @@ footer {
 .p-20 {
     padding: 20px;
 }
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card,
+.player-item {
+    animation: fadeIn 0.3s ease;
+}
+
+/* ===== RESPONSIVE STYLES ===== */
+
+/* Large Desktop (1200px+) */
+@media (max-width: 1200px) {
+    .container {
+        padding: 30px 20px;
+    }
+    
+    .player-item {
+        grid-template-columns: 120px minmax(200px, 3fr) minmax(120px, 1.6fr) minmax(120px, 1.6fr) minmax(120px, 1.6fr) 1fr;
+        gap: 15px;
+    }
+}
+
+/* Tablet Landscape & Small Desktop (992px) */
+@media (max-width: 992px) {
+    :root {
+        --sidebar-width: 220px;
+    }
+    
+    .sidebar-logo {
+        font-size: 20px;
+        padding: 20px 15px;
+    }
+    
+    .nav-section-title {
+        font-size: 10px;
+        padding: 8px 15px 6px;
+    }
+    
+    .sidebar-nav .nav-links a {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+    
+    .container {
+        padding: 25px 15px;
+    }
+    
+    .hero {
+        padding: 50px 25px;
+    }
+    
+    .hero h1 {
+        font-size: 36px;
+    }
+    
+    .player-item {
+        grid-template-columns: 100px 1fr 1fr 1fr;
+        gap: 12px;
+    }
+    
+    .player-item > *:nth-child(6) {
+        display: none;
+    }
+    
+    .rank-badge {
+        width: 70px;
+        min-width: 70px;
+        font-size: 16px;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Tablet Portrait & Large Mobile (768px) - Switch to top header */
+@media (max-width: 768px) {
+    :root {
+        --sidebar-width: 0px;
+    }
+    
+    /* Hide sidebar, show hamburger */
+    .sidebar-header {
+        width: 100%;
+        height: auto;
+        position: fixed;
+        left: 0;
+        top: 0;
+        flex-direction: row;
+        align-items: center;
+        padding: 0;
+    }
+    
+    .sidebar-logo {
+        padding: 15px 20px;
+        font-size: 20px;
+        border-bottom: none;
+        margin-left: 50px;
+    }
+    
+    /* Show hamburger */
+    .hamburger {
+        display: flex;
+        position: fixed;
+        top: 12px;
+        left: 12px;
+        z-index: 200;
+    }
+    
+    /* Sidebar becomes mobile menu */
+    .sidebar-nav {
+        display: none;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 60px);
+        background: linear-gradient(180deg, var(--primary-color) 0%, #1a252f 100%);
+        padding: 20px;
+        overflow-y: auto;
+    }
+    
+    .sidebar-nav.active {
+        display: block;
+    }
+    
+    .nav-section {
+        margin-bottom: 20px;
+    }
+    
+    .nav-section-title {
+        padding: 10px 15px;
+        font-size: 12px;
+    }
+    
+    .sidebar-nav .nav-links {
+        padding: 0;
+    }
+    
+    .sidebar-nav .nav-links a {
+        padding: 14px 15px;
+        font-size: 16px;
+    }
+    
+    .sidebar-nav .nav-user {
+        padding: 20px 15px;
+        border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    /* Main content */
+    .main-content {
+        margin-left: 0;
+        padding-top: 60px;
+    }
+    
+    .container {
+        padding: 20px 15px;
+    }
+    
+    .hero {
+        padding: 40px 20px;
+    }
+    
+    .hero h1 {
+        font-size: 28px;
+    }
+    
+    .hero p {
+        font-size: 16px;
+    }
+    
+    /* Player item - stack vertically */
+    .player-item {
+        grid-template-columns: 1fr;
+        border-left: none;
+        border-top: 4px solid var(--secondary-color);
+        gap: 15px;
+        padding: 20px;
+    }
+    
+    .player-item > *:nth-child(1) {
+        order: 1;
+    }
+    
+    .player-item > *:nth-child(2) {
+        order: 2;
+    }
+    
+    .player-item > *:nth-child(3) {
+        order: 3;
+    }
+    
+    .player-item > *:nth-child(4) {
+        order: 4;
+    }
+    
+    .player-item > *:nth-child(5) {
+        order: 5;
+    }
+    
+    .player-item > *:nth-child(6) {
+        order: 6;
+        display: block !important;
+    }
+    
+    .player-name {
+        font-size: 18px;
+    }
+    
+    .player-stat {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+    }
+    
+    .player-stat-value {
+        font-size: 24px;
+    }
+    
+    .player-stat-label {
+        font-size: 11px;
+    }
+    
+    /* Filters */
+    .filters-section {
+        grid-template-columns: 1fr;
+    }
+    
+    .filter-buttons {
+        width: 100%;
+    }
+    
+    .filter-buttons .btn {
+        flex: 1;
+        text-align: center;
+    }
+    
+    /* Stats grid */
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .stat-box {
+        padding: 15px;
+    }
+    
+    .stat-box-value {
+        font-size: 28px;
+    }
+    
+    /* Cards */
+    .card-body {
+        padding: 15px;
+    }
+    
+    .card-header {
+        padding: 15px;
+    }
+    
+    .card-header h3 {
+        font-size: 18px;
+    }
+    
+    .grid-2, .grid-3 {
+        grid-template-columns: 1fr;
+    }
+    
+    .filters-section > div {
+        flex-wrap: wrap;
+    }
+    
+    .filters-section .btn {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+    
+    .results-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    footer {
+        padding: 15px;
+    }
+    
+    footer p {
+        font-size: 14px;
+    }
+}
+
+/* Mobile Landscape (576px) */
+@media (max-width: 576px) {
+    .sidebar-logo {
+        font-size: 18px;
+        padding: 12px 15px;
+        margin-left: 45px;
+    }
+    
+    .hero {
+        padding: 30px 15px;
+    }
+    
+    .hero h1 {
+        font-size: 24px;
+    }
+    
+    .hero p {
+        font-size: 14px;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .player-item {
+        padding: 15px;
+    }
+    
+    .player-lineages {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+    
+    .rank-badge {
+        width: 60px;
+        min-width: 60px;
+        font-size: 14px;
+    }
+    
+    .player-stat-value {
+        font-size: 20px;
+        min-width: auto;
+    }
+    
+    .btn {
+        padding: 10px 16px;
+        font-size: 13px;
+    }
+    
+    .info-box {
+        padding: 15px;
+    }
+    
+    .filter-group select,
+    .filter-group input {
+        font-size: 16px;
+        padding: 12px;
+    }
+    
+    .filters-section > div {
+        flex-direction: column;
+    }
+    
+    .filters-section .btn {
+        width: 100%;
+    }
+}
+
+/* Small Mobile (400px) */
+@media (max-width: 400px) {
+    .hero h1 {
+        font-size: 20px;
+    }
+    
+    .player-name {
+        font-size: 16px;
+    }
+    
+    .stat-box-value {
+        font-size: 24px;
+    }
+    
+    .stat-box-label {
+        font-size: 12px;
+    }
+}
+
+/* Print styles */
+@media print {
+    .sidebar-header,
+    .hamburger,
+    .filter-buttons,
+    footer {
+        display: none !important;
+    }
+    
+    .main-content {
+        margin-left: 0;
+    }
+    
+    .container {
+        padding: 0;
+    }
+    
+    .player-item {
+        break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #ccc;
+    }
+}
+

@@ -8,45 +8,107 @@
     {% block extra_scripts %}{% endblock %}
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">🎮 <span>WYD</span> Ranking</div>
-            <ul class="nav-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="/ranking">Ranking Level</a></li>
-                <li><a href="/ranking-history">📈 Histórico</a></li>
-                <li><a href="/arena/champion">Arena Champion</a></li>
-                <li><a href="/arena/aspirant">Arena Aspirant</a></li>
+    <header class="sidebar-header">
+        <div class="sidebar-logo">
+            🎮 <span>WYD</span> Ranking
+        </div>
+        
+        <!-- Hamburger Menu Button (mobile only) -->
+        <button class="hamburger" onclick="toggleMobileMenu()" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        
+        <nav class="sidebar-nav" id="sidebarNav">
+            <!-- User section first -->
+            <div class="nav-section nav-user-section">
                 {% if user %}
-                <li><a href="/search">Buscar</a></li>
-                {% endif %}
-            </ul>
-            <div class="nav-user">
-                {% if user %}
-                <span class="username">👤 {{ user.username }}</span>
+                <div class="user-info">
+                    <span class="user-icon">👤</span>
+                    <span class="username">{{ user.username }}</span>
+                </div>
                 <a href="/logout" class="logout-btn">Logout</a>
                 {% else %}
                 <a href="/login" class="login-btn">Admin Login</a>
                 {% endif %}
             </div>
+            
+            <div class="nav-section">
+                <div class="nav-section-title">📊 Rankings</div>
+                <ul class="nav-links">
+                    <li><a href="/">🏠 Home</a></li>
+                    <li><a href="/ranking">📈 Level</a></li>
+                    <li><a href="/ranking-history">⏳ Xp Last Days</a></li>
+                </ul>
+            </div>
+            
+            <div class="nav-section">
+                <div class="nav-section-title">⚔️ Arena</div>
+                <ul class="nav-links">
+                    <li><a href="/arena/champion">👑 Champion</a></li>
+                    <li><a href="/arena/aspirant">🌟 Aspirant</a></li>
+                </ul>
+            </div>
+            
+            {% if user %}
+            <div class="nav-section">
+                <div class="nav-section-title">🔍 Busca</div>
+                <ul class="nav-links">
+                    <li><a href="/search">🔎 Buscar Players</a></li>
+                </ul>
+            </div>
+            {% endif %}
         </nav>
     </header>
 
-    <div class="container">
-        {% block hero %}{% endblock %}
-        
-        {% block content %}{% endblock %}
+    <div class="main-content">
+        <div class="container">
+            {% block hero %}{% endblock %}
+            
+            {% block content %}{% endblock %}
 
-        <div class="info-box" style="margin-top: 40px;">
-            <p><small>Última atualização: {{ last_update }}</small></p>
+            <div class="info-box" style="margin-top: 40px;">
+                <p><small>Última atualização: {{ last_update }}</small></p>
+            </div>
         </div>
+
+        <footer>
+            <p>&copy; 2026 WYD Ranking System. Última atualização: {{ last_update }}</p>
+        </footer>
     </div>
 
-    <footer>
-        <p>&copy; 2026 WYD Ranking System. Última atualização: {{ last_update }}</p>
-    </footer>
-
     <script src="{{ url_for('static', path='filters.js') }}"></script>
+    <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const hamburger = document.querySelector('.hamburger');
+            const sidebarNav = document.getElementById('sidebarNav');
+            hamburger.classList.toggle('active');
+            sidebarNav.classList.toggle('active');
+        }
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                const hamburger = document.querySelector('.hamburger');
+                const sidebarNav = document.getElementById('sidebarNav');
+                hamburger.classList.remove('active');
+                sidebarNav.classList.remove('active');
+            });
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            const hamburger = document.querySelector('.hamburger');
+            const sidebarNav = document.getElementById('sidebarNav');
+            if (!hamburger.contains(e.target) && !sidebarNav.contains(e.target)) {
+                hamburger.classList.remove('active');
+                sidebarNav.classList.remove('active');
+            }
+        });
+    </script>
     {% block extra_body_scripts %}{% endblock %}
 </body>
 </html>
+

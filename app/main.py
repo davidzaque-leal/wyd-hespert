@@ -204,14 +204,16 @@ def home(request: Request):
         from app.utils.lineage_utils import LineageUtils
 
         # Calculate lineage stack combinations from level ranking (top 500)
+        # Normalize combinations: A+B should be same as B+A
         lineage_stacks = {}
         level_ranking = data_store.level_ranking[:500]  # Top 500 players
         
         for player in level_ranking:
             celestial = player.get("celestial_lineage") or "Sem"
             subclass = player.get("subclass_lineage") or "Sem"
-            # Create a stack/combo key
-            stack_key = f"{celestial} + {subclass}"
+            # Create normalized key: sort alphabetically so A+B = B+A
+            combo = sorted([celestial, subclass])
+            stack_key = f"{combo[0]} + {combo[1]}"
             lineage_stacks[stack_key] = lineage_stacks.get(stack_key, 0) + 1
 
         total_in_top = len(level_ranking) or 1
