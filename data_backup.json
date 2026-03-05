@@ -46,15 +46,6 @@
       "guild": 2300
     },
     {
-      "name": "Akirus",
-      "level": 439,
-      "celestial_lineage": "Magia Negra",
-      "levelSub": 430,
-      "subclass_lineage": "Magia Negra",
-      "Soma Level": 869,
-      "guild": 2193
-    },
-    {
       "name": "Raduzin",
       "level": 433,
       "celestial_lineage": "Confiança",
@@ -64,13 +55,13 @@
       "guild": 2300
     },
     {
-      "name": "Leonis",
-      "level": 436,
-      "celestial_lineage": "Sobrevivência",
-      "levelSub": 432,
-      "subclass_lineage": "Sobrevivência",
-      "Soma Level": 868,
-      "guild": 2300
+      "name": "Akirus",
+      "level": 439,
+      "celestial_lineage": "Magia Negra",
+      "levelSub": 430,
+      "subclass_lineage": "Magia Negra",
+      "Soma Level": 869,
+      "guild": 2193
     },
     {
       "name": "FREDAO",
@@ -80,6 +71,15 @@
       "subclass_lineage": "Natureza",
       "Soma Level": 868,
       "guild": 2193
+    },
+    {
+      "name": "Leonis",
+      "level": 436,
+      "celestial_lineage": "Sobrevivência",
+      "levelSub": 432,
+      "subclass_lineage": "Sobrevivência",
+      "Soma Level": 868,
+      "guild": 2300
     },
     {
       "name": "grauzera-",
@@ -109,13 +109,13 @@
       "guild": 2193
     },
     {
-      "name": "Raften-",
-      "level": 433,
-      "celestial_lineage": "Captura",
-      "levelSub": 434,
-      "subclass_lineage": "Natureza",
+      "name": "Qtpie",
+      "level": 435,
+      "celestial_lineage": "Magia Branca",
+      "levelSub": 432,
+      "subclass_lineage": "Confiança",
       "Soma Level": 867,
-      "guild": 2193
+      "guild": 2300
     },
     {
       "name": "-CHAD",
@@ -127,22 +127,13 @@
       "guild": 2308
     },
     {
-      "name": "Qtpie",
-      "level": 435,
-      "celestial_lineage": "Magia Branca",
-      "levelSub": 432,
-      "subclass_lineage": "Confiança",
+      "name": "Raften-",
+      "level": 433,
+      "celestial_lineage": "Captura",
+      "levelSub": 434,
+      "subclass_lineage": "Natureza",
       "Soma Level": 867,
-      "guild": 2300
-    },
-    {
-      "name": "DELIVERYGOOD",
-      "level": 431,
-      "celestial_lineage": "Magia Negra",
-      "levelSub": 435,
-      "subclass_lineage": "Confiança",
-      "Soma Level": 866,
-      "guild": 2185
+      "guild": 2193
     },
     {
       "name": "-Minjiya-",
@@ -163,13 +154,22 @@
       "guild": 2300
     },
     {
-      "name": "-HellKnight-",
-      "level": 430,
-      "celestial_lineage": "Sobrevivência",
+      "name": "DELIVERYGOOD",
+      "level": 431,
+      "celestial_lineage": "Magia Negra",
       "levelSub": 435,
-      "subclass_lineage": "Sobrevivência",
+      "subclass_lineage": "Confiança",
+      "Soma Level": 866,
+      "guild": 2185
+    },
+    {
+      "name": "ThiegoxD",
+      "level": 431,
+      "celestial_lineage": "Magia Negra",
+      "levelSub": 434,
+      "subclass_lineage": "Magia Negra",
       "Soma Level": 865,
-      "guild": 2308
+      "guild": 2193
     },
     {
       "name": "-flowgg-",
@@ -190,13 +190,13 @@
       "guild": 2300
     },
     {
-      "name": "ThiegoxD",
-      "level": 431,
-      "celestial_lineage": "Magia Negra",
-      "levelSub": 434,
-      "subclass_lineage": "Magia Negra",
+      "name": "-HellKnight-",
+      "level": 430,
+      "celestial_lineage": "Sobrevivência",
+      "levelSub": 435,
+      "subclass_lineage": "Sobrevivência",
       "Soma Level": 865,
-      "guild": 2193
+      "guild": 2308
     },
     {
       "name": "Gohann",
@@ -206,15 +206,6 @@
       "subclass_lineage": "Natureza",
       "Soma Level": 865,
       "guild": 1862
-    },
-    {
-      "name": "-MADMAN-",
-      "level": 433,
-      "celestial_lineage": "Sobrevivência",
-      "levelSub": 431,
-      "subclass_lineage": "Natureza",
-      "Soma Level": 864,
-      "guild": 2300
     },
     {
       "name": "iPhone4S",
@@ -280,13 +271,13 @@
       "guild": 1862
     },
     {
-      "name": "xDoidoLoko",
-      "level": 431,
-      "celestial_lineage": "Confiança",
-      "levelSub": 432,
-      "subclass_lineage": "Magia Negra",
-      "Soma Level": 863,
-      "guild": 2308
+      "name": "-MADMAN-",
+      "level": 433,
+      "celestial_lineage": "Sobrevivência",
+      "levelSub": 431,
+      "subclass_lineage": "Natureza",
+      "Soma Level": 864,
+      "guild": 2300
     },
     {
       "name": "DogZZ",
@@ -298,13 +289,13 @@
       "guild": 2193
     },
     {
-      "name": "Fakkri",
+      "name": "Moriveth",
       "level": 431,
-      "celestial_lineage": "Magia Negra",
+      "celestial_lineage": "Magia Especial",
       "levelSub": 432,
-      "subclass_lineage": "Confiança",
+      "subclass_lineage": "Magia Negra",
       "Soma Level": 863,
-      "guild": 2193
+      "guild": null
     },
     {
       "name": "Adoniis",
@@ -314,6 +305,15 @@
       "subclass_lineage": "Magia Branca",
       "Soma Level": 863,
       "guild": 2194
+    },
+    {
+      "name": "Fakkri",
+      "level": 431,
+      "celestial_lineage": "Magia Negra",
+      "levelSub": 432,
+      "subclass_lineage": "Confiança",
+      "Soma Level": 863,
+      "guild": 2193
     },
     {
       "name": "KyungSoon",
@@ -334,15 +334,6 @@
       "guild": 346
     },
     {
-      "name": "Moriveth",
-      "level": 431,
-      "celestial_lineage": "Magia Especial",
-      "levelSub": 432,
-      "subclass_lineage": "Magia Negra",
-      "Soma Level": 863,
-      "guild": null
-    },
-    {
       "name": "-TERROR",
       "level": 431,
       "celestial_lineage": "Natureza",
@@ -361,6 +352,15 @@
       "guild": null
     },
     {
+      "name": "xDoidoLoko",
+      "level": 431,
+      "celestial_lineage": "Confiança",
+      "levelSub": 432,
+      "subclass_lineage": "Magia Negra",
+      "Soma Level": 863,
+      "guild": 2308
+    },
+    {
       "name": "xPesTinHa10x",
       "level": 431,
       "celestial_lineage": "Natureza",
@@ -370,15 +370,6 @@
       "guild": 2308
     },
     {
-      "name": "-GoDeViL",
-      "level": 431,
-      "celestial_lineage": "Confiança",
-      "levelSub": 431,
-      "subclass_lineage": "Magia Branca",
-      "Soma Level": 862,
-      "guild": 1862
-    },
-    {
       "name": "meury---",
       "level": 432,
       "celestial_lineage": "Natureza",
@@ -386,6 +377,15 @@
       "subclass_lineage": "Captura",
       "Soma Level": 862,
       "guild": 2308
+    },
+    {
+      "name": "TunTunGoiaba",
+      "level": 430,
+      "celestial_lineage": "Magia Negra",
+      "levelSub": 432,
+      "subclass_lineage": "Magia Negra",
+      "Soma Level": 862,
+      "guild": null
     },
     {
       "name": "jnr-",
@@ -415,15 +415,6 @@
       "guild": 2308
     },
     {
-      "name": "Awonim",
-      "level": 430,
-      "celestial_lineage": "Confiança",
-      "levelSub": 432,
-      "subclass_lineage": "Confiança",
-      "Soma Level": 862,
-      "guild": 2194
-    },
-    {
       "name": "chaba",
       "level": 431,
       "celestial_lineage": "Magia Negra",
@@ -433,13 +424,13 @@
       "guild": 2194
     },
     {
-      "name": "TunTunGoiaba",
-      "level": 430,
-      "celestial_lineage": "Magia Negra",
-      "levelSub": 432,
-      "subclass_lineage": "Magia Negra",
+      "name": "���L��o��",
+      "level": 431,
+      "celestial_lineage": "Confiança",
+      "levelSub": 431,
+      "subclass_lineage": "Confiança",
       "Soma Level": 862,
-      "guild": null
+      "guild": 2241
     },
     {
       "name": "uCSR",
@@ -469,15 +460,6 @@
       "guild": null
     },
     {
-      "name": "���L��o��",
-      "level": 431,
-      "celestial_lineage": "Confiança",
-      "levelSub": 431,
-      "subclass_lineage": "Confiança",
-      "Soma Level": 862,
-      "guild": 2241
-    },
-    {
       "name": "-oliveedu-",
       "level": 430,
       "celestial_lineage": "Natureza",
@@ -485,6 +467,15 @@
       "subclass_lineage": "Natureza",
       "Soma Level": 862,
       "guild": null
+    },
+    {
+      "name": "Awonim",
+      "level": 430,
+      "celestial_lineage": "Confiança",
+      "levelSub": 432,
+      "subclass_lineage": "Confiança",
+      "Soma Level": 862,
+      "guild": 2194
     },
     {
       "name": "scarpz",
@@ -496,13 +487,22 @@
       "guild": 2300
     },
     {
-      "name": "-Antnick-",
-      "level": 430,
-      "celestial_lineage": "Sobrevivência",
+      "name": "-GoDeViL",
+      "level": 431,
+      "celestial_lineage": "Confiança",
       "levelSub": 431,
-      "subclass_lineage": "Sobrevivência",
+      "subclass_lineage": "Magia Branca",
+      "Soma Level": 862,
+      "guild": 1862
+    },
+    {
+      "name": "-EcstasyPT-",
+      "level": 430,
+      "celestial_lineage": "Magia Negra",
+      "levelSub": 431,
+      "subclass_lineage": "Magia Negra",
       "Soma Level": 861,
-      "guild": null
+      "guild": 2308
     },
     {
       "name": "TuniCAO",
@@ -514,13 +514,13 @@
       "guild": 2308
     },
     {
-      "name": "yTr0n",
-      "level": 430,
-      "celestial_lineage": "Magia Negra",
-      "levelSub": 431,
-      "subclass_lineage": "Confiança",
+      "name": "DARKZAOo",
+      "level": 431,
+      "celestial_lineage": "Sobrevivência",
+      "levelSub": 430,
+      "subclass_lineage": "Sobrevivência",
       "Soma Level": 861,
-      "guild": 1862
+      "guild": 2308
     },
     {
       "name": "Aorb",
@@ -541,15 +541,6 @@
       "guild": 2193
     },
     {
-      "name": "YUMA-",
-      "level": 431,
-      "celestial_lineage": "Confiança",
-      "levelSub": 430,
-      "subclass_lineage": "Confiança",
-      "Soma Level": 861,
-      "guild": 2300
-    },
-    {
       "name": "-Leseux",
       "level": 431,
       "celestial_lineage": "Confiança",
@@ -559,13 +550,22 @@
       "guild": 2193
     },
     {
-      "name": "DARKZAOo",
+      "name": "ItzMrnT",
       "level": 431,
-      "celestial_lineage": "Sobrevivência",
+      "celestial_lineage": "Captura",
       "levelSub": 430,
-      "subclass_lineage": "Sobrevivência",
+      "subclass_lineage": "Natureza",
       "Soma Level": 861,
-      "guild": 2308
+      "guild": 2193
+    },
+    {
+      "name": "LorDKaiser",
+      "level": 430,
+      "celestial_lineage": "Magia Negra",
+      "levelSub": 431,
+      "subclass_lineage": "Confiança",
+      "Soma Level": 861,
+      "guild": null
     },
     {
       "name": "Ver0",
@@ -595,24 +595,6 @@
       "guild": 2193
     },
     {
-      "name": "LorDKaiser",
-      "level": 430,
-      "celestial_lineage": "Magia Negra",
-      "levelSub": 431,
-      "subclass_lineage": "Confiança",
-      "Soma Level": 861,
-      "guild": null
-    },
-    {
-      "name": "-EcstasyPT-",
-      "level": 430,
-      "celestial_lineage": "Magia Negra",
-      "levelSub": 431,
-      "subclass_lineage": "Magia Negra",
-      "Soma Level": 861,
-      "guild": 2308
-    },
-    {
       "name": "SnowBeer",
       "level": 430,
       "celestial_lineage": "Magia Negra",
@@ -640,13 +622,31 @@
       "guild": 2300
     },
     {
-      "name": "ItzMrnT",
-      "level": 431,
-      "celestial_lineage": "Captura",
-      "levelSub": 430,
-      "subclass_lineage": "Natureza",
+      "name": "-Antnick-",
+      "level": 430,
+      "celestial_lineage": "Sobrevivência",
+      "levelSub": 431,
+      "subclass_lineage": "Sobrevivência",
       "Soma Level": 861,
-      "guild": 2193
+      "guild": null
+    },
+    {
+      "name": "yTr0n",
+      "level": 430,
+      "celestial_lineage": "Magia Negra",
+      "levelSub": 431,
+      "subclass_lineage": "Confiança",
+      "Soma Level": 861,
+      "guild": 1862
+    },
+    {
+      "name": "YUMA-",
+      "level": 431,
+      "celestial_lineage": "Confiança",
+      "levelSub": 430,
+      "subclass_lineage": "Confiança",
+      "Soma Level": 861,
+      "guild": 2300
     },
     {
       "name": "Ryuujinn",
@@ -667,6 +667,15 @@
       "guild": 2300
     },
     {
+      "name": "memset",
+      "level": 430,
+      "celestial_lineage": "Natureza",
+      "levelSub": 430,
+      "subclass_lineage": "Natureza",
+      "Soma Level": 860,
+      "guild": 2300
+    },
+    {
       "name": "Jamelllao",
       "level": 430,
       "celestial_lineage": "Natureza",
@@ -676,25 +685,16 @@
       "guild": 2308
     },
     {
-      "name": "Ayeron",
+      "name": "KyriosBaraK",
       "level": 430,
-      "celestial_lineage": "Natureza",
+      "celestial_lineage": "Sobrevivência",
       "levelSub": 430,
       "subclass_lineage": "Natureza",
       "Soma Level": 860,
-      "guild": 2300
+      "guild": 2308
     },
     {
-      "name": "-N-O-E-L-",
-      "level": 430,
-      "celestial_lineage": "Natureza",
-      "levelSub": 430,
-      "subclass_lineage": "Captura",
-      "Soma Level": 860,
-      "guild": 2194
-    },
-    {
-      "name": "memset",
+      "name": "Ayeron",
       "level": 430,
       "celestial_lineage": "Natureza",
       "levelSub": 430,
@@ -712,13 +712,13 @@
       "guild": 1708
     },
     {
-      "name": "KyriosBaraK",
+      "name": "-N-O-E-L-",
       "level": 430,
-      "celestial_lineage": "Sobrevivência",
+      "celestial_lineage": "Natureza",
       "levelSub": 430,
-      "subclass_lineage": "Natureza",
+      "subclass_lineage": "Captura",
       "Soma Level": 860,
-      "guild": 2308
+      "guild": 2194
     },
     {
       "name": "-BIXOGRILO-",
@@ -739,15 +739,6 @@
       "guild": 1708
     },
     {
-      "name": "-PATO-MANCO-",
-      "level": 429,
-      "celestial_lineage": "Natureza",
-      "levelSub": 430,
-      "subclass_lineage": "Captura",
-      "Soma Level": 859,
-      "guild": 1862
-    },
-    {
       "name": "Bigods",
       "level": 432,
       "celestial_lineage": "Evocação",
@@ -757,15 +748,6 @@
       "guild": 2041
     },
     {
-      "name": "Paloff",
-      "level": 430,
-      "celestial_lineage": "Natureza",
-      "levelSub": 429,
-      "subclass_lineage": "Natureza",
-      "Soma Level": 859,
-      "guild": null
-    },
-    {
       "name": "SkaiKruS",
       "level": 430,
       "celestial_lineage": "Sobrevivência",
@@ -773,6 +755,24 @@
       "subclass_lineage": "Sobrevivência",
       "Soma Level": 859,
       "guild": 2308
+    },
+    {
+      "name": "-PATO-MANCO-",
+      "level": 429,
+      "celestial_lineage": "Natureza",
+      "levelSub": 430,
+      "subclass_lineage": "Captura",
+      "Soma Level": 859,
+      "guild": 1862
+    },
+    {
+      "name": "Paloff",
+      "level": 430,
+      "celestial_lineage": "Natureza",
+      "levelSub": 429,
+      "subclass_lineage": "Natureza",
+      "Soma Level": 859,
+      "guild": null
     },
     {
       "name": "OsFartura",
@@ -793,15 +793,6 @@
       "guild": 1862
     },
     {
-      "name": "Guapo-",
-      "level": 431,
-      "celestial_lineage": "Magia Branca",
-      "levelSub": 427,
-      "subclass_lineage": "Elemental",
-      "Soma Level": 858,
-      "guild": 2300
-    },
-    {
       "name": "Xuju",
       "level": 429,
       "celestial_lineage": "Sobrevivência",
@@ -811,13 +802,13 @@
       "guild": 1862
     },
     {
-      "name": "xLanes",
-      "level": 428,
-      "celestial_lineage": "Captura",
-      "levelSub": 430,
-      "subclass_lineage": "Captura",
+      "name": "Guapo-",
+      "level": 431,
+      "celestial_lineage": "Magia Branca",
+      "levelSub": 427,
+      "subclass_lineage": "Elemental",
       "Soma Level": 858,
-      "guild": 2194
+      "guild": 2300
     },
     {
       "name": "-Kilerzinho-",
@@ -829,6 +820,15 @@
       "guild": 13
     },
     {
+      "name": "xLanes",
+      "level": 428,
+      "celestial_lineage": "Captura",
+      "levelSub": 430,
+      "subclass_lineage": "Captura",
+      "Soma Level": 858,
+      "guild": 2194
+    },
+    {
       "name": "GtOkAi",
       "level": 431,
       "celestial_lineage": "Magia Especial",
@@ -838,15 +838,6 @@
       "guild": 2185
     },
     {
-      "name": "sh4bba",
-      "level": 427,
-      "celestial_lineage": "Trans",
-      "levelSub": 430,
-      "subclass_lineage": "Natureza",
-      "Soma Level": 857,
-      "guild": 2163
-    },
-    {
       "name": "-TiuBarba-",
       "level": 428,
       "celestial_lineage": "Sobrevivência",
@@ -854,6 +845,15 @@
       "subclass_lineage": "Captura",
       "Soma Level": 857,
       "guild": null
+    },
+    {
+      "name": "sh4bba",
+      "level": 427,
+      "celestial_lineage": "Trans",
+      "levelSub": 430,
+      "subclass_lineage": "Natureza",
+      "Soma Level": 857,
+      "guild": 2163
     },
     {
       "name": "DeaD",
@@ -872,6 +872,15 @@
       "subclass_lineage": "Confiança",
       "Soma Level": 857,
       "guild": 2193
+    },
+    {
+      "name": "itsDravyn",
+      "level": 430,
+      "celestial_lineage": "Magia Negra",
+      "levelSub": 426,
+      "subclass_lineage": "Sobrevivência",
+      "Soma Level": 856,
+      "guild": 2300
     },
     {
       "name": "Tartaglione",
@@ -899,15 +908,6 @@
       "subclass_lineage": "Captura",
       "Soma Level": 856,
       "guild": null
-    },
-    {
-      "name": "itsDravyn",
-      "level": 430,
-      "celestial_lineage": "Magia Negra",
-      "levelSub": 426,
-      "subclass_lineage": "Sobrevivência",
-      "Soma Level": 856,
-      "guild": 2300
     },
     {
       "name": "Kduzin",
@@ -964,6 +964,15 @@
       "guild": 2193
     },
     {
+      "name": "BIG-WARRIOR",
+      "level": 425,
+      "celestial_lineage": "Natureza",
+      "levelSub": 430,
+      "subclass_lineage": "Natureza",
+      "Soma Level": 855,
+      "guild": 2308
+    },
+    {
       "name": "-Baray-",
       "level": 430,
       "celestial_lineage": "Sobrevivência",
@@ -980,24 +989,6 @@
       "subclass_lineage": "Captura",
       "Soma Level": 855,
       "guild": 2308
-    },
-    {
-      "name": "BIG-WARRIOR",
-      "level": 425,
-      "celestial_lineage": "Natureza",
-      "levelSub": 430,
-      "subclass_lineage": "Natureza",
-      "Soma Level": 855,
-      "guild": 2308
-    },
-    {
-      "name": "VeridaS",
-      "level": 430,
-      "celestial_lineage": "Natureza",
-      "levelSub": 425,
-      "subclass_lineage": "Magia Especial",
-      "Soma Level": 855,
-      "guild": 2185
     },
     {
       "name": "xuxinhaloco",
@@ -1018,6 +1009,15 @@
       "guild": 2300
     },
     {
+      "name": "VeridaS",
+      "level": 430,
+      "celestial_lineage": "Natureza",
+      "levelSub": 425,
+      "subclass_lineage": "Magia Especial",
+      "Soma Level": 855,
+      "guild": 2185
+    },
+    {
       "name": "-AxeGod-97",
       "level": 424,
       "celestial_lineage": "Natureza",
@@ -1025,6 +1025,15 @@
       "subclass_lineage": "Sobrevivência",
       "Soma Level": 854,
       "guild": 2241
+    },
+    {
+      "name": "Ragnnnarok",
+      "level": 425,
+      "celestial_lineage": "Sobrevivência",
+      "levelSub": 429,
+      "subclass_lineage": "Sobrevivência",
+      "Soma Level": 854,
+      "guild": 1862
     },
     {
       "name": "JOW-JOW",
@@ -1072,15 +1081,6 @@
       "guild": 2266
     },
     {
-      "name": "Ragnnnarok",
-      "level": 425,
-      "celestial_lineage": "Sobrevivência",
-      "levelSub": 429,
-      "subclass_lineage": "Sobrevivência",
-      "Soma Level": 854,
-      "guild": 1862
-    },
-    {
       "name": "-Salgadinho-",
       "level": 430,
       "celestial_lineage": "Sobrevivência",
@@ -1097,24 +1097,6 @@
       "subclass_lineage": "Captura",
       "Soma Level": 853,
       "guild": 2194
-    },
-    {
-      "name": "M3MORI3S",
-      "level": 427,
-      "celestial_lineage": "Sobrevivência",
-      "levelSub": 426,
-      "subclass_lineage": "Captura",
-      "Soma Level": 853,
-      "guild": 1721
-    },
-    {
-      "name": "SmithBacaL",
-      "level": 427,
-      "celestial_lineage": "Sobrevivência",
-      "levelSub": 426,
-      "subclass_lineage": "Sobrevivência",
-      "Soma Level": 853,
-      "guild": 2288
     },
     {
       "name": "HippieSujo",
@@ -1153,15 +1135,6 @@
       "guild": 2300
     },
     {
-      "name": "Tenshinham",
-      "level": 425,
-      "celestial_lineage": "Trans",
-      "levelSub": 428,
-      "subclass_lineage": "Natureza",
-      "Soma Level": 853,
-      "guild": 2300
-    },
-    {
       "name": "-Laga",
       "level": 423,
       "celestial_lineage": "Sobrevivência",
@@ -1180,13 +1153,40 @@
       "guild": 1862
     },
     {
-      "name": "zVoid",
-      "level": 430,
-      "celestial_lineage": "Natureza",
-      "levelSub": 422,
+      "name": "Tenshinham",
+      "level": 425,
+      "celestial_lineage": "Trans",
+      "levelSub": 428,
+      "subclass_lineage": "Natureza",
+      "Soma Level": 853,
+      "guild": 2300
+    },
+    {
+      "name": "SmithBacaL",
+      "level": 427,
+      "celestial_lineage": "Sobrevivência",
+      "levelSub": 426,
+      "subclass_lineage": "Sobrevivência",
+      "Soma Level": 853,
+      "guild": 2288
+    },
+    {
+      "name": "M3MORI3S",
+      "level": 427,
+      "celestial_lineage": "Sobrevivência",
+      "levelSub": 426,
+      "subclass_lineage": "Captura",
+      "Soma Level": 853,
+      "guild": 1721
+    },
+    {
+      "name": "SomeBody-",
+      "level": 423,
+      "celestial_lineage": "Trans",
+      "levelSub": 429,
       "subclass_lineage": "Natureza",
       "Soma Level": 852,
-      "guild": 2041
+      "guild": 1862
     },
     {
       "name": "-SrGumball",
@@ -1216,6 +1216,15 @@
       "guild": 2300
     },
     {
+      "name": "zVoid",
+      "level": 430,
+      "celestial_lineage": "Natureza",
+      "levelSub": 422,
+      "subclass_lineage": "Natureza",
+      "Soma Level": 852,
+      "guild": 2041
+    },
+    {
       "name": "DeathQuick",
       "level": 427,
       "celestial_lineage": "Sobrevivência",
@@ -1223,6 +1232,15 @@
       "subclass_lineage": "Natureza",
       "Soma Level": 852,
       "guild": 1862
+    },
+    {
+      "name": "-luizkmx-",
+      "level": 423,
+      "celestial_lineage": "Trans",
+      "levelSub": 429,
+      "subclass_lineage": "Natureza",
+      "Soma Level": 852,
+      "guild": 2308
     },
     {
       "name": "piros",
@@ -1252,15 +1270,6 @@
       "guild": 2305
     },
     {
-      "name": "-luizkmx-",
-      "level": 423,
-      "celestial_lineage": "Trans",
-      "levelSub": 429,
-      "subclass_lineage": "Natureza",
-      "Soma Level": 852,
-      "guild": 2308
-    },
-    {
       "name": "raru",
       "level": 422,
       "celestial_lineage": "Confiança",
@@ -1268,15 +1277,6 @@
       "subclass_lineage": "Magia Especial",
       "Soma Level": 852,
       "guild": 2308
-    },
-    {
-      "name": "SomeBody-",
-      "level": 423,
-      "celestial_lineage": "Trans",
-      "levelSub": 429,
-      "subclass_lineage": "Natureza",
-      "Soma Level": 852,
-      "guild": 1862
     },
     {
       "name": "Alkapone",
@@ -1342,13 +1342,13 @@
       "guild": 2041
     },
     {
-      "name": "lGlAdIaDoRl",
-      "level": 430,
+      "name": "vaitomano",
+      "level": 428,
       "celestial_lineage": "Magia Negra",
-      "levelSub": 421,
+      "levelSub": 423,
       "subclass_lineage": "Magia Especial",
       "Soma Level": 851,
-      "guild": null
+      "guild": 2308
     },
     {
       "name": "Didio-Lino",
@@ -1360,13 +1360,13 @@
       "guild": 2041
     },
     {
-      "name": "vaitomano",
-      "level": 428,
-      "celestial_lineage": "Magia Negra",
-      "levelSub": 423,
-      "subclass_lineage": "Magia Especial",
+      "name": "-shatter",
+      "level": 430,
+      "celestial_lineage": "Trans",
+      "levelSub": 421,
+      "subclass_lineage": "Natureza",
       "Soma Level": 851,
-      "guild": 2308
+      "guild": 511
     },
     {
       "name": "ULTREDRAGNAR",
@@ -1376,15 +1376,6 @@
       "subclass_lineage": "Magia Especial",
       "Soma Level": 851,
       "guild": null
-    },
-    {
-      "name": "-shatter",
-      "level": 430,
-      "celestial_lineage": "Trans",
-      "levelSub": 421,
-      "subclass_lineage": "Natureza",
-      "Soma Level": 851,
-      "guild": 511
     },
     {
       "name": "BemTiVi",
@@ -1403,6 +1394,15 @@
       "subclass_lineage": "Natureza",
       "Soma Level": 851,
       "guild": 2194
+    },
+    {
+      "name": "lGlAdIaDoRl",
+      "level": 430,
+      "celestial_lineage": "Magia Negra",
+      "levelSub": 421,
+      "subclass_lineage": "Magia Especial",
+      "Soma Level": 851,
+      "guild": null
     },
     {
       "name": "OFisicodeOz",
@@ -1432,20 +1432,20 @@
       "guild": 2185
     },
     {
-      "name": "PK-Xita",
-      "level": 421,
-      "celestial_lineage": "Natureza",
-      "levelSub": 429,
-      "subclass_lineage": "Natureza",
-      "Soma Level": 850,
-      "guild": 2300
-    },
-    {
       "name": "FizaNow",
       "level": 425,
       "celestial_lineage": "Natureza",
       "levelSub": 425,
       "subclass_lineage": "Captura",
+      "Soma Level": 850,
+      "guild": null
+    },
+    {
+      "name": "-Parkmann-",
+      "level": 425,
+      "celestial_lineage": "Sobrevivência",
+      "levelSub": 425,
+      "subclass_lineage": "Natureza",
       "Soma Level": 850,
       "guild": null
     },
@@ -1486,13 +1486,13 @@
       "guild": 2308
     },
     {
-      "name": "-Parkmann-",
-      "level": 425,
-      "celestial_lineage": "Sobrevivência",
-      "levelSub": 425,
+      "name": "PK-Xita",
+      "level": 421,
+      "celestial_lineage": "Natureza",
+      "levelSub": 429,
       "subclass_lineage": "Natureza",
       "Soma Level": 850,
-      "guild": null
+      "guild": 2300
     },
     {
       "name": "DRAGON-F3N1X",
@@ -1531,6 +1531,15 @@
       "guild": null
     },
     {
+      "name": "Flaaap",
+      "level": 424,
+      "celestial_lineage": "Magia Branca",
+      "levelSub": 425,
+      "subclass_lineage": "Natureza",
+      "Soma Level": 849,
+      "guild": 2193
+    },
+    {
       "name": "Keffra",
       "level": 425,
       "celestial_lineage": "Natureza",
@@ -1547,15 +1556,6 @@
       "subclass_lineage": "Magia Especial",
       "Soma Level": 849,
       "guild": 2308
-    },
-    {
-      "name": "Flaaap",
-      "level": 424,
-      "celestial_lineage": "Magia Branca",
-      "levelSub": 425,
-      "subclass_lineage": "Natureza",
-      "Soma Level": 849,
-      "guild": 2193
     },
     {
       "name": "SemIdeiaz",
@@ -1585,15 +1585,6 @@
       "guild": 2193
     },
     {
-      "name": "xnxxxxxx",
-      "level": 423,
-      "celestial_lineage": "Magia Negra",
-      "levelSub": 425,
-      "subclass_lineage": "Magia Negra",
-      "Soma Level": 848,
-      "guild": null
-    },
-    {
       "name": "Jovics",
       "level": 425,
       "celestial_lineage": "Natureza",
@@ -1621,13 +1612,13 @@
       "guild": null
     },
     {
-      "name": "AleItada",
+      "name": "xnxxxxxx",
       "level": 423,
-      "celestial_lineage": "Natureza",
+      "celestial_lineage": "Magia Negra",
       "levelSub": 425,
-      "subclass_lineage": "Natureza",
+      "subclass_lineage": "Magia Negra",
       "Soma Level": 848,
-      "guild": 2308
+      "guild": null
     },
     {
       "name": "Bias",
@@ -1639,13 +1630,13 @@
       "guild": null
     },
     {
-      "name": "SnouBert",
-      "level": 424,
-      "celestial_lineage": "Confiança",
-      "levelSub": 424,
-      "subclass_lineage": "Magia Negra",
+      "name": "-DarkShadow-",
+      "level": 425,
+      "celestial_lineage": "Sobrevivência",
+      "levelSub": 423,
+      "subclass_lineage": "Natureza",
       "Soma Level": 848,
-      "guild": 1862
+      "guild": 2308
     },
     {
       "name": "S4NGUINAR1O",
@@ -1666,13 +1657,22 @@
       "guild": null
     },
     {
-      "name": "-DarkShadow-",
+      "name": "Artykun0",
       "level": 425,
-      "celestial_lineage": "Sobrevivência",
+      "celestial_lineage": "Natureza",
       "levelSub": 423,
       "subclass_lineage": "Natureza",
       "Soma Level": 848,
       "guild": 2308
+    },
+    {
+      "name": "SnouBert",
+      "level": 424,
+      "celestial_lineage": "Confiança",
+      "levelSub": 424,
+      "subclass_lineage": "Magia Negra",
+      "Soma Level": 848,
+      "guild": 1862
     },
     {
       "name": "Pescador01",
@@ -1684,10 +1684,10 @@
       "guild": 1862
     },
     {
-      "name": "Artykun0",
-      "level": 425,
+      "name": "AleItada",
+      "level": 423,
       "celestial_lineage": "Natureza",
-      "levelSub": 423,
+      "levelSub": 425,
       "subclass_lineage": "Natureza",
       "Soma Level": 848,
       "guild": 2308
@@ -1720,13 +1720,13 @@
       "guild": 2194
     },
     {
-      "name": "Syzttem",
-      "level": 423,
-      "celestial_lineage": "Trans",
-      "levelSub": 424,
-      "subclass_lineage": "Trans",
+      "name": "c4ladeX",
+      "level": 425,
+      "celestial_lineage": "Sobrevivência",
+      "levelSub": 422,
+      "subclass_lineage": "Sobrevivência",
       "Soma Level": 847,
-      "guild": null
+      "guild": 2300
     },
     {
       "name": "II-CACIKE-II",
@@ -1736,15 +1736,6 @@
       "subclass_lineage": "Elemental",
       "Soma Level": 847,
       "guild": null
-    },
-    {
-      "name": "c4ladeX",
-      "level": 425,
-      "celestial_lineage": "Sobrevivência",
-      "levelSub": 422,
-      "subclass_lineage": "Sobrevivência",
-      "Soma Level": 847,
-      "guild": 2300
     },
     {
       "name": "Shavana",
@@ -1765,13 +1756,13 @@
       "guild": 2194
     },
     {
-      "name": "GusttaPro",
+      "name": "AntiDepress",
       "level": 424,
-      "celestial_lineage": "Trans",
+      "celestial_lineage": "Sobrevivência",
       "levelSub": 423,
-      "subclass_lineage": "Trans",
+      "subclass_lineage": "Natureza",
       "Soma Level": 847,
-      "guild": null
+      "guild": 2284
     },
     {
       "name": "Limpis",
@@ -1779,6 +1770,15 @@
       "celestial_lineage": "Captura",
       "levelSub": 421,
       "subclass_lineage": "Natureza",
+      "Soma Level": 847,
+      "guild": null
+    },
+    {
+      "name": "GusttaPro",
+      "level": 424,
+      "celestial_lineage": "Trans",
+      "levelSub": 423,
+      "subclass_lineage": "Trans",
       "Soma Level": 847,
       "guild": null
     },
@@ -1819,15 +1819,6 @@
       "guild": 2193
     },
     {
-      "name": "Pichaku",
-      "level": 425,
-      "celestial_lineage": "Natureza",
-      "levelSub": 422,
-      "subclass_lineage": "Natureza",
-      "Soma Level": 847,
-      "guild": 2308
-    },
-    {
       "name": "MINEIRINHO0",
       "level": 424,
       "celestial_lineage": "Confiança",
@@ -1837,6 +1828,15 @@
       "guild": null
     },
     {
+      "name": "Pichaku",
+      "level": 425,
+      "celestial_lineage": "Natureza",
+      "levelSub": 422,
+      "subclass_lineage": "Natureza",
+      "Soma Level": 847,
+      "guild": 2308
+    },
+    {
       "name": "zNoia",
       "level": 426,
       "celestial_lineage": "Magia Negra",
@@ -1844,15 +1844,6 @@
       "subclass_lineage": "Magia Especial",
       "Soma Level": 847,
       "guild": null
-    },
-    {
-      "name": "AntiDepress",
-      "level": 424,
-      "celestial_lineage": "Sobrevivência",
-      "levelSub": 423,
-      "subclass_lineage": "Natureza",
-      "Soma Level": 847,
-      "guild": 2284
     },
     {
       "name": "-GalloS-",
@@ -1873,11 +1864,11 @@
       "guild": 511
     },
     {
-      "name": "ThiagoO",
-      "level": 420,
-      "celestial_lineage": "Magia Negra",
-      "levelSub": 427,
-      "subclass_lineage": "Magia Negra",
+      "name": "Syzttem",
+      "level": 423,
+      "celestial_lineage": "Trans",
+      "levelSub": 424,
+      "subclass_lineage": "Trans",
       "Soma Level": 847,
       "guild": null
     },
@@ -1887,6 +1878,15 @@
       "celestial_lineage": "Natureza",
       "levelSub": 420,
       "subclass_lineage": "Captura",
+      "Soma Level": 847,
+      "guild": null
+    },
+    {
+      "name": "ThiagoO",
+      "level": 420,
+      "celestial_lineage": "Magia Negra",
+      "levelSub": 427,
+      "subclass_lineage": "Magia Negra",
       "Soma Level": 847,
       "guild": null
     },
@@ -1918,15 +1918,6 @@
       "guild": null
     },
     {
-      "name": "Cnut",
-      "level": 424,
-      "celestial_lineage": "Sobrevivência",
-      "levelSub": 422,
-      "subclass_lineage": "Captura",
-      "Soma Level": 846,
-      "guild": null
-    },
-    {
       "name": "-FENTA-",
       "level": 422,
       "celestial_lineage": "Captura",
@@ -1934,24 +1925,6 @@
       "subclass_lineage": "Captura",
       "Soma Level": 846,
       "guild": 2308
-    },
-    {
-      "name": "-Pityzera-",
-      "level": 425,
-      "celestial_lineage": "Sobrevivência",
-      "levelSub": 421,
-      "subclass_lineage": "Sobrevivência",
-      "Soma Level": 846,
-      "guild": null
-    },
-    {
-      "name": "LevYzao",
-      "level": 421,
-      "celestial_lineage": "Sobrevivência",
-      "levelSub": 425,
-      "subclass_lineage": "Sobrevivência",
-      "Soma Level": 846,
-      "guild": 2041
     },
     {
       "name": "MagoNegro88",
@@ -1963,11 +1936,20 @@
       "guild": 2194
     },
     {
-      "name": "SuperNoris-",
-      "level": 423,
-      "celestial_lineage": "Trans",
-      "levelSub": 423,
-      "subclass_lineage": "Trans",
+      "name": "LevYzao",
+      "level": 421,
+      "celestial_lineage": "Sobrevivência",
+      "levelSub": 425,
+      "subclass_lineage": "Sobrevivência",
+      "Soma Level": 846,
+      "guild": 2041
+    },
+    {
+      "name": "-Pityzera-",
+      "level": 425,
+      "celestial_lineage": "Sobrevivência",
+      "levelSub": 421,
+      "subclass_lineage": "Sobrevivência",
       "Soma Level": 846,
       "guild": null
     },
@@ -1981,6 +1963,15 @@
       "guild": null
     },
     {
+      "name": "SuperNoris-",
+      "level": 423,
+      "celestial_lineage": "Trans",
+      "levelSub": 423,
+      "subclass_lineage": "Trans",
+      "Soma Level": 846,
+      "guild": null
+    },
+    {
       "name": "verzole",
       "level": 423,
       "celestial_lineage": "Natureza",
@@ -1990,11 +1981,20 @@
       "guild": null
     },
     {
-      "name": "xSAMCRO",
-      "level": 422,
-      "celestial_lineage": "Confiança",
-      "levelSub": 423,
-      "subclass_lineage": "Confiança",
+      "name": "Cnut",
+      "level": 424,
+      "celestial_lineage": "Sobrevivência",
+      "levelSub": 422,
+      "subclass_lineage": "Captura",
+      "Soma Level": 846,
+      "guild": null
+    },
+    {
+      "name": "guizaofh",
+      "level": 424,
+      "celestial_lineage": "Captura",
+      "levelSub": 421,
+      "subclass_lineage": "Captura",
       "Soma Level": 845,
       "guild": null
     },
@@ -2008,15 +2008,6 @@
       "guild": null
     },
     {
-      "name": "AmazonForest",
-      "level": 420,
-      "celestial_lineage": "Sobrevivência",
-      "levelSub": 425,
-      "subclass_lineage": "Sobrevivência",
-      "Soma Level": 845,
-      "guild": null
-    },
-    {
       "name": "BestiaNegra",
       "level": 425,
       "celestial_lineage": "Captura",
@@ -2026,11 +2017,11 @@
       "guild": 2309
     },
     {
-      "name": "guizaofh",
-      "level": 424,
-      "celestial_lineage": "Captura",
-      "levelSub": 421,
-      "subclass_lineage": "Captura",
+      "name": "AmazonForest",
+      "level": 420,
+      "celestial_lineage": "Sobrevivência",
+      "levelSub": 425,
+      "subclass_lineage": "Sobrevivência",
       "Soma Level": 845,
       "guild": null
     },
@@ -2042,15 +2033,6 @@
       "subclass_lineage": "Confiança",
       "Soma Level": 845,
       "guild": null
-    },
-    {
-      "name": "llRedLabeL",
-      "level": 424,
-      "celestial_lineage": "Magia Branca",
-      "levelSub": 421,
-      "subclass_lineage": "Confiança",
-      "Soma Level": 845,
-      "guild": 2194
     },
     {
       "name": "-JACK",
@@ -2067,6 +2049,24 @@
       "celestial_lineage": "Trans",
       "levelSub": 421,
       "subclass_lineage": "Trans",
+      "Soma Level": 845,
+      "guild": null
+    },
+    {
+      "name": "llRedLabeL",
+      "level": 424,
+      "celestial_lineage": "Magia Branca",
+      "levelSub": 421,
+      "subclass_lineage": "Confiança",
+      "Soma Level": 845,
+      "guild": 2194
+    },
+    {
+      "name": "xSAMCRO",
+      "level": 422,
+      "celestial_lineage": "Confiança",
+      "levelSub": 423,
+      "subclass_lineage": "Confiança",
       "Soma Level": 845,
       "guild": null
     },
@@ -2125,83 +2125,11 @@
       "guild": null
     },
     {
-      "name": "RAFENX",
-      "level": 424,
-      "celestial_lineage": "Natureza",
-      "levelSub": 420,
-      "subclass_lineage": "Captura",
-      "Soma Level": 844,
-      "guild": 2194
-    },
-    {
-      "name": "Skythalos",
-      "level": 422,
-      "celestial_lineage": "Trans",
-      "levelSub": 422,
-      "subclass_lineage": "Trans",
-      "Soma Level": 844,
-      "guild": null
-    },
-    {
-      "name": "UNS41NTED",
-      "level": 422,
-      "celestial_lineage": "Magia Negra",
-      "levelSub": 422,
-      "subclass_lineage": "Magia Negra",
-      "Soma Level": 844,
-      "guild": null
-    },
-    {
-      "name": "-Beavis-",
-      "level": 423,
-      "celestial_lineage": "Magia Negra",
-      "levelSub": 421,
-      "subclass_lineage": "Confiança",
-      "Soma Level": 844,
-      "guild": 1862
-    },
-    {
-      "name": "BetaPitola",
+      "name": "LowCat",
       "level": 421,
       "celestial_lineage": "Natureza",
       "levelSub": 423,
       "subclass_lineage": "Sobrevivência",
-      "Soma Level": 844,
-      "guild": 2312
-    },
-    {
-      "name": "xZeudo",
-      "level": 422,
-      "celestial_lineage": "Magia Negra",
-      "levelSub": 422,
-      "subclass_lineage": "Confiança",
-      "Soma Level": 844,
-      "guild": null
-    },
-    {
-      "name": "GeneralGuuS",
-      "level": 420,
-      "celestial_lineage": "Natureza",
-      "levelSub": 424,
-      "subclass_lineage": "Natureza",
-      "Soma Level": 844,
-      "guild": 2194
-    },
-    {
-      "name": "QuietPanda",
-      "level": 420,
-      "celestial_lineage": "Captura",
-      "levelSub": 424,
-      "subclass_lineage": "Natureza",
-      "Soma Level": 844,
-      "guild": 2309
-    },
-    {
-      "name": "SheelVPower",
-      "level": 422,
-      "celestial_lineage": "Natureza",
-      "levelSub": 422,
-      "subclass_lineage": "Trans",
       "Soma Level": 844,
       "guild": null
     },
@@ -2215,13 +2143,76 @@
       "guild": 2308
     },
     {
-      "name": "CAPLUDGERO",
-      "level": 424,
+      "name": "xZeudo",
+      "level": 422,
+      "celestial_lineage": "Magia Negra",
+      "levelSub": 422,
+      "subclass_lineage": "Confiança",
+      "Soma Level": 844,
+      "guild": null
+    },
+    {
+      "name": "Skythalos",
+      "level": 422,
       "celestial_lineage": "Trans",
-      "levelSub": 420,
+      "levelSub": 422,
       "subclass_lineage": "Trans",
       "Soma Level": 844,
       "guild": null
+    },
+    {
+      "name": "BetaPitola",
+      "level": 421,
+      "celestial_lineage": "Natureza",
+      "levelSub": 423,
+      "subclass_lineage": "Sobrevivência",
+      "Soma Level": 844,
+      "guild": 2312
+    },
+    {
+      "name": "-Beavis-",
+      "level": 423,
+      "celestial_lineage": "Magia Negra",
+      "levelSub": 421,
+      "subclass_lineage": "Confiança",
+      "Soma Level": 844,
+      "guild": 1862
+    },
+    {
+      "name": "RAFENX",
+      "level": 424,
+      "celestial_lineage": "Natureza",
+      "levelSub": 420,
+      "subclass_lineage": "Captura",
+      "Soma Level": 844,
+      "guild": 2194
+    },
+    {
+      "name": "--NOG--",
+      "level": 423,
+      "celestial_lineage": "Magia Negra",
+      "levelSub": 421,
+      "subclass_lineage": "Elemental",
+      "Soma Level": 844,
+      "guild": null
+    },
+    {
+      "name": "UNS41NTED",
+      "level": 422,
+      "celestial_lineage": "Magia Negra",
+      "levelSub": 422,
+      "subclass_lineage": "Magia Negra",
+      "Soma Level": 844,
+      "guild": null
+    },
+    {
+      "name": "GeneralGuuS",
+      "level": 420,
+      "celestial_lineage": "Natureza",
+      "levelSub": 424,
+      "subclass_lineage": "Natureza",
+      "Soma Level": 844,
+      "guild": 2194
     },
     {
       "name": "--Monstro--",
@@ -2242,15 +2233,6 @@
       "guild": 2193
     },
     {
-      "name": "LowCat",
-      "level": 421,
-      "celestial_lineage": "Natureza",
-      "levelSub": 423,
-      "subclass_lineage": "Sobrevivência",
-      "Soma Level": 844,
-      "guild": null
-    },
-    {
       "name": "-VoldiGoaT-",
       "level": 423,
       "celestial_lineage": "Magia Negra",
@@ -2269,13 +2251,13 @@
       "guild": 2300
     },
     {
-      "name": "--NOG--",
-      "level": 423,
-      "celestial_lineage": "Magia Negra",
-      "levelSub": 421,
-      "subclass_lineage": "Elemental",
+      "name": "QuietPanda",
+      "level": 420,
+      "celestial_lineage": "Captura",
+      "levelSub": 424,
+      "subclass_lineage": "Natureza",
       "Soma Level": 844,
-      "guild": null
+      "guild": 2309
     },
     {
       "name": "--THUG--",
@@ -2296,31 +2278,22 @@
       "guild": null
     },
     {
-      "name": "riquelme",
-      "level": 417,
+      "name": "CAPLUDGERO",
+      "level": 424,
+      "celestial_lineage": "Trans",
+      "levelSub": 420,
+      "subclass_lineage": "Trans",
+      "Soma Level": 844,
+      "guild": null
+    },
+    {
+      "name": "SheelVPower",
+      "level": 422,
       "celestial_lineage": "Natureza",
-      "levelSub": 426,
-      "subclass_lineage": "Natureza",
-      "Soma Level": 843,
-      "guild": 1862
-    },
-    {
-      "name": "-DeusaEir-",
-      "level": 422,
-      "celestial_lineage": "Magia Branca",
-      "levelSub": 421,
-      "subclass_lineage": "Confiança",
-      "Soma Level": 843,
-      "guild": 2308
-    },
-    {
-      "name": "Kiirlyn",
-      "level": 422,
-      "celestial_lineage": "Magia Negra",
-      "levelSub": 421,
-      "subclass_lineage": "Elemental",
-      "Soma Level": 843,
-      "guild": 2303
+      "levelSub": 422,
+      "subclass_lineage": "Trans",
+      "Soma Level": 844,
+      "guild": null
     },
     {
       "name": "Eisenheim",
@@ -2332,20 +2305,20 @@
       "guild": null
     },
     {
-      "name": "lzanami",
-      "level": 421,
-      "celestial_lineage": "Natureza",
-      "levelSub": 422,
-      "subclass_lineage": "Natureza",
+      "name": "-DeusaEir-",
+      "level": 422,
+      "celestial_lineage": "Magia Branca",
+      "levelSub": 421,
+      "subclass_lineage": "Confiança",
       "Soma Level": 843,
-      "guild": null
+      "guild": 2308
     },
     {
-      "name": "-Frogmetal-",
-      "level": 421,
-      "celestial_lineage": "Trans",
-      "levelSub": 422,
-      "subclass_lineage": "Captura",
+      "name": "Investor",
+      "level": 423,
+      "celestial_lineage": "Magia Negra",
+      "levelSub": 420,
+      "subclass_lineage": "Evocação",
       "Soma Level": 843,
       "guild": null
     },
@@ -2359,11 +2332,11 @@
       "guild": 2041
     },
     {
-      "name": "Investor",
-      "level": 423,
-      "celestial_lineage": "Magia Negra",
-      "levelSub": 420,
-      "subclass_lineage": "Evocação",
+      "name": "-Frogmetal-",
+      "level": 421,
+      "celestial_lineage": "Trans",
+      "levelSub": 422,
+      "subclass_lineage": "Captura",
       "Soma Level": 843,
       "guild": null
     },
@@ -2386,6 +2359,42 @@
       "guild": 2300
     },
     {
+      "name": "riquelme",
+      "level": 417,
+      "celestial_lineage": "Natureza",
+      "levelSub": 426,
+      "subclass_lineage": "Natureza",
+      "Soma Level": 843,
+      "guild": 1862
+    },
+    {
+      "name": "Kiirlyn",
+      "level": 422,
+      "celestial_lineage": "Magia Negra",
+      "levelSub": 421,
+      "subclass_lineage": "Elemental",
+      "Soma Level": 843,
+      "guild": 2303
+    },
+    {
+      "name": "lzanami",
+      "level": 421,
+      "celestial_lineage": "Natureza",
+      "levelSub": 422,
+      "subclass_lineage": "Natureza",
+      "Soma Level": 843,
+      "guild": null
+    },
+    {
+      "name": "Azui",
+      "level": 420,
+      "celestial_lineage": "Trans",
+      "levelSub": 422,
+      "subclass_lineage": "Trans",
+      "Soma Level": 842,
+      "guild": null
+    },
+    {
       "name": "CegoMata",
       "level": 421,
       "celestial_lineage": "Sobrevivência",
@@ -2404,15 +2413,6 @@
       "guild": 1989
     },
     {
-      "name": "Duel",
-      "level": 422,
-      "celestial_lineage": "Magia Negra",
-      "levelSub": 420,
-      "subclass_lineage": "Confiança",
-      "Soma Level": 842,
-      "guild": 2309
-    },
-    {
       "name": "EspecLOKO",
       "level": 422,
       "celestial_lineage": "Magia Negra",
@@ -2420,33 +2420,6 @@
       "subclass_lineage": "Evocação",
       "Soma Level": 842,
       "guild": 2300
-    },
-    {
-      "name": "Azui",
-      "level": 420,
-      "celestial_lineage": "Trans",
-      "levelSub": 422,
-      "subclass_lineage": "Trans",
-      "Soma Level": 842,
-      "guild": null
-    },
-    {
-      "name": "TarcisoHS",
-      "level": 422,
-      "celestial_lineage": "Magia Especial",
-      "levelSub": 420,
-      "subclass_lineage": "Magia Negra",
-      "Soma Level": 842,
-      "guild": 2194
-    },
-    {
-      "name": "nullpointer",
-      "level": 422,
-      "celestial_lineage": "Magia Negra",
-      "levelSub": 420,
-      "subclass_lineage": "Confiança",
-      "Soma Level": 842,
-      "guild": null
     },
     {
       "name": "-Zyrk-",
@@ -2476,24 +2449,6 @@
       "guild": 2041
     },
     {
-      "name": "Skruull",
-      "level": 420,
-      "celestial_lineage": "Trans",
-      "levelSub": 422,
-      "subclass_lineage": "Sobrevivência",
-      "Soma Level": 842,
-      "guild": null
-    },
-    {
-      "name": "-ChaoslorD-",
-      "level": 422,
-      "celestial_lineage": "Sobrevivência",
-      "levelSub": 420,
-      "subclass_lineage": "Trans",
-      "Soma Level": 842,
-      "guild": null
-    },
-    {
       "name": "XxICExX",
       "level": 420,
       "celestial_lineage": "Sobrevivência",
@@ -2521,11 +2476,20 @@
       "guild": 218
     },
     {
-      "name": "OutroNick",
-      "level": 421,
-      "celestial_lineage": "Captura",
-      "levelSub": 421,
-      "subclass_lineage": "Natureza",
+      "name": "Skruull",
+      "level": 420,
+      "celestial_lineage": "Trans",
+      "levelSub": 422,
+      "subclass_lineage": "Sobrevivência",
+      "Soma Level": 842,
+      "guild": null
+    },
+    {
+      "name": "TarcisoHS",
+      "level": 422,
+      "celestial_lineage": "Magia Especial",
+      "levelSub": 420,
+      "subclass_lineage": "Magia Negra",
       "Soma Level": 842,
       "guild": 2194
     },
@@ -2566,6 +2530,15 @@
       "guild": 2041
     },
     {
+      "name": "nullpointer",
+      "level": 422,
+      "celestial_lineage": "Magia Negra",
+      "levelSub": 420,
+      "subclass_lineage": "Confiança",
+      "Soma Level": 842,
+      "guild": null
+    },
+    {
       "name": "randle",
       "level": 421,
       "celestial_lineage": "Natureza",
@@ -2573,6 +2546,24 @@
       "subclass_lineage": "Trans",
       "Soma Level": 842,
       "guild": null
+    },
+    {
+      "name": "-ColoSSoS-",
+      "level": 420,
+      "celestial_lineage": "Confiança",
+      "levelSub": 422,
+      "subclass_lineage": "Magia Especial",
+      "Soma Level": 842,
+      "guild": null
+    },
+    {
+      "name": "Duel",
+      "level": 422,
+      "celestial_lineage": "Magia Negra",
+      "levelSub": 420,
+      "subclass_lineage": "Confiança",
+      "Soma Level": 842,
+      "guild": 2309
     },
     {
       "name": "NETTOH",
@@ -2584,6 +2575,15 @@
       "guild": null
     },
     {
+      "name": "-ChaoslorD-",
+      "level": 422,
+      "celestial_lineage": "Sobrevivência",
+      "levelSub": 420,
+      "subclass_lineage": "Trans",
+      "Soma Level": 842,
+      "guild": null
+    },
+    {
       "name": "Aspirante",
       "level": 420,
       "celestial_lineage": "Sobrevivência",
@@ -2591,15 +2591,6 @@
       "subclass_lineage": "Sobrevivência",
       "Soma Level": 842,
       "guild": 2194
-    },
-    {
-      "name": "-ColoSSoS-",
-      "level": 420,
-      "celestial_lineage": "Confiança",
-      "levelSub": 422,
-      "subclass_lineage": "Magia Especial",
-      "Soma Level": 842,
-      "guild": null
     },
     {
       "name": "Manezim",
@@ -2620,6 +2611,24 @@
       "guild": 2194
     },
     {
+      "name": "OutroNick",
+      "level": 421,
+      "celestial_lineage": "Captura",
+      "levelSub": 421,
+      "subclass_lineage": "Natureza",
+      "Soma Level": 842,
+      "guild": 2194
+    },
+    {
+      "name": "--Reacher-",
+      "level": 421,
+      "celestial_lineage": "Trans",
+      "levelSub": 420,
+      "subclass_lineage": "Natureza",
+      "Soma Level": 841,
+      "guild": 2185
+    },
+    {
       "name": "-iDrop-",
       "level": 421,
       "celestial_lineage": "Sobrevivência",
@@ -2629,6 +2638,24 @@
       "guild": null
     },
     {
+      "name": "PuroVoodoo",
+      "level": 421,
+      "celestial_lineage": "Magia Negra",
+      "levelSub": 420,
+      "subclass_lineage": "Magia Especial",
+      "Soma Level": 841,
+      "guild": 2041
+    },
+    {
+      "name": "Adamantium",
+      "level": 420,
+      "celestial_lineage": "Magia Branca",
+      "levelSub": 421,
+      "subclass_lineage": "Magia Branca",
+      "Soma Level": 841,
+      "guild": 2300
+    },
+    {
       "name": "Altimus",
       "level": 422,
       "celestial_lineage": "Magia Especial",
@@ -2636,6 +2663,15 @@
       "subclass_lineage": "Magia Especial",
       "Soma Level": 841,
       "guild": 2309
+    },
+    {
+      "name": "SHuntres",
+      "level": 421,
+      "celestial_lineage": "Sobrevivência",
+      "levelSub": 420,
+      "subclass_lineage": "Captura",
+      "Soma Level": 841,
+      "guild": null
     },
     {
       "name": "RAPOUSO-",
@@ -2665,11 +2701,29 @@
       "guild": 2236
     },
     {
+      "name": "Shaggy-",
+      "level": 420,
+      "celestial_lineage": "Captura",
+      "levelSub": 421,
+      "subclass_lineage": "Captura",
+      "Soma Level": 841,
+      "guild": null
+    },
+    {
       "name": "--Maldoso-",
       "level": 421,
       "celestial_lineage": "Natureza",
       "levelSub": 420,
       "subclass_lineage": "Natureza",
+      "Soma Level": 841,
+      "guild": null
+    },
+    {
+      "name": "canFIGHT",
+      "level": 420,
+      "celestial_lineage": "Captura",
+      "levelSub": 421,
+      "subclass_lineage": "Captura",
       "Soma Level": 841,
       "guild": null
     },
@@ -2681,15 +2735,6 @@
       "subclass_lineage": "Natureza",
       "Soma Level": 841,
       "guild": null
-    },
-    {
-      "name": "BeTinHoo",
-      "level": 420,
-      "celestial_lineage": "Sobrevivência",
-      "levelSub": 421,
-      "subclass_lineage": "Natureza",
-      "Soma Level": 841,
-      "guild": 2300
     },
     {
       "name": "ghsgs",
@@ -2710,13 +2755,13 @@
       "guild": null
     },
     {
-      "name": "HeLL-Ice",
-      "level": 420,
-      "celestial_lineage": "Captura",
-      "levelSub": 421,
-      "subclass_lineage": "Captura",
+      "name": "NoThorious",
+      "level": 421,
+      "celestial_lineage": "Sobrevivência",
+      "levelSub": 420,
+      "subclass_lineage": "Sobrevivência",
       "Soma Level": 841,
-      "guild": null
+      "guild": 1708
     },
     {
       "name": "Ushio",
@@ -2724,24 +2769,6 @@
       "celestial_lineage": "Magia Negra",
       "levelSub": 420,
       "subclass_lineage": "Magia Especial",
-      "Soma Level": 841,
-      "guild": null
-    },
-    {
-      "name": "Shaggy-",
-      "level": 420,
-      "celestial_lineage": "Captura",
-      "levelSub": 421,
-      "subclass_lineage": "Captura",
-      "Soma Level": 841,
-      "guild": null
-    },
-    {
-      "name": "Exilado-",
-      "level": 421,
-      "celestial_lineage": "Magia Negra",
-      "levelSub": 420,
-      "subclass_lineage": "Elemental",
       "Soma Level": 841,
       "guild": null
     },
@@ -2755,22 +2782,40 @@
       "guild": 2185
     },
     {
-      "name": "--Reacher-",
-      "level": 421,
-      "celestial_lineage": "Trans",
-      "levelSub": 420,
-      "subclass_lineage": "Natureza",
-      "Soma Level": 841,
-      "guild": 2185
-    },
-    {
-      "name": "PuroVoodoo",
+      "name": "Exilado-",
       "level": 421,
       "celestial_lineage": "Magia Negra",
       "levelSub": 420,
-      "subclass_lineage": "Magia Especial",
+      "subclass_lineage": "Elemental",
       "Soma Level": 841,
-      "guild": 2041
+      "guild": null
+    },
+    {
+      "name": "BeTinHoo",
+      "level": 420,
+      "celestial_lineage": "Sobrevivência",
+      "levelSub": 421,
+      "subclass_lineage": "Natureza",
+      "Soma Level": 841,
+      "guild": 2300
+    },
+    {
+      "name": "DinOxzin",
+      "level": 421,
+      "celestial_lineage": "Trans",
+      "levelSub": 420,
+      "subclass_lineage": "Trans",
+      "Soma Level": 841,
+      "guild": 2300
+    },
+    {
+      "name": "HeLL-Ice",
+      "level": 420,
+      "celestial_lineage": "Captura",
+      "levelSub": 421,
+      "subclass_lineage": "Captura",
+      "Soma Level": 841,
+      "guild": null
     },
     {
       "name": "-SOLA-",
@@ -2809,15 +2854,6 @@
       "guild": 2300
     },
     {
-      "name": "canFIGHT",
-      "level": 420,
-      "celestial_lineage": "Captura",
-      "levelSub": 421,
-      "subclass_lineage": "Captura",
-      "Soma Level": 841,
-      "guild": null
-    },
-    {
       "name": "QuickTrick",
       "level": 421,
       "celestial_lineage": "Trans",
@@ -2834,42 +2870,6 @@
       "subclass_lineage": "Trans",
       "Soma Level": 841,
       "guild": 2300
-    },
-    {
-      "name": "NoThorious",
-      "level": 421,
-      "celestial_lineage": "Sobrevivência",
-      "levelSub": 420,
-      "subclass_lineage": "Sobrevivência",
-      "Soma Level": 841,
-      "guild": 1708
-    },
-    {
-      "name": "Adamantium",
-      "level": 420,
-      "celestial_lineage": "Magia Branca",
-      "levelSub": 421,
-      "subclass_lineage": "Magia Branca",
-      "Soma Level": 841,
-      "guild": 2300
-    },
-    {
-      "name": "DinOxzin",
-      "level": 421,
-      "celestial_lineage": "Trans",
-      "levelSub": 420,
-      "subclass_lineage": "Trans",
-      "Soma Level": 841,
-      "guild": 2300
-    },
-    {
-      "name": "SHuntres",
-      "level": 421,
-      "celestial_lineage": "Sobrevivência",
-      "levelSub": 420,
-      "subclass_lineage": "Captura",
-      "Soma Level": 841,
-      "guild": null
     },
     {
       "name": "iT0ken",
@@ -2962,6 +2962,15 @@
       "guild": null
     },
     {
+      "name": "SOHO",
+      "level": 421,
+      "celestial_lineage": "Natureza",
+      "levelSub": 419,
+      "subclass_lineage": "Natureza",
+      "Soma Level": 840,
+      "guild": null
+    },
+    {
       "name": "WINDOWS52",
       "level": 420,
       "celestial_lineage": "Magia Negra",
@@ -2971,11 +2980,11 @@
       "guild": 2194
     },
     {
-      "name": "SOHO",
-      "level": 421,
-      "celestial_lineage": "Natureza",
-      "levelSub": 419,
-      "subclass_lineage": "Natureza",
+      "name": "thinhoso",
+      "level": 420,
+      "celestial_lineage": null,
+      "levelSub": 420,
+      "subclass_lineage": null,
       "Soma Level": 840,
       "guild": null
     },
@@ -2998,15 +3007,6 @@
       "guild": 2185
     },
     {
-      "name": "BigDunga",
-      "level": 420,
-      "celestial_lineage": "Sobrevivência",
-      "levelSub": 420,
-      "subclass_lineage": "Sobrevivência",
-      "Soma Level": 840,
-      "guild": 2059
-    },
-    {
       "name": "KingOf",
       "level": 418,
       "celestial_lineage": "Trans",
@@ -3016,13 +3016,13 @@
       "guild": null
     },
     {
-      "name": "thinhoso",
+      "name": "BigDunga",
       "level": 420,
-      "celestial_lineage": null,
+      "celestial_lineage": "Sobrevivência",
       "levelSub": 420,
-      "subclass_lineage": null,
+      "subclass_lineage": "Sobrevivência",
       "Soma Level": 840,
-      "guild": null
+      "guild": 2059
     },
     {
       "name": "��-MORFEU-��",
@@ -3079,20 +3079,20 @@
       "guild": 1862
     },
     {
-      "name": "EmPresTadim",
-      "level": 419,
-      "celestial_lineage": "Confiança",
-      "levelSub": 420,
-      "subclass_lineage": "Elemental",
-      "Soma Level": 839,
-      "guild": null
-    },
-    {
       "name": "-ChaosBR-",
       "level": 418,
       "celestial_lineage": "Trans",
       "levelSub": 421,
       "subclass_lineage": "Natureza",
+      "Soma Level": 839,
+      "guild": null
+    },
+    {
+      "name": "-NETERO-",
+      "level": 420,
+      "celestial_lineage": "Confiança",
+      "levelSub": 419,
+      "subclass_lineage": "Confiança",
       "Soma Level": 839,
       "guild": null
     },
@@ -3106,11 +3106,11 @@
       "guild": null
     },
     {
-      "name": "BROKER-Y",
+      "name": "EmPresTadim",
       "level": 419,
-      "celestial_lineage": "Sobrevivência",
+      "celestial_lineage": "Confiança",
       "levelSub": 420,
-      "subclass_lineage": "Sobrevivência",
+      "subclass_lineage": "Elemental",
       "Soma Level": 839,
       "guild": null
     },
@@ -3124,9 +3124,9 @@
       "guild": 2308
     },
     {
-      "name": "Cucareka",
+      "name": "BROKER-Y",
       "level": 419,
-      "celestial_lineage": "Trans",
+      "celestial_lineage": "Sobrevivência",
       "levelSub": 420,
       "subclass_lineage": "Sobrevivência",
       "Soma Level": 839,
@@ -3140,6 +3140,24 @@
       "subclass_lineage": "Natureza",
       "Soma Level": 839,
       "guild": null
+    },
+    {
+      "name": "Cucareka",
+      "level": 419,
+      "celestial_lineage": "Trans",
+      "levelSub": 420,
+      "subclass_lineage": "Sobrevivência",
+      "Soma Level": 839,
+      "guild": null
+    },
+    {
+      "name": "Jabreu",
+      "level": 426,
+      "celestial_lineage": "Sobrevivência",
+      "levelSub": 413,
+      "subclass_lineage": "Captura",
+      "Soma Level": 839,
+      "guild": 2300
     },
     {
       "name": "-ChieF-",
@@ -3169,15 +3187,6 @@
       "guild": null
     },
     {
-      "name": "-NETERO-",
-      "level": 420,
-      "celestial_lineage": "Confiança",
-      "levelSub": 419,
-      "subclass_lineage": "Confiança",
-      "Soma Level": 839,
-      "guild": null
-    },
-    {
       "name": "GANJA-",
       "level": 421,
       "celestial_lineage": "Natureza",
@@ -3185,15 +3194,6 @@
       "subclass_lineage": "Natureza",
       "Soma Level": 839,
       "guild": null
-    },
-    {
-      "name": "Jabreu",
-      "level": 426,
-      "celestial_lineage": "Sobrevivência",
-      "levelSub": 413,
-      "subclass_lineage": "Captura",
-      "Soma Level": 839,
-      "guild": 2300
     },
     {
       "name": "Goudenlionn",
@@ -3223,6 +3223,15 @@
       "guild": null
     },
     {
+      "name": "Jiwon",
+      "level": 417,
+      "celestial_lineage": "Trans",
+      "levelSub": 421,
+      "subclass_lineage": "Natureza",
+      "Soma Level": 838,
+      "guild": null
+    },
+    {
       "name": "Catapim",
       "level": 417,
       "celestial_lineage": "Magia Branca",
@@ -3241,6 +3250,24 @@
       "guild": 2193
     },
     {
+      "name": "-4cerorA-",
+      "level": 421,
+      "celestial_lineage": "Natureza",
+      "levelSub": 417,
+      "subclass_lineage": "Natureza",
+      "Soma Level": 838,
+      "guild": null
+    },
+    {
+      "name": "OM-SENA",
+      "level": 420,
+      "celestial_lineage": "Natureza",
+      "levelSub": 418,
+      "subclass_lineage": "Trans",
+      "Soma Level": 838,
+      "guild": null
+    },
+    {
       "name": "HOTS",
       "level": 419,
       "celestial_lineage": "Sobrevivência",
@@ -3257,33 +3284,6 @@
       "subclass_lineage": "Natureza",
       "Soma Level": 838,
       "guild": 2185
-    },
-    {
-      "name": "OM-SENA",
-      "level": 420,
-      "celestial_lineage": "Natureza",
-      "levelSub": 418,
-      "subclass_lineage": "Trans",
-      "Soma Level": 838,
-      "guild": null
-    },
-    {
-      "name": "-4cerorA-",
-      "level": 421,
-      "celestial_lineage": "Natureza",
-      "levelSub": 417,
-      "subclass_lineage": "Natureza",
-      "Soma Level": 838,
-      "guild": null
-    },
-    {
-      "name": "Jiwon",
-      "level": 417,
-      "celestial_lineage": "Trans",
-      "levelSub": 421,
-      "subclass_lineage": "Natureza",
-      "Soma Level": 838,
-      "guild": null
     },
     {
       "name": "Shelldor",
@@ -3385,20 +3385,20 @@
       "guild": null
     },
     {
-      "name": "-Foka-",
-      "level": 416,
-      "celestial_lineage": "Confiança",
-      "levelSub": 420,
-      "subclass_lineage": "Magia Negra",
-      "Soma Level": 836,
-      "guild": null
-    },
-    {
       "name": "hyumasayuki",
       "level": 421,
       "celestial_lineage": "Sobrevivência",
       "levelSub": 415,
       "subclass_lineage": "Sobrevivência",
+      "Soma Level": 836,
+      "guild": null
+    },
+    {
+      "name": "--Cloud--",
+      "level": 420,
+      "celestial_lineage": "Elemental",
+      "levelSub": 416,
+      "subclass_lineage": "Elemental",
       "Soma Level": 836,
       "guild": null
     },
@@ -3439,30 +3439,12 @@
       "guild": 2308
     },
     {
-      "name": "--Cloud--",
-      "level": 420,
-      "celestial_lineage": "Elemental",
-      "levelSub": 416,
-      "subclass_lineage": "Elemental",
-      "Soma Level": 836,
-      "guild": null
-    },
-    {
-      "name": "-Arche",
-      "level": 415,
-      "celestial_lineage": "Magia Branca",
+      "name": "-Foka-",
+      "level": 416,
+      "celestial_lineage": "Confiança",
       "levelSub": 420,
-      "subclass_lineage": "Magia Branca",
-      "Soma Level": 835,
-      "guild": 2308
-    },
-    {
-      "name": "WillBR",
-      "level": 414,
-      "celestial_lineage": "Natureza",
-      "levelSub": 421,
-      "subclass_lineage": "Natureza",
-      "Soma Level": 835,
+      "subclass_lineage": "Magia Negra",
+      "Soma Level": 836,
       "guild": null
     },
     {
@@ -3502,10 +3484,28 @@
       "guild": null
     },
     {
+      "name": "-Arche",
+      "level": 415,
+      "celestial_lineage": "Magia Branca",
+      "levelSub": 420,
+      "subclass_lineage": "Magia Branca",
+      "Soma Level": 835,
+      "guild": 2308
+    },
+    {
       "name": "DeeaN",
       "level": 420,
       "celestial_lineage": "Natureza",
       "levelSub": 415,
+      "subclass_lineage": "Natureza",
+      "Soma Level": 835,
+      "guild": null
+    },
+    {
+      "name": "WillBR",
+      "level": 414,
+      "celestial_lineage": "Natureza",
+      "levelSub": 421,
       "subclass_lineage": "Natureza",
       "Soma Level": 835,
       "guild": null
@@ -3529,15 +3529,6 @@
       "guild": null
     },
     {
-      "name": "Traumatismo",
-      "level": 421,
-      "celestial_lineage": "Magia Branca",
-      "levelSub": 413,
-      "subclass_lineage": "Confiança",
-      "Soma Level": 834,
-      "guild": null
-    },
-    {
       "name": "-KingDaimonD",
       "level": 420,
       "celestial_lineage": "Sobrevivência",
@@ -3545,6 +3536,24 @@
       "subclass_lineage": "Sobrevivência",
       "Soma Level": 834,
       "guild": 2008
+    },
+    {
+      "name": "Pinknyx",
+      "level": 419,
+      "celestial_lineage": "Magia Negra",
+      "levelSub": 415,
+      "subclass_lineage": "Evocação",
+      "Soma Level": 834,
+      "guild": 241
+    },
+    {
+      "name": "sokete",
+      "level": 420,
+      "celestial_lineage": "Sobrevivência",
+      "levelSub": 414,
+      "subclass_lineage": "Sobrevivência",
+      "Soma Level": 834,
+      "guild": 2284
     },
     {
       "name": "SoFaRmmE",
@@ -3556,13 +3565,13 @@
       "guild": null
     },
     {
-      "name": "Pinknyx",
-      "level": 419,
-      "celestial_lineage": "Magia Negra",
-      "levelSub": 415,
-      "subclass_lineage": "Evocação",
+      "name": "-KEZ-",
+      "level": 420,
+      "celestial_lineage": "Captura",
+      "levelSub": 414,
+      "subclass_lineage": "Captura",
       "Soma Level": 834,
-      "guild": 241
+      "guild": null
     },
     {
       "name": "Musafa",
@@ -3583,20 +3592,11 @@
       "guild": 2238
     },
     {
-      "name": "sokete",
-      "level": 420,
-      "celestial_lineage": "Sobrevivência",
-      "levelSub": 414,
-      "subclass_lineage": "Sobrevivência",
-      "Soma Level": 834,
-      "guild": 2284
-    },
-    {
-      "name": "-KEZ-",
-      "level": 420,
-      "celestial_lineage": "Captura",
-      "levelSub": 414,
-      "subclass_lineage": "Captura",
+      "name": "Traumatismo",
+      "level": 421,
+      "celestial_lineage": "Magia Branca",
+      "levelSub": 413,
+      "subclass_lineage": "Confiança",
       "Soma Level": 834,
       "guild": null
     },
@@ -3691,13 +3691,13 @@
       "guild": 2193
     },
     {
-      "name": "-BALALAIKA-",
-      "level": 415,
-      "celestial_lineage": "Trans",
-      "levelSub": 417,
-      "subclass_lineage": "Trans",
+      "name": "ArsheDragoN",
+      "level": 411,
+      "celestial_lineage": "Magia Negra",
+      "levelSub": 421,
+      "subclass_lineage": "Magia Negra",
       "Soma Level": 832,
-      "guild": null
+      "guild": 2241
     },
     {
       "name": "SoulJah",
@@ -3727,22 +3727,13 @@
       "guild": null
     },
     {
-      "name": "ArsheDragoN",
-      "level": 411,
-      "celestial_lineage": "Magia Negra",
-      "levelSub": 421,
-      "subclass_lineage": "Magia Negra",
-      "Soma Level": 832,
-      "guild": 2241
-    },
-    {
-      "name": "Thiabeticos",
-      "level": 412,
+      "name": "-BALALAIKA-",
+      "level": 415,
       "celestial_lineage": "Trans",
-      "levelSub": 420,
+      "levelSub": 417,
       "subclass_lineage": "Trans",
       "Soma Level": 832,
-      "guild": 1896
+      "guild": null
     },
     {
       "name": "Insulina",
@@ -3750,33 +3741,6 @@
       "celestial_lineage": "Troca",
       "levelSub": 420,
       "subclass_lineage": "Trans",
-      "Soma Level": 832,
-      "guild": null
-    },
-    {
-      "name": "--LOK--",
-      "level": 420,
-      "celestial_lineage": "Captura",
-      "levelSub": 412,
-      "subclass_lineage": "Captura",
-      "Soma Level": 832,
-      "guild": 2267
-    },
-    {
-      "name": "Pat0",
-      "level": 420,
-      "celestial_lineage": "Trans",
-      "levelSub": 412,
-      "subclass_lineage": "Trans",
-      "Soma Level": 832,
-      "guild": null
-    },
-    {
-      "name": "llScarFacell",
-      "level": 418,
-      "celestial_lineage": "Natureza",
-      "levelSub": 414,
-      "subclass_lineage": "Sobrevivência",
       "Soma Level": 832,
       "guild": null
     },
@@ -3790,6 +3754,24 @@
       "guild": 2310
     },
     {
+      "name": "--LOK--",
+      "level": 420,
+      "celestial_lineage": "Captura",
+      "levelSub": 412,
+      "subclass_lineage": "Captura",
+      "Soma Level": 832,
+      "guild": 2267
+    },
+    {
+      "name": "llScarFacell",
+      "level": 418,
+      "celestial_lineage": "Natureza",
+      "levelSub": 414,
+      "subclass_lineage": "Sobrevivência",
+      "Soma Level": 832,
+      "guild": null
+    },
+    {
       "name": "Krynyx",
       "level": 419,
       "celestial_lineage": "Sobrevivência",
@@ -3799,20 +3781,20 @@
       "guild": null
     },
     {
+      "name": "Pat0",
+      "level": 420,
+      "celestial_lineage": "Trans",
+      "levelSub": 412,
+      "subclass_lineage": "Trans",
+      "Soma Level": 832,
+      "guild": null
+    },
+    {
       "name": "Brosiii",
       "level": 420,
       "celestial_lineage": "Natureza",
       "levelSub": 412,
       "subclass_lineage": "Natureza",
-      "Soma Level": 832,
-      "guild": null
-    },
-    {
-      "name": "LordMurph",
-      "level": 412,
-      "celestial_lineage": "Magia Negra",
-      "levelSub": 420,
-      "subclass_lineage": "Magia Negra",
       "Soma Level": 832,
       "guild": null
     },
@@ -3835,12 +3817,48 @@
       "guild": null
     },
     {
+      "name": "Thiabeticos",
+      "level": 412,
+      "celestial_lineage": "Trans",
+      "levelSub": 420,
+      "subclass_lineage": "Trans",
+      "Soma Level": 832,
+      "guild": 1896
+    },
+    {
+      "name": "LordMurph",
+      "level": 412,
+      "celestial_lineage": "Magia Negra",
+      "levelSub": 420,
+      "subclass_lineage": "Magia Negra",
+      "Soma Level": 832,
+      "guild": null
+    },
+    {
       "name": "-SpaceTribe-",
       "level": 416,
       "celestial_lineage": "Trans",
       "levelSub": 416,
       "subclass_lineage": "Trans",
       "Soma Level": 832,
+      "guild": null
+    },
+    {
+      "name": "Lycan-",
+      "level": 418,
+      "celestial_lineage": "Sobrevivência",
+      "levelSub": 413,
+      "subclass_lineage": "Natureza",
+      "Soma Level": 831,
+      "guild": null
+    },
+    {
+      "name": "SUPE-ROME",
+      "level": 420,
+      "celestial_lineage": "Magia Especial",
+      "levelSub": 411,
+      "subclass_lineage": "Magia Especial",
+      "Soma Level": 831,
       "guild": null
     },
     {
@@ -3862,22 +3880,13 @@
       "guild": 1896
     },
     {
-      "name": "Guuuuz",
-      "level": 411,
+      "name": "-Ravok-",
+      "level": 418,
       "celestial_lineage": "Magia Negra",
-      "levelSub": 420,
+      "levelSub": 413,
       "subclass_lineage": "Magia Negra",
       "Soma Level": 831,
-      "guild": null
-    },
-    {
-      "name": "SUPE-ROME",
-      "level": 420,
-      "celestial_lineage": "Magia Especial",
-      "levelSub": 411,
-      "subclass_lineage": "Magia Especial",
-      "Soma Level": 831,
-      "guild": null
+      "guild": 2041
     },
     {
       "name": "-RevolktkZ-",
@@ -3907,13 +3916,13 @@
       "guild": null
     },
     {
-      "name": "SYLAS-",
-      "level": 416,
-      "celestial_lineage": "Confiança",
-      "levelSub": 415,
-      "subclass_lineage": "Magia Negra",
+      "name": "TONHA025",
+      "level": 420,
+      "celestial_lineage": "Sobrevivência",
+      "levelSub": 411,
+      "subclass_lineage": "Sobrevivência",
       "Soma Level": 831,
-      "guild": 2194
+      "guild": 2300
     },
     {
       "name": "-dottz-",
@@ -3952,13 +3961,22 @@
       "guild": null
     },
     {
-      "name": "Lycan-",
-      "level": 418,
-      "celestial_lineage": "Sobrevivência",
-      "levelSub": 413,
-      "subclass_lineage": "Natureza",
+      "name": "Guuuuz",
+      "level": 411,
+      "celestial_lineage": "Magia Negra",
+      "levelSub": 420,
+      "subclass_lineage": "Magia Negra",
       "Soma Level": 831,
       "guild": null
+    },
+    {
+      "name": "SYLAS-",
+      "level": 416,
+      "celestial_lineage": "Confiança",
+      "levelSub": 415,
+      "subclass_lineage": "Magia Negra",
+      "Soma Level": 831,
+      "guild": 2194
     },
     {
       "name": "ofZaros",
@@ -3970,15 +3988,6 @@
       "guild": null
     },
     {
-      "name": "-Ravok-",
-      "level": 418,
-      "celestial_lineage": "Magia Negra",
-      "levelSub": 413,
-      "subclass_lineage": "Magia Negra",
-      "Soma Level": 831,
-      "guild": 2041
-    },
-    {
       "name": "Catuto",
       "level": 411,
       "celestial_lineage": "Sobrevivência",
@@ -3986,24 +3995,6 @@
       "subclass_lineage": "Trans",
       "Soma Level": 831,
       "guild": null
-    },
-    {
-      "name": "ESSILOR",
-      "level": 411,
-      "celestial_lineage": "Magia Especial",
-      "levelSub": 420,
-      "subclass_lineage": "Magia Negra",
-      "Soma Level": 831,
-      "guild": 2194
-    },
-    {
-      "name": "TONHA025",
-      "level": 420,
-      "celestial_lineage": "Sobrevivência",
-      "levelSub": 411,
-      "subclass_lineage": "Sobrevivência",
-      "Soma Level": 831,
-      "guild": 2300
     },
     {
       "name": "Firesty",
@@ -4042,6 +4033,15 @@
       "guild": null
     },
     {
+      "name": "ESSILOR",
+      "level": 411,
+      "celestial_lineage": "Magia Especial",
+      "levelSub": 420,
+      "subclass_lineage": "Magia Negra",
+      "Soma Level": 831,
+      "guild": 2194
+    },
+    {
       "name": "K-I-L-L-U-A",
       "level": 420,
       "celestial_lineage": "Magia Negra",
@@ -4060,15 +4060,6 @@
       "guild": 2308
     },
     {
-      "name": "NaKachera",
-      "level": 410,
-      "celestial_lineage": "Magia Negra",
-      "levelSub": 420,
-      "subclass_lineage": "Magia Negra",
-      "Soma Level": 830,
-      "guild": 2292
-    },
-    {
       "name": "Esterzinha",
       "level": 415,
       "celestial_lineage": "Magia Branca",
@@ -4078,13 +4069,13 @@
       "guild": null
     },
     {
-      "name": "Morganaaa",
-      "level": 419,
+      "name": "NaKachera",
+      "level": 410,
       "celestial_lineage": "Magia Negra",
-      "levelSub": 411,
-      "subclass_lineage": "Confiança",
+      "levelSub": 420,
+      "subclass_lineage": "Magia Negra",
       "Soma Level": 830,
-      "guild": 2284
+      "guild": 2292
     },
     {
       "name": "joaoBERTO",
@@ -4132,15 +4123,6 @@
       "guild": null
     },
     {
-      "name": "reiRyl3",
-      "level": 420,
-      "celestial_lineage": "Elemental",
-      "levelSub": 410,
-      "subclass_lineage": "Elemental",
-      "Soma Level": 830,
-      "guild": null
-    },
-    {
       "name": "Panjura-",
       "level": 413,
       "celestial_lineage": "Magia Branca",
@@ -4148,6 +4130,15 @@
       "subclass_lineage": "Magia Branca",
       "Soma Level": 830,
       "guild": 2194
+    },
+    {
+      "name": "xViegas",
+      "level": 411,
+      "celestial_lineage": "Magia Branca",
+      "levelSub": 419,
+      "subclass_lineage": "Magia Branca",
+      "Soma Level": 830,
+      "guild": 2193
     },
     {
       "name": "Caribe",
@@ -4164,6 +4155,15 @@
       "celestial_lineage": "Sobrevivência",
       "levelSub": 416,
       "subclass_lineage": "Natureza",
+      "Soma Level": 830,
+      "guild": null
+    },
+    {
+      "name": "reiRyl3",
+      "level": 420,
+      "celestial_lineage": "Elemental",
+      "levelSub": 410,
+      "subclass_lineage": "Elemental",
       "Soma Level": 830,
       "guild": null
     },
@@ -4195,6 +4195,15 @@
       "guild": null
     },
     {
+      "name": "Morganaaa",
+      "level": 419,
+      "celestial_lineage": "Magia Negra",
+      "levelSub": 411,
+      "subclass_lineage": "Confiança",
+      "Soma Level": 830,
+      "guild": 2284
+    },
+    {
       "name": "GunsNroses",
       "level": 412,
       "celestial_lineage": "Natureza",
@@ -4211,15 +4220,6 @@
       "subclass_lineage": "Trans",
       "Soma Level": 830,
       "guild": 2287
-    },
-    {
-      "name": "xViegas",
-      "level": 411,
-      "celestial_lineage": "Magia Branca",
-      "levelSub": 419,
-      "subclass_lineage": "Magia Branca",
-      "Soma Level": 830,
-      "guild": 2193
     },
     {
       "name": "Black-ToBi",
@@ -4256,6 +4256,15 @@
       "subclass_lineage": "Natureza",
       "Soma Level": 829,
       "guild": null
+    },
+    {
+      "name": "VINGABR",
+      "level": 415,
+      "celestial_lineage": "Espada Mágica",
+      "levelSub": 414,
+      "subclass_lineage": "Espada Mágica",
+      "Soma Level": 829,
+      "guild": 1862
     },
     {
       "name": "R16666",
@@ -4312,15 +4321,6 @@
       "guild": null
     },
     {
-      "name": "VINGABR",
-      "level": 415,
-      "celestial_lineage": "Espada Mágica",
-      "levelSub": 414,
-      "subclass_lineage": "Espada Mágica",
-      "Soma Level": 829,
-      "guild": 1862
-    },
-    {
       "name": "Dipe",
       "level": 414,
       "celestial_lineage": "Captura",
@@ -4348,15 +4348,6 @@
       "guild": null
     },
     {
-      "name": "Azkov",
-      "level": 410,
-      "celestial_lineage": "Sobrevivência",
-      "levelSub": 418,
-      "subclass_lineage": "Sobrevivência",
-      "Soma Level": 828,
-      "guild": 2194
-    },
-    {
       "name": "LULUGIGABIGA",
       "level": 414,
       "celestial_lineage": "Confiança",
@@ -4375,6 +4366,24 @@
       "guild": null
     },
     {
+      "name": "NesquikJR",
+      "level": 417,
+      "celestial_lineage": "Sobrevivência",
+      "levelSub": 411,
+      "subclass_lineage": "Sobrevivência",
+      "Soma Level": 828,
+      "guild": null
+    },
+    {
+      "name": "T0RRACA",
+      "level": 415,
+      "celestial_lineage": "Magia Negra",
+      "levelSub": 413,
+      "subclass_lineage": "Magia Negra",
+      "Soma Level": 828,
+      "guild": 2185
+    },
+    {
       "name": "-WINTER-",
       "level": 414,
       "celestial_lineage": "Natureza",
@@ -4382,6 +4391,15 @@
       "subclass_lineage": "Natureza",
       "Soma Level": 828,
       "guild": null
+    },
+    {
+      "name": "Azkov",
+      "level": 410,
+      "celestial_lineage": "Sobrevivência",
+      "levelSub": 418,
+      "subclass_lineage": "Sobrevivência",
+      "Soma Level": 828,
+      "guild": 2194
     },
     {
       "name": "-HiKeZaDa-",
@@ -4402,6 +4420,15 @@
       "guild": null
     },
     {
+      "name": "-PikaAPE-",
+      "level": 418,
+      "celestial_lineage": "Natureza",
+      "levelSub": 410,
+      "subclass_lineage": "Natureza",
+      "Soma Level": 828,
+      "guild": null
+    },
+    {
       "name": "Innervision",
       "level": 411,
       "celestial_lineage": "Natureza",
@@ -4409,33 +4436,6 @@
       "subclass_lineage": "Sobrevivência",
       "Soma Level": 828,
       "guild": 2185
-    },
-    {
-      "name": "T0RRACA",
-      "level": 415,
-      "celestial_lineage": "Magia Negra",
-      "levelSub": 413,
-      "subclass_lineage": "Magia Negra",
-      "Soma Level": 828,
-      "guild": 2185
-    },
-    {
-      "name": "NesquikJR",
-      "level": 417,
-      "celestial_lineage": "Sobrevivência",
-      "levelSub": 411,
-      "subclass_lineage": "Sobrevivência",
-      "Soma Level": 828,
-      "guild": null
-    },
-    {
-      "name": "HunterKyller",
-      "level": 412,
-      "celestial_lineage": "Trans",
-      "levelSub": 416,
-      "subclass_lineage": "Trans",
-      "Soma Level": 828,
-      "guild": null
     },
     {
       "name": "DexterG",
@@ -4456,11 +4456,11 @@
       "guild": 2284
     },
     {
-      "name": "-PikaAPE-",
-      "level": 418,
-      "celestial_lineage": "Natureza",
-      "levelSub": 410,
-      "subclass_lineage": "Natureza",
+      "name": "HunterKyller",
+      "level": 412,
+      "celestial_lineage": "Trans",
+      "levelSub": 416,
+      "subclass_lineage": "Trans",
       "Soma Level": 828,
       "guild": null
     },
@@ -4505,28 +4505,28 @@
     {
       "charName": "JogoRuim-",
       "winCount": 7,
-      "killValue": 215,
+      "killValue": 229,
       "deathValue": null,
       "total": 59
     },
     {
       "charName": "-Minjiya-",
       "winCount": 6,
-      "killValue": 124,
+      "killValue": 130,
       "deathValue": null,
       "total": 39
     },
     {
       "charName": "Adoniis",
-      "winCount": 7,
+      "winCount": 8,
       "killValue": null,
       "deathValue": null,
       "total": 38
     },
     {
       "charName": "JOW-JOW",
-      "winCount": 6,
-      "killValue": 40,
+      "winCount": 7,
+      "killValue": 47,
       "deathValue": null,
       "total": 37
     },
@@ -4554,7 +4554,7 @@
     {
       "charName": "xPedro",
       "winCount": 3,
-      "killValue": 76,
+      "killValue": 83,
       "deathValue": null,
       "total": 22
     },
@@ -4568,21 +4568,21 @@
     {
       "charName": "REIdoSERTAO",
       "winCount": 4,
-      "killValue": 10,
+      "killValue": 12,
       "deathValue": null,
       "total": 20
     },
     {
       "charName": "meury---",
       "winCount": 4,
-      "killValue": 27,
+      "killValue": 30,
       "deathValue": null,
       "total": 20
     },
     {
       "charName": "Fakkri",
       "winCount": 3,
-      "killValue": 77,
+      "killValue": 80,
       "deathValue": null,
       "total": 20
     },
@@ -4610,7 +4610,7 @@
     {
       "charName": "SomeBody-",
       "winCount": 3,
-      "killValue": 14,
+      "killValue": 16,
       "deathValue": null,
       "total": 17
     },
@@ -4638,7 +4638,7 @@
     {
       "charName": "-Antnick-",
       "winCount": 3,
-      "killValue": 7,
+      "killValue": 8,
       "deathValue": null,
       "total": 16
     },
@@ -4651,8 +4651,8 @@
     },
     {
       "charName": "xPesTinHa10x",
-      "winCount": 3,
-      "killValue": 25,
+      "winCount": 4,
+      "killValue": 27,
       "deathValue": null,
       "total": 16
     },
@@ -4665,36 +4665,36 @@
     },
     {
       "charName": "Kduzin",
-      "winCount": 3,
-      "killValue": 19,
+      "winCount": 4,
+      "killValue": 22,
       "deathValue": null,
       "total": 15
     },
     {
       "charName": "DogZZ",
       "winCount": 3,
-      "killValue": 79,
+      "killValue": 80,
       "deathValue": null,
       "total": 15
     },
     {
       "charName": "FREDAO",
-      "winCount": null,
-      "killValue": 142,
+      "winCount": 1,
+      "killValue": 159,
       "deathValue": null,
       "total": 14
     },
     {
       "charName": "MINEIRINHO0",
       "winCount": 3,
-      "killValue": 5,
+      "killValue": 6,
       "deathValue": null,
       "total": 13
     },
     {
       "charName": "DARKZAOo",
       "winCount": 2,
-      "killValue": 18,
+      "killValue": 20,
       "deathValue": null,
       "total": 13
     },
@@ -4707,7 +4707,7 @@
     },
     {
       "charName": "Flaaap",
-      "winCount": 2,
+      "winCount": 3,
       "killValue": null,
       "deathValue": null,
       "total": 12
@@ -4715,28 +4715,28 @@
     {
       "charName": "Karinud",
       "winCount": 3,
-      "killValue": 9,
+      "killValue": 13,
       "deathValue": null,
       "total": 12
     },
     {
       "charName": "c4ladeX",
       "winCount": 2,
-      "killValue": 18,
+      "killValue": 24,
       "deathValue": null,
       "total": 12
     },
     {
       "charName": "-Blackrex-",
       "winCount": 2,
-      "killValue": 19,
+      "killValue": 23,
       "deathValue": null,
       "total": 12
     },
     {
       "charName": "Zarch",
-      "winCount": 2,
-      "killValue": 33,
+      "winCount": 3,
+      "killValue": 44,
       "deathValue": null,
       "total": 12
     },
@@ -4750,14 +4750,14 @@
     {
       "charName": "-Eddy",
       "winCount": 2,
-      "killValue": 73,
+      "killValue": 84,
       "deathValue": null,
       "total": 12
     },
     {
       "charName": "Alkapone",
       "winCount": 2,
-      "killValue": null,
+      "killValue": 1,
       "deathValue": null,
       "total": 11
     },
@@ -4771,14 +4771,14 @@
     {
       "charName": "Hespert",
       "winCount": 3,
-      "killValue": 11,
+      "killValue": 12,
       "deathValue": null,
       "total": 11
     },
     {
       "charName": "-Beavis-",
       "winCount": 1,
-      "killValue": 7,
+      "killValue": 10,
       "deathValue": null,
       "total": 11
     },
@@ -4813,7 +4813,7 @@
     {
       "charName": "���L��o��",
       "winCount": 3,
-      "killValue": 2,
+      "killValue": 3,
       "deathValue": null,
       "total": 10
     },
@@ -4827,7 +4827,7 @@
     {
       "charName": "zVoid",
       "winCount": 2,
-      "killValue": 37,
+      "killValue": 39,
       "deathValue": null,
       "total": 9
     },
@@ -4875,8 +4875,8 @@
     },
     {
       "charName": "ThuThuMaL",
-      "winCount": 1,
-      "killValue": 13,
+      "winCount": 2,
+      "killValue": 14,
       "deathValue": null,
       "total": 7
     },
@@ -4911,7 +4911,7 @@
     {
       "charName": "-oNezera",
       "winCount": 1,
-      "killValue": 14,
+      "killValue": 17,
       "deathValue": null,
       "total": 6
     },
@@ -5009,14 +5009,14 @@
     {
       "charName": "oPola",
       "winCount": 1,
-      "killValue": 24,
+      "killValue": 27,
       "deathValue": null,
       "total": 4
     },
     {
       "charName": "Aorb",
       "winCount": 1,
-      "killValue": 38,
+      "killValue": 40,
       "deathValue": null,
       "total": 4
     },
@@ -5030,7 +5030,7 @@
     {
       "charName": "sh1ru",
       "winCount": null,
-      "killValue": 34,
+      "killValue": 36,
       "deathValue": null,
       "total": 3
     },
@@ -5051,7 +5051,7 @@
     {
       "charName": "TONHA025",
       "winCount": null,
-      "killValue": 23,
+      "killValue": 27,
       "deathValue": null,
       "total": 2
     },
@@ -5065,14 +5065,14 @@
     {
       "charName": "TuniCAO",
       "winCount": null,
-      "killValue": 10,
+      "killValue": 13,
       "deathValue": null,
       "total": 1
     },
     {
       "charName": "SemIdeiaz",
       "winCount": null,
-      "killValue": 10,
+      "killValue": 12,
       "deathValue": null,
       "total": 1
     },
@@ -5127,8 +5127,8 @@
     },
     {
       "charName": "Raduzin",
-      "winCount": null,
-      "killValue": 9,
+      "winCount": 1,
+      "killValue": 14,
       "deathValue": null,
       "total": 1
     },
@@ -5348,6 +5348,20 @@
       "killValue": null,
       "deathValue": null,
       "total": 0
+    },
+    {
+      "charName": "An�ra�e",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": -1
+    },
+    {
+      "charName": "-Baray-",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": -1
     }
   ],
   "arena_aspirant": [
@@ -5361,14 +5375,14 @@
     {
       "charName": "DrWyd",
       "winCount": 5,
-      "killValue": 181,
+      "killValue": 199,
       "deathValue": null,
       "total": 41
     },
     {
       "charName": "Shaggy-",
-      "winCount": 4,
-      "killValue": 131,
+      "winCount": 5,
+      "killValue": 156,
       "deathValue": null,
       "total": 36
     },
@@ -5382,7 +5396,7 @@
     {
       "charName": "OrNeLaS",
       "winCount": 5,
-      "killValue": 75,
+      "killValue": 83,
       "deathValue": null,
       "total": 30
     },
@@ -5403,14 +5417,14 @@
     {
       "charName": "-LanaDelRey-",
       "winCount": 4,
-      "killValue": 35,
+      "killValue": 36,
       "deathValue": null,
       "total": 24
     },
     {
       "charName": "lTarzaNl",
       "winCount": 4,
-      "killValue": 35,
+      "killValue": 37,
       "deathValue": null,
       "total": 24
     },
@@ -5424,7 +5438,7 @@
     {
       "charName": "FoRtex",
       "winCount": 4,
-      "killValue": 57,
+      "killValue": 66,
       "deathValue": null,
       "total": 22
     },
@@ -5438,28 +5452,28 @@
     {
       "charName": "GamaJunior",
       "winCount": 4,
-      "killValue": 18,
+      "killValue": 19,
       "deathValue": null,
       "total": 21
     },
     {
       "charName": "DrakoNyls",
       "winCount": 4,
-      "killValue": 42,
+      "killValue": 45,
       "deathValue": null,
       "total": 21
     },
     {
       "charName": "Deiwid182",
-      "winCount": 4,
-      "killValue": 31,
+      "winCount": 5,
+      "killValue": 35,
       "deathValue": null,
       "total": 19
     },
     {
       "charName": "L3thyn",
       "winCount": 4,
-      "killValue": 40,
+      "killValue": 44,
       "deathValue": null,
       "total": 19
     },
@@ -5480,7 +5494,7 @@
     {
       "charName": "Meiow",
       "winCount": 3,
-      "killValue": 73,
+      "killValue": 80,
       "deathValue": null,
       "total": 18
     },
@@ -5514,15 +5528,15 @@
     },
     {
       "charName": "paulGOD",
-      "winCount": 3,
-      "killValue": 9,
+      "winCount": 4,
+      "killValue": 11,
       "deathValue": null,
       "total": 15
     },
     {
       "charName": "PomboAlpha",
-      "winCount": 3,
-      "killValue": 41,
+      "winCount": 4,
+      "killValue": 44,
       "deathValue": null,
       "total": 15
     },
@@ -5535,8 +5549,8 @@
     },
     {
       "charName": "-Pityzera-",
-      "winCount": 3,
-      "killValue": 21,
+      "winCount": 4,
+      "killValue": 30,
       "deathValue": null,
       "total": 14
     },
@@ -5550,21 +5564,21 @@
     {
       "charName": "KnightGaren-",
       "winCount": 2,
-      "killValue": 34,
+      "killValue": 36,
       "deathValue": null,
       "total": 14
     },
     {
       "charName": "-Rice",
       "winCount": 2,
-      "killValue": 61,
+      "killValue": 71,
       "deathValue": null,
       "total": 14
     },
     {
       "charName": "KAOS",
       "winCount": 2,
-      "killValue": 6,
+      "killValue": 7,
       "deathValue": null,
       "total": 13
     },
@@ -5578,14 +5592,14 @@
     {
       "charName": "SddsMalech",
       "winCount": 2,
-      "killValue": 7,
+      "killValue": 8,
       "deathValue": null,
       "total": 12
     },
     {
       "charName": "rfaell",
       "winCount": 3,
-      "killValue": 14,
+      "killValue": 15,
       "deathValue": null,
       "total": 12
     },
@@ -5613,7 +5627,7 @@
     {
       "charName": "Xibilson",
       "winCount": 2,
-      "killValue": 33,
+      "killValue": 38,
       "deathValue": null,
       "total": 11
     },
@@ -5634,7 +5648,7 @@
     {
       "charName": "S0uryuu",
       "winCount": 2,
-      "killValue": 22,
+      "killValue": 26,
       "deathValue": null,
       "total": 10
     },
@@ -5655,7 +5669,7 @@
     {
       "charName": "Kepura",
       "winCount": 1,
-      "killValue": 27,
+      "killValue": 28,
       "deathValue": null,
       "total": 9
     },
@@ -5683,7 +5697,7 @@
     {
       "charName": "SrSinistros",
       "winCount": 2,
-      "killValue": 23,
+      "killValue": 24,
       "deathValue": null,
       "total": 7
     },
@@ -5696,7 +5710,7 @@
     },
     {
       "charName": "-Kaboom",
-      "winCount": 2,
+      "winCount": 3,
       "killValue": 4,
       "deathValue": null,
       "total": 6
@@ -5717,7 +5731,7 @@
     },
     {
       "charName": "Ivor",
-      "winCount": 1,
+      "winCount": 2,
       "killValue": null,
       "deathValue": null,
       "total": 6
@@ -5752,8 +5766,8 @@
     },
     {
       "charName": "xSnooKyx",
-      "winCount": 1,
-      "killValue": 9,
+      "winCount": 2,
+      "killValue": 10,
       "deathValue": null,
       "total": 6
     },
@@ -5809,7 +5823,7 @@
     {
       "charName": "Kiirlyn",
       "winCount": 1,
-      "killValue": 16,
+      "killValue": 22,
       "deathValue": null,
       "total": 5
     },
@@ -5823,14 +5837,14 @@
     {
       "charName": "MagicSouder",
       "winCount": 1,
-      "killValue": 3,
+      "killValue": 5,
       "deathValue": null,
       "total": 4
     },
     {
       "charName": "-StarWade",
       "winCount": 1,
-      "killValue": 2,
+      "killValue": 3,
       "deathValue": null,
       "total": 4
     },
@@ -5871,8 +5885,8 @@
     },
     {
       "charName": "MaaaX",
-      "winCount": null,
-      "killValue": 26,
+      "winCount": 1,
+      "killValue": 32,
       "deathValue": null,
       "total": 3
     },
@@ -5899,8 +5913,8 @@
     },
     {
       "charName": "Aizz",
-      "winCount": null,
-      "killValue": 18,
+      "winCount": 1,
+      "killValue": 21,
       "deathValue": null,
       "total": 2
     },
@@ -6012,7 +6026,7 @@
     {
       "charName": "xThanatoSx",
       "winCount": null,
-      "killValue": 3,
+      "killValue": 4,
       "deathValue": null,
       "total": 0
     },
@@ -6137,7 +6151,7 @@
     },
     {
       "charName": "-PRETORIUSS-",
-      "winCount": null,
+      "winCount": 1,
       "killValue": 1,
       "deathValue": null,
       "total": 0
@@ -6194,7 +6208,7 @@
     {
       "charName": "BISNAGUINH4",
       "winCount": null,
-      "killValue": null,
+      "killValue": 1,
       "deathValue": null,
       "total": 0
     },
@@ -6234,9 +6248,23 @@
       "total": -1
     },
     {
+      "charName": "lcastelar",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": -1
+    },
+    {
       "charName": "LevYzao",
       "winCount": null,
       "killValue": 3,
+      "deathValue": null,
+      "total": -1
+    },
+    {
+      "charName": "lDuende",
+      "winCount": null,
+      "killValue": null,
       "deathValue": null,
       "total": -1
     },
@@ -6262,5 +6290,5 @@
       "total": -1
     }
   ],
-  "last_update": "2026-03-05 13:32:05"
+  "last_update": "2026-03-05 19:33:26"
 }

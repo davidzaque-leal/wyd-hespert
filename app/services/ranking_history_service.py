@@ -8,6 +8,24 @@ from app.models import LevelRankingHistory, ArenaRankingHistory
 from datetime import datetime, timezone, timedelta
 
 
+def get_brasilia_time():
+    """
+    Retorna a hora atual no fuso horário de Brasília (GMT-3)
+    Todos os timestamps salvos no banco devem usar este horário
+    """
+    brasilia_tz = timezone(timedelta(hours=-3))
+    return datetime.now(brasilia_tz)
+
+
+def get_brasilia_now_utc():
+    """
+    Retorna a hora atual de Brasília convertida para UTC.
+    Isso permite salvar no banco como UTC mas representando horário de Brasília.
+    Exemplo: Se Brasília é 20:31, retorna UTC 23:31 (20:31 - (-3) = 23:31)
+    """
+    return get_brasilia_time().replace(tzinfo=timezone.utc)
+
+
 def get_arena_number_by_time() -> int:
     """
     Detecta qual número de arena está sendo jogada baseado na hora GMT-3 (Brasília)
@@ -598,6 +616,9 @@ def ensure_today_level_ranking_snapshot(session: Session) -> bool:
             return False
         
         # Criar snapshot para os dados atuais
+        # Usar horário de Brasília convertido para UTC
+        brasilia_now = get_brasilia_now_utc()
+        
         for rank_pos, level_row in enumerate(level_rows, 1):
             player_name = level_row.player.name if level_row.player else f"Player_{level_row.player_id}"
             
@@ -611,7 +632,7 @@ def ensure_today_level_ranking_snapshot(session: Session) -> bool:
                 level_subclass=level_row.level_subclass,
                 celestial_lineage_name=level_row.celestial_lineage_name or "",
                 subclass_lineage_name=level_row.subclass_lineage_name or "",
-                recorded_at=datetime.now(timezone.utc),
+                recorded_at=brasilia_now,
             )
             session.add(history)
         
@@ -674,6 +695,9 @@ def ensure_today_arena_ranking_snapshot(session: Session, category: str) -> bool
             return False
         
         # Criar snapshot para os dados atuais
+        # Usar horário de Brasília convertido para UTC
+        brasilia_now = get_brasilia_now_utc()
+        
         for rank_pos, arena_row in enumerate(arena_rows, 1):
             player_name = arena_row.player.name if arena_row.player else f"Player_{arena_row.player_id}"
             
@@ -688,7 +712,7 @@ def ensure_today_arena_ranking_snapshot(session: Session, category: str) -> bool
                 win_count=arena_row.win_count,
                 kill_value=arena_row.kill_value,
                 death_value=arena_row.death_value,
-                recorded_at=datetime.now(timezone.utc),
+                recorded_at=brasilia_now,
             )
             session.add(history)
         
