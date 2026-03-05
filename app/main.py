@@ -203,22 +203,26 @@ def home(request: Request):
         # Calculate lineage distribution (count occurrences from celestial and subclass)
         from app.utils.lineage_utils import LineageUtils
 
-        lineage_counts = {}
-        players = session.query(Player).all()
-        for p in players:
-            lineages = LineageUtils.get_all_lineages(session, p)
-            for key in ("celestial", "subclass"):
-                name = lineages.get(key)
-                if name:
-                    lineage_counts[name] = lineage_counts.get(name, 0) + 1
+        # Calculate lineage stack combinations from level ranking (top 500)
+        lineage_stacks = {}
+        level_ranking = data_store.level_ranking[:500]  # Top 500 players
+        
+        for player in level_ranking:
+            celestial = player.get("celestial_lineage") or "Sem"
+            subclass = player.get("subclass_lineage") or "Sem"
+            # Create a stack/combo key
+            stack_key = f"{celestial} + {subclass}"
+            lineage_stacks[stack_key] = lineage_stacks.get(stack_key, 0) + 1
 
-        # Build percent over total players (a player may contribute up to 2 counts)
+        total_in_top = len(level_ranking) or 1
+        
+        # Build percent over total players in top 500
         lineage_list = [
-            {"name": name, "count": cnt, "percent": round((cnt / (total_players or 1)) * 100, 2)}
-            for name, cnt in lineage_counts.items()
+            {"name": name, "count": cnt, "percent": round((cnt / total_in_top) * 100, 2)}
+            for name, cnt in lineage_stacks.items()
         ]
         lineage_list.sort(key=lambda x: x["count"], reverse=True)
-        top3_lineages = lineage_list[:3]
+        top10_lineages = lineage_list[:10]
 
         return templates.TemplateResponse("index.html", {
             "request": request,
@@ -226,7 +230,7 @@ def home(request: Request):
             "total_players": total_players,
             "active_guilds": active_guilds,
             "lineages_count": lineages_count,
-            "top3_lineages": top3_lineages,
+            "top10_lineages": top10_lineages,
         })
     finally:
         session.close()
