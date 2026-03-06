@@ -351,43 +351,34 @@ def get_level_changes_for_range(session: Session, days: int = 7):
     }
     """
     try:
-        from sqlalchemy import func, desc, extract
+        from sqlalchemy import func, desc
         from app.models import LevelRankingHistory
         from datetime import timedelta
 
-        # 1. Buscar o snapshot mais recente (usar a data/hora mais recente)
-        # Pegar apenas UM snapshot (o mais recente)
+        # 1. Buscar o snapshot mais recente (independentemente da data)
         latest_record = session.query(LevelRankingHistory).order_by(
             LevelRankingHistory.recorded_at.desc()
         ).first()
         
         if not latest_record:
+            print("DEBUG: Nenhum registro encontrado")
             return []
         
         latest_dt = latest_record.recorded_at
-        latest_date = latest_dt.date() if hasattr(latest_dt, 'date') else latest_dt
+        # Converter para datetimeaware se necessário usando timedelta fixo
+        if latest_dt.tzinfo is None:
+            latest_dt = latest_dt.replace(tzinfo=timezone.utc)
         
-        print(f"DEBUG: latest_dt={latest_dt}, latest_date={latest_date}")
+        print(f"DEBUG: latest_record recorded_at = {latest_dt}")
         
-        # 2. Buscar todos os registros do dia mais recente
-        # Mas pegar apenas UM snapshot (o primeiro/mais recente) para evitar duplicação
+        # 2. Buscar TODOS os registros do snapshot mais recente (pela data YYYY-MM-DD)
+        latest_date = latest_dt.date()
         current_date_start = datetime(latest_date.year, latest_date.month, latest_date.day, 0, 0, 0, tzinfo=timezone.utc)
         current_date_end = datetime(latest_date.year, latest_date.month, latest_date.day, 23, 59, 59, tzinfo=timezone.utc)
         
-        # Pegar o snapshot mais recente do dia
-        latest_snapshot_time = session.query(
-            func.max(LevelRankingHistory.recorded_at).label('max_time')
-        ).filter(
+        current_rows = session.query(LevelRankingHistory).filter(
             LevelRankingHistory.recorded_at >= current_date_start,
             LevelRankingHistory.recorded_at <= current_date_end
-        ).scalar()
-        
-        if not latest_snapshot_time:
-            return []
-        
-        # Buscar apenas registros desse snapshot específico
-        current_rows = session.query(LevelRankingHistory).filter(
-            LevelRankingHistory.recorded_at == latest_snapshot_time
         ).order_by(LevelRankingHistory.rank_position).all()
         
         print(f"DEBUG: current_rows count = {len(current_rows)}")
@@ -395,53 +386,65 @@ def get_level_changes_for_range(session: Session, days: int = 7):
         if not current_rows:
             return []
         
-        # 3. Calcular a data alvo para comparação
-        # Se days=1, procurar do dia anterior ao snapshot mais recente
+        # 3. Calcular a data alvo para comparação (days dias atrás)
         target_date = latest_date - timedelta(days=days)
+        target_date_start = datetime(target_date.year, target_date.month, target_date.day, 0, 0, 0, tzinfo=timezone.utc)
+        target_date_end = datetime(target_date.year, target_date.month, target_date.day, 23, 59, 59, tzinfo=timezone.utc)
         
         print(f"DEBUG: target_date = {target_date}, days = {days}")
         
         # 4. Buscar registros do dia alvo
-        target_date_start = datetime(target_date.year, target_date.month, target_date.day, 0, 0, 0, tzinfo=timezone.utc)
-        target_date_end = datetime(target_date.year, target_date.month, target_date.day, 23, 59, 59, tzinfo=timezone.utc)
-        
-        # Pegar o snapshot mais recente do dia alvo
-        target_snapshot_time = session.query(
-            func.max(LevelRankingHistory.recorded_at).label('max_time')
-        ).filter(
+        target_rows = session.query(LevelRankingHistory).filter(
             LevelRankingHistory.recorded_at >= target_date_start,
             LevelRankingHistory.recorded_at <= target_date_end
-        ).scalar()
-        
-        target_rows = []
-        if target_snapshot_time:
-            target_rows = session.query(LevelRankingHistory).filter(
-                LevelRankingHistory.recorded_at == target_snapshot_time
-            ).order_by(LevelRankingHistory.recorded_at.desc()).all()
+        ).order_by(LevelRankingHistory.recorded_at.desc()).all()
         
         print(f"DEBUG: target_rows count = {len(target_rows)}")
         
-        # 5. Se não encontrou registros do dia alvo, buscar o último registro disponível ANTES do dia atual
+        # 5. Se não encontrou registros do dia alvo, buscar o último registro disponível ANTES do snapshot atual
         if not target_rows:
-            print(f"DEBUG: Não encontrou registros de {target_date}, buscando último registro antes de {latest_date}")
-            # Pegar o snapshot mais recente antes do dia atual
-            last_snapshot_before = session.query(LevelRankingHistory).filter(
+            print(f"DEBUG: Não encontrou registros de {target_date}, buscando último snapshot antes de {latest_date}")
+            # Buscar o snapshot mais antigo que seja anterior ao dia do snapshot atual
+            target_rows = session.query(LevelRankingHistory).filter(
                 LevelRankingHistory.recorded_at < current_date_start
-            ).order_by(LevelRankingHistory.recorded_at.desc()).first()
-            
-            if last_snapshot_before:
-                target_rows = session.query(LevelRankingHistory).filter(
-                    LevelRankingHistory.recorded_at == last_snapshot_before.recorded_at
-                ).order_by(LevelRankingHistory.rank_position).all()
-            
+            ).order_by(LevelRankingHistory.recorded_at.desc()).limit(500).all()
             print(f"DEBUG: fallback target_rows count = {len(target_rows)}")
         
+        # Se ainda não tem dados para comparar, retorna apenas os dados atuais sem mudanças
+        if not target_rows:
+            print("DEBUG: Sem dados históricos para comparar")
+            result = []
+            for cur in current_rows:
+                result.append({
+                    'player_id': cur.player_id,
+                    'rank_position': cur.rank_position,
+                    'name': cur.player_name,
+                    'level_total': cur.level_total or 0,
+                    'level_celestial': cur.level_celestial or 0,
+                    'level_subclass': cur.level_subclass or 0,
+                    'celestial_lineage': cur.celestial_lineage_name or '',
+                    'subclass_lineage': cur.subclass_lineage_name or '',
+                    'level_change': 0,
+                    'level_arrow': '',
+                    'level_active': False,
+                    'position_change': 0,
+                    'position_direction': 'neutral',
+                    'position_active': False,
+                    'points': cur.points or 0,
+                })
+            result.sort(key=lambda x: x['rank_position'])
+            return result[:500]
+        
         # Criar dicionário de referência para comparações rápidas
-        target_dict = {r.player_name: r for r in target_rows}
-
+        # Agrupar por player_name para evitar duplicação
+        target_dict = {}
+        for r in target_rows:
+            if r.player_name not in target_dict:
+                target_dict[r.player_name] = r
+        
+        # 6. Comparar e gerar resultado
         result = []
         for cur in current_rows:
-            # Buscar registro do dia alvo para este player
             prev = target_dict.get(cur.player_name)
 
             prev_level = prev.level_total if prev else None
@@ -560,7 +563,13 @@ def get_position_changes(session: Session, player_name: str, current_position: i
 
 def get_arena_changes(session: Session, player_name: str, current_data: dict, category: str, current_position: int) -> dict:
     """
-    Compara dados atuais de uma arena com o último snapshot gravado para a mesma categoria.
+    Compara dados da arena atual com a arena anterior.
+    Considera horário de Brasília (UTC-3).
+    
+    Arena 1 (13:31) → compara com Arena 4 do dia anterior
+    Arena 2 (19:31) → compara com Arena 1 do mesmo dia
+    Arena 3 (21:01) → compara com Arena 2 do mesmo dia
+    Arena 4 (23:31) → compara com Arena 3 do mesmo dia
 
     Args:
         session: SQLAlchemy Session
@@ -576,13 +585,107 @@ def get_arena_changes(session: Session, player_name: str, current_data: dict, ca
     try:
         from sqlalchemy import desc
         from app.models import ArenaRankingHistory
+        from datetime import timedelta
 
-        # Pegar o snapshot mais recente para essa categoria (última arena registrada)
+        # Definir horários das arenas em Brasília (UTC-3)
+        arena_schedule = {
+            1: (13, 31),  # Arena 1: 13:31
+            2: (19, 31),  # Arena 2: 19:31
+            3: (21, 1),   # Arena 3: 21:01
+            4: (23, 31),  # Arena 4: 23:31
+        }
+        
+        # Usar timezone fixo UTC-3 (Brasília) sem pytz
+        brasilia_tz = timezone(timedelta(hours=-3))
+        
+        # Obter hora atual em Brasília
+        now_utc = datetime.now(timezone.utc)
+        now_brasilia = now_utc.astimezone(brasilia_tz)
+        current_hour = now_brasilia.hour
+        current_minute = now_brasilia.minute
+        
+        # Detectar qual arena está ativa agora em Brasília
+        current_arena = None
+        for arena_num, (h, m) in arena_schedule.items():
+            # Janela de ±5 minutos
+            if h == current_hour and abs(current_minute - m) <= 5:
+                current_arena = arena_num
+                break
+        
+        # Se não está em janela de arena, usar lógica para determinar qual é a próxima/proxima
+        if not current_arena:
+            if current_hour < 13 or (current_hour == 13 and current_minute < 31):
+                current_arena = 1  # Antes de 13:31, assumir que é para arena 1
+            elif current_hour < 19 or (current_hour == 19 and current_minute < 31):
+                current_arena = 2
+            elif current_hour < 21 or (current_hour == 21 and current_minute < 1):
+                current_arena = 3
+            elif current_hour < 23 or (current_hour == 23 and current_minute < 31):
+                current_arena = 4
+            else:
+                current_arena = 1  # Depois de 23:31, próximo ciclo é arena 1
+        
+        print(f"DEBUG: Arena atual detectada: {current_arena} ({current_hour:02d}:{current_minute:02d} Brasília)")
+        
+        # Determinar qual arena é a "anterior" para comparação
+        previous_arena = current_arena - 1
+        if previous_arena == 0:
+            previous_arena = 4  # Arena 1 compara com Arena 4 do dia anterior
+        
+        print(f"DEBUG: Comparando com arena {previous_arena}")
+        
+        # Simplificação baseada em Brasília:
+        # - Arena 3 e 4: arena anterior é do mesmo dia em Brasília
+        # - Arena 2: arena anterior (Arena 1) é do mesmo dia em Brasília
+        # - Arena 1: arena anterior (Arena 4) é do dia anterior em Brasília
+        
+        if current_arena >= 2:
+            # Arena 2, 3, 4: a arena anterior foi no mesmo dia em Brasília
+            today = now_brasilia.date()
+            prev_h, prev_m = arena_schedule[previous_arena]
+            prev_date_start = datetime(today.year, today.month, today.day, prev_h, prev_m, 0, tzinfo=brasilia_tz)
+            prev_date_end = datetime(today.year, today.month, today.day, prev_h, prev_m, 59, tzinfo=brasilia_tz)
+        else:
+            # Arena 1: compara com Arena 4 do dia anterior
+            yesterday = now_brasilia.date() - timedelta(days=1)
+            prev_h, prev_m = arena_schedule[previous_arena]
+            prev_date_start = datetime(yesterday.year, yesterday.month, yesterday.day, prev_h, prev_m, 0, tzinfo=brasilia_tz)
+            prev_date_end = datetime(yesterday.year, yesterday.month, yesterday.day, prev_h, prev_m, 59, tzinfo=brasilia_tz)
+        
+        # Converter para UTC para buscar no banco
+        prev_date_start_utc = prev_date_start.astimezone(timezone.utc)
+        prev_date_end_utc = prev_date_end.astimezone(timezone.utc)
+        
+        print(f"DEBUG: Procurando arena {previous_arena} de {prev_date_start_utc} até {prev_date_end_utc} UTC")
+        
+        # Buscar o registro da arena anterior
         last_record = session.query(ArenaRankingHistory).filter(
             ArenaRankingHistory.player_name == player_name,
-            ArenaRankingHistory.category == category
+            ArenaRankingHistory.category == category,
+            ArenaRankingHistory.arena_number == previous_arena,
+            ArenaRankingHistory.recorded_at >= prev_date_start_utc,
+            ArenaRankingHistory.recorded_at <= prev_date_end_utc
         ).order_by(desc(ArenaRankingHistory.recorded_at)).first()
-
+        
+        # Se não encontrou no rango de tempo, buscar qualquer registro anterior mais recente
+        if not last_record:
+            last_record = session.query(ArenaRankingHistory).filter(
+                ArenaRankingHistory.player_name == player_name,
+                ArenaRankingHistory.category == category,
+                ArenaRankingHistory.arena_number == previous_arena
+            ).order_by(desc(ArenaRankingHistory.recorded_at)).first()
+            if last_record:
+                print(f"DEBUG: Usando fallback - último registro da arena {previous_arena}: {last_record.recorded_at}")
+        
+        if not last_record:
+            # Tentar buscar qualquer registro anterior dessa categoria
+            last_record = session.query(ArenaRankingHistory).filter(
+                ArenaRankingHistory.player_name == player_name,
+                ArenaRankingHistory.category == category
+            ).order_by(desc(ArenaRankingHistory.recorded_at)).first()
+            if last_record:
+                print(f"DEBUG: Usando qualquer registro anterior: arena {last_record.arena_number}, {last_record.recorded_at}")
+        
         if not last_record:
             return {
                 'position_change': 0,
@@ -596,9 +699,8 @@ def get_arena_changes(session: Session, player_name: str, current_data: dict, ca
                 'win_active': False,
             }
 
-        # posição: positivo = subiu (ex: ontem 5 -> hoje 3 => 2)
+        # Calcular diferenças
         pos_diff = (last_record.rank_position or 0) - current_position
-
         kill_change = (current_data.get('kill_value') or 0) - (last_record.kill_value or 0)
         win_change = (current_data.get('win_count') or 0) - (last_record.win_count or 0)
 
@@ -616,6 +718,8 @@ def get_arena_changes(session: Session, player_name: str, current_data: dict, ca
 
     except Exception as e:
         print(f"⚠ Erro ao comparar arena: {e}")
+        import traceback
+        traceback.print_exc()
         return {
             'position_change': 0,
             'direction': 'neutral',
