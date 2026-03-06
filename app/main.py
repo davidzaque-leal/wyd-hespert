@@ -36,13 +36,15 @@ def background_updater():
     """
     from datetime import datetime, timezone, timedelta
     
+    # timezone de Brasília (GMT-3)
+    brasilia_tz = timezone(timedelta(hours=-3))
+    
     # Aguardar próximo horário de sincronização
     time.sleep(60)
     
     while True:
         try:
-            # Converter para GMT-3 (Brasília)
-            brasilia_tz = timezone(timedelta(hours=-3))
+            # Usar horário de Brasília diretamente
             now = datetime.now(brasilia_tz)
             
             hour = now.hour
@@ -354,39 +356,6 @@ def ranking_combined(request: Request):
         "players": players,
         "last_update": data_store.last_update
     })
-
-
-# ===============================
-# Evolução de XP
-# ===============================
-@app.get("/xp-evolution")
-def xp_evolution(request: Request, days: int = 7):
-    """Página com evolução de levels ao longo do tempo
-
-    Parâmetro `days` permite comparar com snapshot de ~1/7/15/30 dias atrás.
-    """
-    from app.services.ranking_history_service import (
-        get_top_level_gainers_for_range,
-    )
-
-    if days not in (1, 7, 15, 30):
-        days = 7
-
-    session = SessionLocal()
-    try:
-        # Mostrar top gainers por default (quem mais upou levels no período)
-        players = get_top_level_gainers_for_range(session, days, limit=500)
-
-        return templates.TemplateResponse("ranking_history.html", {
-            "request": request,
-            "last_update": data_store.last_update,
-            "user": get_current_user(request),
-            "players": players,
-            "days": days,
-            "total_snapshots": 0,
-        })
-    finally:
-        session.close()
 
 
 # ===============================

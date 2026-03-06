@@ -8,22 +8,23 @@ from app.models import LevelRankingHistory, ArenaRankingHistory
 from datetime import datetime, timezone, timedelta
 
 
-def get_brasilia_time():
-    """
-    Retorna a hora atual no fuso horário de Brasília (GMT-3)
-    Todos os timestamps salvos no banco devem usar este horário
-    """
-    brasilia_tz = timezone(timedelta(hours=-3))
-    return datetime.now(brasilia_tz)
+# timezone de Brasília (GMT-3)
+BRASILIA_TZ = timezone(timedelta(hours=-3))
 
 
-def get_brasilia_now_utc():
+def get_brasilia_now():
     """
-    Retorna a hora atual de Brasília convertida para UTC.
-    Isso permite salvar no banco como UTC mas representando horário de Brasília.
-    Exemplo: Se Brasília é 20:31, retorna UTC 23:31 (20:31 - (-3) = 23:31)
+    Retorna a hora atual no fuso horário de Brasília (GMT-3).
+    Usar esta função para todos os timestamps que serão salvos no banco.
     """
-    return get_brasilia_time().replace(tzinfo=timezone.utc)
+    return datetime.now(BRASILIA_TZ)
+
+
+def get_brasilia_date():
+    """
+    Retorna a data de hoje no fuso horário de Brasília.
+    """
+    return get_brasilia_now().date()
 
 
 def get_arena_number_by_time() -> int:
@@ -34,11 +35,7 @@ def get_arena_number_by_time() -> int:
     Returns:
         int: 1, 2, 3 ou 4 correspondendo às arenas do dia
     """
-    # Converter para GMT-3 (Brasília)
-    brasilia_tz = timezone(timedelta(hours=-3))
-    now = datetime.now(brasilia_tz)
-    
-    # Extrair hora e minuto
+    now = get_brasilia_now()
     hour = now.hour
     minute = now.minute
     
@@ -90,7 +87,6 @@ def get_arena_number_by_time() -> int:
         return 1  # Antes de 13:31, retorna arena 1 (do dia anterior ainda em andamento)
 
 
-
 def save_level_ranking_history(session: Session, players_data: list):
     """
     Salva snapshot do ranking de level (apenas 1 por dia)
@@ -102,10 +98,10 @@ def save_level_ranking_history(session: Session, players_data: list):
     try:
         from sqlalchemy import delete, func
         
-        # Verificar se já existe snapshot de hoje
-        today = datetime.now(timezone.utc).date()
-        today_start = datetime(today.year, today.month, today.day, 0, 0, 0, tzinfo=timezone.utc)
-        today_end = datetime(today.year, today.month, today.day, 23, 59, 59, tzinfo=timezone.utc)
+        # Verificar se já existe snapshot de hoje (em horário de Brasília)
+        today = get_brasilia_date()
+        today_start = datetime(today.year, today.month, today.day, 0, 0, 0, tzinfo=BRASILIA_TZ)
+        today_end = datetime(today.year, today.month, today.day, 23, 59, 59, tzinfo=BRASILIA_TZ)
         
         existing_today = session.query(LevelRankingHistory).filter(
             LevelRankingHistory.recorded_at >= today_start,
@@ -117,12 +113,14 @@ def save_level_ranking_history(session: Session, players_data: list):
             return True
         
         # Limpar registros com mais de 30 dias
-        cutoff_date = datetime.now(timezone.utc) - timedelta(days=30)
+        cutoff_date = get_brasilia_now() - timedelta(days=30)
         session.query(LevelRankingHistory).filter(
             LevelRankingHistory.recorded_at < cutoff_date
         ).delete()
         
-        # Inserir novo snapshot de hoje
+        # Inserir novo snapshot de hoje usando horário de Brasília
+        brasilia_now = get_brasilia_now()
+        
         for rank_pos, player_data in enumerate(players_data, 1):
             history = LevelRankingHistory(
                 player_id=player_data.get("id"),
@@ -134,6 +132,7 @@ def save_level_ranking_history(session: Session, players_data: list):
                 level_subclass=player_data.get("levelSub", 0),
                 celestial_lineage_name=player_data.get("celestial_lineage", ""),
                 subclass_lineage_name=player_data.get("subclass_lineage", ""),
+                recorded_at=brasilia_now,
             )
             session.add(history)
         
@@ -163,10 +162,10 @@ def save_arena_ranking_history(session: Session, players_data: list, category: s
         # Detectar qual arena está sendo feita agora
         arena_num = get_arena_number_by_time()
         
-        # Verificar se já existe snapshot de ESTA ARENA ESPECÍFICA hoje
-        today = datetime.now(timezone.utc).date()
-        today_start = datetime(today.year, today.month, today.day, 0, 0, 0, tzinfo=timezone.utc)
-        today_end = datetime(today.year, today.month, today.day, 23, 59, 59, tzinfo=timezone.utc)
+        # Verificar se já existe snapshot de ESTA ARENA ESPECÍFICA hoje (em horário de Brasília)
+        today = get_brasilia_date()
+        today_start = datetime(today.year, today.month, today.day, 0, 0, 0, tzinfo=BRASILIA_TZ)
+        today_end = datetime(today.year, today.month, today.day, 23, 59, 59, tzinfo=BRASILIA_TZ)
         
         existing_arena = session.query(ArenaRankingHistory).filter(
             ArenaRankingHistory.recorded_at >= today_start,
@@ -180,14 +179,16 @@ def save_arena_ranking_history(session: Session, players_data: list, category: s
             return True
         
         # Limpar registros antigos (manter apenas últimos 30 dias)
-        cutoff_date = datetime.now(timezone.utc) - timedelta(days=30)
+        cutoff_date = get_brasilia_now() - timedelta(days=30)
         
         session.query(ArenaRankingHistory).filter(
             ArenaRankingHistory.recorded_at < cutoff_date,
             ArenaRankingHistory.category == category
         ).delete()
         
-        # Inserir novo snapshot
+        # Inserir novo snapshot usando horário de Brasília
+        brasilia_now = get_brasilia_now()
+        
         for rank_pos, player_data in enumerate(players_data, 1):
             history = ArenaRankingHistory(
                 player_id=player_data.get("id"),
@@ -200,6 +201,7 @@ def save_arena_ranking_history(session: Session, players_data: list, category: s
                 win_count=player_data.get("winCount", 0),
                 kill_value=player_data.get("killValue", 0),
                 death_value=player_data.get("deathValue", 0),
+                recorded_at=brasilia_now,
             )
             session.add(history)
         
@@ -283,12 +285,12 @@ def get_level_changes(session: Session, player_name: str, current_data: dict) ->
     try:
         from sqlalchemy import desc
         
-        # Buscar snapshot de ontem (não de hoje)
-        today = datetime.now(timezone.utc).date()
+        # Buscar snapshot de ontem (em horário de Brasília)
+        today = get_brasilia_date()
         yesterday = today - timedelta(days=1)
         
-        yesterday_start = datetime(yesterday.year, yesterday.month, yesterday.day, 0, 0, 0, tzinfo=timezone.utc)
-        yesterday_end = datetime(yesterday.year, yesterday.month, yesterday.day, 23, 59, 59, tzinfo=timezone.utc)
+        yesterday_start = datetime(yesterday.year, yesterday.month, yesterday.day, 0, 0, 0, tzinfo=BRASILIA_TZ)
+        yesterday_end = datetime(yesterday.year, yesterday.month, yesterday.day, 23, 59, 59, tzinfo=BRASILIA_TZ)
         
         yesterday_record = session.query(LevelRankingHistory).filter(
             LevelRankingHistory.player_name == player_name,
@@ -331,178 +333,9 @@ def get_level_changes(session: Session, player_name: str, current_data: dict) ->
         }
 
 
-def get_level_changes_for_range(session: Session, days: int = 7):
-    """
-    Gera a lista de players do snapshot mais recente e compara com o snapshot
-    de aproximadamente `days` dias atrás.
-
-    Retorna lista ordenada pela posição atual (rank_position asc), cada item:
-    {
-        'rank_position': int,
-        'name': str,
-        'level_total': int,
-        'level_change': int,
-        'level_arrow': '↑'|'↓'|'',
-        'level_active': bool,
-        'position_change': int,
-        'position_direction': 'up'|'down'|'neutral',
-        'position_active': bool,
-        'points': int
-    }
-    """
-    try:
-        from sqlalchemy import func, desc
-        from app.models import LevelRankingHistory
-        from datetime import timedelta
-
-        # 1. Buscar o snapshot mais recente (independentemente da data)
-        latest_record = session.query(LevelRankingHistory).order_by(
-            LevelRankingHistory.recorded_at.desc()
-        ).first()
-        
-        if not latest_record:
-            print("DEBUG: Nenhum registro encontrado")
-            return []
-        
-        latest_dt = latest_record.recorded_at
-        # Converter para datetimeaware se necessário usando timedelta fixo
-        if latest_dt.tzinfo is None:
-            latest_dt = latest_dt.replace(tzinfo=timezone.utc)
-        
-        print(f"DEBUG: latest_record recorded_at = {latest_dt}")
-        
-        # 2. Buscar TODOS os registros do snapshot mais recente (pela data YYYY-MM-DD)
-        latest_date = latest_dt.date()
-        current_date_start = datetime(latest_date.year, latest_date.month, latest_date.day, 0, 0, 0, tzinfo=timezone.utc)
-        current_date_end = datetime(latest_date.year, latest_date.month, latest_date.day, 23, 59, 59, tzinfo=timezone.utc)
-        
-        current_rows = session.query(LevelRankingHistory).filter(
-            LevelRankingHistory.recorded_at >= current_date_start,
-            LevelRankingHistory.recorded_at <= current_date_end
-        ).order_by(LevelRankingHistory.rank_position).all()
-        
-        print(f"DEBUG: current_rows count = {len(current_rows)}")
-        
-        if not current_rows:
-            return []
-        
-        # 3. Calcular a data alvo para comparação (days dias atrás)
-        target_date = latest_date - timedelta(days=days)
-        target_date_start = datetime(target_date.year, target_date.month, target_date.day, 0, 0, 0, tzinfo=timezone.utc)
-        target_date_end = datetime(target_date.year, target_date.month, target_date.day, 23, 59, 59, tzinfo=timezone.utc)
-        
-        print(f"DEBUG: target_date = {target_date}, days = {days}")
-        
-        # 4. Buscar registros do dia alvo
-        target_rows = session.query(LevelRankingHistory).filter(
-            LevelRankingHistory.recorded_at >= target_date_start,
-            LevelRankingHistory.recorded_at <= target_date_end
-        ).order_by(LevelRankingHistory.recorded_at.desc()).all()
-        
-        print(f"DEBUG: target_rows count = {len(target_rows)}")
-        
-        # 5. Se não encontrou registros do dia alvo, buscar o último registro disponível ANTES do snapshot atual
-        if not target_rows:
-            print(f"DEBUG: Não encontrou registros de {target_date}, buscando último snapshot antes de {latest_date}")
-            # Buscar o snapshot mais antigo que seja anterior ao dia do snapshot atual
-            target_rows = session.query(LevelRankingHistory).filter(
-                LevelRankingHistory.recorded_at < current_date_start
-            ).order_by(LevelRankingHistory.recorded_at.desc()).limit(500).all()
-            print(f"DEBUG: fallback target_rows count = {len(target_rows)}")
-        
-        # Se ainda não tem dados para comparar, retorna apenas os dados atuais sem mudanças
-        if not target_rows:
-            print("DEBUG: Sem dados históricos para comparar")
-            result = []
-            for cur in current_rows:
-                result.append({
-                    'player_id': cur.player_id,
-                    'rank_position': cur.rank_position,
-                    'name': cur.player_name,
-                    'level_total': cur.level_total or 0,
-                    'level_celestial': cur.level_celestial or 0,
-                    'level_subclass': cur.level_subclass or 0,
-                    'celestial_lineage': cur.celestial_lineage_name or '',
-                    'subclass_lineage': cur.subclass_lineage_name or '',
-                    'level_change': 0,
-                    'level_arrow': '',
-                    'level_active': False,
-                    'position_change': 0,
-                    'position_direction': 'neutral',
-                    'position_active': False,
-                    'points': cur.points or 0,
-                })
-            result.sort(key=lambda x: x['rank_position'])
-            return result[:500]
-        
-        # Criar dicionário de referência para comparações rápidas
-        # Agrupar por player_name para evitar duplicação
-        target_dict = {}
-        for r in target_rows:
-            if r.player_name not in target_dict:
-                target_dict[r.player_name] = r
-        
-        # 6. Comparar e gerar resultado
-        result = []
-        for cur in current_rows:
-            prev = target_dict.get(cur.player_name)
-
-            prev_level = prev.level_total if prev else None
-            prev_rank = prev.rank_position if prev else None
-
-            level_change = (cur.level_total or 0) - (prev_level or 0) if prev_level is not None else 0
-            pos_diff = (prev_rank or cur.rank_position) - cur.rank_position if prev_rank is not None else 0
-
-            result.append({
-                'player_id': cur.player_id,
-                'rank_position': cur.rank_position,
-                'name': cur.player_name,
-                'level_total': cur.level_total or 0,
-                'level_celestial': cur.level_celestial or 0,
-                'level_subclass': cur.level_subclass or 0,
-                'celestial_lineage': cur.celestial_lineage_name or '',
-                'subclass_lineage': cur.subclass_lineage_name or '',
-                'level_change': level_change,
-                'level_arrow': '↑' if level_change > 0 else ('↓' if level_change < 0 else ''),
-                'level_active': level_change != 0,
-                'position_change': abs(pos_diff),
-                'position_direction': 'up' if pos_diff > 0 else ('down' if pos_diff < 0 else 'neutral'),
-                'position_active': pos_diff != 0,
-                'points': cur.points or 0,
-            })
-
-        # Ordenar por posição atual (1,2,3...) e limitar ao top 500
-        result.sort(key=lambda x: x['rank_position'])
-        print(f"DEBUG: returning {len(result)} results")
-        return result[:500]
-    except Exception as e:
-        print(f"⚠ Erro ao gerar comparativos por range: {e}")
-        import traceback
-        traceback.print_exc()
-        return []
-
-
-def get_top_level_gainers_for_range(session: Session, days: int = 7, limit: int = 100):
-    """
-    Retorna players ordenados por maior ganho de níveis no intervalo `days`.
-    Usa `get_level_changes_for_range` e classifica por `level_change` desc.
-    """
-    try:
-        rows = get_level_changes_for_range(session, days)
-        # Filtrar apenas quem subiu (level_change > 0)
-        gainers = [r for r in rows if (r.get('level_change') or 0) > 0]
-        # Ordenar por maior ganho, depois por level_total desc
-        gainers.sort(key=lambda x: ((x.get('level_change') or 0), x.get('level_total') or 0), reverse=True)
-        return gainers[:limit]
-    except Exception as e:
-        print(f"⚠ Erro ao gerar top gainers: {e}")
-        return []
-
-
-
 def get_position_changes(session: Session, player_name: str, current_position: int) -> dict:
     """
-    Compara posição atual com snapshot de ontem
+    Compara posição atual com snapshot de ontem (em horário de Brasília)
     
     Args:
         session: SQLAlchemy Session
@@ -518,11 +351,11 @@ def get_position_changes(session: Session, player_name: str, current_position: i
         }
     """
     try:
-        today = datetime.now(timezone.utc).date()
+        today = get_brasilia_date()
         yesterday = today - timedelta(days=1)
         
-        yesterday_start = datetime(yesterday.year, yesterday.month, yesterday.day, 0, 0, 0, tzinfo=timezone.utc)
-        yesterday_end = datetime(yesterday.year, yesterday.month, yesterday.day, 23, 59, 59, tzinfo=timezone.utc)
+        yesterday_start = datetime(yesterday.year, yesterday.month, yesterday.day, 0, 0, 0, tzinfo=BRASILIA_TZ)
+        yesterday_end = datetime(yesterday.year, yesterday.month, yesterday.day, 23, 59, 59, tzinfo=BRASILIA_TZ)
         
         yesterday_record = session.query(LevelRankingHistory).filter(
             LevelRankingHistory.player_name == player_name,
@@ -564,7 +397,7 @@ def get_position_changes(session: Session, player_name: str, current_position: i
 def get_arena_changes(session: Session, player_name: str, current_data: dict, category: str, current_position: int) -> dict:
     """
     Compara dados da arena atual com a arena anterior.
-    Considera horário de Brasília (UTC-3).
+    Considera horário de Brasília (GMT-3).
     
     Arena 1 (13:31) → compara com Arena 4 do dia anterior
     Arena 2 (19:31) → compara com Arena 1 do mesmo dia
@@ -595,14 +428,10 @@ def get_arena_changes(session: Session, player_name: str, current_data: dict, ca
             4: (23, 31),  # Arena 4: 23:31
         }
         
-        # Usar timezone fixo UTC-3 (Brasília) sem pytz
-        brasilia_tz = timezone(timedelta(hours=-3))
-        
         # Obter hora atual em Brasília
-        now_utc = datetime.now(timezone.utc)
-        now_brasilia = now_utc.astimezone(brasilia_tz)
-        current_hour = now_brasilia.hour
-        current_minute = now_brasilia.minute
+        now = get_brasilia_now()
+        current_hour = now.hour
+        current_minute = now.minute
         
         # Detectar qual arena está ativa agora em Brasília
         current_arena = None
@@ -641,30 +470,26 @@ def get_arena_changes(session: Session, player_name: str, current_data: dict, ca
         
         if current_arena >= 2:
             # Arena 2, 3, 4: a arena anterior foi no mesmo dia em Brasília
-            today = now_brasilia.date()
+            today = now.date()
             prev_h, prev_m = arena_schedule[previous_arena]
-            prev_date_start = datetime(today.year, today.month, today.day, prev_h, prev_m, 0, tzinfo=brasilia_tz)
-            prev_date_end = datetime(today.year, today.month, today.day, prev_h, prev_m, 59, tzinfo=brasilia_tz)
+            prev_date_start = datetime(today.year, today.month, today.day, prev_h, prev_m, 0, tzinfo=BRASILIA_TZ)
+            prev_date_end = datetime(today.year, today.month, today.day, prev_h, prev_m, 59, tzinfo=BRASILIA_TZ)
         else:
             # Arena 1: compara com Arena 4 do dia anterior
-            yesterday = now_brasilia.date() - timedelta(days=1)
+            yesterday = now.date() - timedelta(days=1)
             prev_h, prev_m = arena_schedule[previous_arena]
-            prev_date_start = datetime(yesterday.year, yesterday.month, yesterday.day, prev_h, prev_m, 0, tzinfo=brasilia_tz)
-            prev_date_end = datetime(yesterday.year, yesterday.month, yesterday.day, prev_h, prev_m, 59, tzinfo=brasilia_tz)
+            prev_date_start = datetime(yesterday.year, yesterday.month, yesterday.day, prev_h, prev_m, 0, tzinfo=BRASILIA_TZ)
+            prev_date_end = datetime(yesterday.year, yesterday.month, yesterday.day, prev_h, prev_m, 59, tzinfo=BRASILIA_TZ)
         
-        # Converter para UTC para buscar no banco
-        prev_date_start_utc = prev_date_start.astimezone(timezone.utc)
-        prev_date_end_utc = prev_date_end.astimezone(timezone.utc)
+        print(f"DEBUG: Procurando arena {previous_arena} de {prev_date_start} até {prev_date_end} (Brasília)")
         
-        print(f"DEBUG: Procurando arena {previous_arena} de {prev_date_start_utc} até {prev_date_end_utc} UTC")
-        
-        # Buscar o registro da arena anterior
+        # Buscar o registro da arena anterior (agora em horário de Brasília)
         last_record = session.query(ArenaRankingHistory).filter(
             ArenaRankingHistory.player_name == player_name,
             ArenaRankingHistory.category == category,
             ArenaRankingHistory.arena_number == previous_arena,
-            ArenaRankingHistory.recorded_at >= prev_date_start_utc,
-            ArenaRankingHistory.recorded_at <= prev_date_end_utc
+            ArenaRankingHistory.recorded_at >= prev_date_start,
+            ArenaRankingHistory.recorded_at <= prev_date_end
         ).order_by(desc(ArenaRankingHistory.recorded_at)).first()
         
         # Se não encontrou no rango de tempo, buscar qualquer registro anterior mais recente
@@ -747,10 +572,10 @@ def ensure_today_level_ranking_snapshot(session: Session) -> bool:
         from app.models import LevelRanking, Player
         from sqlalchemy.orm import joinedload
         
-        # Verificar se já existe snapshot de hoje
-        today = datetime.now(timezone.utc).date()
-        today_start = datetime(today.year, today.month, today.day, 0, 0, 0, tzinfo=timezone.utc)
-        today_end = datetime(today.year, today.month, today.day, 23, 59, 59, tzinfo=timezone.utc)
+        # Verificar se já existe snapshot de hoje (em horário de Brasília)
+        today = get_brasilia_date()
+        today_start = datetime(today.year, today.month, today.day, 0, 0, 0, tzinfo=BRASILIA_TZ)
+        today_end = datetime(today.year, today.month, today.day, 23, 59, 59, tzinfo=BRASILIA_TZ)
         
         existing_today = session.query(LevelRankingHistory).filter(
             LevelRankingHistory.recorded_at >= today_start,
@@ -771,9 +596,8 @@ def ensure_today_level_ranking_snapshot(session: Session) -> bool:
             print("⚠ Nenhum dado de ranking de level encontrado")
             return False
         
-        # Criar snapshot para os dados atuais
-        # Usar horário de Brasília convertido para UTC
-        brasilia_now = get_brasilia_now_utc()
+        # Criar snapshot para os dados atuais usando horário de Brasília
+        brasilia_now = get_brasilia_now()
         
         for rank_pos, level_row in enumerate(level_rows, 1):
             player_name = level_row.player.name if level_row.player else f"Player_{level_row.player_id}"
@@ -823,10 +647,10 @@ def ensure_today_arena_ranking_snapshot(session: Session, category: str) -> bool
         # Detectar qual arena está sendo feita agora
         arena_num = get_arena_number_by_time()
         
-        # Verificar se já existe snapshot desta arena específica hoje
-        today = datetime.now(timezone.utc).date()
-        today_start = datetime(today.year, today.month, today.day, 0, 0, 0, tzinfo=timezone.utc)
-        today_end = datetime(today.year, today.month, today.day, 23, 59, 59, tzinfo=timezone.utc)
+        # Verificar se já existe snapshot desta arena específica hoje (em horário de Brasília)
+        today = get_brasilia_date()
+        today_start = datetime(today.year, today.month, today.day, 0, 0, 0, tzinfo=BRASILIA_TZ)
+        today_end = datetime(today.year, today.month, today.day, 23, 59, 59, tzinfo=BRASILIA_TZ)
         
         existing_today = session.query(ArenaRankingHistory).filter(
             ArenaRankingHistory.recorded_at >= today_start,
@@ -850,9 +674,8 @@ def ensure_today_arena_ranking_snapshot(session: Session, category: str) -> bool
             print(f"⚠ Nenhum dado de ranking de arena {category} encontrado")
             return False
         
-        # Criar snapshot para os dados atuais
-        # Usar horário de Brasília convertido para UTC
-        brasilia_now = get_brasilia_now_utc()
+        # Criar snapshot para os dados atuais usando horário de Brasília
+        brasilia_now = get_brasilia_now()
         
         for rank_pos, arena_row in enumerate(arena_rows, 1):
             player_name = arena_row.player.name if arena_row.player else f"Player_{arena_row.player_id}"
@@ -882,3 +705,4 @@ def ensure_today_arena_ranking_snapshot(session: Session, category: str) -> bool
         traceback.print_exc()
         session.rollback()
         return False
+

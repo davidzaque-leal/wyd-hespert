@@ -1,7 +1,18 @@
 from sqlalchemy import Column, Integer, String, SmallInteger, ForeignKey, DateTime, CheckConstraint
 from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
+from datetime import datetime, timezone, timedelta
 from app.database import Base
+
+
+def get_brasilia_time():
+    """
+    Retorna a hora atual no fuso horário de Brasília (GMT-3).
+    Esta função deve ser usada em todos os server_default para garantir
+    que os timestamps sejam salvos no horário de Brasília.
+    """
+    brasilia_tz = timezone(timedelta(hours=-3))
+    return datetime.now(brasilia_tz)
 
 
 class Class(Base):
@@ -35,8 +46,8 @@ class Player(Base):
 
     kingdom = Column(String(20))
 
-    created_at = Column(DateTime(timezone=True), server_default=func.now())
-    updated_at = Column(DateTime(timezone=True), onupdate=func.now())
+    created_at = Column(DateTime(timezone=True), default=get_brasilia_time)
+    updated_at = Column(DateTime(timezone=True), onupdate=get_brasilia_time)
 
     guild = relationship("Guild")
     level_rankings = relationship("LevelRanking", back_populates="player")
@@ -67,7 +78,7 @@ class LevelRanking(Base):
     subclass_lineage_name = Column(String(100))  # Name of subclass lineage
     level_total = Column(Integer)
 
-    snapshot_date = Column(DateTime(timezone=True), server_default=func.now())
+    snapshot_date = Column(DateTime(timezone=True), default=get_brasilia_time)
 
     player = relationship("Player", back_populates="level_rankings")
 
@@ -87,7 +98,7 @@ class ArenaRanking(Base):
     bonus_kill = Column(Integer)
     total = Column(Integer)
 
-    snapshot_date = Column(DateTime(timezone=True), server_default=func.now())
+    snapshot_date = Column(DateTime(timezone=True), default=get_brasilia_time)
 
     player = relationship("Player", back_populates="arena_rankings")
 
@@ -110,7 +121,7 @@ class LevelRankingHistory(Base):
     celestial_lineage_name = Column(String(100))
     subclass_lineage_name = Column(String(100))
 
-    recorded_at = Column(DateTime(timezone=True), server_default=func.now(), index=True)
+    recorded_at = Column(DateTime(timezone=True), default=get_brasilia_time, index=True)
 
     player = relationship("Player", foreign_keys=[player_id])
 
@@ -130,7 +141,7 @@ class ArenaRankingHistory(Base):
     kill_value = Column(Integer)
     death_value = Column(Integer)
 
-    recorded_at = Column(DateTime(timezone=True), server_default=func.now(), index=True)
+    recorded_at = Column(DateTime(timezone=True), default=get_brasilia_time, index=True)
 
     player = relationship("Player", foreign_keys=[player_id])
 
@@ -149,5 +160,5 @@ class User(Base):
     is_admin = Column(Integer, default=1)  # 1 = admin, 0 = não admin
     is_active = Column(Integer, default=1)  # 1 = ativo, 0 = desativado
 
-    created_at = Column(DateTime(timezone=True), server_default=func.now())
-    updated_at = Column(DateTime(timezone=True), onupdate=func.now())
+    created_at = Column(DateTime(timezone=True), default=get_brasilia_time)
+    updated_at = Column(DateTime(timezone=True), onupdate=get_brasilia_time)

@@ -1,7 +1,10 @@
 from sqlalchemy.orm import Session
 from sqlalchemy import or_
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from app.models import Player, Guild, ClassLineage
+
+# timezone de Brasília (GMT-3)
+BRASILIA_TZ = timezone(timedelta(hours=-3))
 
 
 class PlayerRepository:
@@ -246,7 +249,7 @@ class PlayerRepository:
 
         # ===== TOUCHED TIMESTAMP =====
         if updated:
-            player.updated_at = datetime.now(timezone.utc)
+            player.updated_at = datetime.now(BRASILIA_TZ)
             # ensure player is attached to session
             if player not in session:
                 session.add(player)
