@@ -29,7 +29,7 @@ def get_brasilia_now_utc():
 def get_arena_number_by_time() -> int:
     """
     Detecta qual número de arena está sendo jogada baseado na hora GMT-3 (Brasília)
-    Horários: 13:31, 19:31, 20:31, 23:31
+    Horários: 13:31, 19:31, 21:01, 23:31
     
     Returns:
         int: 1, 2, 3 ou 4 correspondendo às arenas do dia
@@ -45,14 +45,14 @@ def get_arena_number_by_time() -> int:
     # Definir quais horários correspondem a cada arena
     # Arena 1: 13:31
     # Arena 2: 19:31
-    # Arena 3: 20:31
+    # Arena 3: 21:01
     # Arena 4: 23:31
     
     # Considerar uma janela de ±5 minutos para sincronizar após a arena
     arena_times = [
         (13, 31),  # Arena 1
         (19, 31),  # Arena 2
-        (21, 01),  # Arena 3
+        (21, 1),   # Arena 3
         (23, 31),  # Arena 4
     ]
     
@@ -80,7 +80,7 @@ def get_arena_number_by_time() -> int:
     # Se não está em nenhuma janela, retornar arena mais recente do dia
     if now.hour >= 23:
         return 4
-    elif now.hour >= 20:
+    elif now.hour >= 21:
         return 3
     elif now.hour >= 19:
         return 2
@@ -150,7 +150,7 @@ def save_level_ranking_history(session: Session, players_data: list):
 def save_arena_ranking_history(session: Session, players_data: list, category: str):
     """
     Salva snapshot do ranking de arena (4 vezes ao dia nos horários específicos)
-    Horários: 13:31, 19:31, 20:31 e 23:31 GMT-3
+    Horários: 13:31, 19:31, 21:01 e 23:31 GMT-3
     
     Args:
         session: SQLAlchemy Session
