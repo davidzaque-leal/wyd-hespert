@@ -29,7 +29,7 @@ def background_updater():
     Horários de atualização GMT-3 (Brasília):
     - 13:31 - Arena 1
     - 19:31 - Arena 2
-    - 20:31 - Arena 3
+    - 21:01 - Arena 3
     - 23:31 - Arena 4
     
     Level ranking atualiza apenas uma vez por dia
@@ -49,15 +49,18 @@ def background_updater():
             minute = now.minute
             
             # Arena schedule nos minutos específicos com janela de tolerância
-            arena_times = [13, 19, 20, 23]  # Horas
-            arena_minute = 31
+            # Arena 1: 13:31, Arena 2: 19:31, Arena 3: 21:01, Arena 4: 23:31
+            arena_times = [13, 19, 21, 23]  # Horas
+            arena_minutes = {13: 31, 19: 31, 21: 1, 23: 31}  # Minutos por hora
             tolerance = 2  # ±2 minutos
             
             # Verificar se estamos em um dos horários de arena
-            is_arena_time = any(
-                hour == h and (arena_minute - tolerance) <= minute <= (arena_minute + tolerance)
-                for h in arena_times
-            )
+            is_arena_time = False
+            for h in arena_times:
+                arena_min = arena_minutes.get(h, 31)
+                if hour == h and (arena_min - tolerance) <= minute <= (arena_min + tolerance):
+                    is_arena_time = True
+                    break
             
             # Sincronizar a cada 1 hora ou no horário de arena
             if is_arena_time:
@@ -150,8 +153,13 @@ def startup_event():
         session.close()
     
     # Garantir snapshots de histórico para hoje
+    # PRIMEIRO: fazer request à API para obter dados atualizados
     session = SessionLocal()
     try:
+        print("📡 Fazendo request inicial à API para atualizar dados...")
+        data_store.update_data()
+        
+        # DEPOIS: garantir snapshots com dados atualizados
         from app.services.ranking_history_service import (
             ensure_today_level_ranking_snapshot, 
             ensure_today_arena_ranking_snapshot
@@ -349,11 +357,11 @@ def ranking_combined(request: Request):
 
 
 # ===============================
-# Ranking Histórico
+# Evolução de XP
 # ===============================
-@app.get("/ranking-history")
-def ranking_history(request: Request, days: int = 7):
-    """Página com histórico de evolução de rankings
+@app.get("/xp-evolution")
+def xp_evolution(request: Request, days: int = 7):
+    """Página com evolução de levels ao longo do tempo
 
     Parâmetro `days` permite comparar com snapshot de ~1/7/15/30 dias atrás.
     """

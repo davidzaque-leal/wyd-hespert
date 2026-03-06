@@ -356,6 +356,7 @@ def get_level_changes_for_range(session: Session, days: int = 7):
         from datetime import timedelta
 
         # 1. Buscar o snapshot mais recente (usar a data/hora mais recente)
+        # Pegar apenas UM snapshot (o mais recente)
         latest_record = session.query(LevelRankingHistory).order_by(
             LevelRankingHistory.recorded_at.desc()
         ).first()
@@ -369,12 +370,24 @@ def get_level_changes_for_range(session: Session, days: int = 7):
         print(f"DEBUG: latest_dt={latest_dt}, latest_date={latest_date}")
         
         # 2. Buscar todos os registros do dia mais recente
+        # Mas pegar apenas UM snapshot (o primeiro/mais recente) para evitar duplicação
         current_date_start = datetime(latest_date.year, latest_date.month, latest_date.day, 0, 0, 0, tzinfo=timezone.utc)
         current_date_end = datetime(latest_date.year, latest_date.month, latest_date.day, 23, 59, 59, tzinfo=timezone.utc)
         
-        current_rows = session.query(LevelRankingHistory).filter(
+        # Pegar o snapshot mais recente do dia
+        latest_snapshot_time = session.query(
+            func.max(LevelRankingHistory.recorded_at).label('max_time')
+        ).filter(
             LevelRankingHistory.recorded_at >= current_date_start,
             LevelRankingHistory.recorded_at <= current_date_end
+        ).scalar()
+        
+        if not latest_snapshot_time:
+            return []
+        
+        # Buscar apenas registros desse snapshot específico
+        current_rows = session.query(LevelRankingHistory).filter(
+            LevelRankingHistory.recorded_at == latest_snapshot_time
         ).order_by(LevelRankingHistory.rank_position).all()
         
         print(f"DEBUG: current_rows count = {len(current_rows)}")
@@ -392,19 +405,35 @@ def get_level_changes_for_range(session: Session, days: int = 7):
         target_date_start = datetime(target_date.year, target_date.month, target_date.day, 0, 0, 0, tzinfo=timezone.utc)
         target_date_end = datetime(target_date.year, target_date.month, target_date.day, 23, 59, 59, tzinfo=timezone.utc)
         
-        target_rows = session.query(LevelRankingHistory).filter(
+        # Pegar o snapshot mais recente do dia alvo
+        target_snapshot_time = session.query(
+            func.max(LevelRankingHistory.recorded_at).label('max_time')
+        ).filter(
             LevelRankingHistory.recorded_at >= target_date_start,
             LevelRankingHistory.recorded_at <= target_date_end
-        ).order_by(LevelRankingHistory.recorded_at.desc()).all()
+        ).scalar()
+        
+        target_rows = []
+        if target_snapshot_time:
+            target_rows = session.query(LevelRankingHistory).filter(
+                LevelRankingHistory.recorded_at == target_snapshot_time
+            ).order_by(LevelRankingHistory.recorded_at.desc()).all()
         
         print(f"DEBUG: target_rows count = {len(target_rows)}")
         
         # 5. Se não encontrou registros do dia alvo, buscar o último registro disponível ANTES do dia atual
         if not target_rows:
             print(f"DEBUG: Não encontrou registros de {target_date}, buscando último registro antes de {latest_date}")
-            target_rows = session.query(LevelRankingHistory).filter(
+            # Pegar o snapshot mais recente antes do dia atual
+            last_snapshot_before = session.query(LevelRankingHistory).filter(
                 LevelRankingHistory.recorded_at < current_date_start
-            ).order_by(LevelRankingHistory.recorded_at.desc()).limit(500).all()
+            ).order_by(LevelRankingHistory.recorded_at.desc()).first()
+            
+            if last_snapshot_before:
+                target_rows = session.query(LevelRankingHistory).filter(
+                    LevelRankingHistory.recorded_at == last_snapshot_before.recorded_at
+                ).order_by(LevelRankingHistory.rank_position).all()
+            
             print(f"DEBUG: fallback target_rows count = {len(target_rows)}")
         
         # Criar dicionário de referência para comparações rápidas
