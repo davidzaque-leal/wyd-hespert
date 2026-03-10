@@ -52,20 +52,26 @@
                 Pontos: {{ p.total or 0 }} | Kill Rating: {{ p.killValue or 0 }}
             </div>
         </div>
-        <div style="display:flex; align-items:center; gap:8px;">
-            {{ components.render_stat(p.winCount, 'Vitórias') }}
-            {% if p.arena_stat_changes and p.arena_stat_changes.win_active %}
-                {{ components.render_small_change_indicator(p.arena_stat_changes.win_change, p.arena_stat_changes.win_arrow, p.arena_stat_changes.win_active) }}
-            {% endif %}
+        <div class="arena-row-flex" style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+            <span style="display: flex; align-items: center; gap: 8px;">
+                {{ components.render_stat(p.winCount, 'Vitórias') }}
+                {% if p.arena_stat_changes and p.arena_stat_changes.win_active %}
+                    {{ components.render_small_change_indicator(p.arena_stat_changes.win_change, p.arena_stat_changes.win_arrow, p.arena_stat_changes.win_active) }}
+                {% endif %}
+            </span>
+            <span style="display: flex; align-items: center; gap: 8px;">
+                {{ components.render_stat(p.killValue, 'Kills', '--success-color') }}
+                {% if p.arena_stat_changes and p.arena_stat_changes.kill_active %}
+                    {{ components.render_small_change_indicator(p.arena_stat_changes.kill_change, p.arena_stat_changes.kill_arrow, p.arena_stat_changes.kill_active) }}
+                {% endif %}
+            </span>
+            <span style="display: flex; align-items: center; gap: 8px;">
+                {{ components.render_stat(p.deathValue, 'Deaths', '--accent-color') }}
+            </span>
         </div>
-        <div style="display:flex; align-items:center; gap:8px;">
-            {{ components.render_stat(p.killValue, 'Kills', '--success-color') }}
-            {% if p.arena_stat_changes and p.arena_stat_changes.kill_active %}
-                {{ components.render_small_change_indicator(p.arena_stat_changes.kill_change, p.arena_stat_changes.kill_arrow, p.arena_stat_changes.kill_active) }}
-            {% endif %}
+        <div style="display: flex; justify-content: center;">
+            {{ components.render_stat(p.total, 'Total Score', '--warning-color') }}
         </div>
-        {{ components.render_stat(p.deathValue, 'Deaths', '--accent-color') }}
-        {{ components.render_stat(p.total, 'Total Score', '--warning-color') }}
     </div>
     {% endfor %}
 </div>
