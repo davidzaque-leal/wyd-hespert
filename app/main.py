@@ -42,37 +42,45 @@ def background_updater():
     # Aguardar próximo horário de sincronização
     time.sleep(60)
     
+    last_level_update_date = None
     while True:
         try:
-            # Usar horário de Brasília diretamente
             now = datetime.now(brasilia_tz)
-            
             hour = now.hour
             minute = now.minute
-            
+
             # Arena schedule nos minutos específicos com janela de tolerância
-            # Arena 1: 13:31, Arena 2: 19:31, Arena 3: 21:01, Arena 4: 23:31
-            arena_times = [13, 19, 21, 23]  # Horas
-            arena_minutes = {13: 31, 19: 31, 21: 1, 23: 31}  # Minutos por hora
-            tolerance = 2  # ±2 minutos
-            
-            # Verificar se estamos em um dos horários de arena
+            arena_times = [13, 19, 21, 23]
+            arena_minutes = {13: 31, 19: 31, 21: 1, 23: 31}
+            tolerance = 2
+
+            # Atualização de arena
             is_arena_time = False
             for h in arena_times:
                 arena_min = arena_minutes.get(h, 31)
                 if hour == h and (arena_min - tolerance) <= minute <= (arena_min + tolerance):
                     is_arena_time = True
                     break
-            
-            # Sincronizar a cada 1 hora ou no horário de arena
+
             if is_arena_time:
                 print(f"⏰ Sincronizando em horário de arena: {hour:02d}:{minute:02d}")
                 data_store.update_data()
-            
+
+            # Atualização de ranking de level às 00:01
+            if hour == 0 and minute == 1:
+                today = now.date()
+                if last_level_update_date != today:
+                    print(f"⏰ Sincronizando ranking de level: {today} 00:01")
+                    session = SessionLocal()
+                    from app.services.ranking_history_service import ensure_today_level_ranking_snapshot
+                    ensure_today_level_ranking_snapshot(session)
+                    session.close()
+                    last_level_update_date = today
+
         except Exception as e:
             print(f"⚠ Erro no background_updater: {e}")
-        
-        time.sleep(60)  # Checar a cada minuto
+
+        time.sleep(60)
 
 
 # ===============================

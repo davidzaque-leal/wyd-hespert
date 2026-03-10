@@ -41,13 +41,19 @@ class DataStore:
                 # Use LevelRepository to get enriched rankings with lineage names
                 level_rows = LevelRepository.get_all(session)
 
-                champion_rows = (
-                    session.query(ArenaRanking).join(Player).filter(ArenaRanking.category == "champion").order_by(ArenaRanking.total.desc()).all()
-                )
+                # Buscar todos os players e suas categorias atuais
+                all_arena_rows = session.query(ArenaRanking).join(Player).order_by(ArenaRanking.total.desc()).all()
+                player_category_map = {}
+                for row in all_arena_rows:
+                    # Só mantém a categoria mais "alta" (champion > aspirant)
+                    pname = row.player.name
+                    if pname not in player_category_map:
+                        player_category_map[pname] = row.category
+                    elif row.category == "champion":
+                        player_category_map[pname] = "champion"
 
-                aspirant_rows = (
-                    session.query(ArenaRanking).join(Player).filter(ArenaRanking.category == "aspirant").order_by(ArenaRanking.total.desc()).all()
-                )
+                champion_rows = [row for row in all_arena_rows if player_category_map.get(row.player.name) == "champion"]
+                aspirant_rows = [row for row in all_arena_rows if player_category_map.get(row.player.name) == "aspirant"]
 
                 with self.lock:
                     # Build lists using PlayerSerializer - Centralizado

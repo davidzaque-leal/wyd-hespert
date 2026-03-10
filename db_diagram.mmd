@@ -1,0 +1,22 @@
+graph TD
+    Class -->|1:N| ClassLineage
+    Player -->|N:1| Guild
+    Player -->|N:1| Class
+    Player -->|N:1| ClassLineage
+    Player -->|N:1| ClassLineage:subclass
+    Player -->|1:N| LevelRanking
+    Player -->|1:N| ArenaRanking
+    Player -->|1:N| LevelRankingHistory
+    Player -->|1:N| ArenaRankingHistory
+    LevelRanking -->|N:1| Player
+    ArenaRanking -->|N:1| Player
+    LevelRankingHistory -->|N:1| Player
+    ArenaRankingHistory -->|N:1| Player
+    User
+    Guild
+    Class
+    ClassLineage
+    LevelRanking
+    ArenaRanking
+    LevelRankingHistory
+    ArenaRankingHistory
