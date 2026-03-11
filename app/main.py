@@ -105,20 +105,38 @@ def login(request: Request, username: str = Form(...), password: str = Form(...)
     """Processa o login"""
     session = SessionLocal()
     try:
-        user = authenticate_user(session, username, password)
+        from pydantic import BaseModel, constr, ValidationError
+
+        class LoginInput(BaseModel):
+            username: constr(strip_whitespace=True, min_length=3, max_length=50)
+            password: constr(strip_whitespace=True, min_length=6, max_length=100)
+
+        # Validação de input
+        try:
+            validated = LoginInput(username=username, password=password)
+        except ValidationError as ve:
+            return templates.TemplateResponse("login.html", {
+                "request": request,
+                "error": "Dados inválidos: " + str(ve)
+            }, status_code=400)
+
+        user = authenticate_user(session, validated.username, validated.password)
         if not user:
             return templates.TemplateResponse("login.html", {
                 "request": request,
                 "error": "Invalid username or password"
             }, status_code=401)
-        
+
         # Criar resposta com cookie de sessão
         response = RedirectResponse(url="/search", status_code=302)
         response.set_cookie(
             key="user_id",
             value=str(user.id),
             max_age=86400,  # 24 horas
-            httponly=True
+            httponly=True,
+            secure=True,
+            samesite="Strict",
+            expires=86400
         )
         return response
     except Exception as e:
@@ -134,7 +152,7 @@ def login(request: Request, username: str = Form(...), password: str = Form(...)
 def logout():
     """Faz logout do usuário"""
     response = RedirectResponse(url="/", status_code=302)
-    response.delete_cookie(key="user_id")
+    response.delete_cookie(key="user_id", httponly=True, secure=True, samesite="Strict")
     return response
 
 
@@ -394,12 +412,27 @@ def search_lineage(request: Request, lineage: str = None):
     if not user:
         return RedirectResponse(url="/login", status_code=302)
     
+    from pydantic import BaseModel, constr, ValidationError
+
+    class LineageInput(BaseModel):
+        lineage: constr(strip_whitespace=True, min_length=3, max_length=100)
+
     session = SessionLocal()
     try:
         results = []
         if lineage:
-            results = PlayerRepository.get_by_lineage(session, lineage)
-        
+            try:
+                validated = LineageInput(lineage=lineage)
+            except ValidationError as ve:
+                context = _get_search_context(session, [], search_performed=True)
+                return templates.TemplateResponse("search.html", {
+                    "request": request,
+                    "last_update": data_store.last_update,
+                    "user": user,
+                    "error": "Dados inválidos: " + str(ve),
+                    **context
+                })
+            results = PlayerRepository.get_by_lineage(session, validated.lineage)
         context = _get_search_context(session, results, search_performed=bool(lineage))
         return templates.TemplateResponse("search.html", {
             "request": request,
@@ -418,12 +451,27 @@ def search_guild(request: Request, guild_id: int = None):
     if not user:
         return RedirectResponse(url="/login", status_code=302)
     
+    from pydantic import BaseModel, conint, ValidationError
+
+    class GuildInput(BaseModel):
+        guild_id: conint(gt=0)
+
     session = SessionLocal()
     try:
         results = []
         if guild_id:
-            results = PlayerRepository.get_by_guild_id(session, guild_id)
-        
+            try:
+                validated = GuildInput(guild_id=guild_id)
+            except ValidationError as ve:
+                context = _get_search_context(session, [], search_performed=True)
+                return templates.TemplateResponse("search.html", {
+                    "request": request,
+                    "last_update": data_store.last_update,
+                    "user": user,
+                    "error": "Dados inválidos: " + str(ve),
+                    **context
+                })
+            results = PlayerRepository.get_by_guild_id(session, validated.guild_id)
         context = _get_search_context(session, results, search_performed=guild_id is not None)
         return templates.TemplateResponse("search.html", {
             "request": request,
@@ -442,12 +490,28 @@ def search_guild_lineage(request: Request, guild_id: int = None, lineage: str = 
     if not user:
         return RedirectResponse(url="/login", status_code=302)
     
+    from pydantic import BaseModel, conint, constr, ValidationError
+
+    class GuildLineageInput(BaseModel):
+        guild_id: conint(gt=0)
+        lineage: constr(strip_whitespace=True, min_length=3, max_length=100)
+
     session = SessionLocal()
     try:
         results = []
         if guild_id and lineage:
-            results = PlayerRepository.get_by_guild_and_lineage(session, guild_id, lineage)
-        
+            try:
+                validated = GuildLineageInput(guild_id=guild_id, lineage=lineage)
+            except ValidationError as ve:
+                context = _get_search_context(session, [], search_performed=True)
+                return templates.TemplateResponse("search.html", {
+                    "request": request,
+                    "last_update": data_store.last_update,
+                    "user": user,
+                    "error": "Dados inválidos: " + str(ve),
+                    **context
+                })
+            results = PlayerRepository.get_by_guild_and_lineage(session, validated.guild_id, validated.lineage)
         context = _get_search_context(session, results, search_performed=guild_id is not None and lineage is not None)
         return templates.TemplateResponse("search.html", {
             "request": request,

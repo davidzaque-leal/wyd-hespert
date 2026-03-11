@@ -10,3 +10,4 @@ python-multipart==0.0.9
 	python-jose[cryptography]==3.3.0
 pytest
 pytest-cov
+python-dotenv
