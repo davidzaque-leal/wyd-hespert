@@ -162,30 +162,9 @@ def startup_event():
     finally:
         session.close()
     
-    # Garantir snapshots de histórico para hoje
-    # PRIMEIRO: fazer request à API para obter dados atualizados
-    session = SessionLocal()
-    try:
-        print("📡 Fazendo request inicial à API para atualizar dados...")
-        data_store.update_data()
-        
-        # DEPOIS: garantir snapshots com dados atualizados
-        from app.services.ranking_history_service import (
-            ensure_today_level_ranking_snapshot, 
-            ensure_today_arena_ranking_snapshot
-        )
-        
-        print("📅 Verificando snapshots de histórico para hoje...")
-        ensure_today_level_ranking_snapshot(session)
-        ensure_today_arena_ranking_snapshot(session, "champion")
-        ensure_today_arena_ranking_snapshot(session, "aspirant")
-        
-    except Exception as e:
-        print(f"⚠ Erro ao garantir snapshots de hoje: {e}")
-        import traceback
-        traceback.print_exc()
-    finally:
-        session.close()
+    # Carregar dados do banco para exibição
+    from app.services.data_store import data_store
+    data_store.update_data(sync=False)
 
     # Seed classes and lineages (needed before syncing players)
     try:

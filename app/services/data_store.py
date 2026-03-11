@@ -1,17 +1,13 @@
 import threading
+import os
 import time
 import json
-import os
-from app.services.api import get_level_ranking, get_arena_ranking
+from app.database import SessionLocal
+from app.repositories.level_repository import LevelRepository
+from app.models import ArenaRanking, Player
+from app.services.player_serializer import PlayerSerializer
 from app.services.sync_service import SyncService
 from app.services.ranking_history_service import save_level_ranking_history, save_arena_ranking_history
-from app.database import SessionLocal
-from app.models import LevelRanking, ArenaRanking, Player
-from app.repositories.level_repository import LevelRepository
-from app.services.player_serializer import PlayerSerializer
-
-
-
 
 class DataStore:
     def __init__(self):
@@ -25,66 +21,48 @@ class DataStore:
         # Tenta restaurar backup ao iniciar
         self._load_backup()
 
-    # ===============================
-    # Atualização dos dados da API
-    # ===============================
-    def update_data(self):
+    def update_data(self, sync: bool = True):
         try:
-            print("🔄 Sincronizando e atualizando dados no banco...")
+            if sync:
+                print("🔄 Sincronizando e atualizando dados no banco...")
+                SyncService.sync_all()
 
-            # Use SyncService to fetch and persist data into the DB
-            SyncService.sync_all()
-
-            # Load normalized structures from DB for templates
+            # Sempre carrega os dados atuais do banco
             session = SessionLocal()
             try:
-                # Use LevelRepository to get enriched rankings with lineage names
                 level_rows = LevelRepository.get_all(session)
-
-                # Buscar todos os players e suas categorias atuais
-                all_arena_rows = session.query(ArenaRanking).join(Player).order_by(ArenaRanking.total.desc()).all()
-                player_category_map = {}
-                for row in all_arena_rows:
-                    # Só mantém a categoria mais "alta" (champion > aspirant)
-                    pname = row.player.name
-                    if pname not in player_category_map:
-                        player_category_map[pname] = row.category
-                    elif row.category == "champion":
-                        player_category_map[pname] = "champion"
-
-                champion_rows = [row for row in all_arena_rows if player_category_map.get(row.player.name) == "champion"]
-                aspirant_rows = [row for row in all_arena_rows if player_category_map.get(row.player.name) == "aspirant"]
+                champion_rows = (
+                    session.query(ArenaRanking).join(Player).filter(ArenaRanking.category == "champion").order_by(ArenaRanking.total.desc()).all()
+                )
+                aspirant_rows = (
+                    session.query(ArenaRanking).join(Player).filter(ArenaRanking.category == "aspirant").order_by(ArenaRanking.total.desc()).all()
+                )
 
                 with self.lock:
-                    # Build lists using PlayerSerializer - Centralizado
                     self.level_ranking = [
                         PlayerSerializer.serialize_level_ranking(lr, session)
                         for lr in level_rows
                     ]
-
                     self.arena_champion = [
                         PlayerSerializer.serialize_arena_ranking(a)
                         for a in champion_rows
                     ]
-                    
                     self.arena_aspirant = [
                         PlayerSerializer.serialize_arena_ranking(a)
                         for a in aspirant_rows
                     ]
-
                     self.last_update = time.strftime("%Y-%m-%d %H:%M:%S")
 
-                # Salvar histórico de rankings
-                try:
-                    save_level_ranking_history(session, self.level_ranking)
-                    save_arena_ranking_history(session, self.arena_champion, "champion")
-                    save_arena_ranking_history(session, self.arena_aspirant, "aspirant")
-                except Exception as e:
-                    print(f"⚠ Erro ao salvar histórico de rankings: {e}")
+                if sync:
+                    try:
+                        save_level_ranking_history(session, self.level_ranking)
+                        save_arena_ranking_history(session, self.arena_champion, "champion")
+                        save_arena_ranking_history(session, self.arena_aspirant, "aspirant")
+                    except Exception as e:
+                        print(f"⚠ Erro ao salvar histórico de rankings: {e}")
+                    self._save_backup()
 
-                self._save_backup()
-
-                print("✅ Dados sincronizados e carregados do banco com sucesso!")
+                print("✅ Dados carregados do banco com sucesso!")
             finally:
                 session.close()
 

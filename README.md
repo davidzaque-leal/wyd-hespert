@@ -25,15 +25,24 @@ Instalar dependências:
 pip install -r requirements.txt
 ```
 
+
 ## Configuração e banco de dados
 
-- O projeto utiliza SQLAlchemy. Para criar as tabelas, você pode executar o script `create_tables.py` ou deixar o evento de startup criar automaticamente.
+- O projeto utiliza apenas Postgres (não há mais fallback para SQLite).
+- Para criar as tabelas, execute o script `create_tables.py` ou deixe o evento de startup criar automaticamente.
 
 ```bash
 python create_tables.py
 ```
 
 - O primeiro startup cria um usuário admin padrão (username: `admin`, password: `admin123`) caso não exista.
+
+**Arquivos obsoletos removidos:**
+- `app.db` (SQLite antigo)
+- `data_backup.json` (backup antigo)
+- Todas as pastas `__pycache__` (cache Python)
+
+**Apenas arquivos essenciais permanecem no projeto.**
 
 ## Executando a aplicação
 
