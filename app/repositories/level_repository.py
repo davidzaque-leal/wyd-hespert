@@ -30,6 +30,8 @@ class LevelRepository:
             if sub_lineage:
                 subclass_lineage_name = sub_lineage.name
         
+        from app.models import get_brasilia_time
+        snapshot_date = get_brasilia_time()
         ranking = LevelRanking(
             player_id=player.id,
             points=ranking_data.get("points"),
@@ -37,9 +39,11 @@ class LevelRepository:
             celestial_lineage_name=celestial_lineage_name,
             level_subclass=ranking_data.get("levelSub"),
             subclass_lineage_name=subclass_lineage_name,
-            level_total=ranking_data.get("Soma Level")
+            level_total=ranking_data.get("Soma Level"),
+            snapshot_date=snapshot_date
         )
         session.add(ranking)
+        return snapshot_date  # Para sincronizar com histórico
 
     @staticmethod
     def get_all(session: Session):

@@ -9,6 +9,8 @@ class ArenaRepository:
 
     @staticmethod
     def save(session: Session, player: Player, arena_data: dict, category: str):
+        from app.models import get_brasilia_time
+        snapshot_date = get_brasilia_time()
         ranking = ArenaRanking(
             player_id=player.id,
             category=category,
@@ -19,5 +21,7 @@ class ArenaRepository:
             points=arena_data.get("points"),
             bonus_kill=arena_data.get("bonusKill") or arena_data.get("bonus_kill"),
             total=arena_data.get("total"),
+            snapshot_date=snapshot_date
         )
         session.add(ranking)
+        return snapshot_date  # Para sincronizar com histórico

@@ -7,6 +7,16 @@
 <div class="hero">
     <h1>📊 Ranking de Level</h1>
     <p>Top players por nível total alcançado</p>
+    <div style="margin-top: 18px; display: flex; justify-content: center; gap: 24px;">
+        <span style="background: #222a; color: #ffd700; padding: 8px 18px; border-radius: 18px; font-weight: bold; font-size: 1.1em; box-shadow: 0 2px 8px #0002;">
+            🏟️ Arena atualizada em:<br>
+            <span style="color: #fff; font-size: 1em;">{{ last_arena_update.strftime('%d/%m/%Y %H:%M') if last_arena_update else 'N/A' }}</span>
+        </span>
+        <span style="background: #222a; color: #00eaff; padding: 8px 18px; border-radius: 18px; font-weight: bold; font-size: 1.1em; box-shadow: 0 2px 8px #0002;">
+            🗂️ Ranking de level atualizado em:<br>
+            <span style="color: #fff; font-size: 1em;">{{ last_level_update.strftime('%d/%m/%Y %H:%M') if last_level_update else 'N/A' }}</span>
+        </span>
+    </div>
 </div>
 {% endblock %}
 

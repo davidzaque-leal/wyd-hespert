@@ -12,7 +12,9 @@ def get_brasilia_time():
     que os timestamps sejam salvos no horário de Brasília.
     """
     brasilia_tz = timezone(timedelta(hours=-3))
-    return datetime.now(brasilia_tz)
+    now = datetime.now(brasilia_tz)
+    # Truncar segundos e microsegundos
+    return now.replace(second=0, microsecond=0)
 
 
 class Class(Base):

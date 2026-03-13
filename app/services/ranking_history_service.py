@@ -119,8 +119,13 @@ def save_level_ranking_history(session: Session, players_data: list):
         ).delete()
         
         # Inserir novo snapshot de hoje usando horário de Brasília
-        brasilia_now = get_brasilia_now()
-        
+        # Receber snapshot_date dos registros principais
+        snapshot_date = None
+        if players_data and "snapshot_date" in players_data[0]:
+            snapshot_date = players_data[0]["snapshot_date"]
+        else:
+            snapshot_date = get_brasilia_now().replace(second=0, microsecond=0)
+
         for rank_pos, player_data in enumerate(players_data, 1):
             history = LevelRankingHistory(
                 player_id=player_data.get("id"),
@@ -132,7 +137,7 @@ def save_level_ranking_history(session: Session, players_data: list):
                 level_subclass=player_data.get("levelSub", 0),
                 celestial_lineage_name=player_data.get("celestial_lineage", ""),
                 subclass_lineage_name=player_data.get("subclass_lineage", ""),
-                recorded_at=brasilia_now,
+                recorded_at=snapshot_date,
             )
             session.add(history)
         
@@ -187,8 +192,13 @@ def save_arena_ranking_history(session: Session, players_data: list, category: s
         ).delete()
         
         # Inserir novo snapshot usando horário de Brasília
-        brasilia_now = get_brasilia_now()
-        
+        # Receber snapshot_date dos registros principais
+        snapshot_date = None
+        if players_data and "snapshot_date" in players_data[0]:
+            snapshot_date = players_data[0]["snapshot_date"]
+        else:
+            snapshot_date = get_brasilia_now().replace(second=0, microsecond=0)
+
         for rank_pos, player_data in enumerate(players_data, 1):
             history = ArenaRankingHistory(
                 player_id=player_data.get("id"),
@@ -201,7 +211,7 @@ def save_arena_ranking_history(session: Session, players_data: list, category: s
                 win_count=player_data.get("winCount", 0),
                 kill_value=player_data.get("killValue", 0),
                 death_value=player_data.get("deathValue", 0),
-                recorded_at=brasilia_now,
+                recorded_at=snapshot_date,
             )
             session.add(history)
         
