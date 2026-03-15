@@ -12,6 +12,12 @@
         <h1>🌟 Arena Aspirante</h1>
         <p>Novos talentos em ascensão</p>
     {% endif %}
+    <div style="margin-top: 18px; display: flex; justify-content: center;">
+        <span style="background: #222a; color: #ffd700; padding: 8px 18px; border-radius: 18px; font-weight: bold; font-size: 1.1em; box-shadow: 0 2px 8px #0002;">
+            🏟️ Arena atualizada em:<br>
+            <span style="color: #fff; font-size: 1em;">{{ last_update if last_update else 'N/A' }}</span>
+        </span>
+    </div>
 </div>
 {% endblock %}
 
