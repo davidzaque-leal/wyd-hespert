@@ -133,6 +133,7 @@ def save_level_ranking_history(session: Session, players_data: list):
         for rank_pos, player_data in enumerate(players_data, 1):
             history = LevelRankingHistory(
                 player_id=player_data.get("id"),
+                player_name=player_data.get("name") or player_data.get("charName") or "Unknown",
                 rank_position=rank_pos,
                 level_total=player_data.get("Soma Level", 0),
                 points=player_data.get("points", 0),
@@ -140,8 +141,7 @@ def save_level_ranking_history(session: Session, players_data: list):
                 level_sub_celestial=player_data.get("levelSub", 0),
                 celestial_lineage_name=player_data.get("celestial_lineage", ""),
                 subclass_lineage_name=player_data.get("subclass_lineage", ""),
-                recorded_at=snapshot_date,
-                season=season
+                recorded_at=snapshot_date
             )
             session.add(history)
         

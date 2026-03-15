@@ -11,18 +11,18 @@ class LevelRepository:
     @staticmethod
     def save(session: Session, player, ranking_data):
         # Get celestial lineage name
-        celestial_lineage_name = None
-        if player.class_id is not None and player.class_lineage is not None:
+        celestial_lineage_name = ranking_data.get("celestial_lineage")
+        if celestial_lineage_name is None and player.class_id is not None and player.class_lineage is not None:
             cel_lineage = session.query(ClassLineage).filter(
                 ClassLineage.class_id == player.class_id,
                 ClassLineage.lineage_index == player.class_lineage
             ).first()
             if cel_lineage:
                 celestial_lineage_name = cel_lineage.name
-        
+
         # Get subclass lineage name
-        subclass_lineage_name = None
-        if player.subclass is not None and player.subclass_lineage is not None:
+        subclass_lineage_name = ranking_data.get("subclass_lineage")
+        if subclass_lineage_name is None and player.subclass is not None and player.subclass_lineage is not None:
             sub_lineage = session.query(ClassLineage).filter(
                 ClassLineage.class_id == player.subclass,
                 ClassLineage.lineage_index == player.subclass_lineage

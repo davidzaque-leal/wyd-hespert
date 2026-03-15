@@ -29,6 +29,7 @@ class PlayerSerializer:
         """
         lineages = LineageUtils.get_all_lineages(session, ranking.player)
         return {
+            "id": ranking.player.id,
             "name": ranking.player.name,
             "level": ranking.level_celestial,
             "celestial_lineage": ranking.celestial_lineage_name or lineages.get("celestial"),
@@ -50,6 +51,7 @@ class PlayerSerializer:
             dict: Dicionário padronizado com dados da arena
         """
         return {
+            "id": ranking.player.id,
             "charName": ranking.player.name,
             "winCount": ranking.win_count,
             "killValue": ranking.kill_value,
