@@ -170,16 +170,13 @@ def save_arena_ranking_history(session: Session, players_data: list, category: s
         
         # Detectar qual arena está sendo feita agora
         arena_num = get_arena_number_by_time()
-        from app.models import ArenaNumberEnum
-        enum_arena_num = ArenaNumberEnum(arena_num)
-        
         # Verificar se já existe snapshot de ESTA ARENA ESPECÍFICA hoje (em horário de Brasília)
         today = get_today()
         today_str = today.strftime('%d/%m/%Y')
         existing_arena = session.query(ArenaRankingHistory).filter(
             ArenaRankingHistory.recorded_at.like(f'{today_str}%'),
             ArenaRankingHistory.category == category,
-            ArenaRankingHistory.arena_number == enum_arena_num
+            ArenaRankingHistory.arena_number == arena_num
         ).first()
         
         if existing_arena:
@@ -204,7 +201,7 @@ def save_arena_ranking_history(session: Session, players_data: list, category: s
             history = ArenaRankingHistory(
                 player_id=player_id,
                 category=category,
-                arena_number=enum_arena_num,
+                arena_number=arena_num,
                 rank_position=rank_pos,
                 total=player_data.get("total", 0),
                 points=player_data.get("points", 0),
@@ -429,99 +426,33 @@ def get_arena_changes(session: Session, player_name: str, current_data: dict, ca
         from app.models import ArenaRankingHistory
         from datetime import timedelta
 
-        # Definir horários das arenas em Brasília (UTC-3)
-        arena_schedule = {
-            1: (13, 31),  # Arena 1: 13:31
-            2: (19, 31),  # Arena 2: 19:31
-            3: (21, 1),   # Arena 3: 21:01
-            4: (23, 31),  # Arena 4: 23:31
-        }
-        
-        # Obter hora atual em Brasília
-        now = datetime.now()
-        current_hour = now.hour
-        current_minute = now.minute
-        
-        # Detectar qual arena está ativa agora em Brasília
-        current_arena = None
-        for arena_num, (h, m) in arena_schedule.items():
-            # Janela de ±5 minutos
-            if h == current_hour and abs(current_minute - m) <= 5:
-                current_arena = arena_num
-                break
-        
-        # Se não está em janela de arena, usar lógica para determinar qual é a próxima/proxima
+        # Simplificação: compara arenas por data e arena_number
+        today_str = get_formatted_now().split()[0]
+        yesterday = datetime.now() - timedelta(days=1)
+        yesterday_str = yesterday.strftime('%d/%m/%Y')
+
+        # Detecta arena atual
+        current_arena = current_data.get('arena_number')
         if not current_arena:
-            if current_hour < 13 or (current_hour == 13 and current_minute < 31):
-                current_arena = 1  # Antes de 13:31, assumir que é para arena 1
-            elif current_hour < 19 or (current_hour == 19 and current_minute < 31):
-                current_arena = 2
-            elif current_hour < 21 or (current_hour == 21 and current_minute < 1):
-                current_arena = 3
-            elif current_hour < 23 or (current_hour == 23 and current_minute < 31):
-                current_arena = 4
-            else:
-                current_arena = 1  # Depois de 23:31, próximo ciclo é arena 1
-        
-        print(f"DEBUG: Arena atual detectada: {current_arena} ({current_hour:02d}:{current_minute:02d} Brasília)")
-        
-        # Determinar qual arena é a "anterior" para comparação
-        previous_arena = current_arena - 1
-        if previous_arena == 0:
-            previous_arena = 4  # Arena 1 compara com Arena 4 do dia anterior
-        
-        print(f"DEBUG: Comparando com arena {previous_arena}")
-        
-        # Simplificação baseada em Brasília:
-        # - Arena 3 e 4: arena anterior é do mesmo dia em Brasília
-        # - Arena 2: arena anterior (Arena 1) é do mesmo dia em Brasília
-        # - Arena 1: arena anterior (Arena 4) é do dia anterior em Brasília
-        
-        if current_arena >= 2:
-            # Arena 2, 3, 4: a arena anterior foi no mesmo dia em Brasília
-            today = now.date()
-            prev_h, prev_m = arena_schedule[previous_arena]
-            prev_date_start = datetime(today.year, today.month, today.day, prev_h, prev_m, 0, tzinfo=BRASILIA_TZ)
-            prev_date_end = datetime(today.year, today.month, today.day, prev_h, prev_m, 59, tzinfo=BRASILIA_TZ)
+            current_arena = 1
+
+        # Define arena anterior
+        if current_arena == 1:
+            previous_arena = 4
+            previous_date = yesterday_str
         else:
-            # Arena 1: compara com Arena 4 do dia anterior
-            yesterday = now.date() - timedelta(days=1)
-            prev_h, prev_m = arena_schedule[previous_arena]
-            prev_date_start = datetime(yesterday.year, yesterday.month, yesterday.day, prev_h, prev_m, 0, tzinfo=BRASILIA_TZ)
-            prev_date_end = datetime(yesterday.year, yesterday.month, yesterday.day, prev_h, prev_m, 59, tzinfo=BRASILIA_TZ)
-        
-        print(f"DEBUG: Procurando arena {previous_arena} de {prev_date_start} até {prev_date_end} (Brasília)")
-        
-        # Buscar o registro da arena anterior (agora em horário de Brasília)
-        from app.models import ArenaNumberEnum
-        enum_previous_arena = ArenaNumberEnum(previous_arena)
+            previous_arena = current_arena - 1
+            previous_date = today_str
+
+        # Busca registro anterior
+        player_id = current_data.get('id')
         last_record = session.query(ArenaRankingHistory).filter(
-            ArenaRankingHistory.player_name == player_name,
+            ArenaRankingHistory.player_id == player_id,
             ArenaRankingHistory.category == category,
-            ArenaRankingHistory.arena_number == enum_previous_arena,
-            ArenaRankingHistory.recorded_at >= prev_date_start,
-            ArenaRankingHistory.recorded_at <= prev_date_end
-        ).order_by(desc(ArenaRankingHistory.recorded_at)).first()
-        
-        # Se não encontrou no rango de tempo, buscar qualquer registro anterior mais recente
-        if not last_record:
-            last_record = session.query(ArenaRankingHistory).filter(
-                ArenaRankingHistory.player_name == player_name,
-                ArenaRankingHistory.category == category,
-                ArenaRankingHistory.arena_number == enum_previous_arena
-            ).order_by(desc(ArenaRankingHistory.recorded_at)).first()
-            if last_record:
-                print(f"DEBUG: Usando fallback - último registro da arena {previous_arena}: {last_record.recorded_at}")
-        
-        if not last_record:
-            # Tentar buscar qualquer registro anterior dessa categoria
-            last_record = session.query(ArenaRankingHistory).filter(
-                ArenaRankingHistory.player_name == player_name,
-                ArenaRankingHistory.category == category
-            ).order_by(desc(ArenaRankingHistory.recorded_at)).first()
-            if last_record:
-                print(f"DEBUG: Usando qualquer registro anterior: arena {last_record.arena_number}, {last_record.recorded_at}")
-        
+            ArenaRankingHistory.arena_number == previous_arena,
+            ArenaRankingHistory.recorded_at.like(f'{previous_date}%')
+        ).first()
+
         if not last_record:
             return {
                 'position_change': 0,
@@ -685,12 +616,10 @@ def ensure_today_arena_ranking_snapshot(session: Session, category: str) -> bool
         
         # Detectar qual arena está sendo feita agora
         arena_num = get_arena_number_by_time()
-        
         # Verificar se já existe snapshot desta arena específica hoje (em horário de Brasília)
         today = get_brasilia_date()
         today_start = datetime(today.year, today.month, today.day, 0, 0, 0, tzinfo=BRASILIA_TZ)
         today_end = datetime(today.year, today.month, today.day, 23, 59, 59, tzinfo=BRASILIA_TZ)
-        
         existing_today = session.query(ArenaRankingHistory).filter(
             ArenaRankingHistory.recorded_at >= today_start,
             ArenaRankingHistory.recorded_at <= today_end,

@@ -16,11 +16,6 @@ class KingdomEnum(enum.Enum):
     red = "red"
     none = "none"
 
-class ArenaNumberEnum(enum.Enum):
-    one = 1
-    two = 2
-    three = 3
-    four = 4
 
 
 def get_formatted_now():
@@ -149,7 +144,7 @@ class ArenaRankingHistory(Base):
     player_id = Column(Integer, ForeignKey("players.id", ondelete="CASCADE"))
     season = Column(String(5), nullable=False)  # MM/YY
     category = Column(Enum(ArenaCategoryEnum), nullable=False)  # champion ou aspirant
-    arena_number = Column(Enum(ArenaNumberEnum), default=ArenaNumberEnum.one, nullable=False)  # 1, 2, 3, ou 4
+    arena_number = Column(Integer, default=1, nullable=False)  # 1, 2, 3, ou 4
     rank_position = Column(Integer)  # Posição no ranking
     total = Column(Integer)
     points = Column(Integer)

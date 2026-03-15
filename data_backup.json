@@ -1471,16 +1471,6 @@
       "guild": null
     },
     {
-      "id": 150,
-      "name": "-MarioX-",
-      "level": 429,
-      "celestial_lineage": null,
-      "levelSub": 423,
-      "subclass_lineage": null,
-      "Soma Level": 852,
-      "guild": null
-    },
-    {
       "id": 149,
       "name": "-Rice",
       "level": 430,
@@ -1489,6 +1479,16 @@
       "subclass_lineage": null,
       "Soma Level": 852,
       "guild": 2201
+    },
+    {
+      "id": 150,
+      "name": "-MarioX-",
+      "level": 429,
+      "celestial_lineage": null,
+      "levelSub": 423,
+      "subclass_lineage": null,
+      "Soma Level": 852,
+      "guild": null
     },
     {
       "id": 151,
@@ -1811,21 +1811,21 @@
       "guild": 2305
     },
     {
-      "id": 183,
-      "name": "dropfarm",
-      "level": 426,
-      "celestial_lineage": null,
-      "levelSub": 423,
-      "subclass_lineage": null,
-      "Soma Level": 849,
-      "guild": null
-    },
-    {
       "id": 184,
       "name": "Teku-Holy2",
       "level": 425,
       "celestial_lineage": null,
       "levelSub": 424,
+      "subclass_lineage": null,
+      "Soma Level": 849,
+      "guild": null
+    },
+    {
+      "id": 183,
+      "name": "dropfarm",
+      "level": 426,
+      "celestial_lineage": null,
+      "levelSub": 423,
       "subclass_lineage": null,
       "Soma Level": 849,
       "guild": null
@@ -2951,8 +2951,8 @@
       "guild": null
     },
     {
-      "id": 298,
-      "name": "-ColoSSoS-",
+      "id": 296,
+      "name": "Shaggy-",
       "level": 420,
       "celestial_lineage": null,
       "levelSub": 422,
@@ -2961,8 +2961,8 @@
       "guild": null
     },
     {
-      "id": 296,
-      "name": "Shaggy-",
+      "id": 298,
+      "name": "-ColoSSoS-",
       "level": 420,
       "celestial_lineage": null,
       "levelSub": 422,
@@ -3211,26 +3211,6 @@
       "guild": null
     },
     {
-      "id": 322,
-      "name": "-LilWayne",
-      "level": 421,
-      "celestial_lineage": null,
-      "levelSub": 420,
-      "subclass_lineage": null,
-      "Soma Level": 841,
-      "guild": 2300
-    },
-    {
-      "id": 325,
-      "name": "--Maldoso-",
-      "level": 421,
-      "celestial_lineage": null,
-      "levelSub": 420,
-      "subclass_lineage": null,
-      "Soma Level": 841,
-      "guild": null
-    },
-    {
       "id": 324,
       "name": "SOHO",
       "level": 421,
@@ -3249,6 +3229,26 @@
       "subclass_lineage": null,
       "Soma Level": 841,
       "guild": null
+    },
+    {
+      "id": 325,
+      "name": "--Maldoso-",
+      "level": 421,
+      "celestial_lineage": null,
+      "levelSub": 420,
+      "subclass_lineage": null,
+      "Soma Level": 841,
+      "guild": null
+    },
+    {
+      "id": 322,
+      "name": "-LilWayne",
+      "level": 421,
+      "celestial_lineage": null,
+      "levelSub": 420,
+      "subclass_lineage": null,
+      "Soma Level": 841,
+      "guild": 2300
     },
     {
       "id": 326,
@@ -3401,26 +3401,6 @@
       "guild": null
     },
     {
-      "id": 344,
-      "name": "thinhoso",
-      "level": 420,
-      "celestial_lineage": null,
-      "levelSub": 420,
-      "subclass_lineage": null,
-      "Soma Level": 840,
-      "guild": null
-    },
-    {
-      "id": 341,
-      "name": "GoustDragon",
-      "level": 419,
-      "celestial_lineage": null,
-      "levelSub": 421,
-      "subclass_lineage": null,
-      "Soma Level": 840,
-      "guild": null
-    },
-    {
       "id": 342,
       "name": "Cucareka",
       "level": 420,
@@ -3441,6 +3421,16 @@
       "guild": null
     },
     {
+      "id": 344,
+      "name": "thinhoso",
+      "level": 420,
+      "celestial_lineage": null,
+      "levelSub": 420,
+      "subclass_lineage": null,
+      "Soma Level": 840,
+      "guild": null
+    },
+    {
       "id": 343,
       "name": "-Venus",
       "level": 419,
@@ -3449,6 +3439,16 @@
       "subclass_lineage": null,
       "Soma Level": 840,
       "guild": 2185
+    },
+    {
+      "id": 341,
+      "name": "GoustDragon",
+      "level": 419,
+      "celestial_lineage": null,
+      "levelSub": 421,
+      "subclass_lineage": null,
+      "Soma Level": 840,
+      "guild": null
     },
     {
       "id": 346,
@@ -4271,16 +4271,6 @@
       "guild": 2284
     },
     {
-      "id": 428,
-      "name": "Bacon-",
-      "level": 416,
-      "celestial_lineage": null,
-      "levelSub": 416,
-      "subclass_lineage": null,
-      "Soma Level": 832,
-      "guild": 2287
-    },
-    {
       "id": 427,
       "name": "-Ravok-",
       "level": 418,
@@ -4289,6 +4279,16 @@
       "subclass_lineage": null,
       "Soma Level": 832,
       "guild": 2041
+    },
+    {
+      "id": 428,
+      "name": "Bacon-",
+      "level": 416,
+      "celestial_lineage": null,
+      "levelSub": 416,
+      "subclass_lineage": null,
+      "Soma Level": 832,
+      "guild": 2287
     },
     {
       "id": 429,
@@ -4361,16 +4361,6 @@
       "guild": null
     },
     {
-      "id": 437,
-      "name": "Insulina",
-      "level": 412,
-      "celestial_lineage": null,
-      "levelSub": 420,
-      "subclass_lineage": null,
-      "Soma Level": 832,
-      "guild": null
-    },
-    {
       "id": 436,
       "name": "Maver1k",
       "level": 416,
@@ -4379,6 +4369,16 @@
       "subclass_lineage": null,
       "Soma Level": 832,
       "guild": 2193
+    },
+    {
+      "id": 437,
+      "name": "Insulina",
+      "level": 412,
+      "celestial_lineage": null,
+      "levelSub": 420,
+      "subclass_lineage": null,
+      "Soma Level": 832,
+      "guild": null
     },
     {
       "id": 438,
@@ -4541,16 +4541,6 @@
       "guild": null
     },
     {
-      "id": 458,
-      "name": "Dipe",
-      "level": 416,
-      "celestial_lineage": null,
-      "levelSub": 415,
-      "subclass_lineage": null,
-      "Soma Level": 831,
-      "guild": null
-    },
-    {
       "id": 455,
       "name": "I-Synxz-I",
       "level": 416,
@@ -4566,6 +4556,16 @@
       "level": 417,
       "celestial_lineage": null,
       "levelSub": 414,
+      "subclass_lineage": null,
+      "Soma Level": 831,
+      "guild": null
+    },
+    {
+      "id": 458,
+      "name": "Dipe",
+      "level": 416,
+      "celestial_lineage": null,
+      "levelSub": 415,
       "subclass_lineage": null,
       "Soma Level": 831,
       "guild": null
@@ -4701,16 +4701,6 @@
       "guild": null
     },
     {
-      "id": 472,
-      "name": "DexterGG",
-      "level": 415,
-      "celestial_lineage": null,
-      "levelSub": 415,
-      "subclass_lineage": null,
-      "Soma Level": 830,
-      "guild": 2284
-    },
-    {
       "id": 470,
       "name": "Esterzinha",
       "level": 415,
@@ -4719,6 +4709,16 @@
       "subclass_lineage": null,
       "Soma Level": 830,
       "guild": null
+    },
+    {
+      "id": 472,
+      "name": "DexterGG",
+      "level": 415,
+      "celestial_lineage": null,
+      "levelSub": 415,
+      "subclass_lineage": null,
+      "Soma Level": 830,
+      "guild": 2284
     },
     {
       "id": 471,
@@ -5043,18 +5043,18 @@
       "total": 75
     },
     {
-      "id": 116,
-      "charName": "-Elloy-",
-      "winCount": 15,
-      "killValue": 76,
-      "deathValue": null,
-      "total": 72
-    },
-    {
       "id": 115,
       "charName": "xuxinhaloco",
       "winCount": 13,
       "killValue": 195,
+      "deathValue": null,
+      "total": 72
+    },
+    {
+      "id": 116,
+      "charName": "-Elloy-",
+      "winCount": 15,
+      "killValue": 76,
       "deathValue": null,
       "total": 72
     },
@@ -5147,18 +5147,18 @@
       "total": 38
     },
     {
-      "id": 77,
-      "charName": "DARKZAOo",
-      "winCount": 7,
-      "killValue": 107,
-      "deathValue": null,
-      "total": 36
-    },
-    {
       "id": 55,
       "charName": "Zarch",
       "winCount": 6,
       "killValue": 109,
+      "deathValue": null,
+      "total": 36
+    },
+    {
+      "id": 77,
+      "charName": "DARKZAOo",
+      "winCount": 7,
+      "killValue": 107,
       "deathValue": null,
       "total": 36
     },
@@ -5179,22 +5179,6 @@
       "total": 33
     },
     {
-      "id": 500,
-      "charName": "S�chTiger",
-      "winCount": 6,
-      "killValue": 17,
-      "deathValue": null,
-      "total": 32
-    },
-    {
-      "id": 58,
-      "charName": "HANNIBALROY",
-      "winCount": 6,
-      "killValue": 111,
-      "deathValue": null,
-      "total": 32
-    },
-    {
       "id": 41,
       "charName": "DogZZ",
       "winCount": 7,
@@ -5207,6 +5191,22 @@
       "charName": "Duel",
       "winCount": 3,
       "killValue": 1,
+      "deathValue": null,
+      "total": 32
+    },
+    {
+      "id": 58,
+      "charName": "HANNIBALROY",
+      "winCount": 6,
+      "killValue": 111,
+      "deathValue": null,
+      "total": 32
+    },
+    {
+      "id": 500,
+      "charName": "S�chTiger",
+      "winCount": 6,
+      "killValue": 17,
       "deathValue": null,
       "total": 32
     },
@@ -5227,6 +5227,14 @@
       "total": 31
     },
     {
+      "id": 178,
+      "charName": "Flaaap",
+      "winCount": 6,
+      "killValue": null,
+      "deathValue": null,
+      "total": 30
+    },
+    {
       "id": 127,
       "charName": "Tenshinham",
       "winCount": 7,
@@ -5239,14 +5247,6 @@
       "charName": "Paloff",
       "winCount": 8,
       "killValue": 19,
-      "deathValue": null,
-      "total": 30
-    },
-    {
-      "id": 178,
-      "charName": "Flaaap",
-      "winCount": 6,
-      "killValue": null,
       "deathValue": null,
       "total": 30
     },
@@ -5265,6 +5265,14 @@
       "killValue": 54,
       "deathValue": null,
       "total": 28
+    },
+    {
+      "id": 271,
+      "charName": "Altimus",
+      "winCount": 2,
+      "killValue": 4,
+      "deathValue": null,
+      "total": 25
     },
     {
       "id": 200,
@@ -5291,12 +5299,12 @@
       "total": 25
     },
     {
-      "id": 271,
-      "charName": "Altimus",
-      "winCount": 2,
-      "killValue": 4,
+      "id": 120,
+      "charName": "-Eddy",
+      "winCount": 4,
+      "killValue": 242,
       "deathValue": null,
-      "total": 25
+      "total": 24
     },
     {
       "id": 38,
@@ -5307,12 +5315,36 @@
       "total": 24
     },
     {
-      "id": 120,
-      "charName": "-Eddy",
-      "winCount": 4,
-      "killValue": 242,
+      "id": 231,
+      "charName": "SheelVPower",
+      "winCount": 6,
+      "killValue": 11,
       "deathValue": null,
-      "total": 24
+      "total": 22
+    },
+    {
+      "id": 119,
+      "charName": "SmithBacaL",
+      "winCount": 1,
+      "killValue": 2,
+      "deathValue": null,
+      "total": 22
+    },
+    {
+      "id": 267,
+      "charName": "RADIOHE4D",
+      "winCount": 4,
+      "killValue": 15,
+      "deathValue": null,
+      "total": 22
+    },
+    {
+      "id": 202,
+      "charName": "c4ladeX",
+      "winCount": 5,
+      "killValue": 66,
+      "deathValue": null,
+      "total": 22
     },
     {
       "id": 27,
@@ -5331,38 +5363,6 @@
       "total": 22
     },
     {
-      "id": 119,
-      "charName": "SmithBacaL",
-      "winCount": 1,
-      "killValue": 2,
-      "deathValue": null,
-      "total": 22
-    },
-    {
-      "id": 202,
-      "charName": "c4ladeX",
-      "winCount": 5,
-      "killValue": 66,
-      "deathValue": null,
-      "total": 22
-    },
-    {
-      "id": 231,
-      "charName": "SheelVPower",
-      "winCount": 6,
-      "killValue": 11,
-      "deathValue": null,
-      "total": 22
-    },
-    {
-      "id": 267,
-      "charName": "RADIOHE4D",
-      "winCount": 4,
-      "killValue": 15,
-      "deathValue": null,
-      "total": 22
-    },
-    {
       "id": 501,
       "charName": "LoVeGun",
       "winCount": 4,
@@ -5371,10 +5371,10 @@
       "total": 21
     },
     {
-      "id": 395,
-      "charName": "Danilo-",
-      "winCount": 6,
-      "killValue": 14,
+      "id": 72,
+      "charName": "Aorb",
+      "winCount": 5,
+      "killValue": 91,
       "deathValue": null,
       "total": 20
     },
@@ -5387,34 +5387,26 @@
       "total": 20
     },
     {
-      "id": 72,
-      "charName": "Aorb",
-      "winCount": 5,
-      "killValue": 91,
+      "id": 395,
+      "charName": "Danilo-",
+      "winCount": 6,
+      "killValue": 14,
       "deathValue": null,
       "total": 20
-    },
-    {
-      "id": 134,
-      "charName": "SemIdeaiz",
-      "winCount": 4,
-      "killValue": 74,
-      "deathValue": null,
-      "total": 19
-    },
-    {
-      "id": 170,
-      "charName": "Jovics",
-      "winCount": 5,
-      "killValue": 34,
-      "deathValue": null,
-      "total": 19
     },
     {
       "id": 472,
       "charName": "DexterGG",
       "winCount": 7,
       "killValue": 25,
+      "deathValue": null,
+      "total": 19
+    },
+    {
+      "id": 134,
+      "charName": "SemIdeaiz",
+      "winCount": 4,
+      "killValue": 74,
       "deathValue": null,
       "total": 19
     },
@@ -5427,20 +5419,12 @@
       "total": 19
     },
     {
-      "id": 148,
-      "charName": "-Parkmann-",
+      "id": 170,
+      "charName": "Jovics",
       "winCount": 5,
-      "killValue": 38,
+      "killValue": 34,
       "deathValue": null,
-      "total": 18
-    },
-    {
-      "id": 508,
-      "charName": "Ducortes",
-      "winCount": 7,
-      "killValue": 33,
-      "deathValue": null,
-      "total": 18
+      "total": 19
     },
     {
       "id": 503,
@@ -5451,10 +5435,26 @@
       "total": 18
     },
     {
+      "id": 148,
+      "charName": "-Parkmann-",
+      "winCount": 5,
+      "killValue": 38,
+      "deathValue": null,
+      "total": 18
+    },
+    {
       "id": 83,
       "charName": "Jamelllao",
       "winCount": 3,
       "killValue": 60,
+      "deathValue": null,
+      "total": 18
+    },
+    {
+      "id": 508,
+      "charName": "Ducortes",
+      "winCount": 7,
+      "killValue": 33,
       "deathValue": null,
       "total": 18
     },
@@ -5483,18 +5483,18 @@
       "total": 17
     },
     {
-      "id": 59,
-      "charName": "ThuThuMaL",
-      "winCount": 5,
-      "killValue": 67,
-      "deathValue": null,
-      "total": 16
-    },
-    {
       "id": 256,
       "charName": "AnaarK-",
       "winCount": null,
       "killValue": null,
+      "deathValue": null,
+      "total": 16
+    },
+    {
+      "id": 59,
+      "charName": "ThuThuMaL",
+      "winCount": 5,
+      "killValue": 67,
       "deathValue": null,
       "total": 16
     },
@@ -5505,14 +5505,6 @@
       "killValue": 74,
       "deathValue": null,
       "total": 16
-    },
-    {
-      "id": 80,
-      "charName": "-N-O-E-L-",
-      "winCount": 2,
-      "killValue": 37,
-      "deathValue": null,
-      "total": 15
     },
     {
       "id": 76,
@@ -5527,6 +5519,14 @@
       "charName": "--THUG--",
       "winCount": 3,
       "killValue": 5,
+      "deathValue": null,
+      "total": 15
+    },
+    {
+      "id": 80,
+      "charName": "-N-O-E-L-",
+      "winCount": 2,
+      "killValue": 37,
       "deathValue": null,
       "total": 15
     },
@@ -5563,14 +5563,6 @@
       "total": 14
     },
     {
-      "id": 507,
-      "charName": "raru",
-      "winCount": 2,
-      "killValue": 32,
-      "deathValue": null,
-      "total": 13
-    },
-    {
       "id": 240,
       "charName": "Mulekotte",
       "winCount": 2,
@@ -5587,6 +5579,22 @@
       "total": 13
     },
     {
+      "id": 507,
+      "charName": "raru",
+      "winCount": 2,
+      "killValue": 32,
+      "deathValue": null,
+      "total": 13
+    },
+    {
+      "id": 506,
+      "charName": "ChupaOuCospe",
+      "winCount": 2,
+      "killValue": null,
+      "deathValue": null,
+      "total": 12
+    },
+    {
       "id": 9,
       "charName": "Raduzin",
       "winCount": 2,
@@ -5599,14 +5607,6 @@
       "charName": "xDoidoLoko",
       "winCount": 4,
       "killValue": 45,
-      "deathValue": null,
-      "total": 12
-    },
-    {
-      "id": 506,
-      "charName": "ChupaOuCospe",
-      "winCount": 2,
-      "killValue": null,
       "deathValue": null,
       "total": 12
     },
@@ -5627,14 +5627,6 @@
       "total": 10
     },
     {
-      "id": 131,
-      "charName": "-Laga",
-      "winCount": 1,
-      "killValue": 49,
-      "deathValue": null,
-      "total": 10
-    },
-    {
       "id": 142,
       "charName": "vaitomano",
       "winCount": 2,
@@ -5643,12 +5635,12 @@
       "total": 10
     },
     {
-      "id": 5,
-      "charName": "Indeex",
+      "id": 131,
+      "charName": "-Laga",
       "winCount": 1,
-      "killValue": 2,
+      "killValue": 49,
       "deathValue": null,
-      "total": 9
+      "total": 10
     },
     {
       "id": 54,
@@ -5659,10 +5651,10 @@
       "total": 9
     },
     {
-      "id": 207,
-      "charName": "Niknill",
-      "winCount": null,
-      "killValue": 6,
+      "id": 5,
+      "charName": "Indeex",
+      "winCount": 1,
+      "killValue": 2,
       "deathValue": null,
       "total": 9
     },
@@ -5675,10 +5667,18 @@
       "total": 9
     },
     {
-      "id": 427,
-      "charName": "-Ravok-",
-      "winCount": 2,
-      "killValue": 3,
+      "id": 207,
+      "charName": "Niknill",
+      "winCount": null,
+      "killValue": 6,
+      "deathValue": null,
+      "total": 9
+    },
+    {
+      "id": 509,
+      "charName": "Stuk4",
+      "winCount": 3,
+      "killValue": 21,
       "deathValue": null,
       "total": 8
     },
@@ -5691,10 +5691,10 @@
       "total": 8
     },
     {
-      "id": 6,
-      "charName": "-Blackrex-",
-      "winCount": 4,
-      "killValue": 68,
+      "id": 427,
+      "charName": "-Ravok-",
+      "winCount": 2,
+      "killValue": 3,
       "deathValue": null,
       "total": 8
     },
@@ -5707,17 +5707,25 @@
       "total": 8
     },
     {
-      "id": 509,
-      "charName": "Stuk4",
-      "winCount": 3,
-      "killValue": 21,
+      "id": 6,
+      "charName": "-Blackrex-",
+      "winCount": 4,
+      "killValue": 68,
       "deathValue": null,
       "total": 8
     },
     {
-      "id": 515,
-      "charName": "-Lampheroe",
-      "winCount": 3,
+      "id": 104,
+      "charName": "-Teiker-",
+      "winCount": 2,
+      "killValue": 6,
+      "deathValue": null,
+      "total": 7
+    },
+    {
+      "id": 61,
+      "charName": "Chiquinhooo",
+      "winCount": 2,
       "killValue": 26,
       "deathValue": null,
       "total": 7
@@ -5731,18 +5739,10 @@
       "total": 7
     },
     {
-      "id": 61,
-      "charName": "Chiquinhooo",
-      "winCount": 2,
+      "id": 515,
+      "charName": "-Lampheroe",
+      "winCount": 3,
       "killValue": 26,
-      "deathValue": null,
-      "total": 7
-    },
-    {
-      "id": 104,
-      "charName": "-Teiker-",
-      "winCount": 2,
-      "killValue": 6,
       "deathValue": null,
       "total": 7
     },
@@ -5755,9 +5755,25 @@
       "total": 6
     },
     {
+      "id": 512,
+      "charName": "JoaumLiaum",
+      "winCount": 1,
+      "killValue": 7,
+      "deathValue": null,
+      "total": 6
+    },
+    {
       "id": 514,
       "charName": "DasAntigas08",
       "winCount": null,
+      "killValue": 8,
+      "deathValue": null,
+      "total": 6
+    },
+    {
+      "id": 482,
+      "charName": "MsClara",
+      "winCount": 1,
       "killValue": 8,
       "deathValue": null,
       "total": 6
@@ -5787,18 +5803,10 @@
       "total": 6
     },
     {
-      "id": 512,
-      "charName": "JoaumLiaum",
-      "winCount": 1,
-      "killValue": 7,
-      "deathValue": null,
-      "total": 6
-    },
-    {
-      "id": 482,
-      "charName": "MsClara",
-      "winCount": 1,
-      "killValue": 8,
+      "id": 20,
+      "charName": "xZeBonitinho",
+      "winCount": 2,
+      "killValue": 30,
       "deathValue": null,
       "total": 6
     },
@@ -5811,42 +5819,10 @@
       "total": 6
     },
     {
-      "id": 20,
-      "charName": "xZeBonitinho",
-      "winCount": 2,
-      "killValue": 30,
-      "deathValue": null,
-      "total": 6
-    },
-    {
-      "id": 485,
-      "charName": "B3Trader",
-      "winCount": 2,
-      "killValue": 23,
-      "deathValue": null,
-      "total": 5
-    },
-    {
-      "id": 516,
-      "charName": "-1TACHI-",
-      "winCount": 3,
-      "killValue": 12,
-      "deathValue": null,
-      "total": 5
-    },
-    {
-      "id": 490,
-      "charName": "-Everaldo-",
+      "id": 517,
+      "charName": "-JACK",
       "winCount": 1,
-      "killValue": 7,
-      "deathValue": null,
-      "total": 5
-    },
-    {
-      "id": 513,
-      "charName": "Pr�Hist�rico",
-      "winCount": 1,
-      "killValue": 1,
+      "killValue": 15,
       "deathValue": null,
       "total": 5
     },
@@ -5859,10 +5835,18 @@
       "total": 5
     },
     {
-      "id": 517,
-      "charName": "-JACK",
+      "id": 490,
+      "charName": "-Everaldo-",
       "winCount": 1,
-      "killValue": 15,
+      "killValue": 7,
+      "deathValue": null,
+      "total": 5
+    },
+    {
+      "id": 485,
+      "charName": "B3Trader",
+      "winCount": 2,
+      "killValue": 23,
       "deathValue": null,
       "total": 5
     },
@@ -5873,6 +5857,30 @@
       "killValue": 49,
       "deathValue": null,
       "total": 5
+    },
+    {
+      "id": 513,
+      "charName": "Pr�Hist�rico",
+      "winCount": 1,
+      "killValue": 1,
+      "deathValue": null,
+      "total": 5
+    },
+    {
+      "id": 516,
+      "charName": "-1TACHI-",
+      "winCount": 3,
+      "killValue": 12,
+      "deathValue": null,
+      "total": 5
+    },
+    {
+      "id": 317,
+      "charName": "BigDunga",
+      "winCount": 2,
+      "killValue": 17,
+      "deathValue": null,
+      "total": 4
     },
     {
       "id": 252,
@@ -5907,22 +5915,6 @@
       "total": 4
     },
     {
-      "id": 317,
-      "charName": "BigDunga",
-      "winCount": 2,
-      "killValue": 17,
-      "deathValue": null,
-      "total": 4
-    },
-    {
-      "id": 518,
-      "charName": "paulGOD",
-      "winCount": 1,
-      "killValue": null,
-      "deathValue": null,
-      "total": 3
-    },
-    {
       "id": 287,
       "charName": "-ZecaXereca",
       "winCount": null,
@@ -5931,10 +5923,10 @@
       "total": 3
     },
     {
-      "id": 530,
-      "charName": "ServoDoSaci-",
-      "winCount": null,
-      "killValue": 25,
+      "id": 518,
+      "charName": "paulGOD",
+      "winCount": 1,
+      "killValue": null,
       "deathValue": null,
       "total": 3
     },
@@ -5947,12 +5939,12 @@
       "total": 3
     },
     {
-      "id": 153,
-      "charName": "Djia",
+      "id": 530,
+      "charName": "ServoDoSaci-",
       "winCount": null,
-      "killValue": null,
+      "killValue": 25,
       "deathValue": null,
-      "total": 2
+      "total": 3
     },
     {
       "id": 30,
@@ -5963,10 +5955,74 @@
       "total": 2
     },
     {
+      "id": 153,
+      "charName": "Djia",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": 2
+    },
+    {
+      "id": 88,
+      "charName": "-PATO-MANCO-",
+      "winCount": null,
+      "killValue": 12,
+      "deathValue": null,
+      "total": 1
+    },
+    {
+      "id": 94,
+      "charName": "Alkapone",
+      "winCount": 2,
+      "killValue": 7,
+      "deathValue": null,
+      "total": 1
+    },
+    {
+      "id": 439,
+      "charName": "CROSSBOY",
+      "winCount": null,
+      "killValue": 9,
+      "deathValue": null,
+      "total": 1
+    },
+    {
+      "id": 103,
+      "charName": "Arrogante",
+      "winCount": null,
+      "killValue": 8,
+      "deathValue": null,
+      "total": 1
+    },
+    {
+      "id": 323,
+      "charName": "ArsheDragoN",
+      "winCount": null,
+      "killValue": 5,
+      "deathValue": null,
+      "total": 1
+    },
+    {
       "id": 111,
       "charName": "BIG-WARRIOR",
       "winCount": null,
       "killValue": 6,
+      "deathValue": null,
+      "total": 1
+    },
+    {
+      "id": 199,
+      "charName": "MagoNegro88",
+      "winCount": null,
+      "killValue": 9,
+      "deathValue": null,
+      "total": 1
+    },
+    {
+      "id": 283,
+      "charName": "DinOxzin",
+      "winCount": null,
+      "killValue": 5,
       "deathValue": null,
       "total": 1
     },
@@ -5995,34 +6051,10 @@
       "total": 1
     },
     {
-      "id": 439,
-      "charName": "CROSSBOY",
+      "id": 282,
+      "charName": "-WESTERM4N-",
       "winCount": null,
-      "killValue": 9,
-      "deathValue": null,
-      "total": 1
-    },
-    {
-      "id": 88,
-      "charName": "-PATO-MANCO-",
-      "winCount": null,
-      "killValue": 12,
-      "deathValue": null,
-      "total": 1
-    },
-    {
-      "id": 283,
-      "charName": "DinOxzin",
-      "winCount": null,
-      "killValue": 5,
-      "deathValue": null,
-      "total": 1
-    },
-    {
-      "id": 60,
-      "charName": "Awonim",
-      "winCount": null,
-      "killValue": 7,
+      "killValue": 8,
       "deathValue": null,
       "total": 1
     },
@@ -6035,38 +6067,6 @@
       "total": 1
     },
     {
-      "id": 103,
-      "charName": "Arrogante",
-      "winCount": null,
-      "killValue": 8,
-      "deathValue": null,
-      "total": 1
-    },
-    {
-      "id": 323,
-      "charName": "ArsheDragoN",
-      "winCount": null,
-      "killValue": 5,
-      "deathValue": null,
-      "total": 1
-    },
-    {
-      "id": 199,
-      "charName": "MagoNegro88",
-      "winCount": null,
-      "killValue": 9,
-      "deathValue": null,
-      "total": 1
-    },
-    {
-      "id": 282,
-      "charName": "-WESTERM4N-",
-      "winCount": null,
-      "killValue": 8,
-      "deathValue": null,
-      "total": 1
-    },
-    {
       "id": 29,
       "charName": "-MADMAN-",
       "winCount": null,
@@ -6075,106 +6075,50 @@
       "total": 1
     },
     {
-      "id": 94,
-      "charName": "Alkapone",
-      "winCount": 2,
+      "id": 60,
+      "charName": "Awonim",
+      "winCount": null,
       "killValue": 7,
       "deathValue": null,
       "total": 1
     },
     {
-      "id": 288,
-      "charName": "Skruull",
-      "winCount": null,
-      "killValue": 2,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 307,
-      "charName": "QuickTrick",
+      "id": 520,
+      "charName": "TioPhil",
       "winCount": null,
       "killValue": null,
       "deathValue": null,
       "total": 0
     },
     {
-      "id": 74,
-      "charName": "Parucker",
-      "winCount": null,
-      "killValue": 1,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 183,
-      "charName": "dropfarm",
+      "id": 521,
+      "charName": "BoogiePop",
       "winCount": 1,
       "killValue": null,
       "deathValue": null,
       "total": 0
     },
     {
-      "id": 527,
-      "charName": "OneHytt",
+      "id": 522,
+      "charName": "Khronus-",
       "winCount": null,
       "killValue": null,
       "deathValue": null,
       "total": 0
     },
     {
-      "id": 228,
-      "charName": "llRedLabeL",
-      "winCount": null,
-      "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 13,
-      "charName": "Zeudo",
-      "winCount": null,
-      "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 242,
-      "charName": "CAPLUDGERO",
-      "winCount": null,
-      "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 186,
-      "charName": "-DarkShadow-",
+      "id": 524,
+      "charName": "Aspirante",
       "winCount": null,
       "killValue": 1,
       "deathValue": null,
       "total": 0
     },
     {
-      "id": 86,
-      "charName": "-BIXOGRILO-",
+      "id": 525,
+      "charName": "xFeeder",
       "winCount": null,
       "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 43,
-      "charName": "oCSR",
-      "winCount": null,
-      "killValue": 1,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 327,
-      "charName": "Rachid",
-      "winCount": null,
-      "killValue": 2,
       "deathValue": null,
       "total": 0
     },
@@ -6187,10 +6131,10 @@
       "total": 0
     },
     {
-      "id": 26,
-      "charName": "-flowgg-",
+      "id": 527,
+      "charName": "OneHytt",
       "winCount": null,
-      "killValue": 1,
+      "killValue": null,
       "deathValue": null,
       "total": 0
     },
@@ -6203,10 +6147,18 @@
       "total": 0
     },
     {
-      "id": 358,
-      "charName": "-Foka-",
-      "winCount": 1,
-      "killValue": 4,
+      "id": 529,
+      "charName": "KAOS",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 531,
+      "charName": "-Baruk",
+      "winCount": null,
+      "killValue": 2,
       "deathValue": null,
       "total": 0
     },
@@ -6215,6 +6167,46 @@
       "charName": "PaULiNhU7br",
       "winCount": null,
       "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 533,
+      "charName": "BrutaRaycaFm",
+      "winCount": null,
+      "killValue": 1,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 242,
+      "charName": "CAPLUDGERO",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 86,
+      "charName": "-BIXOGRILO-",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 26,
+      "charName": "-flowgg-",
+      "winCount": null,
+      "killValue": 1,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 358,
+      "charName": "-Foka-",
+      "winCount": 1,
+      "killValue": 4,
       "deathValue": null,
       "total": 0
     },
@@ -6235,41 +6227,17 @@
       "total": 0
     },
     {
-      "id": 533,
-      "charName": "BrutaRaycaFm",
-      "winCount": null,
-      "killValue": 1,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 525,
-      "charName": "xFeeder",
+      "id": 228,
+      "charName": "llRedLabeL",
       "winCount": null,
       "killValue": null,
       "deathValue": null,
       "total": 0
     },
     {
-      "id": 521,
-      "charName": "BoogiePop",
+      "id": 183,
+      "charName": "dropfarm",
       "winCount": 1,
-      "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 524,
-      "charName": "Aspirante",
-      "winCount": null,
-      "killValue": 1,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 522,
-      "charName": "Khronus-",
-      "winCount": null,
       "killValue": null,
       "deathValue": null,
       "total": 0
@@ -6283,14 +6251,6 @@
       "total": 0
     },
     {
-      "id": 529,
-      "charName": "KAOS",
-      "winCount": null,
-      "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
       "id": 235,
       "charName": "FKM1",
       "winCount": null,
@@ -6299,56 +6259,8 @@
       "total": 0
     },
     {
-      "id": 520,
-      "charName": "TioPhil",
-      "winCount": null,
-      "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
       "id": 68,
       "charName": "PegaKzada",
-      "winCount": null,
-      "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 299,
-      "charName": "WINDOWS52",
-      "winCount": null,
-      "killValue": 1,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 165,
-      "charName": "TREMBORAGE",
-      "winCount": null,
-      "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 71,
-      "charName": "ALO-GOIANIA",
-      "winCount": null,
-      "killValue": 2,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 531,
-      "charName": "-Baruk",
-      "winCount": null,
-      "killValue": 2,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 35,
-      "charName": "TSUB4KI",
       "winCount": null,
       "killValue": null,
       "deathValue": null,
@@ -6363,16 +6275,64 @@
       "total": 0
     },
     {
-      "id": 113,
-      "charName": "-Baray-",
+      "id": 478,
+      "charName": "ZEN1N",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 13,
+      "charName": "Zeudo",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 74,
+      "charName": "Parucker",
       "winCount": null,
       "killValue": 1,
       "deathValue": null,
       "total": 0
     },
     {
-      "id": 478,
-      "charName": "ZEN1N",
+      "id": 307,
+      "charName": "QuickTrick",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 327,
+      "charName": "Rachid",
+      "winCount": null,
+      "killValue": 2,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 288,
+      "charName": "Skruull",
+      "winCount": null,
+      "killValue": 2,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 43,
+      "charName": "oCSR",
+      "winCount": null,
+      "killValue": 1,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 99,
+      "charName": "GtOkAi",
       "winCount": null,
       "killValue": null,
       "deathValue": null,
@@ -6387,10 +6347,50 @@
       "total": 0
     },
     {
-      "id": 99,
-      "charName": "GtOkAi",
+      "id": 113,
+      "charName": "-Baray-",
+      "winCount": null,
+      "killValue": 1,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 35,
+      "charName": "TSUB4KI",
       "winCount": null,
       "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 165,
+      "charName": "TREMBORAGE",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 299,
+      "charName": "WINDOWS52",
+      "winCount": null,
+      "killValue": 1,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 71,
+      "charName": "ALO-GOIANIA",
+      "winCount": null,
+      "killValue": 2,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 186,
+      "charName": "-DarkShadow-",
+      "winCount": null,
+      "killValue": 1,
       "deathValue": null,
       "total": 0
     },
@@ -6509,14 +6509,6 @@
       "total": 50
     },
     {
-      "id": 536,
-      "charName": "Aislin7",
-      "winCount": 11,
-      "killValue": null,
-      "deathValue": null,
-      "total": 49
-    },
-    {
       "id": 538,
       "charName": "Xibilson",
       "winCount": 10,
@@ -6525,18 +6517,26 @@
       "total": 49
     },
     {
-      "id": 420,
-      "charName": "llScarFacell",
-      "winCount": 8,
-      "killValue": 166,
+      "id": 536,
+      "charName": "Aislin7",
+      "winCount": 11,
+      "killValue": null,
       "deathValue": null,
-      "total": 46
+      "total": 49
     },
     {
       "id": 549,
       "charName": "FoRtex",
       "winCount": 10,
       "killValue": 217,
+      "deathValue": null,
+      "total": 46
+    },
+    {
+      "id": 420,
+      "charName": "llScarFacell",
+      "winCount": 8,
+      "killValue": 166,
       "deathValue": null,
       "total": 46
     },
@@ -6581,14 +6581,6 @@
       "total": 41
     },
     {
-      "id": 543,
-      "charName": "lDuende",
-      "winCount": 9,
-      "killValue": 33,
-      "deathValue": null,
-      "total": 40
-    },
-    {
       "id": 541,
       "charName": "SrSinistros",
       "winCount": 10,
@@ -6597,12 +6589,12 @@
       "total": 40
     },
     {
-      "id": 347,
-      "charName": "Deiwid182",
-      "winCount": 10,
-      "killValue": 77,
+      "id": 543,
+      "charName": "lDuende",
+      "winCount": 9,
+      "killValue": 33,
       "deathValue": null,
-      "total": 36
+      "total": 40
     },
     {
       "id": 540,
@@ -6621,18 +6613,26 @@
       "total": 36
     },
     {
-      "id": 553,
-      "charName": "joaozk7",
-      "winCount": 8,
-      "killValue": 123,
+      "id": 347,
+      "charName": "Deiwid182",
+      "winCount": 10,
+      "killValue": 77,
       "deathValue": null,
-      "total": 35
+      "total": 36
     },
     {
       "id": 246,
       "charName": "--NOG--",
       "winCount": 5,
       "killValue": 127,
+      "deathValue": null,
+      "total": 35
+    },
+    {
+      "id": 553,
+      "charName": "joaozk7",
+      "winCount": 8,
+      "killValue": 123,
       "deathValue": null,
       "total": 35
     },
@@ -6677,14 +6677,6 @@
       "total": 31
     },
     {
-      "id": 552,
-      "charName": "BMastodonte",
-      "winCount": 6,
-      "killValue": null,
-      "deathValue": null,
-      "total": 30
-    },
-    {
       "id": 555,
       "charName": "rfaell",
       "winCount": 8,
@@ -6693,12 +6685,12 @@
       "total": 30
     },
     {
-      "id": 314,
-      "charName": "-ChaosBR-",
+      "id": 552,
+      "charName": "BMastodonte",
       "winCount": 6,
-      "killValue": 158,
+      "killValue": null,
       "deathValue": null,
-      "total": 29
+      "total": 30
     },
     {
       "id": 554,
@@ -6713,6 +6705,14 @@
       "charName": "lTarzaNl",
       "winCount": 6,
       "killValue": 53,
+      "deathValue": null,
+      "total": 29
+    },
+    {
+      "id": 314,
+      "charName": "-ChaosBR-",
+      "winCount": 6,
+      "killValue": 158,
       "deathValue": null,
       "total": 29
     },
@@ -6765,14 +6765,6 @@
       "total": 23
     },
     {
-      "id": 569,
-      "charName": "-Kaboom",
-      "winCount": 7,
-      "killValue": 12,
-      "deathValue": null,
-      "total": 22
-    },
-    {
       "id": 438,
       "charName": "NaKachera",
       "winCount": 4,
@@ -6781,10 +6773,18 @@
       "total": 22
     },
     {
-      "id": 556,
-      "charName": "-Uzumaki",
-      "winCount": 8,
-      "killValue": 2,
+      "id": 569,
+      "charName": "-Kaboom",
+      "winCount": 7,
+      "killValue": 12,
+      "deathValue": null,
+      "total": 22
+    },
+    {
+      "id": 558,
+      "charName": "Ivor",
+      "winCount": 7,
+      "killValue": 3,
       "deathValue": null,
       "total": 21
     },
@@ -6797,10 +6797,10 @@
       "total": 21
     },
     {
-      "id": 558,
-      "charName": "Ivor",
-      "winCount": 7,
-      "killValue": 3,
+      "id": 556,
+      "charName": "-Uzumaki",
+      "winCount": 8,
+      "killValue": 2,
       "deathValue": null,
       "total": 21
     },
@@ -6821,14 +6821,6 @@
       "total": 19
     },
     {
-      "id": 570,
-      "charName": "SddsMalech",
-      "winCount": 4,
-      "killValue": 28,
-      "deathValue": null,
-      "total": 18
-    },
-    {
       "id": 565,
       "charName": "xThanatoSx",
       "winCount": 3,
@@ -6837,18 +6829,26 @@
       "total": 18
     },
     {
-      "id": 563,
-      "charName": "Mult-Filtros",
-      "winCount": 3,
-      "killValue": null,
+      "id": 570,
+      "charName": "SddsMalech",
+      "winCount": 4,
+      "killValue": 28,
       "deathValue": null,
-      "total": 17
+      "total": 18
     },
     {
       "id": 576,
       "charName": "CoisaLindaBB",
       "winCount": 6,
       "killValue": 37,
+      "deathValue": null,
+      "total": 17
+    },
+    {
+      "id": 563,
+      "charName": "Mult-Filtros",
+      "winCount": 3,
+      "killValue": null,
       "deathValue": null,
       "total": 17
     },
@@ -6869,10 +6869,10 @@
       "total": 16
     },
     {
-      "id": 568,
-      "charName": "Danz3xx",
-      "winCount": 4,
-      "killValue": 3,
+      "id": 573,
+      "charName": "Bucksz",
+      "winCount": 3,
+      "killValue": 31,
       "deathValue": null,
       "total": 15
     },
@@ -6885,20 +6885,12 @@
       "total": 15
     },
     {
-      "id": 573,
-      "charName": "Bucksz",
-      "winCount": 3,
-      "killValue": 31,
+      "id": 568,
+      "charName": "Danz3xx",
+      "winCount": 4,
+      "killValue": 3,
       "deathValue": null,
       "total": 15
-    },
-    {
-      "id": 579,
-      "charName": "FM-BB",
-      "winCount": 7,
-      "killValue": 27,
-      "deathValue": null,
-      "total": 14
     },
     {
       "id": 581,
@@ -6909,26 +6901,10 @@
       "total": 14
     },
     {
-      "id": 571,
-      "charName": "BMNATUREZA",
-      "winCount": 3,
-      "killValue": 1,
-      "deathValue": null,
-      "total": 14
-    },
-    {
-      "id": 578,
-      "charName": "FoemaMago",
-      "winCount": 3,
-      "killValue": 23,
-      "deathValue": null,
-      "total": 14
-    },
-    {
-      "id": 575,
-      "charName": "Jujubah",
-      "winCount": 6,
-      "killValue": 19,
+      "id": 579,
+      "charName": "FM-BB",
+      "winCount": 7,
+      "killValue": 27,
       "deathValue": null,
       "total": 14
     },
@@ -6941,12 +6917,28 @@
       "total": 14
     },
     {
-      "id": 105,
-      "charName": "PontinhO-",
-      "winCount": 2,
-      "killValue": 11,
+      "id": 578,
+      "charName": "FoemaMago",
+      "winCount": 3,
+      "killValue": 23,
       "deathValue": null,
-      "total": 13
+      "total": 14
+    },
+    {
+      "id": 571,
+      "charName": "BMNATUREZA",
+      "winCount": 3,
+      "killValue": 1,
+      "deathValue": null,
+      "total": 14
+    },
+    {
+      "id": 575,
+      "charName": "Jujubah",
+      "winCount": 6,
+      "killValue": 19,
+      "deathValue": null,
+      "total": 14
     },
     {
       "id": 574,
@@ -6965,10 +6957,18 @@
       "total": 13
     },
     {
-      "id": 582,
-      "charName": "MagicSouder",
-      "winCount": 5,
-      "killValue": 23,
+      "id": 105,
+      "charName": "PontinhO-",
+      "winCount": 2,
+      "killValue": 11,
+      "deathValue": null,
+      "total": 13
+    },
+    {
+      "id": 583,
+      "charName": "HeadzinXD",
+      "winCount": 4,
+      "killValue": 22,
       "deathValue": null,
       "total": 12
     },
@@ -6981,20 +6981,12 @@
       "total": 12
     },
     {
-      "id": 583,
-      "charName": "HeadzinXD",
-      "winCount": 4,
-      "killValue": 22,
+      "id": 582,
+      "charName": "MagicSouder",
+      "winCount": 5,
+      "killValue": 23,
       "deathValue": null,
       "total": 12
-    },
-    {
-      "id": 597,
-      "charName": "Saint-Joseph",
-      "winCount": 3,
-      "killValue": null,
-      "deathValue": null,
-      "total": 11
     },
     {
       "id": 338,
@@ -7013,18 +7005,26 @@
       "total": 11
     },
     {
-      "id": 584,
-      "charName": "damNNNN",
-      "winCount": 4,
-      "killValue": 19,
+      "id": 597,
+      "charName": "Saint-Joseph",
+      "winCount": 3,
+      "killValue": null,
       "deathValue": null,
-      "total": 10
+      "total": 11
     },
     {
       "id": 613,
       "charName": "zNostalgiC",
       "winCount": 3,
       "killValue": 12,
+      "deathValue": null,
+      "total": 10
+    },
+    {
+      "id": 584,
+      "charName": "damNNNN",
+      "winCount": 4,
+      "killValue": 19,
       "deathValue": null,
       "total": 10
     },
@@ -7037,14 +7037,6 @@
       "total": 9
     },
     {
-      "id": 462,
-      "charName": "joaoBERTO",
-      "winCount": 2,
-      "killValue": 20,
-      "deathValue": null,
-      "total": 9
-    },
-    {
       "id": 428,
       "charName": "Bacon-",
       "winCount": 4,
@@ -7053,12 +7045,12 @@
       "total": 9
     },
     {
-      "id": 224,
-      "charName": "BestiaNegra",
+      "id": 462,
+      "charName": "joaoBERTO",
       "winCount": 2,
-      "killValue": 10,
+      "killValue": 20,
       "deathValue": null,
-      "total": 8
+      "total": 9
     },
     {
       "id": 617,
@@ -7069,42 +7061,18 @@
       "total": 8
     },
     {
-      "id": 595,
-      "charName": "--2OMATAR--",
-      "winCount": 3,
+      "id": 224,
+      "charName": "BestiaNegra",
+      "winCount": 2,
       "killValue": 10,
       "deathValue": null,
-      "total": 7
-    },
-    {
-      "id": 591,
-      "charName": "Aziir-",
-      "winCount": 2,
-      "killValue": 6,
-      "deathValue": null,
-      "total": 7
+      "total": 8
     },
     {
       "id": 606,
       "charName": "Rezzyy",
       "winCount": 2,
       "killValue": 17,
-      "deathValue": null,
-      "total": 7
-    },
-    {
-      "id": 604,
-      "charName": "Mojarobmele",
-      "winCount": 1,
-      "killValue": 19,
-      "deathValue": null,
-      "total": 7
-    },
-    {
-      "id": 601,
-      "charName": "Hannibal-Du",
-      "winCount": 2,
-      "killValue": 15,
       "deathValue": null,
       "total": 7
     },
@@ -7125,10 +7093,50 @@
       "total": 7
     },
     {
-      "id": 588,
-      "charName": "TkTranSao",
+      "id": 591,
+      "charName": "Aziir-",
+      "winCount": 2,
+      "killValue": 6,
+      "deathValue": null,
+      "total": 7
+    },
+    {
+      "id": 595,
+      "charName": "--2OMATAR--",
+      "winCount": 3,
+      "killValue": 10,
+      "deathValue": null,
+      "total": 7
+    },
+    {
+      "id": 601,
+      "charName": "Hannibal-Du",
+      "winCount": 2,
+      "killValue": 15,
+      "deathValue": null,
+      "total": 7
+    },
+    {
+      "id": 604,
+      "charName": "Mojarobmele",
       "winCount": 1,
+      "killValue": 19,
+      "deathValue": null,
+      "total": 7
+    },
+    {
+      "id": 619,
+      "charName": "Vassy",
+      "winCount": 7,
       "killValue": null,
+      "deathValue": null,
+      "total": 6
+    },
+    {
+      "id": 593,
+      "charName": "TITTO-",
+      "winCount": 1,
+      "killValue": 8,
       "deathValue": null,
       "total": 6
     },
@@ -7141,10 +7149,10 @@
       "total": 6
     },
     {
-      "id": 593,
-      "charName": "TITTO-",
+      "id": 599,
+      "charName": "FLOKINIS",
       "winCount": 1,
-      "killValue": 8,
+      "killValue": 12,
       "deathValue": null,
       "total": 6
     },
@@ -7165,26 +7173,10 @@
       "total": 6
     },
     {
-      "id": 590,
-      "charName": "hitecoos",
+      "id": 588,
+      "charName": "TkTranSao",
       "winCount": 1,
-      "killValue": 1,
-      "deathValue": null,
-      "total": 6
-    },
-    {
-      "id": 619,
-      "charName": "Vassy",
-      "winCount": 7,
       "killValue": null,
-      "deathValue": null,
-      "total": 6
-    },
-    {
-      "id": 599,
-      "charName": "FLOKINIS",
-      "winCount": 1,
-      "killValue": 12,
       "deathValue": null,
       "total": 6
     },
@@ -7197,26 +7189,18 @@
       "total": 6
     },
     {
-      "id": 609,
-      "charName": "EZODYA",
+      "id": 590,
+      "charName": "hitecoos",
       "winCount": 1,
-      "killValue": 5,
+      "killValue": 1,
       "deathValue": null,
-      "total": 5
+      "total": 6
     },
     {
-      "id": 605,
-      "charName": "Mine1",
-      "winCount": 1,
-      "killValue": null,
-      "deathValue": null,
-      "total": 5
-    },
-    {
-      "id": 334,
-      "charName": "TiuniTchaine",
-      "winCount": 1,
-      "killValue": 12,
+      "id": 596,
+      "charName": "Zanaris",
+      "winCount": 4,
+      "killValue": 1,
       "deathValue": null,
       "total": 5
     },
@@ -7229,18 +7213,10 @@
       "total": 5
     },
     {
-      "id": 596,
-      "charName": "Zanaris",
-      "winCount": 4,
-      "killValue": 1,
-      "deathValue": null,
-      "total": 5
-    },
-    {
-      "id": 592,
-      "charName": "HoraDooShow",
-      "winCount": 4,
-      "killValue": 4,
+      "id": 609,
+      "charName": "EZODYA",
+      "winCount": 1,
+      "killValue": 5,
       "deathValue": null,
       "total": 5
     },
@@ -7253,26 +7229,34 @@
       "total": 5
     },
     {
-      "id": 611,
-      "charName": "BlackDanger",
+      "id": 334,
+      "charName": "TiuniTchaine",
       "winCount": 1,
-      "killValue": 10,
+      "killValue": 12,
       "deathValue": null,
-      "total": 4
+      "total": 5
     },
     {
-      "id": 608,
-      "charName": "M43L",
-      "winCount": 3,
+      "id": 605,
+      "charName": "Mine1",
+      "winCount": 1,
+      "killValue": null,
+      "deathValue": null,
+      "total": 5
+    },
+    {
+      "id": 592,
+      "charName": "HoraDooShow",
+      "winCount": 4,
       "killValue": 4,
       "deathValue": null,
-      "total": 4
+      "total": 5
     },
     {
-      "id": 614,
-      "charName": "-PRETORIUSS-",
-      "winCount": 3,
-      "killValue": 11,
+      "id": 406,
+      "charName": "-StarWade",
+      "winCount": 4,
+      "killValue": 36,
       "deathValue": null,
       "total": 4
     },
@@ -7293,10 +7277,26 @@
       "total": 4
     },
     {
-      "id": 406,
-      "charName": "-StarWade",
-      "winCount": 4,
-      "killValue": 36,
+      "id": 608,
+      "charName": "M43L",
+      "winCount": 3,
+      "killValue": 4,
+      "deathValue": null,
+      "total": 4
+    },
+    {
+      "id": 611,
+      "charName": "BlackDanger",
+      "winCount": 1,
+      "killValue": 10,
+      "deathValue": null,
+      "total": 4
+    },
+    {
+      "id": 614,
+      "charName": "-PRETORIUSS-",
+      "winCount": 3,
+      "killValue": 11,
       "deathValue": null,
       "total": 4
     },
@@ -7309,16 +7309,16 @@
       "total": 3
     },
     {
-      "id": 641,
-      "charName": "-Juniiior-",
+      "id": 664,
+      "charName": "TTCO",
       "winCount": null,
       "killValue": 16,
       "deathValue": null,
       "total": 2
     },
     {
-      "id": 664,
-      "charName": "TTCO",
+      "id": 641,
+      "charName": "-Juniiior-",
       "winCount": null,
       "killValue": 16,
       "deathValue": null,
@@ -7341,14 +7341,6 @@
       "total": 2
     },
     {
-      "id": 615,
-      "charName": "gueroba",
-      "winCount": 1,
-      "killValue": null,
-      "deathValue": null,
-      "total": 2
-    },
-    {
       "id": 363,
       "charName": "-4cerorA-",
       "winCount": 1,
@@ -7357,12 +7349,12 @@
       "total": 2
     },
     {
-      "id": 625,
-      "charName": "-PIVA-",
-      "winCount": null,
-      "killValue": 6,
+      "id": 615,
+      "charName": "gueroba",
+      "winCount": 1,
+      "killValue": null,
       "deathValue": null,
-      "total": 1
+      "total": 2
     },
     {
       "id": 659,
@@ -7381,10 +7373,282 @@
       "total": 1
     },
     {
+      "id": 625,
+      "charName": "-PIVA-",
+      "winCount": null,
+      "killValue": 6,
+      "deathValue": null,
+      "total": 1
+    },
+    {
+      "id": 647,
+      "charName": "1818",
+      "winCount": null,
+      "killValue": 3,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 352,
+      "charName": "Goudenlionn",
+      "winCount": null,
+      "killValue": 3,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 348,
+      "charName": "-NETERO-",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 268,
+      "charName": "OutroNick",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 213,
+      "charName": "-GalloS-",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
       "id": 381,
       "charName": "sokete",
       "winCount": 2,
       "killValue": 2,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 618,
+      "charName": "XxNaNxX",
+      "winCount": null,
+      "killValue": 3,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 620,
+      "charName": "Sr-Mauricio",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 621,
+      "charName": "RogerioCeni",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 622,
+      "charName": "ht-bb",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 623,
+      "charName": "-SmokeWeeD-",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 624,
+      "charName": "ZeGoTas",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 626,
+      "charName": "Caba",
+      "winCount": null,
+      "killValue": 1,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 627,
+      "charName": "CptCavernaa",
+      "winCount": null,
+      "killValue": 1,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 628,
+      "charName": "SeuCastelox",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 629,
+      "charName": "Lolo-CE",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 630,
+      "charName": "Aphromoo",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 631,
+      "charName": "BlackEvv",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 632,
+      "charName": "II-FISCAO-II",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 633,
+      "charName": "boobby",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 634,
+      "charName": "Constantino1",
+      "winCount": null,
+      "killValue": 1,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 635,
+      "charName": "Yumisashi",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 636,
+      "charName": "AIATHUS",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 637,
+      "charName": "GigaBlack",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 638,
+      "charName": "Vysache",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 639,
+      "charName": "neyhehexd",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 640,
+      "charName": "-BravoMike-",
+      "winCount": null,
+      "killValue": 2,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 642,
+      "charName": "xxXKauanXxx",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 643,
+      "charName": "ServoDeDeus",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 644,
+      "charName": "KrauL",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 645,
+      "charName": "lcastelar",
+      "winCount": null,
+      "killValue": 1,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 646,
+      "charName": "LebraoJames",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 648,
+      "charName": "L1ND1NH4",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 649,
+      "charName": "Lordtoxico",
+      "winCount": null,
+      "killValue": null,
       "deathValue": null,
       "total": 0
     },
@@ -7461,166 +7725,6 @@
       "total": 0
     },
     {
-      "id": 632,
-      "charName": "II-FISCAO-II",
-      "winCount": null,
-      "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 631,
-      "charName": "BlackEvv",
-      "winCount": null,
-      "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 630,
-      "charName": "Aphromoo",
-      "winCount": null,
-      "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 629,
-      "charName": "Lolo-CE",
-      "winCount": null,
-      "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 628,
-      "charName": "SeuCastelox",
-      "winCount": null,
-      "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 352,
-      "charName": "Goudenlionn",
-      "winCount": null,
-      "killValue": 3,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 348,
-      "charName": "-NETERO-",
-      "winCount": null,
-      "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 627,
-      "charName": "CptCavernaa",
-      "winCount": null,
-      "killValue": 1,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 268,
-      "charName": "OutroNick",
-      "winCount": null,
-      "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 213,
-      "charName": "-GalloS-",
-      "winCount": null,
-      "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 626,
-      "charName": "Caba",
-      "winCount": null,
-      "killValue": 1,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 649,
-      "charName": "Lordtoxico",
-      "winCount": null,
-      "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 624,
-      "charName": "ZeGoTas",
-      "winCount": null,
-      "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 623,
-      "charName": "-SmokeWeeD-",
-      "winCount": null,
-      "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 622,
-      "charName": "ht-bb",
-      "winCount": null,
-      "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 621,
-      "charName": "RogerioCeni",
-      "winCount": null,
-      "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 620,
-      "charName": "Sr-Mauricio",
-      "winCount": null,
-      "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 618,
-      "charName": "XxNaNxX",
-      "winCount": null,
-      "killValue": 3,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 647,
-      "charName": "1818",
-      "winCount": null,
-      "killValue": 3,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 648,
-      "charName": "L1ND1NH4",
-      "winCount": null,
-      "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
       "id": 660,
       "charName": "EDworld777",
       "winCount": null,
@@ -7649,22 +7753,6 @@
       "charName": "FSharmanlanD",
       "winCount": null,
       "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 646,
-      "charName": "LebraoJames",
-      "winCount": null,
-      "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 645,
-      "charName": "lcastelar",
-      "winCount": null,
-      "killValue": 1,
       "deathValue": null,
       "total": 0
     },
@@ -7717,106 +7805,18 @@
       "total": 0
     },
     {
-      "id": 644,
-      "charName": "KrauL",
-      "winCount": null,
+      "id": 676,
+      "charName": "MulleKinhO",
+      "winCount": 1,
       "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 643,
-      "charName": "ServoDeDeus",
-      "winCount": null,
-      "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 642,
-      "charName": "xxXKauanXxx",
-      "winCount": null,
-      "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 640,
-      "charName": "-BravoMike-",
-      "winCount": null,
-      "killValue": 2,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 639,
-      "charName": "neyhehexd",
-      "winCount": null,
-      "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 638,
-      "charName": "Vysache",
-      "winCount": null,
-      "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 637,
-      "charName": "GigaBlack",
-      "winCount": null,
-      "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 636,
-      "charName": "AIATHUS",
-      "winCount": null,
-      "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 635,
-      "charName": "Yumisashi",
-      "winCount": null,
-      "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 634,
-      "charName": "Constantino1",
-      "winCount": null,
-      "killValue": 1,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 633,
-      "charName": "boobby",
-      "winCount": null,
-      "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 518,
-      "charName": "paulGOD",
-      "winCount": 5,
-      "killValue": 14,
       "deathValue": null,
       "total": -1
     },
     {
-      "id": 679,
-      "charName": "ZeninMaki",
-      "winCount": 1,
-      "killValue": 2,
+      "id": 677,
+      "charName": "Ericonha",
+      "winCount": null,
+      "killValue": 1,
       "deathValue": null,
       "total": -1
     },
@@ -7829,50 +7829,10 @@
       "total": -1
     },
     {
-      "id": 529,
-      "charName": "KAOS",
-      "winCount": 3,
-      "killValue": 12,
-      "deathValue": null,
-      "total": -1
-    },
-    {
-      "id": 494,
-      "charName": "Gorin",
-      "winCount": null,
-      "killValue": 5,
-      "deathValue": null,
-      "total": -1
-    },
-    {
-      "id": 526,
-      "charName": "Nazg�ll",
-      "winCount": null,
-      "killValue": 4,
-      "deathValue": null,
-      "total": -1
-    },
-    {
-      "id": 504,
-      "charName": "Mododoy",
+      "id": 679,
+      "charName": "ZeninMaki",
       "winCount": 1,
-      "killValue": 8,
-      "deathValue": null,
-      "total": -1
-    },
-    {
-      "id": 506,
-      "charName": "ChupaOuCospe",
-      "winCount": 2,
-      "killValue": null,
-      "deathValue": null,
-      "total": -1
-    },
-    {
-      "id": 157,
-      "charName": "CaIxForTe",
-      "winCount": null,
-      "killValue": 1,
+      "killValue": 2,
       "deathValue": null,
       "total": -1
     },
@@ -7901,18 +7861,18 @@
       "total": -1
     },
     {
-      "id": 671,
-      "charName": "Arelwen",
-      "winCount": null,
-      "killValue": null,
+      "id": 316,
+      "charName": "PuroVoodoo",
+      "winCount": 2,
+      "killValue": 5,
       "deathValue": null,
       "total": -1
     },
     {
-      "id": 672,
-      "charName": "ITALIANINHOO",
+      "id": 57,
+      "charName": "Hespert",
       "winCount": null,
-      "killValue": null,
+      "killValue": 4,
       "deathValue": null,
       "total": -1
     },
@@ -7925,6 +7885,70 @@
       "total": -1
     },
     {
+      "id": 672,
+      "charName": "ITALIANINHOO",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": -1
+    },
+    {
+      "id": 671,
+      "charName": "Arelwen",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": -1
+    },
+    {
+      "id": 494,
+      "charName": "Gorin",
+      "winCount": null,
+      "killValue": 5,
+      "deathValue": null,
+      "total": -1
+    },
+    {
+      "id": 529,
+      "charName": "KAOS",
+      "winCount": 3,
+      "killValue": 12,
+      "deathValue": null,
+      "total": -1
+    },
+    {
+      "id": 526,
+      "charName": "Nazg�ll",
+      "winCount": null,
+      "killValue": 4,
+      "deathValue": null,
+      "total": -1
+    },
+    {
+      "id": 518,
+      "charName": "paulGOD",
+      "winCount": 5,
+      "killValue": 14,
+      "deathValue": null,
+      "total": -1
+    },
+    {
+      "id": 506,
+      "charName": "ChupaOuCospe",
+      "winCount": 2,
+      "killValue": null,
+      "deathValue": null,
+      "total": -1
+    },
+    {
+      "id": 504,
+      "charName": "Mododoy",
+      "winCount": 1,
+      "killValue": 8,
+      "deathValue": null,
+      "total": -1
+    },
+    {
       "id": 674,
       "charName": "PredatorKing",
       "winCount": null,
@@ -7933,37 +7957,13 @@
       "total": -1
     },
     {
-      "id": 316,
-      "charName": "PuroVoodoo",
-      "winCount": 2,
-      "killValue": 5,
-      "deathValue": null,
-      "total": -1
-    },
-    {
-      "id": 676,
-      "charName": "MulleKinhO",
-      "winCount": 1,
-      "killValue": null,
-      "deathValue": null,
-      "total": -1
-    },
-    {
-      "id": 677,
-      "charName": "Ericonha",
+      "id": 157,
+      "charName": "CaIxForTe",
       "winCount": null,
       "killValue": 1,
       "deathValue": null,
       "total": -1
-    },
-    {
-      "id": 57,
-      "charName": "Hespert",
-      "winCount": null,
-      "killValue": 4,
-      "deathValue": null,
-      "total": -1
     }
   ],
-  "last_update": "2026-03-15 17:33:10"
+  "last_update": "2026-03-15 17:44:05"
 }
