@@ -37,13 +37,14 @@ def ranking(request: Request):
     players = LevelRepository.get_all(session)
 
     # Buscar última atualização do ranking de level
+    from sqlalchemy import text
     last_level_update = session.execute(
-        "SELECT MAX(snapshot_date) FROM level_rankings"
+        text("SELECT MAX(snapshot_date) FROM level_rankings")
     ).scalar()
 
     # Buscar última atualização da arena
     last_arena_update = session.execute(
-        "SELECT MAX(snapshot_date) FROM arena_rankings"
+        text("SELECT MAX(snapshot_date) FROM arena_rankings")
     ).scalar()
 
     session.close()

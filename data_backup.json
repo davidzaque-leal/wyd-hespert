@@ -1,7 +1,7 @@
 {
   "level_ranking": [
     {
-      "id": 3,
+      "id": 1,
       "name": "JogoRuim-",
       "level": 440,
       "celestial_lineage": null,
@@ -11,7 +11,7 @@
       "guild": 2300
     },
     {
-      "id": 4,
+      "id": 2,
       "name": "xGandalf",
       "level": 437,
       "celestial_lineage": null,
@@ -21,7 +21,7 @@
       "guild": 2300
     },
     {
-      "id": 5,
+      "id": 3,
       "name": "Indeex",
       "level": 434,
       "celestial_lineage": null,
@@ -31,7 +31,7 @@
       "guild": 2308
     },
     {
-      "id": 6,
+      "id": 4,
       "name": "-Blackrex-",
       "level": 439,
       "celestial_lineage": null,
@@ -41,7 +41,7 @@
       "guild": 2300
     },
     {
-      "id": 7,
+      "id": 5,
       "name": "Akirus",
       "level": 440,
       "celestial_lineage": null,
@@ -51,7 +51,7 @@
       "guild": 2193
     },
     {
-      "id": 8,
+      "id": 6,
       "name": "Bringer",
       "level": 431,
       "celestial_lineage": null,
@@ -61,7 +61,7 @@
       "guild": 2300
     },
     {
-      "id": 9,
+      "id": 7,
       "name": "Raduzin",
       "level": 433,
       "celestial_lineage": null,
@@ -71,7 +71,7 @@
       "guild": 2300
     },
     {
-      "id": 10,
+      "id": 8,
       "name": "grauzera-",
       "level": 431,
       "celestial_lineage": null,
@@ -81,7 +81,7 @@
       "guild": 2300
     },
     {
-      "id": 11,
+      "id": 9,
       "name": "Leonis",
       "level": 436,
       "celestial_lineage": null,
@@ -91,7 +91,7 @@
       "guild": 2300
     },
     {
-      "id": 12,
+      "id": 10,
       "name": "Qtpie",
       "level": 436,
       "celestial_lineage": null,
@@ -101,7 +101,7 @@
       "guild": 2300
     },
     {
-      "id": 13,
+      "id": 11,
       "name": "Zeudo",
       "level": 434,
       "celestial_lineage": null,
@@ -111,7 +111,7 @@
       "guild": 2308
     },
     {
-      "id": 14,
+      "id": 12,
       "name": "FREDAO",
       "level": 434,
       "celestial_lineage": null,
@@ -121,7 +121,7 @@
       "guild": 2193
     },
     {
-      "id": 15,
+      "id": 13,
       "name": "jnr-",
       "level": 434,
       "celestial_lineage": null,
@@ -131,7 +131,7 @@
       "guild": 2193
     },
     {
-      "id": 16,
+      "id": 14,
       "name": "-WaveBeast-",
       "level": 432,
       "celestial_lineage": null,
@@ -141,7 +141,7 @@
       "guild": 2300
     },
     {
-      "id": 17,
+      "id": 15,
       "name": "-Minjiya-",
       "level": 433,
       "celestial_lineage": null,
@@ -151,7 +151,7 @@
       "guild": 2193
     },
     {
-      "id": 18,
+      "id": 16,
       "name": "Raften-",
       "level": 433,
       "celestial_lineage": null,
@@ -161,7 +161,7 @@
       "guild": 2193
     },
     {
-      "id": 19,
+      "id": 17,
       "name": "-CHAD",
       "level": 431,
       "celestial_lineage": null,
@@ -171,7 +171,7 @@
       "guild": 2308
     },
     {
-      "id": 20,
+      "id": 18,
       "name": "xZeBonitinho",
       "level": 433,
       "celestial_lineage": null,
@@ -181,7 +181,7 @@
       "guild": null
     },
     {
-      "id": 21,
+      "id": 19,
       "name": "ThiegoxD",
       "level": 431,
       "celestial_lineage": null,
@@ -191,7 +191,7 @@
       "guild": 2193
     },
     {
-      "id": 22,
+      "id": 20,
       "name": "Kooh",
       "level": 434,
       "celestial_lineage": null,
@@ -201,7 +201,7 @@
       "guild": 2300
     },
     {
-      "id": 23,
+      "id": 21,
       "name": "-HellKnight-",
       "level": 430,
       "celestial_lineage": null,
@@ -211,7 +211,7 @@
       "guild": 2308
     },
     {
-      "id": 24,
+      "id": 22,
       "name": "DELIVERYGOOD",
       "level": 431,
       "celestial_lineage": null,
@@ -221,7 +221,7 @@
       "guild": 2185
     },
     {
-      "id": 25,
+      "id": 23,
       "name": "Gohann",
       "level": 432,
       "celestial_lineage": null,
@@ -231,7 +231,7 @@
       "guild": 1862
     },
     {
-      "id": 26,
+      "id": 24,
       "name": "-flowgg-",
       "level": 434,
       "celestial_lineage": null,
@@ -241,7 +241,7 @@
       "guild": 2193
     },
     {
-      "id": 27,
+      "id": 25,
       "name": "Faakri",
       "level": 432,
       "celestial_lineage": null,
@@ -251,7 +251,7 @@
       "guild": 2193
     },
     {
-      "id": 28,
+      "id": 26,
       "name": "Commandos1",
       "level": 433,
       "celestial_lineage": null,
@@ -261,7 +261,7 @@
       "guild": null
     },
     {
-      "id": 29,
+      "id": 27,
       "name": "-MADMAN-",
       "level": 433,
       "celestial_lineage": null,
@@ -271,7 +271,7 @@
       "guild": 2300
     },
     {
-      "id": 30,
+      "id": 28,
       "name": "llSpeeDll",
       "level": 431,
       "celestial_lineage": null,
@@ -281,7 +281,7 @@
       "guild": 2300
     },
     {
-      "id": 31,
+      "id": 29,
       "name": "StFigarLand",
       "level": 432,
       "celestial_lineage": null,
@@ -291,7 +291,7 @@
       "guild": 492
     },
     {
-      "id": 32,
+      "id": 30,
       "name": "-GoDeViL",
       "level": 432,
       "celestial_lineage": null,
@@ -301,7 +301,7 @@
       "guild": 1862
     },
     {
-      "id": 33,
+      "id": 31,
       "name": "xDoidoLoko",
       "level": 432,
       "celestial_lineage": null,
@@ -311,7 +311,7 @@
       "guild": 2308
     },
     {
-      "id": 34,
+      "id": 32,
       "name": "iPhone4S",
       "level": 432,
       "celestial_lineage": null,
@@ -321,7 +321,7 @@
       "guild": null
     },
     {
-      "id": 35,
+      "id": 33,
       "name": "TSUB4KI",
       "level": 432,
       "celestial_lineage": null,
@@ -331,7 +331,7 @@
       "guild": 1862
     },
     {
-      "id": 36,
+      "id": 34,
       "name": "DrWyd",
       "level": 431,
       "celestial_lineage": null,
@@ -341,7 +341,7 @@
       "guild": null
     },
     {
-      "id": 37,
+      "id": 35,
       "name": "SkaiKruS",
       "level": 431,
       "celestial_lineage": null,
@@ -351,7 +351,7 @@
       "guild": 2300
     },
     {
-      "id": 38,
+      "id": 36,
       "name": "-oNezera",
       "level": 433,
       "celestial_lineage": null,
@@ -361,7 +361,7 @@
       "guild": 2193
     },
     {
-      "id": 39,
+      "id": 37,
       "name": "INSANO-BRA",
       "level": 431,
       "celestial_lineage": null,
@@ -371,7 +371,7 @@
       "guild": null
     },
     {
-      "id": 40,
+      "id": 38,
       "name": "KyungSoon",
       "level": 432,
       "celestial_lineage": null,
@@ -381,7 +381,7 @@
       "guild": 1862
     },
     {
-      "id": 41,
+      "id": 39,
       "name": "DogZZ",
       "level": 433,
       "celestial_lineage": null,
@@ -391,7 +391,7 @@
       "guild": 2193
     },
     {
-      "id": 42,
+      "id": 40,
       "name": "Adoniis",
       "level": 431,
       "celestial_lineage": null,
@@ -401,7 +401,7 @@
       "guild": 2194
     },
     {
-      "id": 43,
+      "id": 41,
       "name": "oCSR",
       "level": 432,
       "celestial_lineage": null,
@@ -411,7 +411,7 @@
       "guild": 2300
     },
     {
-      "id": 44,
+      "id": 42,
       "name": "Moriveth",
       "level": 431,
       "celestial_lineage": null,
@@ -421,7 +421,7 @@
       "guild": null
     },
     {
-      "id": 45,
+      "id": 43,
       "name": "Dragnnel",
       "level": 433,
       "celestial_lineage": null,
@@ -431,7 +431,7 @@
       "guild": 346
     },
     {
-      "id": 46,
+      "id": 44,
       "name": "Xalvorn",
       "level": 431,
       "celestial_lineage": null,
@@ -441,7 +441,7 @@
       "guild": null
     },
     {
-      "id": 47,
+      "id": 45,
       "name": "chaba",
       "level": 431,
       "celestial_lineage": null,
@@ -451,7 +451,7 @@
       "guild": 2194
     },
     {
-      "id": 48,
+      "id": 46,
       "name": "meury---",
       "level": 433,
       "celestial_lineage": null,
@@ -461,7 +461,7 @@
       "guild": 2308
     },
     {
-      "id": 49,
+      "id": 47,
       "name": "AqueleCara",
       "level": 430,
       "celestial_lineage": null,
@@ -471,7 +471,7 @@
       "guild": 2194
     },
     {
-      "id": 50,
+      "id": 48,
       "name": "���L��o��",
       "level": 431,
       "celestial_lineage": null,
@@ -481,7 +481,7 @@
       "guild": 2241
     },
     {
-      "id": 51,
+      "id": 49,
       "name": "wakandaa",
       "level": 433,
       "celestial_lineage": null,
@@ -491,7 +491,7 @@
       "guild": null
     },
     {
-      "id": 52,
+      "id": 50,
       "name": "-Antnick-",
       "level": 430,
       "celestial_lineage": null,
@@ -501,7 +501,7 @@
       "guild": null
     },
     {
-      "id": 53,
+      "id": 51,
       "name": "xPesTinHa10x",
       "level": 431,
       "celestial_lineage": null,
@@ -511,7 +511,7 @@
       "guild": 2308
     },
     {
-      "id": 54,
+      "id": 52,
       "name": "scarpz",
       "level": 430,
       "celestial_lineage": null,
@@ -521,7 +521,7 @@
       "guild": 2300
     },
     {
-      "id": 55,
+      "id": 53,
       "name": "Zarch",
       "level": 430,
       "celestial_lineage": null,
@@ -531,7 +531,7 @@
       "guild": 2193
     },
     {
-      "id": 56,
+      "id": 54,
       "name": "-oliveedu-",
       "level": 430,
       "celestial_lineage": null,
@@ -541,7 +541,7 @@
       "guild": null
     },
     {
-      "id": 57,
+      "id": 55,
       "name": "Hespert",
       "level": 431,
       "celestial_lineage": null,
@@ -551,7 +551,7 @@
       "guild": 2194
     },
     {
-      "id": 58,
+      "id": 56,
       "name": "HANNIBALROY",
       "level": 430,
       "celestial_lineage": null,
@@ -561,7 +561,7 @@
       "guild": 2300
     },
     {
-      "id": 59,
+      "id": 57,
       "name": "ThuThuMaL",
       "level": 431,
       "celestial_lineage": null,
@@ -571,7 +571,7 @@
       "guild": 2308
     },
     {
-      "id": 60,
+      "id": 58,
       "name": "Awonim",
       "level": 430,
       "celestial_lineage": null,
@@ -581,7 +581,7 @@
       "guild": 2194
     },
     {
-      "id": 61,
+      "id": 59,
       "name": "Chiquinhooo",
       "level": 430,
       "celestial_lineage": null,
@@ -591,7 +591,7 @@
       "guild": 2193
     },
     {
-      "id": 62,
+      "id": 60,
       "name": "VeridaS",
       "level": 431,
       "celestial_lineage": null,
@@ -601,7 +601,7 @@
       "guild": 2185
     },
     {
-      "id": 63,
+      "id": 61,
       "name": "Ver0",
       "level": 431,
       "celestial_lineage": null,
@@ -611,7 +611,7 @@
       "guild": 2308
     },
     {
-      "id": 64,
+      "id": 62,
       "name": "TunTunGoiaba",
       "level": 430,
       "celestial_lineage": null,
@@ -621,7 +621,7 @@
       "guild": null
     },
     {
-      "id": 51,
+      "id": 49,
       "name": "wakandaa",
       "level": 432,
       "celestial_lineage": null,
@@ -631,7 +631,7 @@
       "guild": null
     },
     {
-      "id": 65,
+      "id": 63,
       "name": "-Leseux",
       "level": 431,
       "celestial_lineage": null,
@@ -641,7 +641,7 @@
       "guild": 2193
     },
     {
-      "id": 66,
+      "id": 64,
       "name": "Demoin",
       "level": 430,
       "celestial_lineage": null,
@@ -651,7 +651,7 @@
       "guild": 2300
     },
     {
-      "id": 67,
+      "id": 65,
       "name": "ItzMrnT",
       "level": 431,
       "celestial_lineage": null,
@@ -661,7 +661,7 @@
       "guild": 2193
     },
     {
-      "id": 68,
+      "id": 66,
       "name": "PegaKzada",
       "level": 430,
       "celestial_lineage": null,
@@ -671,7 +671,7 @@
       "guild": 1862
     },
     {
-      "id": 69,
+      "id": 67,
       "name": "xPedro",
       "level": 430,
       "celestial_lineage": null,
@@ -681,7 +681,7 @@
       "guild": 2193
     },
     {
-      "id": 70,
+      "id": 68,
       "name": "YUMA-",
       "level": 431,
       "celestial_lineage": null,
@@ -691,7 +691,7 @@
       "guild": 2300
     },
     {
-      "id": 71,
+      "id": 69,
       "name": "ALO-GOIANIA",
       "level": 430,
       "celestial_lineage": null,
@@ -701,7 +701,7 @@
       "guild": 2300
     },
     {
-      "id": 72,
+      "id": 70,
       "name": "Aorb",
       "level": 430,
       "celestial_lineage": null,
@@ -711,7 +711,7 @@
       "guild": 2308
     },
     {
-      "id": 73,
+      "id": 71,
       "name": "SnowBeer",
       "level": 430,
       "celestial_lineage": null,
@@ -721,7 +721,7 @@
       "guild": 2193
     },
     {
-      "id": 74,
+      "id": 72,
       "name": "Parucker",
       "level": 430,
       "celestial_lineage": null,
@@ -731,7 +731,7 @@
       "guild": 2193
     },
     {
-      "id": 75,
+      "id": 73,
       "name": "TuniCAO",
       "level": 430,
       "celestial_lineage": null,
@@ -741,7 +741,7 @@
       "guild": 2308
     },
     {
-      "id": 76,
+      "id": 74,
       "name": "yTr0n",
       "level": 430,
       "celestial_lineage": null,
@@ -751,7 +751,7 @@
       "guild": 1862
     },
     {
-      "id": 77,
+      "id": 75,
       "name": "DARKZAOo",
       "level": 431,
       "celestial_lineage": null,
@@ -761,7 +761,7 @@
       "guild": 2308
     },
     {
-      "id": 78,
+      "id": 76,
       "name": "Ryuujinn",
       "level": 431,
       "celestial_lineage": null,
@@ -771,7 +771,7 @@
       "guild": 2308
     },
     {
-      "id": 79,
+      "id": 77,
       "name": "Bigods",
       "level": 433,
       "celestial_lineage": null,
@@ -781,7 +781,7 @@
       "guild": 2041
     },
     {
-      "id": 80,
+      "id": 78,
       "name": "-N-O-E-L-",
       "level": 430,
       "celestial_lineage": null,
@@ -791,7 +791,7 @@
       "guild": 2194
     },
     {
-      "id": 81,
+      "id": 79,
       "name": "Buch",
       "level": 430,
       "celestial_lineage": null,
@@ -801,7 +801,7 @@
       "guild": 1708
     },
     {
-      "id": 82,
+      "id": 80,
       "name": "Paloff",
       "level": 430,
       "celestial_lineage": null,
@@ -811,7 +811,7 @@
       "guild": null
     },
     {
-      "id": 83,
+      "id": 81,
       "name": "Jamelllao",
       "level": 430,
       "celestial_lineage": null,
@@ -821,7 +821,7 @@
       "guild": 2308
     },
     {
-      "id": 84,
+      "id": 82,
       "name": "Kleptomaniac",
       "level": 430,
       "celestial_lineage": null,
@@ -831,7 +831,7 @@
       "guild": 2300
     },
     {
-      "id": 85,
+      "id": 83,
       "name": "KyriosBaraK",
       "level": 430,
       "celestial_lineage": null,
@@ -841,7 +841,7 @@
       "guild": 2308
     },
     {
-      "id": 86,
+      "id": 84,
       "name": "-BIXOGRILO-",
       "level": 430,
       "celestial_lineage": null,
@@ -851,7 +851,7 @@
       "guild": 2185
     },
     {
-      "id": 87,
+      "id": 85,
       "name": "Ayeron",
       "level": 430,
       "celestial_lineage": null,
@@ -861,7 +861,7 @@
       "guild": 2300
     },
     {
-      "id": 88,
+      "id": 86,
       "name": "-PATO-MANCO-",
       "level": 429,
       "celestial_lineage": null,
@@ -871,7 +871,7 @@
       "guild": 1862
     },
     {
-      "id": 89,
+      "id": 87,
       "name": "xLanes",
       "level": 429,
       "celestial_lineage": null,
@@ -881,7 +881,7 @@
       "guild": 2194
     },
     {
-      "id": 90,
+      "id": 88,
       "name": "Nearr",
       "level": 430,
       "celestial_lineage": null,
@@ -891,7 +891,7 @@
       "guild": 1708
     },
     {
-      "id": 91,
+      "id": 89,
       "name": "O-Psy",
       "level": 429,
       "celestial_lineage": null,
@@ -901,7 +901,7 @@
       "guild": 1862
     },
     {
-      "id": 92,
+      "id": 90,
       "name": "sh4bba",
       "level": 429,
       "celestial_lineage": null,
@@ -911,7 +911,7 @@
       "guild": 2163
     },
     {
-      "id": 93,
+      "id": 91,
       "name": "OsFartura",
       "level": 429,
       "celestial_lineage": null,
@@ -921,7 +921,7 @@
       "guild": null
     },
     {
-      "id": 94,
+      "id": 92,
       "name": "Alkapone",
       "level": 430,
       "celestial_lineage": null,
@@ -931,7 +931,7 @@
       "guild": null
     },
     {
-      "id": 95,
+      "id": 93,
       "name": "Oldzarch",
       "level": 431,
       "celestial_lineage": null,
@@ -941,7 +941,7 @@
       "guild": 2193
     },
     {
-      "id": 96,
+      "id": 94,
       "name": "Guapo-",
       "level": 431,
       "celestial_lineage": null,
@@ -951,7 +951,7 @@
       "guild": 2300
     },
     {
-      "id": 97,
+      "id": 95,
       "name": "DeaD",
       "level": 428,
       "celestial_lineage": null,
@@ -961,7 +961,7 @@
       "guild": 2300
     },
     {
-      "id": 98,
+      "id": 96,
       "name": "Kduzin",
       "level": 430,
       "celestial_lineage": null,
@@ -971,7 +971,7 @@
       "guild": 2308
     },
     {
-      "id": 99,
+      "id": 97,
       "name": "GtOkAi",
       "level": 431,
       "celestial_lineage": null,
@@ -981,7 +981,7 @@
       "guild": 2185
     },
     {
-      "id": 100,
+      "id": 98,
       "name": "Xuju",
       "level": 429,
       "celestial_lineage": null,
@@ -991,7 +991,7 @@
       "guild": 1862
     },
     {
-      "id": 101,
+      "id": 99,
       "name": "-Kilerzinho-",
       "level": 432,
       "celestial_lineage": null,
@@ -1001,7 +1001,7 @@
       "guild": 13
     },
     {
-      "id": 102,
+      "id": 100,
       "name": "oPola",
       "level": 425,
       "celestial_lineage": null,
@@ -1011,7 +1011,7 @@
       "guild": 2308
     },
     {
-      "id": 103,
+      "id": 101,
       "name": "Arrogante",
       "level": 428,
       "celestial_lineage": null,
@@ -1021,7 +1021,7 @@
       "guild": 2193
     },
     {
-      "id": 104,
+      "id": 102,
       "name": "-Teiker-",
       "level": 430,
       "celestial_lineage": null,
@@ -1031,17 +1031,7 @@
       "guild": null
     },
     {
-      "id": 105,
-      "name": "PontinhO-",
-      "level": 427,
-      "celestial_lineage": null,
-      "levelSub": 430,
-      "subclass_lineage": null,
-      "Soma Level": 857,
-      "guild": null
-    },
-    {
-      "id": 106,
+      "id": 103,
       "name": "-TiuBarba-",
       "level": 428,
       "celestial_lineage": null,
@@ -1051,7 +1041,17 @@
       "guild": 2241
     },
     {
-      "id": 107,
+      "id": 104,
+      "name": "PontinhO-",
+      "level": 427,
+      "celestial_lineage": null,
+      "levelSub": 430,
+      "subclass_lineage": null,
+      "Soma Level": 857,
+      "guild": null
+    },
+    {
+      "id": 105,
       "name": "-Ruela-",
       "level": 430,
       "celestial_lineage": null,
@@ -1061,7 +1061,7 @@
       "guild": 2303
     },
     {
-      "id": 108,
+      "id": 106,
       "name": "TrickOrTreaT",
       "level": 427,
       "celestial_lineage": null,
@@ -1071,7 +1071,7 @@
       "guild": null
     },
     {
-      "id": 109,
+      "id": 107,
       "name": "luccsb",
       "level": 426,
       "celestial_lineage": null,
@@ -1081,7 +1081,7 @@
       "guild": 2308
     },
     {
-      "id": 110,
+      "id": 108,
       "name": "Tartaglione",
       "level": 425,
       "celestial_lineage": null,
@@ -1091,7 +1091,7 @@
       "guild": 2193
     },
     {
-      "id": 111,
+      "id": 109,
       "name": "BIG-WARRIOR",
       "level": 425,
       "celestial_lineage": null,
@@ -1101,7 +1101,7 @@
       "guild": 2308
     },
     {
-      "id": 112,
+      "id": 110,
       "name": "itsDravyn",
       "level": 430,
       "celestial_lineage": null,
@@ -1111,7 +1111,7 @@
       "guild": 2300
     },
     {
-      "id": 113,
+      "id": 111,
       "name": "-Baray-",
       "level": 430,
       "celestial_lineage": null,
@@ -1121,7 +1121,7 @@
       "guild": 2329
     },
     {
-      "id": 114,
+      "id": 112,
       "name": "-JOKERl-",
       "level": 430,
       "celestial_lineage": null,
@@ -1131,7 +1131,7 @@
       "guild": 2185
     },
     {
-      "id": 115,
+      "id": 113,
       "name": "xuxinhaloco",
       "level": 425,
       "celestial_lineage": null,
@@ -1141,7 +1141,7 @@
       "guild": 1862
     },
     {
-      "id": 116,
+      "id": 114,
       "name": "-Elloy-",
       "level": 428,
       "celestial_lineage": null,
@@ -1151,7 +1151,7 @@
       "guild": 2300
     },
     {
-      "id": 117,
+      "id": 115,
       "name": "JOW-JOW",
       "level": 425,
       "celestial_lineage": null,
@@ -1161,7 +1161,7 @@
       "guild": 2194
     },
     {
-      "id": 118,
+      "id": 116,
       "name": "BonJovi",
       "level": 427,
       "celestial_lineage": null,
@@ -1171,7 +1171,7 @@
       "guild": 2194
     },
     {
-      "id": 119,
+      "id": 117,
       "name": "SmithBacaL",
       "level": 429,
       "celestial_lineage": null,
@@ -1181,7 +1181,7 @@
       "guild": null
     },
     {
-      "id": 120,
+      "id": 118,
       "name": "-Eddy",
       "level": 429,
       "celestial_lineage": null,
@@ -1191,7 +1191,7 @@
       "guild": 2300
     },
     {
-      "id": 121,
+      "id": 119,
       "name": "MimDaBuff",
       "level": 430,
       "celestial_lineage": null,
@@ -1201,7 +1201,7 @@
       "guild": 13
     },
     {
-      "id": 122,
+      "id": 120,
       "name": "Ragnnnarok",
       "level": 425,
       "celestial_lineage": null,
@@ -1211,7 +1211,7 @@
       "guild": 1862
     },
     {
-      "id": 123,
+      "id": 121,
       "name": "HippieSujo",
       "level": 425,
       "celestial_lineage": null,
@@ -1221,7 +1221,7 @@
       "guild": 2308
     },
     {
-      "id": 124,
+      "id": 122,
       "name": "Zekiel",
       "level": 424,
       "celestial_lineage": null,
@@ -1231,7 +1231,7 @@
       "guild": 1862
     },
     {
-      "id": 125,
+      "id": 123,
       "name": "FrostFury",
       "level": 427,
       "celestial_lineage": null,
@@ -1241,7 +1241,7 @@
       "guild": null
     },
     {
-      "id": 126,
+      "id": 124,
       "name": "-Yael-",
       "level": 425,
       "celestial_lineage": null,
@@ -1251,7 +1251,7 @@
       "guild": 2185
     },
     {
-      "id": 127,
+      "id": 125,
       "name": "Tenshinham",
       "level": 425,
       "celestial_lineage": null,
@@ -1261,7 +1261,7 @@
       "guild": 2300
     },
     {
-      "id": 128,
+      "id": 126,
       "name": "-luizkmx-",
       "level": 425,
       "celestial_lineage": null,
@@ -1271,7 +1271,7 @@
       "guild": 2308
     },
     {
-      "id": 129,
+      "id": 127,
       "name": "fafona",
       "level": 426,
       "celestial_lineage": null,
@@ -1281,7 +1281,7 @@
       "guild": 2266
     },
     {
-      "id": 130,
+      "id": 128,
       "name": "-AxeGod-97",
       "level": 424,
       "celestial_lineage": null,
@@ -1291,7 +1291,7 @@
       "guild": 2241
     },
     {
-      "id": 131,
+      "id": 129,
       "name": "-Laga",
       "level": 423,
       "celestial_lineage": null,
@@ -1301,7 +1301,7 @@
       "guild": 2194
     },
     {
-      "id": 132,
+      "id": 130,
       "name": "SomeBody-",
       "level": 423,
       "celestial_lineage": null,
@@ -1311,7 +1311,7 @@
       "guild": 1862
     },
     {
-      "id": 133,
+      "id": 131,
       "name": "zVoid",
       "level": 430,
       "celestial_lineage": null,
@@ -1321,7 +1321,7 @@
       "guild": 2041
     },
     {
-      "id": 134,
+      "id": 132,
       "name": "SemIdeaiz",
       "level": 431,
       "celestial_lineage": null,
@@ -1331,7 +1331,7 @@
       "guild": 2308
     },
     {
-      "id": 135,
+      "id": 133,
       "name": "-Salgadinho-",
       "level": 430,
       "celestial_lineage": null,
@@ -1341,7 +1341,7 @@
       "guild": 2305
     },
     {
-      "id": 136,
+      "id": 134,
       "name": "M3MORI3S",
       "level": 427,
       "celestial_lineage": null,
@@ -1351,7 +1351,7 @@
       "guild": 1721
     },
     {
-      "id": 137,
+      "id": 135,
       "name": "DeathQuick",
       "level": 428,
       "celestial_lineage": null,
@@ -1361,7 +1361,7 @@
       "guild": 1862
     },
     {
-      "id": 138,
+      "id": 136,
       "name": "OPENCLOSE",
       "level": 430,
       "celestial_lineage": null,
@@ -1371,7 +1371,7 @@
       "guild": 2305
     },
     {
-      "id": 139,
+      "id": 137,
       "name": "Loner",
       "level": 430,
       "celestial_lineage": null,
@@ -1381,7 +1381,7 @@
       "guild": 2300
     },
     {
-      "id": 140,
+      "id": 138,
       "name": "-Khaleesi-",
       "level": 428,
       "celestial_lineage": null,
@@ -1391,7 +1391,7 @@
       "guild": null
     },
     {
-      "id": 141,
+      "id": 139,
       "name": "PuRoGoLPe",
       "level": 427,
       "celestial_lineage": null,
@@ -1401,7 +1401,7 @@
       "guild": 2300
     },
     {
-      "id": 142,
+      "id": 140,
       "name": "vaitomano",
       "level": 429,
       "celestial_lineage": null,
@@ -1411,7 +1411,7 @@
       "guild": 2308
     },
     {
-      "id": 143,
+      "id": 141,
       "name": "-ESC",
       "level": 431,
       "celestial_lineage": null,
@@ -1421,7 +1421,7 @@
       "guild": null
     },
     {
-      "id": 144,
+      "id": 142,
       "name": "Mrmarquinhos",
       "level": 430,
       "celestial_lineage": null,
@@ -1431,7 +1431,7 @@
       "guild": 2309
     },
     {
-      "id": 145,
+      "id": 143,
       "name": "-SrGumball",
       "level": 430,
       "celestial_lineage": null,
@@ -1441,7 +1441,7 @@
       "guild": 2194
     },
     {
-      "id": 146,
+      "id": 144,
       "name": "piros",
       "level": 430,
       "celestial_lineage": null,
@@ -1451,7 +1451,7 @@
       "guild": null
     },
     {
-      "id": 147,
+      "id": 145,
       "name": "T0RRACA",
       "level": 422,
       "celestial_lineage": null,
@@ -1461,7 +1461,7 @@
       "guild": 2185
     },
     {
-      "id": 148,
+      "id": 146,
       "name": "-Parkmann-",
       "level": 426,
       "celestial_lineage": null,
@@ -1471,7 +1471,7 @@
       "guild": null
     },
     {
-      "id": 149,
+      "id": 147,
       "name": "-Rice",
       "level": 430,
       "celestial_lineage": null,
@@ -1481,7 +1481,7 @@
       "guild": 2201
     },
     {
-      "id": 150,
+      "id": 148,
       "name": "-MarioX-",
       "level": 429,
       "celestial_lineage": null,
@@ -1491,7 +1491,7 @@
       "guild": null
     },
     {
-      "id": 151,
+      "id": 149,
       "name": "ULTREDRAGNAR",
       "level": 430,
       "celestial_lineage": null,
@@ -1501,7 +1501,7 @@
       "guild": null
     },
     {
-      "id": 152,
+      "id": 150,
       "name": "DRAGON-F3N1X",
       "level": 429,
       "celestial_lineage": null,
@@ -1511,7 +1511,7 @@
       "guild": null
     },
     {
-      "id": 153,
+      "id": 151,
       "name": "Djia",
       "level": 421,
       "celestial_lineage": null,
@@ -1521,7 +1521,7 @@
       "guild": null
     },
     {
-      "id": 154,
+      "id": 152,
       "name": "WS-zim",
       "level": 427,
       "celestial_lineage": null,
@@ -1531,7 +1531,7 @@
       "guild": 2308
     },
     {
-      "id": 155,
+      "id": 153,
       "name": "Karinud",
       "level": 424,
       "celestial_lineage": null,
@@ -1541,7 +1541,7 @@
       "guild": 2308
     },
     {
-      "id": 156,
+      "id": 154,
       "name": "l-Indio-I",
       "level": 424,
       "celestial_lineage": null,
@@ -1551,7 +1551,7 @@
       "guild": 2194
     },
     {
-      "id": 157,
+      "id": 155,
       "name": "CaIxForTe",
       "level": 421,
       "celestial_lineage": null,
@@ -1561,7 +1561,7 @@
       "guild": null
     },
     {
-      "id": 158,
+      "id": 156,
       "name": "-shatter",
       "level": 430,
       "celestial_lineage": null,
@@ -1571,7 +1571,7 @@
       "guild": 511
     },
     {
-      "id": 159,
+      "id": 157,
       "name": "CADOSO",
       "level": 430,
       "celestial_lineage": null,
@@ -1581,7 +1581,7 @@
       "guild": null
     },
     {
-      "id": 160,
+      "id": 158,
       "name": "Zewor",
       "level": 422,
       "celestial_lineage": null,
@@ -1591,7 +1591,7 @@
       "guild": null
     },
     {
-      "id": 161,
+      "id": 159,
       "name": "Rioux",
       "level": 426,
       "celestial_lineage": null,
@@ -1599,6 +1599,26 @@
       "subclass_lineage": null,
       "Soma Level": 851,
       "guild": 2185
+    },
+    {
+      "id": 162,
+      "name": "51TonsDpinga",
+      "level": 428,
+      "celestial_lineage": null,
+      "levelSub": 423,
+      "subclass_lineage": null,
+      "Soma Level": 851,
+      "guild": null
+    },
+    {
+      "id": 160,
+      "name": "TREMBORAGE",
+      "level": 426,
+      "celestial_lineage": null,
+      "levelSub": 425,
+      "subclass_lineage": null,
+      "Soma Level": 851,
+      "guild": null
     },
     {
       "id": 163,
@@ -1611,17 +1631,7 @@
       "guild": null
     },
     {
-      "id": 165,
-      "name": "TREMBORAGE",
-      "level": 426,
-      "celestial_lineage": null,
-      "levelSub": 425,
-      "subclass_lineage": null,
-      "Soma Level": 851,
-      "guild": null
-    },
-    {
-      "id": 162,
+      "id": 161,
       "name": "Cars",
       "level": 426,
       "celestial_lineage": null,
@@ -1632,16 +1642,6 @@
     },
     {
       "id": 164,
-      "name": "51TonsDpinga",
-      "level": 428,
-      "celestial_lineage": null,
-      "levelSub": 423,
-      "subclass_lineage": null,
-      "Soma Level": 851,
-      "guild": null
-    },
-    {
-      "id": 166,
       "name": "PK-Xita",
       "level": 421,
       "celestial_lineage": null,
@@ -1651,7 +1651,7 @@
       "guild": 2300
     },
     {
-      "id": 167,
+      "id": 165,
       "name": "OFisicodeOz",
       "level": 420,
       "celestial_lineage": null,
@@ -1661,7 +1661,7 @@
       "guild": 2308
     },
     {
-      "id": 168,
+      "id": 166,
       "name": "-KZERO",
       "level": 430,
       "celestial_lineage": null,
@@ -1671,7 +1671,7 @@
       "guild": 2185
     },
     {
-      "id": 169,
+      "id": 167,
       "name": "preth",
       "level": 431,
       "celestial_lineage": null,
@@ -1681,7 +1681,7 @@
       "guild": 2193
     },
     {
-      "id": 170,
+      "id": 168,
       "name": "Jovics",
       "level": 425,
       "celestial_lineage": null,
@@ -1691,7 +1691,7 @@
       "guild": 2300
     },
     {
-      "id": 171,
+      "id": 169,
       "name": "-Pinkman-",
       "level": 423,
       "celestial_lineage": null,
@@ -1701,7 +1701,7 @@
       "guild": null
     },
     {
-      "id": 172,
+      "id": 170,
       "name": "MACACO-LOKO",
       "level": 420,
       "celestial_lineage": null,
@@ -1711,7 +1711,7 @@
       "guild": 2193
     },
     {
-      "id": 173,
+      "id": 171,
       "name": "Caboclo-",
       "level": 425,
       "celestial_lineage": null,
@@ -1721,7 +1721,7 @@
       "guild": 2185
     },
     {
-      "id": 174,
+      "id": 172,
       "name": "FizaNow",
       "level": 425,
       "celestial_lineage": null,
@@ -1731,7 +1731,7 @@
       "guild": null
     },
     {
-      "id": 175,
+      "id": 173,
       "name": "S4NGUINAR1O",
       "level": 429,
       "celestial_lineage": null,
@@ -1741,7 +1741,7 @@
       "guild": null
     },
     {
-      "id": 176,
+      "id": 174,
       "name": "TED-BUNNY",
       "level": 424,
       "celestial_lineage": null,
@@ -1751,7 +1751,7 @@
       "guild": null
     },
     {
-      "id": 177,
+      "id": 175,
       "name": "ItsBruxo",
       "level": 425,
       "celestial_lineage": null,
@@ -1761,7 +1761,7 @@
       "guild": 2308
     },
     {
-      "id": 178,
+      "id": 176,
       "name": "Flaaap",
       "level": 424,
       "celestial_lineage": null,
@@ -1771,7 +1771,7 @@
       "guild": 2193
     },
     {
-      "id": 179,
+      "id": 177,
       "name": "Pescador01",
       "level": 427,
       "celestial_lineage": null,
@@ -1781,7 +1781,7 @@
       "guild": 1862
     },
     {
-      "id": 180,
+      "id": 178,
       "name": "�Machado",
       "level": 420,
       "celestial_lineage": null,
@@ -1791,7 +1791,7 @@
       "guild": 2241
     },
     {
-      "id": 181,
+      "id": 179,
       "name": "Keffra",
       "level": 425,
       "celestial_lineage": null,
@@ -1801,7 +1801,7 @@
       "guild": 2041
     },
     {
-      "id": 182,
+      "id": 180,
       "name": "SalgadinhoCE",
       "level": 428,
       "celestial_lineage": null,
@@ -1811,7 +1811,7 @@
       "guild": 2305
     },
     {
-      "id": 184,
+      "id": 181,
       "name": "Teku-Holy2",
       "level": 425,
       "celestial_lineage": null,
@@ -1821,7 +1821,7 @@
       "guild": null
     },
     {
-      "id": 183,
+      "id": 182,
       "name": "dropfarm",
       "level": 426,
       "celestial_lineage": null,
@@ -1831,7 +1831,7 @@
       "guild": null
     },
     {
-      "id": 185,
+      "id": 183,
       "name": "SnouBert",
       "level": 424,
       "celestial_lineage": null,
@@ -1841,7 +1841,7 @@
       "guild": 1862
     },
     {
-      "id": 186,
+      "id": 184,
       "name": "-DarkShadow-",
       "level": 425,
       "celestial_lineage": null,
@@ -1851,7 +1851,7 @@
       "guild": 2308
     },
     {
-      "id": 187,
+      "id": 185,
       "name": "SugaForte",
       "level": 423,
       "celestial_lineage": null,
@@ -1861,7 +1861,7 @@
       "guild": 2193
     },
     {
-      "id": 188,
+      "id": 186,
       "name": "Artykun0",
       "level": 425,
       "celestial_lineage": null,
@@ -1871,7 +1871,7 @@
       "guild": 2308
     },
     {
-      "id": 189,
+      "id": 187,
       "name": "AntiDepress",
       "level": 424,
       "celestial_lineage": null,
@@ -1881,7 +1881,7 @@
       "guild": 2284
     },
     {
-      "id": 190,
+      "id": 188,
       "name": "Bias",
       "level": 421,
       "celestial_lineage": null,
@@ -1891,7 +1891,7 @@
       "guild": null
     },
     {
-      "id": 191,
+      "id": 189,
       "name": "Shavana",
       "level": 426,
       "celestial_lineage": null,
@@ -1901,7 +1901,7 @@
       "guild": 2194
     },
     {
-      "id": 192,
+      "id": 190,
       "name": "Arrazad0r",
       "level": 424,
       "celestial_lineage": null,
@@ -1911,7 +1911,7 @@
       "guild": null
     },
     {
-      "id": 193,
+      "id": 191,
       "name": "xnxxxxxx",
       "level": 423,
       "celestial_lineage": null,
@@ -1921,7 +1921,7 @@
       "guild": null
     },
     {
-      "id": 194,
+      "id": 192,
       "name": "GusttaPro",
       "level": 424,
       "celestial_lineage": null,
@@ -1931,7 +1931,7 @@
       "guild": null
     },
     {
-      "id": 195,
+      "id": 193,
       "name": "II-CACIKE-II",
       "level": 424,
       "celestial_lineage": null,
@@ -1941,7 +1941,7 @@
       "guild": null
     },
     {
-      "id": 196,
+      "id": 194,
       "name": "MINEIRINHO0",
       "level": 424,
       "celestial_lineage": null,
@@ -1951,7 +1951,7 @@
       "guild": null
     },
     {
-      "id": 197,
+      "id": 195,
       "name": "SANGUINARIO",
       "level": 428,
       "celestial_lineage": null,
@@ -1961,7 +1961,7 @@
       "guild": null
     },
     {
-      "id": 198,
+      "id": 196,
       "name": "Limpis",
       "level": 427,
       "celestial_lineage": null,
@@ -1971,7 +1971,7 @@
       "guild": null
     },
     {
-      "id": 199,
+      "id": 197,
       "name": "MagoNegro88",
       "level": 421,
       "celestial_lineage": null,
@@ -1981,7 +1981,7 @@
       "guild": 2194
     },
     {
-      "id": 200,
+      "id": 198,
       "name": "GeneralGuuS",
       "level": 420,
       "celestial_lineage": null,
@@ -1991,7 +1991,7 @@
       "guild": 2194
     },
     {
-      "id": 201,
+      "id": 199,
       "name": "Syzttem",
       "level": 423,
       "celestial_lineage": null,
@@ -2001,7 +2001,7 @@
       "guild": null
     },
     {
-      "id": 202,
+      "id": 200,
       "name": "c4ladeX",
       "level": 425,
       "celestial_lineage": null,
@@ -2011,7 +2011,7 @@
       "guild": 2300
     },
     {
-      "id": 203,
+      "id": 201,
       "name": "scriptado",
       "level": 420,
       "celestial_lineage": null,
@@ -2021,7 +2021,7 @@
       "guild": 2194
     },
     {
-      "id": 204,
+      "id": 202,
       "name": "Pichaku",
       "level": 425,
       "celestial_lineage": null,
@@ -2031,7 +2031,7 @@
       "guild": 2308
     },
     {
-      "id": 205,
+      "id": 203,
       "name": "ManoGuatic",
       "level": 423,
       "celestial_lineage": null,
@@ -2041,7 +2041,7 @@
       "guild": null
     },
     {
-      "id": 206,
+      "id": 204,
       "name": "verzole",
       "level": 424,
       "celestial_lineage": null,
@@ -2051,7 +2051,7 @@
       "guild": null
     },
     {
-      "id": 207,
+      "id": 205,
       "name": "Niknill",
       "level": 428,
       "celestial_lineage": null,
@@ -2061,7 +2061,7 @@
       "guild": 2268
     },
     {
-      "id": 208,
+      "id": 206,
       "name": "130cm",
       "level": 420,
       "celestial_lineage": null,
@@ -2071,7 +2071,7 @@
       "guild": null
     },
     {
-      "id": 209,
+      "id": 207,
       "name": "Coxuda",
       "level": 424,
       "celestial_lineage": null,
@@ -2081,7 +2081,7 @@
       "guild": null
     },
     {
-      "id": 210,
+      "id": 208,
       "name": "Arkzada",
       "level": 423,
       "celestial_lineage": null,
@@ -2091,7 +2091,7 @@
       "guild": null
     },
     {
-      "id": 211,
+      "id": 209,
       "name": "Vornyx",
       "level": 424,
       "celestial_lineage": null,
@@ -2101,7 +2101,7 @@
       "guild": 511
     },
     {
-      "id": 212,
+      "id": 210,
       "name": "ThiagoO",
       "level": 420,
       "celestial_lineage": null,
@@ -2111,7 +2111,7 @@
       "guild": null
     },
     {
-      "id": 213,
+      "id": 211,
       "name": "-GalloS-",
       "level": 424,
       "celestial_lineage": null,
@@ -2121,7 +2121,7 @@
       "guild": null
     },
     {
-      "id": 214,
+      "id": 212,
       "name": "zNoia",
       "level": 426,
       "celestial_lineage": null,
@@ -2131,7 +2131,7 @@
       "guild": null
     },
     {
-      "id": 215,
+      "id": 213,
       "name": "TutanC�mon",
       "level": 423,
       "celestial_lineage": null,
@@ -2141,7 +2141,7 @@
       "guild": null
     },
     {
-      "id": 216,
+      "id": 214,
       "name": "-FENTA-",
       "level": 422,
       "celestial_lineage": null,
@@ -2151,7 +2151,7 @@
       "guild": 2308
     },
     {
-      "id": 217,
+      "id": 215,
       "name": "REIdoSERTAO",
       "level": 426,
       "celestial_lineage": null,
@@ -2161,7 +2161,7 @@
       "guild": 2041
     },
     {
-      "id": 218,
+      "id": 216,
       "name": "guizaofh",
       "level": 424,
       "celestial_lineage": null,
@@ -2171,7 +2171,7 @@
       "guild": null
     },
     {
-      "id": 219,
+      "id": 217,
       "name": "Cnut",
       "level": 424,
       "celestial_lineage": null,
@@ -2181,7 +2181,7 @@
       "guild": 2308
     },
     {
-      "id": 220,
+      "id": 218,
       "name": "-Pityzera-",
       "level": 425,
       "celestial_lineage": null,
@@ -2191,7 +2191,7 @@
       "guild": null
     },
     {
-      "id": 221,
+      "id": 219,
       "name": "-EcstasyPT-",
       "level": 424,
       "celestial_lineage": null,
@@ -2201,7 +2201,7 @@
       "guild": 2308
     },
     {
-      "id": 222,
+      "id": 220,
       "name": "LevYzao",
       "level": 421,
       "celestial_lineage": null,
@@ -2211,7 +2211,7 @@
       "guild": 2041
     },
     {
-      "id": 223,
+      "id": 221,
       "name": "Sary",
       "level": 424,
       "celestial_lineage": null,
@@ -2221,7 +2221,7 @@
       "guild": null
     },
     {
-      "id": 224,
+      "id": 222,
       "name": "BestiaNegra",
       "level": 425,
       "celestial_lineage": null,
@@ -2231,7 +2231,7 @@
       "guild": 2309
     },
     {
-      "id": 225,
+      "id": 223,
       "name": "SuperNoris-",
       "level": 423,
       "celestial_lineage": null,
@@ -2241,7 +2241,7 @@
       "guild": null
     },
     {
-      "id": 226,
+      "id": 224,
       "name": "AmazonForest",
       "level": 420,
       "celestial_lineage": null,
@@ -2251,7 +2251,7 @@
       "guild": 2303
     },
     {
-      "id": 227,
+      "id": 225,
       "name": "KeBowen",
       "level": 424,
       "celestial_lineage": null,
@@ -2261,7 +2261,7 @@
       "guild": null
     },
     {
-      "id": 228,
+      "id": 226,
       "name": "llRedLabeL",
       "level": 424,
       "celestial_lineage": null,
@@ -2271,7 +2271,7 @@
       "guild": 2194
     },
     {
-      "id": 229,
+      "id": 227,
       "name": "-McO-",
       "level": 424,
       "celestial_lineage": null,
@@ -2281,7 +2281,7 @@
       "guild": null
     },
     {
-      "id": 230,
+      "id": 228,
       "name": "Duel",
       "level": 424,
       "celestial_lineage": null,
@@ -2291,7 +2291,7 @@
       "guild": null
     },
     {
-      "id": 231,
+      "id": 229,
       "name": "SheelVPower",
       "level": 423,
       "celestial_lineage": null,
@@ -2301,7 +2301,7 @@
       "guild": 2041
     },
     {
-      "id": 232,
+      "id": 230,
       "name": "QuietPanda",
       "level": 420,
       "celestial_lineage": null,
@@ -2311,7 +2311,7 @@
       "guild": 2309
     },
     {
-      "id": 233,
+      "id": 231,
       "name": "CaM1nHoNeiRa",
       "level": 421,
       "celestial_lineage": null,
@@ -2321,7 +2321,7 @@
       "guild": 2308
     },
     {
-      "id": 234,
+      "id": 232,
       "name": "-VoldiGoaT-",
       "level": 424,
       "celestial_lineage": null,
@@ -2331,7 +2331,7 @@
       "guild": null
     },
     {
-      "id": 235,
+      "id": 233,
       "name": "FKM1",
       "level": 424,
       "celestial_lineage": null,
@@ -2341,17 +2341,7 @@
       "guild": 2185
     },
     {
-      "id": 236,
-      "name": "xSAMCRO",
-      "level": 422,
-      "celestial_lineage": null,
-      "levelSub": 423,
-      "subclass_lineage": null,
-      "Soma Level": 845,
-      "guild": 1862
-    },
-    {
-      "id": 237,
+      "id": 234,
       "name": "Asceu",
       "level": 425,
       "celestial_lineage": null,
@@ -2361,7 +2351,17 @@
       "guild": null
     },
     {
-      "id": 238,
+      "id": 235,
+      "name": "xSAMCRO",
+      "level": 422,
+      "celestial_lineage": null,
+      "levelSub": 423,
+      "subclass_lineage": null,
+      "Soma Level": 845,
+      "guild": 1862
+    },
+    {
+      "id": 236,
       "name": "-EternoSoul-",
       "level": 424,
       "celestial_lineage": null,
@@ -2371,7 +2371,7 @@
       "guild": null
     },
     {
-      "id": 239,
+      "id": 237,
       "name": "Darck-",
       "level": 420,
       "celestial_lineage": null,
@@ -2381,7 +2381,7 @@
       "guild": null
     },
     {
-      "id": 240,
+      "id": 238,
       "name": "Mulekotte",
       "level": 421,
       "celestial_lineage": null,
@@ -2391,7 +2391,7 @@
       "guild": null
     },
     {
-      "id": 242,
+      "id": 239,
       "name": "CAPLUDGERO",
       "level": 425,
       "celestial_lineage": null,
@@ -2401,7 +2401,7 @@
       "guild": null
     },
     {
-      "id": 241,
+      "id": 240,
       "name": "SeekForadesi",
       "level": 424,
       "celestial_lineage": null,
@@ -2411,7 +2411,7 @@
       "guild": null
     },
     {
-      "id": 243,
+      "id": 241,
       "name": "Antrax-",
       "level": 430,
       "celestial_lineage": null,
@@ -2421,7 +2421,7 @@
       "guild": null
     },
     {
-      "id": 244,
+      "id": 242,
       "name": "-LethaL",
       "level": 424,
       "celestial_lineage": null,
@@ -2431,7 +2431,7 @@
       "guild": 2300
     },
     {
-      "id": 245,
+      "id": 243,
       "name": "--Monstro--",
       "level": 421,
       "celestial_lineage": null,
@@ -2441,7 +2441,7 @@
       "guild": null
     },
     {
-      "id": 246,
+      "id": 244,
       "name": "--NOG--",
       "level": 423,
       "celestial_lineage": null,
@@ -2451,7 +2451,7 @@
       "guild": null
     },
     {
-      "id": 247,
+      "id": 245,
       "name": "xStefano",
       "level": 424,
       "celestial_lineage": null,
@@ -2461,7 +2461,7 @@
       "guild": 2193
     },
     {
-      "id": 248,
+      "id": 246,
       "name": "xZeudo",
       "level": 422,
       "celestial_lineage": null,
@@ -2471,7 +2471,7 @@
       "guild": null
     },
     {
-      "id": 249,
+      "id": 247,
       "name": "-Break-Bone-",
       "level": 422,
       "celestial_lineage": null,
@@ -2481,7 +2481,7 @@
       "guild": null
     },
     {
-      "id": 250,
+      "id": 248,
       "name": "Kiirlyn",
       "level": 423,
       "celestial_lineage": null,
@@ -2491,7 +2491,7 @@
       "guild": 2303
     },
     {
-      "id": 251,
+      "id": 249,
       "name": "RAFENX",
       "level": 424,
       "celestial_lineage": null,
@@ -2501,7 +2501,7 @@
       "guild": 2194
     },
     {
-      "id": 252,
+      "id": 250,
       "name": "PoneyCrazzy",
       "level": 423,
       "celestial_lineage": null,
@@ -2511,7 +2511,7 @@
       "guild": 1862
     },
     {
-      "id": 253,
+      "id": 251,
       "name": "--THUG--",
       "level": 423,
       "celestial_lineage": null,
@@ -2521,7 +2521,7 @@
       "guild": 2309
     },
     {
-      "id": 254,
+      "id": 252,
       "name": "LordSomora",
       "level": 422,
       "celestial_lineage": null,
@@ -2531,7 +2531,7 @@
       "guild": null
     },
     {
-      "id": 255,
+      "id": 253,
       "name": "Skythalos",
       "level": 422,
       "celestial_lineage": null,
@@ -2541,7 +2541,7 @@
       "guild": null
     },
     {
-      "id": 256,
+      "id": 254,
       "name": "AnaarK-",
       "level": 422,
       "celestial_lineage": null,
@@ -2551,7 +2551,7 @@
       "guild": 2041
     },
     {
-      "id": 257,
+      "id": 255,
       "name": "LowCat",
       "level": 421,
       "celestial_lineage": null,
@@ -2561,7 +2561,7 @@
       "guild": null
     },
     {
-      "id": 258,
+      "id": 256,
       "name": "BetaPitola",
       "level": 421,
       "celestial_lineage": null,
@@ -2571,7 +2571,7 @@
       "guild": 2312
     },
     {
-      "id": 259,
+      "id": 257,
       "name": "UNS41NTED",
       "level": 422,
       "celestial_lineage": null,
@@ -2581,7 +2581,7 @@
       "guild": null
     },
     {
-      "id": 260,
+      "id": 258,
       "name": "-Zyrk-",
       "level": 421,
       "celestial_lineage": null,
@@ -2591,7 +2591,7 @@
       "guild": 2287
     },
     {
-      "id": 261,
+      "id": 259,
       "name": "lzanami",
       "level": 421,
       "celestial_lineage": null,
@@ -2601,7 +2601,7 @@
       "guild": null
     },
     {
-      "id": 262,
+      "id": 260,
       "name": "SilvioS4ntoS",
       "level": 420,
       "celestial_lineage": null,
@@ -2611,7 +2611,7 @@
       "guild": 2300
     },
     {
-      "id": 263,
+      "id": 261,
       "name": "-LanaDelRey-",
       "level": 420,
       "celestial_lineage": null,
@@ -2621,7 +2621,7 @@
       "guild": 2309
     },
     {
-      "id": 264,
+      "id": 262,
       "name": "-Frogmetal-",
       "level": 421,
       "celestial_lineage": null,
@@ -2631,7 +2631,7 @@
       "guild": null
     },
     {
-      "id": 265,
+      "id": 263,
       "name": "Catapum",
       "level": 425,
       "celestial_lineage": null,
@@ -2641,7 +2641,7 @@
       "guild": 2300
     },
     {
-      "id": 266,
+      "id": 264,
       "name": "nullpointer",
       "level": 423,
       "celestial_lineage": null,
@@ -2651,7 +2651,7 @@
       "guild": null
     },
     {
-      "id": 267,
+      "id": 265,
       "name": "RADIOHE4D",
       "level": 423,
       "celestial_lineage": null,
@@ -2661,7 +2661,7 @@
       "guild": 2041
     },
     {
-      "id": 268,
+      "id": 266,
       "name": "OutroNick",
       "level": 422,
       "celestial_lineage": null,
@@ -2671,7 +2671,7 @@
       "guild": 2194
     },
     {
-      "id": 269,
+      "id": 267,
       "name": "Investor",
       "level": 423,
       "celestial_lineage": null,
@@ -2681,7 +2681,7 @@
       "guild": null
     },
     {
-      "id": 270,
+      "id": 268,
       "name": "-DeusaEir-",
       "level": 422,
       "celestial_lineage": null,
@@ -2691,7 +2691,7 @@
       "guild": 2308
     },
     {
-      "id": 271,
+      "id": 269,
       "name": "Altimus",
       "level": 422,
       "celestial_lineage": null,
@@ -2701,7 +2701,7 @@
       "guild": 2309
     },
     {
-      "id": 272,
+      "id": 270,
       "name": "IBadMistic",
       "level": 422,
       "celestial_lineage": null,
@@ -2711,7 +2711,7 @@
       "guild": null
     },
     {
-      "id": 273,
+      "id": 271,
       "name": "FearPutifero",
       "level": 421,
       "celestial_lineage": null,
@@ -2721,7 +2721,7 @@
       "guild": null
     },
     {
-      "id": 274,
+      "id": 272,
       "name": "XxICExX",
       "level": 420,
       "celestial_lineage": null,
@@ -2731,7 +2731,7 @@
       "guild": null
     },
     {
-      "id": 275,
+      "id": 273,
       "name": "llllllllllll",
       "level": 420,
       "celestial_lineage": null,
@@ -2741,7 +2741,7 @@
       "guild": 218
     },
     {
-      "id": 276,
+      "id": 274,
       "name": "-ChaoslorD-",
       "level": 423,
       "celestial_lineage": null,
@@ -2751,7 +2751,7 @@
       "guild": null
     },
     {
-      "id": 277,
+      "id": 275,
       "name": "Fask",
       "level": 421,
       "celestial_lineage": null,
@@ -2761,7 +2761,7 @@
       "guild": null
     },
     {
-      "id": 278,
+      "id": 276,
       "name": "EspecLOKO",
       "level": 422,
       "celestial_lineage": null,
@@ -2771,7 +2771,7 @@
       "guild": 2300
     },
     {
-      "id": 279,
+      "id": 277,
       "name": "OrNeLaS",
       "level": 421,
       "celestial_lineage": null,
@@ -2781,7 +2781,7 @@
       "guild": 2300
     },
     {
-      "id": 280,
+      "id": 278,
       "name": "Manezim",
       "level": 421,
       "celestial_lineage": null,
@@ -2791,7 +2791,7 @@
       "guild": 2310
     },
     {
-      "id": 281,
+      "id": 279,
       "name": "KromuS",
       "level": 421,
       "celestial_lineage": null,
@@ -2801,7 +2801,7 @@
       "guild": null
     },
     {
-      "id": 282,
+      "id": 280,
       "name": "-WESTERM4N-",
       "level": 422,
       "celestial_lineage": null,
@@ -2811,7 +2811,7 @@
       "guild": 1862
     },
     {
-      "id": 283,
+      "id": 281,
       "name": "DinOxzin",
       "level": 422,
       "celestial_lineage": null,
@@ -2821,7 +2821,7 @@
       "guild": 2300
     },
     {
-      "id": 284,
+      "id": 282,
       "name": "MrJericho",
       "level": 422,
       "celestial_lineage": null,
@@ -2831,7 +2831,7 @@
       "guild": 2300
     },
     {
-      "id": 285,
+      "id": 283,
       "name": "BeTinHoo",
       "level": 421,
       "celestial_lineage": null,
@@ -2841,7 +2841,7 @@
       "guild": 2300
     },
     {
-      "id": 286,
+      "id": 284,
       "name": "randle",
       "level": 421,
       "celestial_lineage": null,
@@ -2851,7 +2851,7 @@
       "guild": null
     },
     {
-      "id": 287,
+      "id": 285,
       "name": "-ZecaXereca",
       "level": 421,
       "celestial_lineage": null,
@@ -2861,7 +2861,7 @@
       "guild": 2041
     },
     {
-      "id": 288,
+      "id": 286,
       "name": "Skruull",
       "level": 420,
       "celestial_lineage": null,
@@ -2871,7 +2871,7 @@
       "guild": null
     },
     {
-      "id": 289,
+      "id": 287,
       "name": "BulePoint",
       "level": 422,
       "celestial_lineage": null,
@@ -2881,7 +2881,7 @@
       "guild": 1989
     },
     {
-      "id": 290,
+      "id": 288,
       "name": "NETTOH",
       "level": 421,
       "celestial_lineage": null,
@@ -2891,7 +2891,7 @@
       "guild": null
     },
     {
-      "id": 291,
+      "id": 289,
       "name": "Azui",
       "level": 420,
       "celestial_lineage": null,
@@ -2901,7 +2901,7 @@
       "guild": null
     },
     {
-      "id": 292,
+      "id": 290,
       "name": "TarcisoHS",
       "level": 422,
       "celestial_lineage": null,
@@ -2911,7 +2911,7 @@
       "guild": 2194
     },
     {
-      "id": 293,
+      "id": 291,
       "name": "-VoldiGoaD-",
       "level": 421,
       "celestial_lineage": null,
@@ -2921,7 +2921,7 @@
       "guild": 2194
     },
     {
-      "id": 294,
+      "id": 292,
       "name": "CegoMata",
       "level": 421,
       "celestial_lineage": null,
@@ -2931,7 +2931,7 @@
       "guild": null
     },
     {
-      "id": 24,
+      "id": 22,
       "name": "DELIVERYGOOD",
       "level": 420,
       "celestial_lineage": null,
@@ -2941,7 +2941,7 @@
       "guild": 2185
     },
     {
-      "id": 295,
+      "id": 293,
       "name": "Albrecht",
       "level": 420,
       "celestial_lineage": null,
@@ -2951,17 +2951,7 @@
       "guild": null
     },
     {
-      "id": 296,
-      "name": "Shaggy-",
-      "level": 420,
-      "celestial_lineage": null,
-      "levelSub": 422,
-      "subclass_lineage": null,
-      "Soma Level": 842,
-      "guild": null
-    },
-    {
-      "id": 298,
+      "id": 295,
       "name": "-ColoSSoS-",
       "level": 420,
       "celestial_lineage": null,
@@ -2971,7 +2961,17 @@
       "guild": null
     },
     {
-      "id": 297,
+      "id": 294,
+      "name": "Shaggy-",
+      "level": 420,
+      "celestial_lineage": null,
+      "levelSub": 422,
+      "subclass_lineage": null,
+      "Soma Level": 842,
+      "guild": null
+    },
+    {
+      "id": 296,
       "name": "RAPOUSO-",
       "level": 422,
       "celestial_lineage": null,
@@ -2981,7 +2981,7 @@
       "guild": null
     },
     {
-      "id": 299,
+      "id": 297,
       "name": "WINDOWS52",
       "level": 420,
       "celestial_lineage": null,
@@ -2991,7 +2991,7 @@
       "guild": 2194
     },
     {
-      "id": 300,
+      "id": 298,
       "name": "DYNAMICo",
       "level": 421,
       "celestial_lineage": null,
@@ -3001,7 +3001,7 @@
       "guild": 2185
     },
     {
-      "id": 301,
+      "id": 299,
       "name": "Exilado-",
       "level": 421,
       "celestial_lineage": null,
@@ -3011,7 +3011,7 @@
       "guild": null
     },
     {
-      "id": 302,
+      "id": 300,
       "name": "Adamantium",
       "level": 420,
       "celestial_lineage": null,
@@ -3021,7 +3021,7 @@
       "guild": 2300
     },
     {
-      "id": 303,
+      "id": 301,
       "name": "-MeninoBom-",
       "level": 420,
       "celestial_lineage": null,
@@ -3031,7 +3031,7 @@
       "guild": 2308
     },
     {
-      "id": 304,
+      "id": 302,
       "name": "El-Capeta",
       "level": 420,
       "celestial_lineage": null,
@@ -3041,7 +3041,7 @@
       "guild": 2236
     },
     {
-      "id": 305,
+      "id": 303,
       "name": "GurgeL",
       "level": 425,
       "celestial_lineage": null,
@@ -3051,7 +3051,7 @@
       "guild": null
     },
     {
-      "id": 306,
+      "id": 304,
       "name": "NoThorious",
       "level": 421,
       "celestial_lineage": null,
@@ -3061,7 +3061,7 @@
       "guild": 1708
     },
     {
-      "id": 307,
+      "id": 305,
       "name": "QuickTrick",
       "level": 421,
       "celestial_lineage": null,
@@ -3071,7 +3071,7 @@
       "guild": null
     },
     {
-      "id": 308,
+      "id": 306,
       "name": "HeLL-Ice",
       "level": 420,
       "celestial_lineage": null,
@@ -3081,7 +3081,7 @@
       "guild": null
     },
     {
-      "id": 309,
+      "id": 308,
       "name": "Ushio",
       "level": 421,
       "celestial_lineage": null,
@@ -3091,7 +3091,7 @@
       "guild": null
     },
     {
-      "id": 310,
+      "id": 307,
       "name": "-rio-",
       "level": 421,
       "celestial_lineage": null,
@@ -3101,7 +3101,7 @@
       "guild": null
     },
     {
-      "id": 311,
+      "id": 309,
       "name": "DrMax",
       "level": 421,
       "celestial_lineage": null,
@@ -3111,7 +3111,7 @@
       "guild": 2308
     },
     {
-      "id": 312,
+      "id": 310,
       "name": "Genio",
       "level": 420,
       "celestial_lineage": null,
@@ -3121,7 +3121,7 @@
       "guild": 2185
     },
     {
-      "id": 313,
+      "id": 311,
       "name": "--Reacher-",
       "level": 421,
       "celestial_lineage": null,
@@ -3131,7 +3131,7 @@
       "guild": 2185
     },
     {
-      "id": 314,
+      "id": 312,
       "name": "-ChaosBR-",
       "level": 420,
       "celestial_lineage": null,
@@ -3141,7 +3141,7 @@
       "guild": null
     },
     {
-      "id": 315,
+      "id": 313,
       "name": "SHuntres",
       "level": 421,
       "celestial_lineage": null,
@@ -3151,7 +3151,7 @@
       "guild": null
     },
     {
-      "id": 316,
+      "id": 314,
       "name": "PuroVoodoo",
       "level": 421,
       "celestial_lineage": null,
@@ -3161,7 +3161,7 @@
       "guild": 2041
     },
     {
-      "id": 317,
+      "id": 315,
       "name": "BigDunga",
       "level": 421,
       "celestial_lineage": null,
@@ -3171,7 +3171,7 @@
       "guild": 2059
     },
     {
-      "id": 318,
+      "id": 316,
       "name": "-SOLA-",
       "level": 421,
       "celestial_lineage": null,
@@ -3181,7 +3181,7 @@
       "guild": null
     },
     {
-      "id": 319,
+      "id": 318,
       "name": "Krestt",
       "level": 421,
       "celestial_lineage": null,
@@ -3191,7 +3191,7 @@
       "guild": 2185
     },
     {
-      "id": 320,
+      "id": 317,
       "name": "canFIGHT",
       "level": 420,
       "celestial_lineage": null,
@@ -3201,7 +3201,7 @@
       "guild": null
     },
     {
-      "id": 321,
+      "id": 319,
       "name": "DTM-JCC-",
       "level": 420,
       "celestial_lineage": null,
@@ -3211,37 +3211,7 @@
       "guild": null
     },
     {
-      "id": 324,
-      "name": "SOHO",
-      "level": 421,
-      "celestial_lineage": null,
-      "levelSub": 420,
-      "subclass_lineage": null,
-      "Soma Level": 841,
-      "guild": null
-    },
-    {
       "id": 323,
-      "name": "ArsheDragoN",
-      "level": 423,
-      "celestial_lineage": null,
-      "levelSub": 418,
-      "subclass_lineage": null,
-      "Soma Level": 841,
-      "guild": null
-    },
-    {
-      "id": 325,
-      "name": "--Maldoso-",
-      "level": 421,
-      "celestial_lineage": null,
-      "levelSub": 420,
-      "subclass_lineage": null,
-      "Soma Level": 841,
-      "guild": null
-    },
-    {
-      "id": 322,
       "name": "-LilWayne",
       "level": 421,
       "celestial_lineage": null,
@@ -3251,7 +3221,37 @@
       "guild": 2300
     },
     {
-      "id": 326,
+      "id": 321,
+      "name": "ArsheDragoN",
+      "level": 423,
+      "celestial_lineage": null,
+      "levelSub": 418,
+      "subclass_lineage": null,
+      "Soma Level": 841,
+      "guild": null
+    },
+    {
+      "id": 322,
+      "name": "SOHO",
+      "level": 421,
+      "celestial_lineage": null,
+      "levelSub": 420,
+      "subclass_lineage": null,
+      "Soma Level": 841,
+      "guild": null
+    },
+    {
+      "id": 320,
+      "name": "--Maldoso-",
+      "level": 421,
+      "celestial_lineage": null,
+      "levelSub": 420,
+      "subclass_lineage": null,
+      "Soma Level": 841,
+      "guild": null
+    },
+    {
+      "id": 324,
       "name": "Gennos",
       "level": 420,
       "celestial_lineage": null,
@@ -3261,7 +3261,7 @@
       "guild": null
     },
     {
-      "id": 327,
+      "id": 325,
       "name": "Rachid",
       "level": 418,
       "celestial_lineage": null,
@@ -3271,7 +3271,7 @@
       "guild": 2041
     },
     {
-      "id": 328,
+      "id": 326,
       "name": "Jabreu",
       "level": 427,
       "celestial_lineage": null,
@@ -3281,7 +3281,7 @@
       "guild": 2300
     },
     {
-      "id": 329,
+      "id": 327,
       "name": "-Yuta",
       "level": 420,
       "celestial_lineage": null,
@@ -3291,7 +3291,7 @@
       "guild": null
     },
     {
-      "id": 330,
+      "id": 328,
       "name": "IcedCoffee",
       "level": 420,
       "celestial_lineage": null,
@@ -3301,7 +3301,7 @@
       "guild": null
     },
     {
-      "id": 331,
+      "id": 329,
       "name": "��-MORFEU-��",
       "level": 419,
       "celestial_lineage": null,
@@ -3311,7 +3311,7 @@
       "guild": 2308
     },
     {
-      "id": 332,
+      "id": 330,
       "name": "KingOf",
       "level": 418,
       "celestial_lineage": null,
@@ -3321,7 +3321,7 @@
       "guild": null
     },
     {
-      "id": 333,
+      "id": 331,
       "name": "iT0ken",
       "level": 419,
       "celestial_lineage": null,
@@ -3331,7 +3331,7 @@
       "guild": 2308
     },
     {
-      "id": 334,
+      "id": 332,
       "name": "TiuniTchaine",
       "level": 420,
       "celestial_lineage": null,
@@ -3341,7 +3341,7 @@
       "guild": null
     },
     {
-      "id": 335,
+      "id": 333,
       "name": "muck",
       "level": 420,
       "celestial_lineage": null,
@@ -3351,7 +3351,7 @@
       "guild": null
     },
     {
-      "id": 336,
+      "id": 334,
       "name": "-ChieF-",
       "level": 420,
       "celestial_lineage": null,
@@ -3361,7 +3361,7 @@
       "guild": 2300
     },
     {
-      "id": 337,
+      "id": 335,
       "name": "K3N4I-",
       "level": 420,
       "celestial_lineage": null,
@@ -3371,17 +3371,7 @@
       "guild": 2185
     },
     {
-      "id": 338,
-      "name": "HOTS",
-      "level": 420,
-      "celestial_lineage": null,
-      "levelSub": 420,
-      "subclass_lineage": null,
-      "Soma Level": 840,
-      "guild": 2303
-    },
-    {
-      "id": 339,
+      "id": 337,
       "name": "iTzBazzinga",
       "level": 420,
       "celestial_lineage": null,
@@ -3391,7 +3381,17 @@
       "guild": null
     },
     {
-      "id": 340,
+      "id": 336,
+      "name": "HOTS",
+      "level": 420,
+      "celestial_lineage": null,
+      "levelSub": 420,
+      "subclass_lineage": null,
+      "Soma Level": 840,
+      "guild": 2303
+    },
+    {
+      "id": 338,
       "name": "Sr-DarKodz",
       "level": 420,
       "celestial_lineage": null,
@@ -3401,37 +3401,7 @@
       "guild": null
     },
     {
-      "id": 342,
-      "name": "Cucareka",
-      "level": 420,
-      "celestial_lineage": null,
-      "levelSub": 420,
-      "subclass_lineage": null,
-      "Soma Level": 840,
-      "guild": null
-    },
-    {
-      "id": 345,
-      "name": "Gu1lherme",
-      "level": 419,
-      "celestial_lineage": null,
-      "levelSub": 421,
-      "subclass_lineage": null,
-      "Soma Level": 840,
-      "guild": null
-    },
-    {
-      "id": 344,
-      "name": "thinhoso",
-      "level": 420,
-      "celestial_lineage": null,
-      "levelSub": 420,
-      "subclass_lineage": null,
-      "Soma Level": 840,
-      "guild": null
-    },
-    {
-      "id": 343,
+      "id": 339,
       "name": "-Venus",
       "level": 419,
       "celestial_lineage": null,
@@ -3441,7 +3411,7 @@
       "guild": 2185
     },
     {
-      "id": 341,
+      "id": 342,
       "name": "GoustDragon",
       "level": 419,
       "celestial_lineage": null,
@@ -3451,7 +3421,37 @@
       "guild": null
     },
     {
-      "id": 346,
+      "id": 340,
+      "name": "Gu1lherme",
+      "level": 419,
+      "celestial_lineage": null,
+      "levelSub": 421,
+      "subclass_lineage": null,
+      "Soma Level": 840,
+      "guild": null
+    },
+    {
+      "id": 341,
+      "name": "Cucareka",
+      "level": 420,
+      "celestial_lineage": null,
+      "levelSub": 420,
+      "subclass_lineage": null,
+      "Soma Level": 840,
+      "guild": null
+    },
+    {
+      "id": 343,
+      "name": "thinhoso",
+      "level": 420,
+      "celestial_lineage": null,
+      "levelSub": 420,
+      "subclass_lineage": null,
+      "Soma Level": 840,
+      "guild": null
+    },
+    {
+      "id": 344,
       "name": "-TioChico-",
       "level": 418,
       "celestial_lineage": null,
@@ -3461,7 +3461,7 @@
       "guild": 1862
     },
     {
-      "id": 347,
+      "id": 345,
       "name": "Deiwid182",
       "level": 417,
       "celestial_lineage": null,
@@ -3471,7 +3471,7 @@
       "guild": 2309
     },
     {
-      "id": 348,
+      "id": 346,
       "name": "-NETERO-",
       "level": 420,
       "celestial_lineage": null,
@@ -3481,7 +3481,7 @@
       "guild": null
     },
     {
-      "id": 349,
+      "id": 347,
       "name": "GANJA-",
       "level": 421,
       "celestial_lineage": null,
@@ -3491,7 +3491,7 @@
       "guild": null
     },
     {
-      "id": 350,
+      "id": 348,
       "name": "Leroy-",
       "level": 419,
       "celestial_lineage": null,
@@ -3501,7 +3501,7 @@
       "guild": null
     },
     {
-      "id": 351,
+      "id": 350,
       "name": "-BlenD-",
       "level": 419,
       "celestial_lineage": null,
@@ -3511,7 +3511,7 @@
       "guild": null
     },
     {
-      "id": 352,
+      "id": 349,
       "name": "Goudenlionn",
       "level": 420,
       "celestial_lineage": null,
@@ -3521,7 +3521,7 @@
       "guild": 2041
     },
     {
-      "id": 353,
+      "id": 351,
       "name": "EveruS",
       "level": 419,
       "celestial_lineage": null,
@@ -3531,7 +3531,7 @@
       "guild": null
     },
     {
-      "id": 354,
+      "id": 352,
       "name": "-THEORAGNAR-",
       "level": 423,
       "celestial_lineage": null,
@@ -3541,7 +3541,7 @@
       "guild": null
     },
     {
-      "id": 355,
+      "id": 353,
       "name": "TheJester",
       "level": 418,
       "celestial_lineage": null,
@@ -3551,7 +3551,7 @@
       "guild": null
     },
     {
-      "id": 356,
+      "id": 354,
       "name": "Catapim",
       "level": 417,
       "celestial_lineage": null,
@@ -3561,7 +3561,7 @@
       "guild": 2300
     },
     {
-      "id": 357,
+      "id": 355,
       "name": "Jiwon",
       "level": 417,
       "celestial_lineage": null,
@@ -3571,7 +3571,7 @@
       "guild": null
     },
     {
-      "id": 358,
+      "id": 356,
       "name": "-Foka-",
       "level": 418,
       "celestial_lineage": null,
@@ -3581,7 +3581,7 @@
       "guild": null
     },
     {
-      "id": 359,
+      "id": 357,
       "name": "Tzeentch",
       "level": 417,
       "celestial_lineage": null,
@@ -3591,7 +3591,7 @@
       "guild": 2308
     },
     {
-      "id": 360,
+      "id": 358,
       "name": "Chingotto",
       "level": 418,
       "celestial_lineage": null,
@@ -3601,7 +3601,7 @@
       "guild": null
     },
     {
-      "id": 361,
+      "id": 359,
       "name": "LiTEE",
       "level": 417,
       "celestial_lineage": null,
@@ -3611,7 +3611,7 @@
       "guild": null
     },
     {
-      "id": 362,
+      "id": 360,
       "name": "OM-SENA",
       "level": 420,
       "celestial_lineage": null,
@@ -3621,7 +3621,7 @@
       "guild": null
     },
     {
-      "id": 363,
+      "id": 361,
       "name": "-4cerorA-",
       "level": 421,
       "celestial_lineage": null,
@@ -3631,7 +3631,7 @@
       "guild": null
     },
     {
-      "id": 364,
+      "id": 362,
       "name": "bbGODZILLA",
       "level": 418,
       "celestial_lineage": null,
@@ -3641,7 +3641,7 @@
       "guild": 2258
     },
     {
-      "id": 365,
+      "id": 363,
       "name": "AdrianoBJJ",
       "level": 423,
       "celestial_lineage": null,
@@ -3651,7 +3651,7 @@
       "guild": null
     },
     {
-      "id": 366,
+      "id": 364,
       "name": "KxoRroLouCo",
       "level": 420,
       "celestial_lineage": null,
@@ -3661,7 +3661,7 @@
       "guild": 2185
     },
     {
-      "id": 367,
+      "id": 365,
       "name": "Zakarias",
       "level": 418,
       "celestial_lineage": null,
@@ -3671,7 +3671,7 @@
       "guild": 2185
     },
     {
-      "id": 368,
+      "id": 366,
       "name": "llluks",
       "level": 424,
       "celestial_lineage": null,
@@ -3681,7 +3681,7 @@
       "guild": null
     },
     {
-      "id": 369,
+      "id": 367,
       "name": "--CITROEN--",
       "level": 417,
       "celestial_lineage": null,
@@ -3691,7 +3691,7 @@
       "guild": null
     },
     {
-      "id": 370,
+      "id": 368,
       "name": "-NutGoddes",
       "level": 417,
       "celestial_lineage": null,
@@ -3701,7 +3701,7 @@
       "guild": null
     },
     {
-      "id": 371,
+      "id": 369,
       "name": "SNJOzempic",
       "level": 408,
       "celestial_lineage": null,
@@ -3711,7 +3711,7 @@
       "guild": null
     },
     {
-      "id": 372,
+      "id": 370,
       "name": "-deePy",
       "level": 420,
       "celestial_lineage": null,
@@ -3721,7 +3721,7 @@
       "guild": null
     },
     {
-      "id": 373,
+      "id": 371,
       "name": "OBraboBM",
       "level": 420,
       "celestial_lineage": null,
@@ -3731,7 +3731,7 @@
       "guild": 2042
     },
     {
-      "id": 374,
+      "id": 372,
       "name": "SERGIPE-SD",
       "level": 420,
       "celestial_lineage": null,
@@ -3741,7 +3741,7 @@
       "guild": 2041
     },
     {
-      "id": 375,
+      "id": 373,
       "name": "�PaiDoMangue",
       "level": 418,
       "celestial_lineage": null,
@@ -3751,7 +3751,7 @@
       "guild": 1862
     },
     {
-      "id": 376,
+      "id": 374,
       "name": "-fara�-",
       "level": 420,
       "celestial_lineage": null,
@@ -3761,7 +3761,7 @@
       "guild": null
     },
     {
-      "id": 377,
+      "id": 375,
       "name": "Shelldor",
       "level": 422,
       "celestial_lineage": null,
@@ -3771,7 +3771,7 @@
       "guild": null
     },
     {
-      "id": 378,
+      "id": 376,
       "name": "--Cloud--",
       "level": 420,
       "celestial_lineage": null,
@@ -3781,7 +3781,7 @@
       "guild": null
     },
     {
-      "id": 379,
+      "id": 377,
       "name": "Catapuff",
       "level": 419,
       "celestial_lineage": null,
@@ -3791,7 +3791,7 @@
       "guild": 2308
     },
     {
-      "id": 380,
+      "id": 378,
       "name": "PomboAlpha",
       "level": 418,
       "celestial_lineage": null,
@@ -3801,7 +3801,7 @@
       "guild": 2193
     },
     {
-      "id": 381,
+      "id": 379,
       "name": "sokete",
       "level": 420,
       "celestial_lineage": null,
@@ -3811,7 +3811,7 @@
       "guild": 2284
     },
     {
-      "id": 382,
+      "id": 380,
       "name": "SoFaRmmE",
       "level": 416,
       "celestial_lineage": null,
@@ -3821,7 +3821,7 @@
       "guild": null
     },
     {
-      "id": 383,
+      "id": 381,
       "name": "hyumasayuki",
       "level": 421,
       "celestial_lineage": null,
@@ -3831,7 +3831,7 @@
       "guild": null
     },
     {
-      "id": 384,
+      "id": 382,
       "name": "px2anjo",
       "level": 420,
       "celestial_lineage": null,
@@ -3841,7 +3841,7 @@
       "guild": null
     },
     {
-      "id": 385,
+      "id": 383,
       "name": "-MOSASAUR-",
       "level": 415,
       "celestial_lineage": null,
@@ -3851,7 +3851,7 @@
       "guild": null
     },
     {
-      "id": 386,
+      "id": 384,
       "name": "WillBR",
       "level": 414,
       "celestial_lineage": null,
@@ -3861,7 +3861,7 @@
       "guild": null
     },
     {
-      "id": 387,
+      "id": 385,
       "name": "-Arche",
       "level": 415,
       "celestial_lineage": null,
@@ -3871,7 +3871,7 @@
       "guild": 2308
     },
     {
-      "id": 388,
+      "id": 386,
       "name": "ManoEEL",
       "level": 421,
       "celestial_lineage": null,
@@ -3881,7 +3881,7 @@
       "guild": null
     },
     {
-      "id": 389,
+      "id": 387,
       "name": "DeeaN",
       "level": 420,
       "celestial_lineage": null,
@@ -3891,7 +3891,7 @@
       "guild": null
     },
     {
-      "id": 390,
+      "id": 388,
       "name": "Hero",
       "level": 418,
       "celestial_lineage": null,
@@ -3901,7 +3901,7 @@
       "guild": 511
     },
     {
-      "id": 391,
+      "id": 389,
       "name": "kibutsuji",
       "level": 415,
       "celestial_lineage": null,
@@ -3911,7 +3911,7 @@
       "guild": null
     },
     {
-      "id": 392,
+      "id": 390,
       "name": "OG-Kael",
       "level": 420,
       "celestial_lineage": null,
@@ -3921,7 +3921,7 @@
       "guild": null
     },
     {
-      "id": 393,
+      "id": 391,
       "name": "Traumatismo",
       "level": 421,
       "celestial_lineage": null,
@@ -3931,7 +3931,7 @@
       "guild": null
     },
     {
-      "id": 394,
+      "id": 392,
       "name": "-KEZ-",
       "level": 420,
       "celestial_lineage": null,
@@ -3941,7 +3941,7 @@
       "guild": null
     },
     {
-      "id": 395,
+      "id": 393,
       "name": "Danilo-",
       "level": 417,
       "celestial_lineage": null,
@@ -3951,7 +3951,7 @@
       "guild": 2041
     },
     {
-      "id": 396,
+      "id": 394,
       "name": "McKiller",
       "level": 413,
       "celestial_lineage": null,
@@ -3961,7 +3961,7 @@
       "guild": null
     },
     {
-      "id": 397,
+      "id": 395,
       "name": "Katitu",
       "level": 420,
       "celestial_lineage": null,
@@ -3971,7 +3971,7 @@
       "guild": 1708
     },
     {
-      "id": 398,
+      "id": 396,
       "name": "FunkaFaction",
       "level": 417,
       "celestial_lineage": null,
@@ -3981,7 +3981,7 @@
       "guild": 2238
     },
     {
-      "id": 399,
+      "id": 397,
       "name": "Pinknyx",
       "level": 419,
       "celestial_lineage": null,
@@ -3991,7 +3991,7 @@
       "guild": 241
     },
     {
-      "id": 400,
+      "id": 398,
       "name": "KnightFire",
       "level": 414,
       "celestial_lineage": null,
@@ -4001,7 +4001,7 @@
       "guild": null
     },
     {
-      "id": 401,
+      "id": 399,
       "name": "-KingDaimonD",
       "level": 420,
       "celestial_lineage": null,
@@ -4011,7 +4011,7 @@
       "guild": 2008
     },
     {
-      "id": 402,
+      "id": 400,
       "name": "o548",
       "level": 418,
       "celestial_lineage": null,
@@ -4021,7 +4021,27 @@
       "guild": null
     },
     {
-      "id": 396,
+      "id": 401,
+      "name": "ANDROIDE-17",
+      "level": 420,
+      "celestial_lineage": null,
+      "levelSub": 414,
+      "subclass_lineage": null,
+      "Soma Level": 834,
+      "guild": 2185
+    },
+    {
+      "id": 402,
+      "name": "HunterDragon",
+      "level": 424,
+      "celestial_lineage": null,
+      "levelSub": 410,
+      "subclass_lineage": null,
+      "Soma Level": 834,
+      "guild": null
+    },
+    {
+      "id": 394,
       "name": "McKiller",
       "level": 413,
       "celestial_lineage": null,
@@ -4032,26 +4052,6 @@
     },
     {
       "id": 403,
-      "name": "ANDROIDE-17",
-      "level": 420,
-      "celestial_lineage": null,
-      "levelSub": 414,
-      "subclass_lineage": null,
-      "Soma Level": 834,
-      "guild": 2185
-    },
-    {
-      "id": 404,
-      "name": "HunterDragon",
-      "level": 424,
-      "celestial_lineage": null,
-      "levelSub": 410,
-      "subclass_lineage": null,
-      "Soma Level": 834,
-      "guild": null
-    },
-    {
-      "id": 405,
       "name": "TONHA025",
       "level": 420,
       "celestial_lineage": null,
@@ -4061,7 +4061,7 @@
       "guild": 2300
     },
     {
-      "id": 406,
+      "id": 404,
       "name": "-StarWade",
       "level": 413,
       "celestial_lineage": null,
@@ -4071,7 +4071,7 @@
       "guild": 2041
     },
     {
-      "id": 407,
+      "id": 405,
       "name": "Saidera-0",
       "level": 422,
       "celestial_lineage": null,
@@ -4081,7 +4081,7 @@
       "guild": null
     },
     {
-      "id": 408,
+      "id": 406,
       "name": "LxST-Cxnturi",
       "level": 412,
       "celestial_lineage": null,
@@ -4091,7 +4091,7 @@
       "guild": null
     },
     {
-      "id": 409,
+      "id": 407,
       "name": "AhNao",
       "level": 418,
       "celestial_lineage": null,
@@ -4101,7 +4101,7 @@
       "guild": null
     },
     {
-      "id": 410,
+      "id": 408,
       "name": "-BALALAIKA-",
       "level": 415,
       "celestial_lineage": null,
@@ -4111,7 +4111,7 @@
       "guild": 2258
     },
     {
-      "id": 411,
+      "id": 409,
       "name": "Firesty",
       "level": 420,
       "celestial_lineage": null,
@@ -4121,7 +4121,7 @@
       "guild": null
     },
     {
-      "id": 412,
+      "id": 410,
       "name": "Bula-Vinaka",
       "level": 420,
       "celestial_lineage": null,
@@ -4131,7 +4131,7 @@
       "guild": null
     },
     {
-      "id": 413,
+      "id": 411,
       "name": "VINGABR",
       "level": 415,
       "celestial_lineage": null,
@@ -4141,7 +4141,7 @@
       "guild": 1862
     },
     {
-      "id": 414,
+      "id": 412,
       "name": "ESSILOR",
       "level": 412,
       "celestial_lineage": null,
@@ -4151,7 +4151,7 @@
       "guild": 2194
     },
     {
-      "id": 415,
+      "id": 413,
       "name": "-SpaceTribe-",
       "level": 416,
       "celestial_lineage": null,
@@ -4161,7 +4161,7 @@
       "guild": null
     },
     {
-      "id": 416,
+      "id": 414,
       "name": "�Admirall",
       "level": 418,
       "celestial_lineage": null,
@@ -4171,7 +4171,7 @@
       "guild": 2308
     },
     {
-      "id": 417,
+      "id": 415,
       "name": "VUMOVEI",
       "level": 420,
       "celestial_lineage": null,
@@ -4181,7 +4181,7 @@
       "guild": 1862
     },
     {
-      "id": 418,
+      "id": 416,
       "name": "SYLAS-",
       "level": 417,
       "celestial_lineage": null,
@@ -4191,7 +4191,7 @@
       "guild": 2194
     },
     {
-      "id": 419,
+      "id": 417,
       "name": "Preferido",
       "level": 420,
       "celestial_lineage": null,
@@ -4201,7 +4201,7 @@
       "guild": null
     },
     {
-      "id": 420,
+      "id": 418,
       "name": "llScarFacell",
       "level": 418,
       "celestial_lineage": null,
@@ -4211,7 +4211,7 @@
       "guild": null
     },
     {
-      "id": 421,
+      "id": 419,
       "name": "Uatanabe",
       "level": 416,
       "celestial_lineage": null,
@@ -4221,7 +4221,7 @@
       "guild": 2193
     },
     {
-      "id": 422,
+      "id": 420,
       "name": "--LOK--",
       "level": 420,
       "celestial_lineage": null,
@@ -4231,7 +4231,7 @@
       "guild": 2267
     },
     {
-      "id": 423,
+      "id": 421,
       "name": "Zefa-Preta",
       "level": 420,
       "celestial_lineage": null,
@@ -4241,7 +4241,7 @@
       "guild": 2310
     },
     {
-      "id": 424,
+      "id": 422,
       "name": "xronkyz",
       "level": 413,
       "celestial_lineage": null,
@@ -4251,7 +4251,7 @@
       "guild": 2193
     },
     {
-      "id": 425,
+      "id": 423,
       "name": "ScroogeDuck",
       "level": 412,
       "celestial_lineage": null,
@@ -4261,7 +4261,7 @@
       "guild": null
     },
     {
-      "id": 426,
+      "id": 424,
       "name": "Morganaaa",
       "level": 420,
       "celestial_lineage": null,
@@ -4271,7 +4271,7 @@
       "guild": 2284
     },
     {
-      "id": 427,
+      "id": 425,
       "name": "-Ravok-",
       "level": 418,
       "celestial_lineage": null,
@@ -4281,7 +4281,7 @@
       "guild": 2041
     },
     {
-      "id": 428,
+      "id": 426,
       "name": "Bacon-",
       "level": 416,
       "celestial_lineage": null,
@@ -4291,7 +4291,7 @@
       "guild": 2287
     },
     {
-      "id": 429,
+      "id": 427,
       "name": "SoulJah",
       "level": 420,
       "celestial_lineage": null,
@@ -4301,7 +4301,7 @@
       "guild": null
     },
     {
-      "id": 430,
+      "id": 428,
       "name": "BAUCHESTIN",
       "level": 412,
       "celestial_lineage": null,
@@ -4311,7 +4311,7 @@
       "guild": null
     },
     {
-      "id": 431,
+      "id": 429,
       "name": "Pat0",
       "level": 420,
       "celestial_lineage": null,
@@ -4321,7 +4321,7 @@
       "guild": null
     },
     {
-      "id": 432,
+      "id": 430,
       "name": "LordMurph",
       "level": 412,
       "celestial_lineage": null,
@@ -4331,7 +4331,7 @@
       "guild": null
     },
     {
-      "id": 433,
+      "id": 431,
       "name": "Catuto",
       "level": 412,
       "celestial_lineage": null,
@@ -4341,7 +4341,7 @@
       "guild": null
     },
     {
-      "id": 434,
+      "id": 432,
       "name": "Thiabeticos",
       "level": 412,
       "celestial_lineage": null,
@@ -4351,7 +4351,7 @@
       "guild": 1896
     },
     {
-      "id": 435,
+      "id": 433,
       "name": "-DarkMoon",
       "level": 421,
       "celestial_lineage": null,
@@ -4361,17 +4361,7 @@
       "guild": null
     },
     {
-      "id": 436,
-      "name": "Maver1k",
-      "level": 416,
-      "celestial_lineage": null,
-      "levelSub": 416,
-      "subclass_lineage": null,
-      "Soma Level": 832,
-      "guild": 2193
-    },
-    {
-      "id": 437,
+      "id": 435,
       "name": "Insulina",
       "level": 412,
       "celestial_lineage": null,
@@ -4381,7 +4371,17 @@
       "guild": null
     },
     {
-      "id": 438,
+      "id": 434,
+      "name": "Maver1k",
+      "level": 416,
+      "celestial_lineage": null,
+      "levelSub": 416,
+      "subclass_lineage": null,
+      "Soma Level": 832,
+      "guild": 2193
+    },
+    {
+      "id": 436,
       "name": "NaKachera",
       "level": 411,
       "celestial_lineage": null,
@@ -4391,7 +4391,7 @@
       "guild": 2292
     },
     {
-      "id": 439,
+      "id": 437,
       "name": "CROSSBOY",
       "level": 417,
       "celestial_lineage": null,
@@ -4401,7 +4401,7 @@
       "guild": 2193
     },
     {
-      "id": 440,
+      "id": 438,
       "name": "Panjura-",
       "level": 413,
       "celestial_lineage": null,
@@ -4411,7 +4411,7 @@
       "guild": 2194
     },
     {
-      "id": 441,
+      "id": 439,
       "name": "Guuuuz",
       "level": 411,
       "celestial_lineage": null,
@@ -4421,7 +4421,7 @@
       "guild": null
     },
     {
-      "id": 442,
+      "id": 440,
       "name": "SUPE-ROME",
       "level": 420,
       "celestial_lineage": null,
@@ -4431,7 +4431,7 @@
       "guild": null
     },
     {
-      "id": 443,
+      "id": 441,
       "name": "-Neymar-Jr",
       "level": 420,
       "celestial_lineage": null,
@@ -4441,7 +4441,7 @@
       "guild": null
     },
     {
-      "id": 444,
+      "id": 442,
       "name": "K-I-L-L-U-A",
       "level": 420,
       "celestial_lineage": null,
@@ -4451,17 +4451,7 @@
       "guild": null
     },
     {
-      "id": 445,
-      "name": "-RevolktkZ-",
-      "level": 418,
-      "celestial_lineage": null,
-      "levelSub": 413,
-      "subclass_lineage": null,
-      "Soma Level": 831,
-      "guild": 2194
-    },
-    {
-      "id": 446,
+      "id": 443,
       "name": "711Samn",
       "level": 413,
       "celestial_lineage": null,
@@ -4471,7 +4461,17 @@
       "guild": null
     },
     {
-      "id": 447,
+      "id": 444,
+      "name": "-RevolktkZ-",
+      "level": 418,
+      "celestial_lineage": null,
+      "levelSub": 413,
+      "subclass_lineage": null,
+      "Soma Level": 831,
+      "guild": 2194
+    },
+    {
+      "id": 445,
       "name": "Aizz",
       "level": 421,
       "celestial_lineage": null,
@@ -4481,7 +4481,7 @@
       "guild": null
     },
     {
-      "id": 448,
+      "id": 446,
       "name": "--AnarkoN--",
       "level": 420,
       "celestial_lineage": null,
@@ -4491,7 +4491,7 @@
       "guild": null
     },
     {
-      "id": 449,
+      "id": 447,
       "name": "DR-Dolittle",
       "level": 416,
       "celestial_lineage": null,
@@ -4501,7 +4501,7 @@
       "guild": 510
     },
     {
-      "id": 450,
+      "id": 448,
       "name": "OneSlip",
       "level": 416,
       "celestial_lineage": null,
@@ -4511,7 +4511,7 @@
       "guild": null
     },
     {
-      "id": 451,
+      "id": 449,
       "name": "Meiow",
       "level": 420,
       "celestial_lineage": null,
@@ -4521,7 +4521,7 @@
       "guild": 2284
     },
     {
-      "id": 452,
+      "id": 450,
       "name": "Mickey-Mouse",
       "level": 417,
       "celestial_lineage": null,
@@ -4531,7 +4531,7 @@
       "guild": 2041
     },
     {
-      "id": 453,
+      "id": 451,
       "name": "-Zypher-",
       "level": 417,
       "celestial_lineage": null,
@@ -4541,27 +4541,7 @@
       "guild": null
     },
     {
-      "id": 455,
-      "name": "I-Synxz-I",
-      "level": 416,
-      "celestial_lineage": null,
-      "levelSub": 415,
-      "subclass_lineage": null,
-      "Soma Level": 831,
-      "guild": 1896
-    },
-    {
-      "id": 457,
-      "name": "xZolpidemx",
-      "level": 417,
-      "celestial_lineage": null,
-      "levelSub": 414,
-      "subclass_lineage": null,
-      "Soma Level": 831,
-      "guild": null
-    },
-    {
-      "id": 458,
+      "id": 454,
       "name": "Dipe",
       "level": 416,
       "celestial_lineage": null,
@@ -4571,7 +4551,27 @@
       "guild": null
     },
     {
-      "id": 454,
+      "id": 453,
+      "name": "I-Synxz-I",
+      "level": 416,
+      "celestial_lineage": null,
+      "levelSub": 415,
+      "subclass_lineage": null,
+      "Soma Level": 831,
+      "guild": 1896
+    },
+    {
+      "id": 452,
+      "name": "xZolpidemx",
+      "level": 417,
+      "celestial_lineage": null,
+      "levelSub": 414,
+      "subclass_lineage": null,
+      "Soma Level": 831,
+      "guild": null
+    },
+    {
+      "id": 456,
       "name": "Lycan-",
       "level": 418,
       "celestial_lineage": null,
@@ -4581,7 +4581,7 @@
       "guild": null
     },
     {
-      "id": 456,
+      "id": 455,
       "name": "Dibs",
       "level": 411,
       "celestial_lineage": null,
@@ -4591,7 +4591,7 @@
       "guild": null
     },
     {
-      "id": 459,
+      "id": 457,
       "name": "GunsNroses",
       "level": 412,
       "celestial_lineage": null,
@@ -4601,7 +4601,7 @@
       "guild": 2194
     },
     {
-      "id": 460,
+      "id": 458,
       "name": "MIBR-lissA",
       "level": 417,
       "celestial_lineage": null,
@@ -4611,7 +4611,7 @@
       "guild": null
     },
     {
-      "id": 461,
+      "id": 459,
       "name": "xViegas",
       "level": 411,
       "celestial_lineage": null,
@@ -4621,7 +4621,7 @@
       "guild": 2193
     },
     {
-      "id": 462,
+      "id": 460,
       "name": "joaoBERTO",
       "level": 418,
       "celestial_lineage": null,
@@ -4631,7 +4631,7 @@
       "guild": 2185
     },
     {
-      "id": 463,
+      "id": 461,
       "name": "--WH1SP3R--",
       "level": 410,
       "celestial_lineage": null,
@@ -4641,7 +4641,7 @@
       "guild": 2308
     },
     {
-      "id": 464,
+      "id": 462,
       "name": "Axxpirina",
       "level": 415,
       "celestial_lineage": null,
@@ -4651,7 +4651,7 @@
       "guild": null
     },
     {
-      "id": 465,
+      "id": 463,
       "name": "reiRyl3",
       "level": 420,
       "celestial_lineage": null,
@@ -4661,7 +4661,7 @@
       "guild": null
     },
     {
-      "id": 466,
+      "id": 464,
       "name": "Caribe",
       "level": 421,
       "celestial_lineage": null,
@@ -4671,7 +4671,7 @@
       "guild": 1896
     },
     {
-      "id": 467,
+      "id": 465,
       "name": "AXL-ROSE",
       "level": 415,
       "celestial_lineage": null,
@@ -4681,7 +4681,7 @@
       "guild": null
     },
     {
-      "id": 468,
+      "id": 466,
       "name": "Nyctalos",
       "level": 411,
       "celestial_lineage": null,
@@ -4691,7 +4691,7 @@
       "guild": null
     },
     {
-      "id": 469,
+      "id": 467,
       "name": "EvilWarning",
       "level": 414,
       "celestial_lineage": null,
@@ -4702,16 +4702,6 @@
     },
     {
       "id": 470,
-      "name": "Esterzinha",
-      "level": 415,
-      "celestial_lineage": null,
-      "levelSub": 415,
-      "subclass_lineage": null,
-      "Soma Level": 830,
-      "guild": null
-    },
-    {
-      "id": 472,
       "name": "DexterGG",
       "level": 415,
       "celestial_lineage": null,
@@ -4721,7 +4711,17 @@
       "guild": 2284
     },
     {
-      "id": 471,
+      "id": 469,
+      "name": "Esterzinha",
+      "level": 415,
+      "celestial_lineage": null,
+      "levelSub": 415,
+      "subclass_lineage": null,
+      "Soma Level": 830,
+      "guild": null
+    },
+    {
+      "id": 468,
       "name": "-Banzai-",
       "level": 411,
       "celestial_lineage": null,
@@ -4731,7 +4731,7 @@
       "guild": null
     },
     {
-      "id": 473,
+      "id": 471,
       "name": "-Adebayor-",
       "level": 409,
       "celestial_lineage": null,
@@ -4741,7 +4741,7 @@
       "guild": null
     },
     {
-      "id": 474,
+      "id": 472,
       "name": "R16666",
       "level": 411,
       "celestial_lineage": null,
@@ -4751,7 +4751,7 @@
       "guild": null
     },
     {
-      "id": 475,
+      "id": 473,
       "name": "Black-ToBi",
       "level": 416,
       "celestial_lineage": null,
@@ -4761,7 +4761,7 @@
       "guild": 2196
     },
     {
-      "id": 476,
+      "id": 474,
       "name": "Nilinho",
       "level": 413,
       "celestial_lineage": null,
@@ -4771,7 +4771,7 @@
       "guild": 2194
     },
     {
-      "id": 477,
+      "id": 475,
       "name": "japachapa",
       "level": 418,
       "celestial_lineage": null,
@@ -4781,7 +4781,7 @@
       "guild": null
     },
     {
-      "id": 478,
+      "id": 476,
       "name": "ZEN1N",
       "level": 413,
       "celestial_lineage": null,
@@ -4791,7 +4791,7 @@
       "guild": null
     },
     {
-      "id": 479,
+      "id": 477,
       "name": "SutecK",
       "level": 415,
       "celestial_lineage": null,
@@ -4801,7 +4801,7 @@
       "guild": 2138
     },
     {
-      "id": 480,
+      "id": 478,
       "name": "PacosIV",
       "level": 412,
       "celestial_lineage": null,
@@ -4811,7 +4811,7 @@
       "guild": 1862
     },
     {
-      "id": 481,
+      "id": 479,
       "name": "-Sebastian-",
       "level": 413,
       "celestial_lineage": null,
@@ -4821,7 +4821,7 @@
       "guild": 2310
     },
     {
-      "id": 482,
+      "id": 480,
       "name": "MsClara",
       "level": 410,
       "celestial_lineage": null,
@@ -4831,7 +4831,7 @@
       "guild": null
     },
     {
-      "id": 483,
+      "id": 481,
       "name": "-Jano-",
       "level": 411,
       "celestial_lineage": null,
@@ -4841,7 +4841,7 @@
       "guild": null
     },
     {
-      "id": 484,
+      "id": 482,
       "name": "Urrso",
       "level": 411,
       "celestial_lineage": null,
@@ -4851,7 +4851,7 @@
       "guild": null
     },
     {
-      "id": 485,
+      "id": 483,
       "name": "B3Trader",
       "level": 415,
       "celestial_lineage": null,
@@ -4861,7 +4861,7 @@
       "guild": 2308
     },
     {
-      "id": 486,
+      "id": 484,
       "name": "-HiKeZaDa-",
       "level": 418,
       "celestial_lineage": null,
@@ -4871,7 +4871,7 @@
       "guild": null
     },
     {
-      "id": 487,
+      "id": 485,
       "name": "HunterKyller",
       "level": 412,
       "celestial_lineage": null,
@@ -4881,7 +4881,7 @@
       "guild": null
     },
     {
-      "id": 488,
+      "id": 486,
       "name": "AuraFX",
       "level": 410,
       "celestial_lineage": null,
@@ -4891,7 +4891,7 @@
       "guild": null
     },
     {
-      "id": 489,
+      "id": 487,
       "name": "-NOGz",
       "level": 417,
       "celestial_lineage": null,
@@ -4901,7 +4901,7 @@
       "guild": null
     },
     {
-      "id": 490,
+      "id": 488,
       "name": "-Everaldo-",
       "level": 417,
       "celestial_lineage": null,
@@ -4911,7 +4911,7 @@
       "guild": null
     },
     {
-      "id": 491,
+      "id": 489,
       "name": "jackieboYYYY",
       "level": 418,
       "celestial_lineage": null,
@@ -4921,7 +4921,7 @@
       "guild": null
     },
     {
-      "id": 492,
+      "id": 490,
       "name": "LULUGIGABIGA",
       "level": 414,
       "celestial_lineage": null,
@@ -4931,7 +4931,7 @@
       "guild": null
     },
     {
-      "id": 493,
+      "id": 491,
       "name": "Bravanter",
       "level": 411,
       "celestial_lineage": null,
@@ -4941,7 +4941,7 @@
       "guild": null
     },
     {
-      "id": 494,
+      "id": 492,
       "name": "Gorin",
       "level": 415,
       "celestial_lineage": null,
@@ -4951,7 +4951,7 @@
       "guild": 2284
     },
     {
-      "id": 495,
+      "id": 493,
       "name": "-MATOX-",
       "level": 414,
       "celestial_lineage": null,
@@ -4961,7 +4961,7 @@
       "guild": null
     },
     {
-      "id": 496,
+      "id": 494,
       "name": "-PikaAPE-",
       "level": 418,
       "celestial_lineage": null,
@@ -4971,7 +4971,7 @@
       "guild": null
     },
     {
-      "id": 497,
+      "id": 495,
       "name": "Copenhagen",
       "level": 412,
       "celestial_lineage": null,
@@ -4981,7 +4981,7 @@
       "guild": null
     },
     {
-      "id": 498,
+      "id": 496,
       "name": "INS4N0-TK",
       "level": 412,
       "celestial_lineage": null,
@@ -4991,7 +4991,7 @@
       "guild": null
     },
     {
-      "id": 499,
+      "id": 497,
       "name": "-ArgONaulT-",
       "level": 416,
       "celestial_lineage": null,
@@ -5003,7 +5003,7 @@
   ],
   "arena_champion": [
     {
-      "id": 3,
+      "id": 1,
       "charName": "JogoRuim-",
       "winCount": 25,
       "killValue": 948,
@@ -5011,7 +5011,7 @@
       "total": 225
     },
     {
-      "id": 17,
+      "id": 15,
       "charName": "-Minjiya-",
       "winCount": 16,
       "killValue": 444,
@@ -5019,7 +5019,7 @@
       "total": 106
     },
     {
-      "id": 42,
+      "id": 40,
       "charName": "Adoniis",
       "winCount": 18,
       "killValue": 3,
@@ -5027,7 +5027,7 @@
       "total": 88
     },
     {
-      "id": 117,
+      "id": 115,
       "charName": "JOW-JOW",
       "winCount": 15,
       "killValue": 130,
@@ -5035,7 +5035,7 @@
       "total": 82
     },
     {
-      "id": 32,
+      "id": 30,
       "charName": "-GoDeViL",
       "winCount": 10,
       "killValue": 8,
@@ -5043,15 +5043,7 @@
       "total": 75
     },
     {
-      "id": 115,
-      "charName": "xuxinhaloco",
-      "winCount": 13,
-      "killValue": 195,
-      "deathValue": null,
-      "total": 72
-    },
-    {
-      "id": 116,
+      "id": 114,
       "charName": "-Elloy-",
       "winCount": 15,
       "killValue": 76,
@@ -5059,7 +5051,15 @@
       "total": 72
     },
     {
-      "id": 69,
+      "id": 113,
+      "charName": "xuxinhaloco",
+      "winCount": 13,
+      "killValue": 195,
+      "deathValue": null,
+      "total": 72
+    },
+    {
+      "id": 67,
       "charName": "xPedro",
       "winCount": 11,
       "killValue": 298,
@@ -5067,7 +5067,7 @@
       "total": 68
     },
     {
-      "id": 56,
+      "id": 54,
       "charName": "-oliveedu-",
       "winCount": 1,
       "killValue": 1,
@@ -5075,7 +5075,7 @@
       "total": 66
     },
     {
-      "id": 12,
+      "id": 10,
       "charName": "Qtpie",
       "winCount": 12,
       "killValue": 26,
@@ -5083,7 +5083,7 @@
       "total": 58
     },
     {
-      "id": 23,
+      "id": 21,
       "charName": "-HellKnight-",
       "winCount": 9,
       "killValue": 215,
@@ -5091,7 +5091,7 @@
       "total": 56
     },
     {
-      "id": 8,
+      "id": 6,
       "charName": "Bringer",
       "winCount": 9,
       "killValue": 236,
@@ -5099,7 +5099,7 @@
       "total": 54
     },
     {
-      "id": 4,
+      "id": 2,
       "charName": "xGandalf",
       "winCount": 8,
       "killValue": 221,
@@ -5107,7 +5107,7 @@
       "total": 52
     },
     {
-      "id": 50,
+      "id": 48,
       "charName": "���L��o��",
       "winCount": 12,
       "killValue": 14,
@@ -5115,15 +5115,7 @@
       "total": 48
     },
     {
-      "id": 217,
-      "charName": "REIdoSERTAO",
-      "winCount": 11,
-      "killValue": 77,
-      "deathValue": null,
-      "total": 45
-    },
-    {
-      "id": 132,
+      "id": 130,
       "charName": "SomeBody-",
       "winCount": 10,
       "killValue": 79,
@@ -5131,7 +5123,15 @@
       "total": 45
     },
     {
-      "id": 98,
+      "id": 215,
+      "charName": "REIdoSERTAO",
+      "winCount": 11,
+      "killValue": 77,
+      "deathValue": null,
+      "total": 45
+    },
+    {
+      "id": 96,
       "charName": "Kduzin",
       "winCount": 11,
       "killValue": 56,
@@ -5139,7 +5139,7 @@
       "total": 44
     },
     {
-      "id": 260,
+      "id": 258,
       "charName": "-Zyrk-",
       "winCount": 7,
       "killValue": 188,
@@ -5147,15 +5147,7 @@
       "total": 38
     },
     {
-      "id": 55,
-      "charName": "Zarch",
-      "winCount": 6,
-      "killValue": 109,
-      "deathValue": null,
-      "total": 36
-    },
-    {
-      "id": 77,
+      "id": 75,
       "charName": "DARKZAOo",
       "winCount": 7,
       "killValue": 107,
@@ -5163,15 +5155,15 @@
       "total": 36
     },
     {
-      "id": 196,
-      "charName": "MINEIRINHO0",
-      "winCount": 8,
-      "killValue": 23,
+      "id": 53,
+      "charName": "Zarch",
+      "winCount": 6,
+      "killValue": 109,
       "deathValue": null,
-      "total": 33
+      "total": 36
     },
     {
-      "id": 52,
+      "id": 50,
       "charName": "-Antnick-",
       "winCount": 9,
       "killValue": 27,
@@ -5179,31 +5171,15 @@
       "total": 33
     },
     {
-      "id": 41,
-      "charName": "DogZZ",
-      "winCount": 7,
-      "killValue": 182,
+      "id": 194,
+      "charName": "MINEIRINHO0",
+      "winCount": 8,
+      "killValue": 23,
       "deathValue": null,
-      "total": 32
+      "total": 33
     },
     {
-      "id": 230,
-      "charName": "Duel",
-      "winCount": 3,
-      "killValue": 1,
-      "deathValue": null,
-      "total": 32
-    },
-    {
-      "id": 58,
-      "charName": "HANNIBALROY",
-      "winCount": 6,
-      "killValue": 111,
-      "deathValue": null,
-      "total": 32
-    },
-    {
-      "id": 500,
+      "id": 498,
       "charName": "S�chTiger",
       "winCount": 6,
       "killValue": 17,
@@ -5211,15 +5187,31 @@
       "total": 32
     },
     {
-      "id": 53,
-      "charName": "xPesTinHa10x",
-      "winCount": 8,
-      "killValue": 110,
+      "id": 56,
+      "charName": "HANNIBALROY",
+      "winCount": 6,
+      "killValue": 111,
       "deathValue": null,
-      "total": 31
+      "total": 32
     },
     {
-      "id": 48,
+      "id": 39,
+      "charName": "DogZZ",
+      "winCount": 7,
+      "killValue": 182,
+      "deathValue": null,
+      "total": 32
+    },
+    {
+      "id": 228,
+      "charName": "Duel",
+      "winCount": 3,
+      "killValue": 1,
+      "deathValue": null,
+      "total": 32
+    },
+    {
+      "id": 46,
       "charName": "meury---",
       "winCount": 9,
       "killValue": 101,
@@ -5227,15 +5219,15 @@
       "total": 31
     },
     {
-      "id": 178,
-      "charName": "Flaaap",
-      "winCount": 6,
-      "killValue": null,
+      "id": 51,
+      "charName": "xPesTinHa10x",
+      "winCount": 8,
+      "killValue": 110,
       "deathValue": null,
-      "total": 30
+      "total": 31
     },
     {
-      "id": 127,
+      "id": 125,
       "charName": "Tenshinham",
       "winCount": 7,
       "killValue": 30,
@@ -5243,7 +5235,7 @@
       "total": 30
     },
     {
-      "id": 82,
+      "id": 80,
       "charName": "Paloff",
       "winCount": 8,
       "killValue": 19,
@@ -5251,7 +5243,15 @@
       "total": 30
     },
     {
-      "id": 85,
+      "id": 176,
+      "charName": "Flaaap",
+      "winCount": 6,
+      "killValue": null,
+      "deathValue": null,
+      "total": 30
+    },
+    {
+      "id": 83,
       "charName": "KyriosBaraK",
       "winCount": 5,
       "killValue": 24,
@@ -5259,7 +5259,7 @@
       "total": 29
     },
     {
-      "id": 75,
+      "id": 73,
       "charName": "TuniCAO",
       "winCount": 5,
       "killValue": 54,
@@ -5267,15 +5267,7 @@
       "total": 28
     },
     {
-      "id": 271,
-      "charName": "Altimus",
-      "winCount": 2,
-      "killValue": 4,
-      "deathValue": null,
-      "total": 25
-    },
-    {
-      "id": 200,
+      "id": 198,
       "charName": "GeneralGuuS",
       "winCount": 5,
       "killValue": 33,
@@ -5283,15 +5275,15 @@
       "total": 25
     },
     {
-      "id": 70,
-      "charName": "YUMA-",
-      "winCount": 4,
-      "killValue": 73,
+      "id": 269,
+      "charName": "Altimus",
+      "winCount": 2,
+      "killValue": 4,
       "deathValue": null,
       "total": 25
     },
     {
-      "id": 57,
+      "id": 55,
       "charName": "Hespert",
       "winCount": 9,
       "killValue": 52,
@@ -5299,15 +5291,15 @@
       "total": 25
     },
     {
-      "id": 120,
-      "charName": "-Eddy",
+      "id": 68,
+      "charName": "YUMA-",
       "winCount": 4,
-      "killValue": 242,
+      "killValue": 73,
       "deathValue": null,
-      "total": 24
+      "total": 25
     },
     {
-      "id": 38,
+      "id": 36,
       "charName": "-oNezera",
       "winCount": 4,
       "killValue": 128,
@@ -5315,47 +5307,15 @@
       "total": 24
     },
     {
-      "id": 231,
-      "charName": "SheelVPower",
-      "winCount": 6,
-      "killValue": 11,
-      "deathValue": null,
-      "total": 22
-    },
-    {
-      "id": 119,
-      "charName": "SmithBacaL",
-      "winCount": 1,
-      "killValue": 2,
-      "deathValue": null,
-      "total": 22
-    },
-    {
-      "id": 267,
-      "charName": "RADIOHE4D",
+      "id": 118,
+      "charName": "-Eddy",
       "winCount": 4,
-      "killValue": 15,
+      "killValue": 242,
       "deathValue": null,
-      "total": 22
+      "total": 24
     },
     {
-      "id": 202,
-      "charName": "c4ladeX",
-      "winCount": 5,
-      "killValue": 66,
-      "deathValue": null,
-      "total": 22
-    },
-    {
-      "id": 27,
-      "charName": "Faakri",
-      "winCount": 5,
-      "killValue": 129,
-      "deathValue": null,
-      "total": 22
-    },
-    {
-      "id": 14,
+      "id": 12,
       "charName": "FREDAO",
       "winCount": 1,
       "killValue": 159,
@@ -5363,7 +5323,47 @@
       "total": 22
     },
     {
-      "id": 501,
+      "id": 117,
+      "charName": "SmithBacaL",
+      "winCount": 1,
+      "killValue": 2,
+      "deathValue": null,
+      "total": 22
+    },
+    {
+      "id": 229,
+      "charName": "SheelVPower",
+      "winCount": 6,
+      "killValue": 11,
+      "deathValue": null,
+      "total": 22
+    },
+    {
+      "id": 265,
+      "charName": "RADIOHE4D",
+      "winCount": 4,
+      "killValue": 15,
+      "deathValue": null,
+      "total": 22
+    },
+    {
+      "id": 200,
+      "charName": "c4ladeX",
+      "winCount": 5,
+      "killValue": 66,
+      "deathValue": null,
+      "total": 22
+    },
+    {
+      "id": 25,
+      "charName": "Faakri",
+      "winCount": 5,
+      "killValue": 129,
+      "deathValue": null,
+      "total": 22
+    },
+    {
+      "id": 499,
       "charName": "LoVeGun",
       "winCount": 4,
       "killValue": null,
@@ -5371,23 +5371,7 @@
       "total": 21
     },
     {
-      "id": 72,
-      "charName": "Aorb",
-      "winCount": 5,
-      "killValue": 91,
-      "deathValue": null,
-      "total": 20
-    },
-    {
-      "id": 155,
-      "charName": "Karinud",
-      "winCount": 7,
-      "killValue": 34,
-      "deathValue": null,
-      "total": 20
-    },
-    {
-      "id": 395,
+      "id": 393,
       "charName": "Danilo-",
       "winCount": 6,
       "killValue": 14,
@@ -5395,7 +5379,23 @@
       "total": 20
     },
     {
-      "id": 472,
+      "id": 153,
+      "charName": "Karinud",
+      "winCount": 7,
+      "killValue": 34,
+      "deathValue": null,
+      "total": 20
+    },
+    {
+      "id": 70,
+      "charName": "Aorb",
+      "winCount": 5,
+      "killValue": 91,
+      "deathValue": null,
+      "total": 20
+    },
+    {
+      "id": 470,
       "charName": "DexterGG",
       "winCount": 7,
       "killValue": 25,
@@ -5403,7 +5403,23 @@
       "total": 19
     },
     {
-      "id": 134,
+      "id": 168,
+      "charName": "Jovics",
+      "winCount": 5,
+      "killValue": 34,
+      "deathValue": null,
+      "total": 19
+    },
+    {
+      "id": 500,
+      "charName": "Padre-Kelmon",
+      "winCount": 3,
+      "killValue": null,
+      "deathValue": null,
+      "total": 19
+    },
+    {
+      "id": 132,
       "charName": "SemIdeaiz",
       "winCount": 4,
       "killValue": 74,
@@ -5412,46 +5428,6 @@
     },
     {
       "id": 502,
-      "charName": "Padre-Kelmon",
-      "winCount": 3,
-      "killValue": null,
-      "deathValue": null,
-      "total": 19
-    },
-    {
-      "id": 170,
-      "charName": "Jovics",
-      "winCount": 5,
-      "killValue": 34,
-      "deathValue": null,
-      "total": 19
-    },
-    {
-      "id": 503,
-      "charName": "Divinius",
-      "winCount": 4,
-      "killValue": 17,
-      "deathValue": null,
-      "total": 18
-    },
-    {
-      "id": 148,
-      "charName": "-Parkmann-",
-      "winCount": 5,
-      "killValue": 38,
-      "deathValue": null,
-      "total": 18
-    },
-    {
-      "id": 83,
-      "charName": "Jamelllao",
-      "winCount": 3,
-      "killValue": 60,
-      "deathValue": null,
-      "total": 18
-    },
-    {
-      "id": 508,
       "charName": "Ducortes",
       "winCount": 7,
       "killValue": 33,
@@ -5459,15 +5435,31 @@
       "total": 18
     },
     {
-      "id": 37,
-      "charName": "SkaiKruS",
-      "winCount": 4,
-      "killValue": 113,
+      "id": 146,
+      "charName": "-Parkmann-",
+      "winCount": 5,
+      "killValue": 38,
       "deathValue": null,
-      "total": 17
+      "total": 18
     },
     {
-      "id": 377,
+      "id": 501,
+      "charName": "Divinius",
+      "winCount": 4,
+      "killValue": 17,
+      "deathValue": null,
+      "total": 18
+    },
+    {
+      "id": 81,
+      "charName": "Jamelllao",
+      "winCount": 3,
+      "killValue": 60,
+      "deathValue": null,
+      "total": 18
+    },
+    {
+      "id": 375,
       "charName": "Shelldor",
       "winCount": 1,
       "killValue": null,
@@ -5475,7 +5467,7 @@
       "total": 17
     },
     {
-      "id": 187,
+      "id": 185,
       "charName": "SugaForte",
       "winCount": 3,
       "killValue": null,
@@ -5483,7 +5475,15 @@
       "total": 17
     },
     {
-      "id": 256,
+      "id": 35,
+      "charName": "SkaiKruS",
+      "winCount": 4,
+      "killValue": 113,
+      "deathValue": null,
+      "total": 17
+    },
+    {
+      "id": 254,
       "charName": "AnaarK-",
       "winCount": null,
       "killValue": null,
@@ -5491,7 +5491,7 @@
       "total": 16
     },
     {
-      "id": 59,
+      "id": 57,
       "charName": "ThuThuMaL",
       "winCount": 5,
       "killValue": 67,
@@ -5499,7 +5499,7 @@
       "total": 16
     },
     {
-      "id": 285,
+      "id": 283,
       "charName": "BeTinHoo",
       "winCount": 5,
       "killValue": 74,
@@ -5507,23 +5507,7 @@
       "total": 16
     },
     {
-      "id": 76,
-      "charName": "yTr0n",
-      "winCount": 4,
-      "killValue": 12,
-      "deathValue": null,
-      "total": 15
-    },
-    {
-      "id": 253,
-      "charName": "--THUG--",
-      "winCount": 3,
-      "killValue": 5,
-      "deathValue": null,
-      "total": 15
-    },
-    {
-      "id": 80,
+      "id": 78,
       "charName": "-N-O-E-L-",
       "winCount": 2,
       "killValue": 37,
@@ -5531,7 +5515,23 @@
       "total": 15
     },
     {
-      "id": 133,
+      "id": 251,
+      "charName": "--THUG--",
+      "winCount": 3,
+      "killValue": 5,
+      "deathValue": null,
+      "total": 15
+    },
+    {
+      "id": 74,
+      "charName": "yTr0n",
+      "winCount": 4,
+      "killValue": 12,
+      "deathValue": null,
+      "total": 15
+    },
+    {
+      "id": 131,
       "charName": "zVoid",
       "winCount": 3,
       "killValue": 81,
@@ -5539,15 +5539,7 @@
       "total": 14
     },
     {
-      "id": 102,
-      "charName": "oPola",
-      "winCount": 4,
-      "killValue": 131,
-      "deathValue": null,
-      "total": 14
-    },
-    {
-      "id": 505,
+      "id": 504,
       "charName": "An�ra�e",
       "winCount": 4,
       "killValue": 10,
@@ -5555,7 +5547,7 @@
       "total": 14
     },
     {
-      "id": 504,
+      "id": 503,
       "charName": "Mododoy",
       "winCount": 3,
       "killValue": 4,
@@ -5563,7 +5555,15 @@
       "total": 14
     },
     {
-      "id": 240,
+      "id": 100,
+      "charName": "oPola",
+      "winCount": 4,
+      "killValue": 131,
+      "deathValue": null,
+      "total": 14
+    },
+    {
+      "id": 238,
       "charName": "Mulekotte",
       "winCount": 2,
       "killValue": 65,
@@ -5571,7 +5571,7 @@
       "total": 13
     },
     {
-      "id": 494,
+      "id": 492,
       "charName": "Gorin",
       "winCount": 3,
       "killValue": 1,
@@ -5579,7 +5579,7 @@
       "total": 13
     },
     {
-      "id": 507,
+      "id": 506,
       "charName": "raru",
       "winCount": 2,
       "killValue": 32,
@@ -5587,7 +5587,7 @@
       "total": 13
     },
     {
-      "id": 506,
+      "id": 505,
       "charName": "ChupaOuCospe",
       "winCount": 2,
       "killValue": null,
@@ -5595,7 +5595,7 @@
       "total": 12
     },
     {
-      "id": 9,
+      "id": 7,
       "charName": "Raduzin",
       "winCount": 2,
       "killValue": 37,
@@ -5603,7 +5603,7 @@
       "total": 12
     },
     {
-      "id": 33,
+      "id": 31,
       "charName": "xDoidoLoko",
       "winCount": 4,
       "killValue": 45,
@@ -5611,7 +5611,7 @@
       "total": 12
     },
     {
-      "id": 510,
+      "id": 508,
       "charName": "sh1ru",
       "winCount": 1,
       "killValue": 50,
@@ -5619,7 +5619,7 @@
       "total": 11
     },
     {
-      "id": 191,
+      "id": 189,
       "charName": "Shavana",
       "winCount": 2,
       "killValue": 16,
@@ -5627,15 +5627,7 @@
       "total": 10
     },
     {
-      "id": 142,
-      "charName": "vaitomano",
-      "winCount": 2,
-      "killValue": 15,
-      "deathValue": null,
-      "total": 10
-    },
-    {
-      "id": 131,
+      "id": 129,
       "charName": "-Laga",
       "winCount": 1,
       "killValue": 49,
@@ -5643,15 +5635,15 @@
       "total": 10
     },
     {
-      "id": 54,
-      "charName": "scarpz",
+      "id": 140,
+      "charName": "vaitomano",
       "winCount": 2,
-      "killValue": 12,
+      "killValue": 15,
       "deathValue": null,
-      "total": 9
+      "total": 10
     },
     {
-      "id": 5,
+      "id": 3,
       "charName": "Indeex",
       "winCount": 1,
       "killValue": 2,
@@ -5659,7 +5651,7 @@
       "total": 9
     },
     {
-      "id": 137,
+      "id": 135,
       "charName": "DeathQuick",
       "winCount": 1,
       "killValue": 3,
@@ -5667,7 +5659,7 @@
       "total": 9
     },
     {
-      "id": 207,
+      "id": 205,
       "charName": "Niknill",
       "winCount": null,
       "killValue": 6,
@@ -5675,31 +5667,15 @@
       "total": 9
     },
     {
-      "id": 509,
-      "charName": "Stuk4",
-      "winCount": 3,
-      "killValue": 21,
-      "deathValue": null,
-      "total": 8
-    },
-    {
-      "id": 190,
-      "charName": "Bias",
-      "winCount": null,
-      "killValue": null,
-      "deathValue": null,
-      "total": 8
-    },
-    {
-      "id": 427,
-      "charName": "-Ravok-",
+      "id": 52,
+      "charName": "scarpz",
       "winCount": 2,
-      "killValue": 3,
+      "killValue": 12,
       "deathValue": null,
-      "total": 8
+      "total": 9
     },
     {
-      "id": 11,
+      "id": 9,
       "charName": "Leonis",
       "winCount": null,
       "killValue": 82,
@@ -5707,7 +5683,23 @@
       "total": 8
     },
     {
-      "id": 6,
+      "id": 188,
+      "charName": "Bias",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": 8
+    },
+    {
+      "id": 425,
+      "charName": "-Ravok-",
+      "winCount": 2,
+      "killValue": 3,
+      "deathValue": null,
+      "total": 8
+    },
+    {
+      "id": 4,
       "charName": "-Blackrex-",
       "winCount": 4,
       "killValue": 68,
@@ -5715,15 +5707,15 @@
       "total": 8
     },
     {
-      "id": 104,
-      "charName": "-Teiker-",
-      "winCount": 2,
-      "killValue": 6,
+      "id": 507,
+      "charName": "Stuk4",
+      "winCount": 3,
+      "killValue": 21,
       "deathValue": null,
-      "total": 7
+      "total": 8
     },
     {
-      "id": 61,
+      "id": 59,
       "charName": "Chiquinhooo",
       "winCount": 2,
       "killValue": 26,
@@ -5731,7 +5723,7 @@
       "total": 7
     },
     {
-      "id": 66,
+      "id": 64,
       "charName": "Demoin",
       "winCount": 1,
       "killValue": 28,
@@ -5739,7 +5731,15 @@
       "total": 7
     },
     {
-      "id": 515,
+      "id": 102,
+      "charName": "-Teiker-",
+      "winCount": 2,
+      "killValue": 6,
+      "deathValue": null,
+      "total": 7
+    },
+    {
+      "id": 513,
       "charName": "-Lampheroe",
       "winCount": 3,
       "killValue": 26,
@@ -5747,31 +5747,7 @@
       "total": 7
     },
     {
-      "id": 511,
-      "charName": "oRetalhador",
-      "winCount": 1,
-      "killValue": 2,
-      "deathValue": null,
-      "total": 6
-    },
-    {
-      "id": 512,
-      "charName": "JoaumLiaum",
-      "winCount": 1,
-      "killValue": 7,
-      "deathValue": null,
-      "total": 6
-    },
-    {
-      "id": 514,
-      "charName": "DasAntigas08",
-      "winCount": null,
-      "killValue": 8,
-      "deathValue": null,
-      "total": 6
-    },
-    {
-      "id": 482,
+      "id": 480,
       "charName": "MsClara",
       "winCount": 1,
       "killValue": 8,
@@ -5779,15 +5755,7 @@
       "total": 6
     },
     {
-      "id": 405,
-      "charName": "TONHA025",
-      "winCount": null,
-      "killValue": 56,
-      "deathValue": null,
-      "total": 6
-    },
-    {
-      "id": 424,
+      "id": 422,
       "charName": "xronkyz",
       "winCount": 1,
       "killValue": null,
@@ -5795,7 +5763,15 @@
       "total": 6
     },
     {
-      "id": 251,
+      "id": 509,
+      "charName": "oRetalhador",
+      "winCount": 1,
+      "killValue": 2,
+      "deathValue": null,
+      "total": 6
+    },
+    {
+      "id": 249,
       "charName": "RAFENX",
       "winCount": 1,
       "killValue": 3,
@@ -5803,15 +5779,23 @@
       "total": 6
     },
     {
-      "id": 20,
-      "charName": "xZeBonitinho",
-      "winCount": 2,
-      "killValue": 30,
+      "id": 511,
+      "charName": "JoaumLiaum",
+      "winCount": 1,
+      "killValue": 7,
       "deathValue": null,
       "total": 6
     },
     {
-      "id": 124,
+      "id": 512,
+      "charName": "DasAntigas08",
+      "winCount": null,
+      "killValue": 8,
+      "deathValue": null,
+      "total": 6
+    },
+    {
+      "id": 122,
       "charName": "Zekiel",
       "winCount": 1,
       "killValue": 6,
@@ -5819,39 +5803,23 @@
       "total": 6
     },
     {
-      "id": 517,
-      "charName": "-JACK",
-      "winCount": 1,
-      "killValue": 15,
-      "deathValue": null,
-      "total": 5
-    },
-    {
-      "id": 278,
-      "charName": "EspecLOKO",
-      "winCount": 1,
-      "killValue": null,
-      "deathValue": null,
-      "total": 5
-    },
-    {
-      "id": 490,
-      "charName": "-Everaldo-",
-      "winCount": 1,
-      "killValue": 7,
-      "deathValue": null,
-      "total": 5
-    },
-    {
-      "id": 485,
-      "charName": "B3Trader",
+      "id": 18,
+      "charName": "xZeBonitinho",
       "winCount": 2,
-      "killValue": 23,
+      "killValue": 30,
       "deathValue": null,
-      "total": 5
+      "total": 6
     },
     {
-      "id": 15,
+      "id": 403,
+      "charName": "TONHA025",
+      "winCount": null,
+      "killValue": 56,
+      "deathValue": null,
+      "total": 6
+    },
+    {
+      "id": 13,
       "charName": "jnr-",
       "winCount": null,
       "killValue": 49,
@@ -5859,15 +5827,15 @@
       "total": 5
     },
     {
-      "id": 513,
-      "charName": "Pr�Hist�rico",
+      "id": 515,
+      "charName": "-JACK",
       "winCount": 1,
-      "killValue": 1,
+      "killValue": 15,
       "deathValue": null,
       "total": 5
     },
     {
-      "id": 516,
+      "id": 514,
       "charName": "-1TACHI-",
       "winCount": 3,
       "killValue": 12,
@@ -5875,39 +5843,39 @@
       "total": 5
     },
     {
-      "id": 317,
-      "charName": "BigDunga",
-      "winCount": 2,
-      "killValue": 17,
-      "deathValue": null,
-      "total": 4
-    },
-    {
-      "id": 252,
-      "charName": "PoneyCrazzy",
+      "id": 488,
+      "charName": "-Everaldo-",
       "winCount": 1,
-      "killValue": 13,
+      "killValue": 7,
       "deathValue": null,
-      "total": 4
+      "total": 5
     },
     {
-      "id": 177,
-      "charName": "ItsBruxo",
-      "winCount": 3,
-      "killValue": 35,
+      "id": 483,
+      "charName": "B3Trader",
+      "winCount": 2,
+      "killValue": 23,
       "deathValue": null,
-      "total": 4
+      "total": 5
     },
     {
-      "id": 461,
-      "charName": "xViegas",
+      "id": 510,
+      "charName": "Pr�Hist�rico",
       "winCount": 1,
       "killValue": 1,
       "deathValue": null,
-      "total": 4
+      "total": 5
     },
     {
-      "id": 40,
+      "id": 276,
+      "charName": "EspecLOKO",
+      "winCount": 1,
+      "killValue": null,
+      "deathValue": null,
+      "total": 5
+    },
+    {
+      "id": 38,
       "charName": "KyungSoon",
       "winCount": 1,
       "killValue": 14,
@@ -5915,7 +5883,39 @@
       "total": 4
     },
     {
-      "id": 287,
+      "id": 315,
+      "charName": "BigDunga",
+      "winCount": 2,
+      "killValue": 17,
+      "deathValue": null,
+      "total": 4
+    },
+    {
+      "id": 459,
+      "charName": "xViegas",
+      "winCount": 1,
+      "killValue": 1,
+      "deathValue": null,
+      "total": 4
+    },
+    {
+      "id": 250,
+      "charName": "PoneyCrazzy",
+      "winCount": 1,
+      "killValue": 13,
+      "deathValue": null,
+      "total": 4
+    },
+    {
+      "id": 175,
+      "charName": "ItsBruxo",
+      "winCount": 3,
+      "killValue": 35,
+      "deathValue": null,
+      "total": 4
+    },
+    {
+      "id": 285,
       "charName": "-ZecaXereca",
       "winCount": null,
       "killValue": 14,
@@ -5923,15 +5923,7 @@
       "total": 3
     },
     {
-      "id": 518,
-      "charName": "paulGOD",
-      "winCount": 1,
-      "killValue": null,
-      "deathValue": null,
-      "total": 3
-    },
-    {
-      "id": 360,
+      "id": 358,
       "charName": "Chingotto",
       "winCount": null,
       "killValue": 32,
@@ -5939,7 +5931,7 @@
       "total": 3
     },
     {
-      "id": 530,
+      "id": 528,
       "charName": "ServoDoSaci-",
       "winCount": null,
       "killValue": 25,
@@ -5947,7 +5939,15 @@
       "total": 3
     },
     {
-      "id": 30,
+      "id": 516,
+      "charName": "paulGOD",
+      "winCount": 1,
+      "killValue": null,
+      "deathValue": null,
+      "total": 3
+    },
+    {
+      "id": 28,
       "charName": "llSpeeDll",
       "winCount": null,
       "killValue": 23,
@@ -5955,7 +5955,7 @@
       "total": 2
     },
     {
-      "id": 153,
+      "id": 151,
       "charName": "Djia",
       "winCount": null,
       "killValue": null,
@@ -5963,95 +5963,7 @@
       "total": 2
     },
     {
-      "id": 88,
-      "charName": "-PATO-MANCO-",
-      "winCount": null,
-      "killValue": 12,
-      "deathValue": null,
-      "total": 1
-    },
-    {
-      "id": 94,
-      "charName": "Alkapone",
-      "winCount": 2,
-      "killValue": 7,
-      "deathValue": null,
-      "total": 1
-    },
-    {
-      "id": 439,
-      "charName": "CROSSBOY",
-      "winCount": null,
-      "killValue": 9,
-      "deathValue": null,
-      "total": 1
-    },
-    {
-      "id": 103,
-      "charName": "Arrogante",
-      "winCount": null,
-      "killValue": 8,
-      "deathValue": null,
-      "total": 1
-    },
-    {
-      "id": 323,
-      "charName": "ArsheDragoN",
-      "winCount": null,
-      "killValue": 5,
-      "deathValue": null,
-      "total": 1
-    },
-    {
-      "id": 111,
-      "charName": "BIG-WARRIOR",
-      "winCount": null,
-      "killValue": 6,
-      "deathValue": null,
-      "total": 1
-    },
-    {
-      "id": 199,
-      "charName": "MagoNegro88",
-      "winCount": null,
-      "killValue": 9,
-      "deathValue": null,
-      "total": 1
-    },
-    {
-      "id": 283,
-      "charName": "DinOxzin",
-      "winCount": null,
-      "killValue": 5,
-      "deathValue": null,
-      "total": 1
-    },
-    {
-      "id": 519,
-      "charName": "Erickvvvv",
-      "winCount": null,
-      "killValue": null,
-      "deathValue": null,
-      "total": 1
-    },
-    {
-      "id": 523,
-      "charName": "chocola12",
-      "winCount": null,
-      "killValue": 9,
-      "deathValue": null,
-      "total": 1
-    },
-    {
-      "id": 10,
-      "charName": "grauzera-",
-      "winCount": null,
-      "killValue": 11,
-      "deathValue": null,
-      "total": 1
-    },
-    {
-      "id": 282,
+      "id": 280,
       "charName": "-WESTERM4N-",
       "winCount": null,
       "killValue": 8,
@@ -6059,23 +5971,55 @@
       "total": 1
     },
     {
-      "id": 185,
-      "charName": "SnouBert",
+      "id": 517,
+      "charName": "Erickvvvv",
       "winCount": null,
-      "killValue": 12,
+      "killValue": null,
       "deathValue": null,
       "total": 1
     },
     {
-      "id": 29,
-      "charName": "-MADMAN-",
+      "id": 521,
+      "charName": "chocola12",
       "winCount": null,
       "killValue": 9,
       "deathValue": null,
       "total": 1
     },
     {
-      "id": 60,
+      "id": 8,
+      "charName": "grauzera-",
+      "winCount": null,
+      "killValue": 11,
+      "deathValue": null,
+      "total": 1
+    },
+    {
+      "id": 437,
+      "charName": "CROSSBOY",
+      "winCount": null,
+      "killValue": 9,
+      "deathValue": null,
+      "total": 1
+    },
+    {
+      "id": 86,
+      "charName": "-PATO-MANCO-",
+      "winCount": null,
+      "killValue": 12,
+      "deathValue": null,
+      "total": 1
+    },
+    {
+      "id": 281,
+      "charName": "DinOxzin",
+      "winCount": null,
+      "killValue": 5,
+      "deathValue": null,
+      "total": 1
+    },
+    {
+      "id": 58,
       "charName": "Awonim",
       "winCount": null,
       "killValue": 7,
@@ -6083,47 +6027,63 @@
       "total": 1
     },
     {
-      "id": 520,
-      "charName": "TioPhil",
+      "id": 183,
+      "charName": "SnouBert",
       "winCount": null,
-      "killValue": null,
+      "killValue": 12,
       "deathValue": null,
-      "total": 0
+      "total": 1
     },
     {
-      "id": 521,
-      "charName": "BoogiePop",
-      "winCount": 1,
-      "killValue": null,
+      "id": 101,
+      "charName": "Arrogante",
+      "winCount": null,
+      "killValue": 8,
       "deathValue": null,
-      "total": 0
+      "total": 1
     },
     {
-      "id": 522,
-      "charName": "Khronus-",
+      "id": 321,
+      "charName": "ArsheDragoN",
       "winCount": null,
-      "killValue": null,
+      "killValue": 5,
       "deathValue": null,
-      "total": 0
+      "total": 1
+    },
+    {
+      "id": 109,
+      "charName": "BIG-WARRIOR",
+      "winCount": null,
+      "killValue": 6,
+      "deathValue": null,
+      "total": 1
+    },
+    {
+      "id": 197,
+      "charName": "MagoNegro88",
+      "winCount": null,
+      "killValue": 9,
+      "deathValue": null,
+      "total": 1
+    },
+    {
+      "id": 27,
+      "charName": "-MADMAN-",
+      "winCount": null,
+      "killValue": 9,
+      "deathValue": null,
+      "total": 1
+    },
+    {
+      "id": 92,
+      "charName": "Alkapone",
+      "winCount": 2,
+      "killValue": 7,
+      "deathValue": null,
+      "total": 1
     },
     {
       "id": 524,
-      "charName": "Aspirante",
-      "winCount": null,
-      "killValue": 1,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 525,
-      "charName": "xFeeder",
-      "winCount": null,
-      "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 526,
       "charName": "Nazg�ll",
       "winCount": null,
       "killValue": 2,
@@ -6131,175 +6091,7 @@
       "total": 0
     },
     {
-      "id": 527,
-      "charName": "OneHytt",
-      "winCount": null,
-      "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 528,
-      "charName": "Winchesters",
-      "winCount": null,
-      "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 529,
-      "charName": "KAOS",
-      "winCount": null,
-      "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 531,
-      "charName": "-Baruk",
-      "winCount": null,
-      "killValue": 2,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 532,
-      "charName": "PaULiNhU7br",
-      "winCount": null,
-      "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 533,
-      "charName": "BrutaRaycaFm",
-      "winCount": null,
-      "killValue": 1,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 242,
-      "charName": "CAPLUDGERO",
-      "winCount": null,
-      "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 86,
-      "charName": "-BIXOGRILO-",
-      "winCount": null,
-      "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 26,
-      "charName": "-flowgg-",
-      "winCount": null,
-      "killValue": 1,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 358,
-      "charName": "-Foka-",
-      "winCount": 1,
-      "killValue": 4,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 233,
-      "charName": "CaM1nHoNeiRa",
-      "winCount": null,
-      "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 22,
-      "charName": "Kooh",
-      "winCount": null,
-      "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 228,
-      "charName": "llRedLabeL",
-      "winCount": null,
-      "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 183,
-      "charName": "dropfarm",
-      "winCount": 1,
-      "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 284,
-      "charName": "MrJericho",
-      "winCount": null,
-      "killValue": 4,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 235,
-      "charName": "FKM1",
-      "winCount": null,
-      "killValue": 3,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 68,
-      "charName": "PegaKzada",
-      "winCount": null,
-      "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 418,
-      "charName": "SYLAS-",
-      "winCount": null,
-      "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 478,
-      "charName": "ZEN1N",
-      "winCount": null,
-      "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 13,
-      "charName": "Zeudo",
-      "winCount": null,
-      "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 74,
-      "charName": "Parucker",
-      "winCount": null,
-      "killValue": 1,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 307,
+      "id": 305,
       "charName": "QuickTrick",
       "winCount": null,
       "killValue": null,
@@ -6307,63 +6099,47 @@
       "total": 0
     },
     {
-      "id": 327,
-      "charName": "Rachid",
-      "winCount": null,
-      "killValue": 2,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 288,
-      "charName": "Skruull",
-      "winCount": null,
-      "killValue": 2,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 43,
-      "charName": "oCSR",
+      "id": 72,
+      "charName": "Parucker",
       "winCount": null,
       "killValue": 1,
       "deathValue": null,
       "total": 0
     },
     {
-      "id": 99,
-      "charName": "GtOkAi",
+      "id": 182,
+      "charName": "dropfarm",
+      "winCount": 1,
+      "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 526,
+      "charName": "Winchesters",
       "winCount": null,
       "killValue": null,
       "deathValue": null,
       "total": 0
     },
     {
-      "id": 359,
-      "charName": "Tzeentch",
-      "winCount": null,
-      "killValue": 1,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 113,
-      "charName": "-Baray-",
-      "winCount": null,
-      "killValue": 1,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 35,
-      "charName": "TSUB4KI",
+      "id": 527,
+      "charName": "KAOS",
       "winCount": null,
       "killValue": null,
       "deathValue": null,
       "total": 0
     },
     {
-      "id": 165,
+      "id": 522,
+      "charName": "Aspirante",
+      "winCount": null,
+      "killValue": 1,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 160,
       "charName": "TREMBORAGE",
       "winCount": null,
       "killValue": null,
@@ -6371,23 +6147,31 @@
       "total": 0
     },
     {
-      "id": 299,
-      "charName": "WINDOWS52",
+      "id": 226,
+      "charName": "llRedLabeL",
       "winCount": null,
-      "killValue": 1,
+      "killValue": null,
       "deathValue": null,
       "total": 0
     },
     {
-      "id": 71,
-      "charName": "ALO-GOIANIA",
+      "id": 233,
+      "charName": "FKM1",
       "winCount": null,
-      "killValue": 2,
+      "killValue": 3,
       "deathValue": null,
       "total": 0
     },
     {
-      "id": 186,
+      "id": 239,
+      "charName": "CAPLUDGERO",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 184,
       "charName": "-DarkShadow-",
       "winCount": null,
       "killValue": 1,
@@ -6395,7 +6179,223 @@
       "total": 0
     },
     {
-      "id": 62,
+      "id": 84,
+      "charName": "-BIXOGRILO-",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 518,
+      "charName": "TioPhil",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 297,
+      "charName": "WINDOWS52",
+      "winCount": null,
+      "killValue": 1,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 529,
+      "charName": "-Baruk",
+      "winCount": null,
+      "killValue": 2,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 530,
+      "charName": "PaULiNhU7br",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 66,
+      "charName": "PegaKzada",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 24,
+      "charName": "-flowgg-",
+      "winCount": null,
+      "killValue": 1,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 325,
+      "charName": "Rachid",
+      "winCount": null,
+      "killValue": 2,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 525,
+      "charName": "OneHytt",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 531,
+      "charName": "BrutaRaycaFm",
+      "winCount": null,
+      "killValue": 1,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 356,
+      "charName": "-Foka-",
+      "winCount": 1,
+      "killValue": 4,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 416,
+      "charName": "SYLAS-",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 231,
+      "charName": "CaM1nHoNeiRa",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 20,
+      "charName": "Kooh",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 520,
+      "charName": "Khronus-",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 476,
+      "charName": "ZEN1N",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 11,
+      "charName": "Zeudo",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 69,
+      "charName": "ALO-GOIANIA",
+      "winCount": null,
+      "killValue": 2,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 33,
+      "charName": "TSUB4KI",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 282,
+      "charName": "MrJericho",
+      "winCount": null,
+      "killValue": 4,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 111,
+      "charName": "-Baray-",
+      "winCount": null,
+      "killValue": 1,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 519,
+      "charName": "BoogiePop",
+      "winCount": 1,
+      "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 357,
+      "charName": "Tzeentch",
+      "winCount": null,
+      "killValue": 1,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 523,
+      "charName": "xFeeder",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 97,
+      "charName": "GtOkAi",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 41,
+      "charName": "oCSR",
+      "winCount": null,
+      "killValue": 1,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 286,
+      "charName": "Skruull",
+      "winCount": null,
+      "killValue": 2,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 60,
       "charName": "VeridaS",
       "winCount": null,
       "killValue": 4,
@@ -6403,7 +6403,7 @@
       "total": -1
     },
     {
-      "id": 114,
+      "id": 112,
       "charName": "-JOKERl-",
       "winCount": null,
       "killValue": null,
@@ -6413,7 +6413,7 @@
   ],
   "arena_aspirant": [
     {
-      "id": 296,
+      "id": 294,
       "charName": "Shaggy-",
       "winCount": 22,
       "killValue": 706,
@@ -6421,7 +6421,7 @@
       "total": 187
     },
     {
-      "id": 534,
+      "id": 532,
       "charName": "OrionPax",
       "winCount": 16,
       "killValue": 354,
@@ -6429,7 +6429,7 @@
       "total": 105
     },
     {
-      "id": 149,
+      "id": 147,
       "charName": "-Rice",
       "winCount": 13,
       "killValue": 357,
@@ -6437,7 +6437,7 @@
       "total": 89
     },
     {
-      "id": 36,
+      "id": 34,
       "charName": "DrWyd",
       "winCount": 18,
       "killValue": 671,
@@ -6445,7 +6445,7 @@
       "total": 85
     },
     {
-      "id": 279,
+      "id": 277,
       "charName": "OrNeLaS",
       "winCount": 14,
       "killValue": 186,
@@ -6453,7 +6453,7 @@
       "total": 75
     },
     {
-      "id": 331,
+      "id": 329,
       "charName": "��-MORFEU-��",
       "winCount": 12,
       "killValue": 270,
@@ -6461,7 +6461,7 @@
       "total": 70
     },
     {
-      "id": 447,
+      "id": 445,
       "charName": "Aizz",
       "winCount": 12,
       "killValue": 127,
@@ -6469,7 +6469,7 @@
       "total": 69
     },
     {
-      "id": 535,
+      "id": 533,
       "charName": "ADC-Ashe",
       "winCount": 15,
       "killValue": 38,
@@ -6477,7 +6477,7 @@
       "total": 67
     },
     {
-      "id": 451,
+      "id": 449,
       "charName": "Meiow",
       "winCount": 11,
       "killValue": 269,
@@ -6485,7 +6485,7 @@
       "total": 57
     },
     {
-      "id": 380,
+      "id": 378,
       "charName": "PomboAlpha",
       "winCount": 11,
       "killValue": 139,
@@ -6493,7 +6493,7 @@
       "total": 57
     },
     {
-      "id": 537,
+      "id": 534,
       "charName": "-Neurotoxina",
       "winCount": null,
       "killValue": 40,
@@ -6501,7 +6501,7 @@
       "total": 54
     },
     {
-      "id": 539,
+      "id": 537,
       "charName": "L3thyn",
       "winCount": 11,
       "killValue": 133,
@@ -6509,7 +6509,7 @@
       "total": 50
     },
     {
-      "id": 538,
+      "id": 536,
       "charName": "Xibilson",
       "winCount": 10,
       "killValue": 112,
@@ -6517,12 +6517,20 @@
       "total": 49
     },
     {
-      "id": 536,
+      "id": 535,
       "charName": "Aislin7",
       "winCount": 11,
       "killValue": null,
       "deathValue": null,
       "total": 49
+    },
+    {
+      "id": 418,
+      "charName": "llScarFacell",
+      "winCount": 8,
+      "killValue": 166,
+      "deathValue": null,
+      "total": 46
     },
     {
       "id": 549,
@@ -6533,22 +6541,6 @@
       "total": 46
     },
     {
-      "id": 420,
-      "charName": "llScarFacell",
-      "winCount": 8,
-      "killValue": 166,
-      "deathValue": null,
-      "total": 46
-    },
-    {
-      "id": 557,
-      "charName": "MaaaX",
-      "winCount": 8,
-      "killValue": 170,
-      "deathValue": null,
-      "total": 45
-    },
-    {
       "id": 547,
       "charName": "-Lizo-",
       "winCount": 9,
@@ -6557,7 +6549,15 @@
       "total": 45
     },
     {
-      "id": 263,
+      "id": 545,
+      "charName": "MaaaX",
+      "winCount": 8,
+      "killValue": 170,
+      "deathValue": null,
+      "total": 45
+    },
+    {
+      "id": 261,
       "charName": "-LanaDelRey-",
       "winCount": 8,
       "killValue": 101,
@@ -6573,7 +6573,7 @@
       "total": 42
     },
     {
-      "id": 303,
+      "id": 301,
       "charName": "-MeninoBom-",
       "winCount": 8,
       "killValue": 142,
@@ -6581,15 +6581,7 @@
       "total": 41
     },
     {
-      "id": 541,
-      "charName": "SrSinistros",
-      "winCount": 10,
-      "killValue": 62,
-      "deathValue": null,
-      "total": 40
-    },
-    {
-      "id": 543,
+      "id": 538,
       "charName": "lDuende",
       "winCount": 9,
       "killValue": 33,
@@ -6598,22 +6590,14 @@
     },
     {
       "id": 540,
-      "charName": "Kizar-HT",
-      "winCount": 7,
-      "killValue": 20,
+      "charName": "SrSinistros",
+      "winCount": 10,
+      "killValue": 62,
       "deathValue": null,
-      "total": 36
+      "total": 40
     },
     {
-      "id": 208,
-      "charName": "130cm",
-      "winCount": 8,
-      "killValue": null,
-      "deathValue": null,
-      "total": 36
-    },
-    {
-      "id": 347,
+      "id": 345,
       "charName": "Deiwid182",
       "winCount": 10,
       "killValue": 77,
@@ -6621,7 +6605,23 @@
       "total": 36
     },
     {
-      "id": 246,
+      "id": 206,
+      "charName": "130cm",
+      "winCount": 8,
+      "killValue": null,
+      "deathValue": null,
+      "total": 36
+    },
+    {
+      "id": 539,
+      "charName": "Kizar-HT",
+      "winCount": 7,
+      "killValue": 20,
+      "deathValue": null,
+      "total": 36
+    },
+    {
+      "id": 244,
       "charName": "--NOG--",
       "winCount": 5,
       "killValue": 127,
@@ -6629,7 +6629,7 @@
       "total": 35
     },
     {
-      "id": 553,
+      "id": 552,
       "charName": "joaozk7",
       "winCount": 8,
       "killValue": 123,
@@ -6637,7 +6637,7 @@
       "total": 35
     },
     {
-      "id": 572,
+      "id": 562,
       "charName": "-Cesote-",
       "winCount": 5,
       "killValue": 156,
@@ -6661,7 +6661,7 @@
       "total": 32
     },
     {
-      "id": 545,
+      "id": 544,
       "charName": "GamaJunior",
       "winCount": 6,
       "killValue": 26,
@@ -6669,7 +6669,7 @@
       "total": 32
     },
     {
-      "id": 544,
+      "id": 543,
       "charName": "-Ze-Purungo-",
       "winCount": 5,
       "killValue": 8,
@@ -6677,7 +6677,7 @@
       "total": 31
     },
     {
-      "id": 555,
+      "id": 553,
       "charName": "rfaell",
       "winCount": 8,
       "killValue": 73,
@@ -6685,7 +6685,7 @@
       "total": 30
     },
     {
-      "id": 552,
+      "id": 541,
       "charName": "BMastodonte",
       "winCount": 6,
       "killValue": null,
@@ -6693,10 +6693,10 @@
       "total": 30
     },
     {
-      "id": 554,
-      "charName": "Kepura",
-      "winCount": 6,
-      "killValue": 71,
+      "id": 548,
+      "charName": "-AlcheMisT-",
+      "winCount": 8,
+      "killValue": 35,
       "deathValue": null,
       "total": 29
     },
@@ -6709,7 +6709,15 @@
       "total": 29
     },
     {
-      "id": 314,
+      "id": 554,
+      "charName": "Kepura",
+      "winCount": 6,
+      "killValue": 71,
+      "deathValue": null,
+      "total": 29
+    },
+    {
+      "id": 312,
       "charName": "-ChaosBR-",
       "winCount": 6,
       "killValue": 158,
@@ -6717,15 +6725,7 @@
       "total": 29
     },
     {
-      "id": 548,
-      "charName": "-AlcheMisT-",
-      "winCount": 8,
-      "killValue": 35,
-      "deathValue": null,
-      "total": 29
-    },
-    {
-      "id": 564,
+      "id": 567,
       "charName": "KnightGaren-",
       "winCount": 6,
       "killValue": 123,
@@ -6733,7 +6733,7 @@
       "total": 28
     },
     {
-      "id": 250,
+      "id": 248,
       "charName": "Kiirlyn",
       "winCount": 4,
       "killValue": 91,
@@ -6749,7 +6749,7 @@
       "total": 25
     },
     {
-      "id": 562,
+      "id": 561,
       "charName": "xSnooKyx",
       "winCount": 5,
       "killValue": 36,
@@ -6757,7 +6757,7 @@
       "total": 24
     },
     {
-      "id": 567,
+      "id": 555,
       "charName": "sososweet",
       "winCount": 5,
       "killValue": 11,
@@ -6765,15 +6765,7 @@
       "total": 23
     },
     {
-      "id": 438,
-      "charName": "NaKachera",
-      "winCount": 4,
-      "killValue": 36,
-      "deathValue": null,
-      "total": 22
-    },
-    {
-      "id": 569,
+      "id": 556,
       "charName": "-Kaboom",
       "winCount": 7,
       "killValue": 12,
@@ -6781,12 +6773,12 @@
       "total": 22
     },
     {
-      "id": 558,
-      "charName": "Ivor",
-      "winCount": 7,
-      "killValue": 3,
+      "id": 436,
+      "charName": "NaKachera",
+      "winCount": 4,
+      "killValue": 36,
       "deathValue": null,
-      "total": 21
+      "total": 22
     },
     {
       "id": 560,
@@ -6797,7 +6789,7 @@
       "total": 21
     },
     {
-      "id": 556,
+      "id": 557,
       "charName": "-Uzumaki",
       "winCount": 8,
       "killValue": 2,
@@ -6805,7 +6797,15 @@
       "total": 21
     },
     {
-      "id": 220,
+      "id": 558,
+      "charName": "Ivor",
+      "winCount": 7,
+      "killValue": 3,
+      "deathValue": null,
+      "total": 21
+    },
+    {
+      "id": 218,
       "charName": "-Pityzera-",
       "winCount": 6,
       "killValue": 44,
@@ -6813,7 +6813,7 @@
       "total": 20
     },
     {
-      "id": 561,
+      "id": 563,
       "charName": "oliveselos",
       "winCount": 9,
       "killValue": 4,
@@ -6829,7 +6829,7 @@
       "total": 18
     },
     {
-      "id": 570,
+      "id": 569,
       "charName": "SddsMalech",
       "winCount": 4,
       "killValue": 28,
@@ -6837,18 +6837,18 @@
       "total": 18
     },
     {
-      "id": 576,
-      "charName": "CoisaLindaBB",
-      "winCount": 6,
-      "killValue": 37,
+      "id": 564,
+      "charName": "Mult-Filtros",
+      "winCount": 3,
+      "killValue": null,
       "deathValue": null,
       "total": 17
     },
     {
-      "id": 563,
-      "charName": "Mult-Filtros",
-      "winCount": 3,
-      "killValue": null,
+      "id": 572,
+      "charName": "CoisaLindaBB",
+      "winCount": 6,
+      "killValue": 37,
       "deathValue": null,
       "total": 17
     },
@@ -6861,7 +6861,7 @@
       "total": 16
     },
     {
-      "id": 612,
+      "id": 614,
       "charName": "gmlzao",
       "winCount": 5,
       "killValue": 143,
@@ -6869,15 +6869,7 @@
       "total": 16
     },
     {
-      "id": 573,
-      "charName": "Bucksz",
-      "winCount": 3,
-      "killValue": 31,
-      "deathValue": null,
-      "total": 15
-    },
-    {
-      "id": 577,
+      "id": 574,
       "charName": "Sekh",
       "winCount": 5,
       "killValue": 26,
@@ -6893,7 +6885,15 @@
       "total": 15
     },
     {
-      "id": 581,
+      "id": 573,
+      "charName": "Bucksz",
+      "winCount": 3,
+      "killValue": 31,
+      "deathValue": null,
+      "total": 15
+    },
+    {
+      "id": 580,
       "charName": "xSauron",
       "winCount": 3,
       "killValue": 26,
@@ -6901,31 +6901,7 @@
       "total": 14
     },
     {
-      "id": 579,
-      "charName": "FM-BB",
-      "winCount": 7,
-      "killValue": 27,
-      "deathValue": null,
-      "total": 14
-    },
-    {
-      "id": 333,
-      "charName": "iT0ken",
-      "winCount": 2,
-      "killValue": 33,
-      "deathValue": null,
-      "total": 14
-    },
-    {
-      "id": 578,
-      "charName": "FoemaMago",
-      "winCount": 3,
-      "killValue": 23,
-      "deathValue": null,
-      "total": 14
-    },
-    {
-      "id": 571,
+      "id": 570,
       "charName": "BMNATUREZA",
       "winCount": 3,
       "killValue": 1,
@@ -6941,23 +6917,31 @@
       "total": 14
     },
     {
-      "id": 574,
-      "charName": "-PaoKumOvO-",
-      "winCount": 4,
-      "killValue": null,
+      "id": 331,
+      "charName": "iT0ken",
+      "winCount": 2,
+      "killValue": 33,
       "deathValue": null,
-      "total": 13
+      "total": 14
     },
     {
-      "id": 426,
-      "charName": "Morganaaa",
+      "id": 576,
+      "charName": "FoemaMago",
       "winCount": 3,
-      "killValue": 47,
+      "killValue": 23,
       "deathValue": null,
-      "total": 13
+      "total": 14
     },
     {
-      "id": 105,
+      "id": 577,
+      "charName": "FM-BB",
+      "winCount": 7,
+      "killValue": 27,
+      "deathValue": null,
+      "total": 14
+    },
+    {
+      "id": 104,
       "charName": "PontinhO-",
       "winCount": 2,
       "killValue": 11,
@@ -6965,20 +6949,20 @@
       "total": 13
     },
     {
-      "id": 583,
-      "charName": "HeadzinXD",
+      "id": 571,
+      "charName": "-PaoKumOvO-",
       "winCount": 4,
-      "killValue": 22,
+      "killValue": null,
       "deathValue": null,
-      "total": 12
+      "total": 13
     },
     {
-      "id": 580,
-      "charName": "-Schell-",
-      "winCount": 2,
-      "killValue": 6,
+      "id": 424,
+      "charName": "Morganaaa",
+      "winCount": 3,
+      "killValue": 47,
       "deathValue": null,
-      "total": 12
+      "total": 13
     },
     {
       "id": 582,
@@ -6989,7 +6973,31 @@
       "total": 12
     },
     {
-      "id": 338,
+      "id": 579,
+      "charName": "-Schell-",
+      "winCount": 2,
+      "killValue": 6,
+      "deathValue": null,
+      "total": 12
+    },
+    {
+      "id": 581,
+      "charName": "HeadzinXD",
+      "winCount": 4,
+      "killValue": 22,
+      "deathValue": null,
+      "total": 12
+    },
+    {
+      "id": 578,
+      "charName": "Saint-Joseph",
+      "winCount": 3,
+      "killValue": null,
+      "deathValue": null,
+      "total": 11
+    },
+    {
+      "id": 336,
       "charName": "HOTS",
       "winCount": 3,
       "killValue": 10,
@@ -7005,15 +7013,7 @@
       "total": 11
     },
     {
-      "id": 597,
-      "charName": "Saint-Joseph",
-      "winCount": 3,
-      "killValue": null,
-      "deathValue": null,
-      "total": 11
-    },
-    {
-      "id": 613,
+      "id": 583,
       "charName": "zNostalgiC",
       "winCount": 3,
       "killValue": 12,
@@ -7037,15 +7037,7 @@
       "total": 9
     },
     {
-      "id": 428,
-      "charName": "Bacon-",
-      "winCount": 4,
-      "killValue": 26,
-      "deathValue": null,
-      "total": 9
-    },
-    {
-      "id": 462,
+      "id": 460,
       "charName": "joaoBERTO",
       "winCount": 2,
       "killValue": 20,
@@ -7053,7 +7045,15 @@
       "total": 9
     },
     {
-      "id": 617,
+      "id": 426,
+      "charName": "Bacon-",
+      "winCount": 4,
+      "killValue": 26,
+      "deathValue": null,
+      "total": 9
+    },
+    {
+      "id": 596,
       "charName": "PapaiDoMau",
       "winCount": 5,
       "killValue": 18,
@@ -7061,7 +7061,7 @@
       "total": 8
     },
     {
-      "id": 224,
+      "id": 222,
       "charName": "BestiaNegra",
       "winCount": 2,
       "killValue": 10,
@@ -7069,10 +7069,10 @@
       "total": 8
     },
     {
-      "id": 606,
-      "charName": "Rezzyy",
-      "winCount": 2,
-      "killValue": 17,
+      "id": 604,
+      "charName": "Mojarobmele",
+      "winCount": 1,
+      "killValue": 19,
       "deathValue": null,
       "total": 7
     },
@@ -7085,7 +7085,7 @@
       "total": 7
     },
     {
-      "id": 586,
+      "id": 587,
       "charName": "--DUCATI--",
       "winCount": 1,
       "killValue": 7,
@@ -7093,7 +7093,7 @@
       "total": 7
     },
     {
-      "id": 591,
+      "id": 592,
       "charName": "Aziir-",
       "winCount": 2,
       "killValue": 6,
@@ -7117,18 +7117,34 @@
       "total": 7
     },
     {
-      "id": 604,
-      "charName": "Mojarobmele",
-      "winCount": 1,
-      "killValue": 19,
+      "id": 607,
+      "charName": "Rezzyy",
+      "winCount": 2,
+      "killValue": 17,
       "deathValue": null,
       "total": 7
     },
     {
-      "id": 619,
-      "charName": "Vassy",
-      "winCount": 7,
+      "id": 602,
+      "charName": "oLd-",
+      "winCount": 1,
+      "killValue": 5,
+      "deathValue": null,
+      "total": 6
+    },
+    {
+      "id": 589,
+      "charName": "TkTranSao",
+      "winCount": 1,
       "killValue": null,
+      "deathValue": null,
+      "total": 6
+    },
+    {
+      "id": 588,
+      "charName": "-Osaminha-",
+      "winCount": 1,
+      "killValue": 2,
       "deathValue": null,
       "total": 6
     },
@@ -7141,9 +7157,17 @@
       "total": 6
     },
     {
-      "id": 594,
-      "charName": "-EleKiCisTa",
+      "id": 591,
+      "charName": "hitecoos",
       "winCount": 1,
+      "killValue": 1,
+      "deathValue": null,
+      "total": 6
+    },
+    {
+      "id": 586,
+      "charName": "Vassy",
+      "winCount": 7,
       "killValue": null,
       "deathValue": null,
       "total": 6
@@ -7157,31 +7181,7 @@
       "total": 6
     },
     {
-      "id": 602,
-      "charName": "oLd-",
-      "winCount": 1,
-      "killValue": 5,
-      "deathValue": null,
-      "total": 6
-    },
-    {
-      "id": 587,
-      "charName": "-Osaminha-",
-      "winCount": 1,
-      "killValue": 2,
-      "deathValue": null,
-      "total": 6
-    },
-    {
-      "id": 588,
-      "charName": "TkTranSao",
-      "winCount": 1,
-      "killValue": null,
-      "deathValue": null,
-      "total": 6
-    },
-    {
-      "id": 589,
+      "id": 590,
       "charName": "Ralifer-",
       "winCount": 1,
       "killValue": 2,
@@ -7189,18 +7189,26 @@
       "total": 6
     },
     {
-      "id": 590,
-      "charName": "hitecoos",
+      "id": 594,
+      "charName": "-EleKiCisTa",
       "winCount": 1,
-      "killValue": 1,
+      "killValue": null,
       "deathValue": null,
       "total": 6
     },
     {
-      "id": 596,
-      "charName": "Zanaris",
+      "id": 606,
+      "charName": "Mine1",
+      "winCount": 1,
+      "killValue": null,
+      "deathValue": null,
+      "total": 5
+    },
+    {
+      "id": 605,
+      "charName": "HoraDooShow",
       "winCount": 4,
-      "killValue": 1,
+      "killValue": 4,
       "deathValue": null,
       "total": 5
     },
@@ -7213,15 +7221,15 @@
       "total": 5
     },
     {
-      "id": 609,
-      "charName": "EZODYA",
-      "winCount": 1,
-      "killValue": 5,
+      "id": 597,
+      "charName": "Zanaris",
+      "winCount": 4,
+      "killValue": 1,
       "deathValue": null,
       "total": 5
     },
     {
-      "id": 610,
+      "id": 611,
       "charName": "Rakiri",
       "winCount": 1,
       "killValue": 10,
@@ -7229,7 +7237,7 @@
       "total": 5
     },
     {
-      "id": 334,
+      "id": 332,
       "charName": "TiuniTchaine",
       "winCount": 1,
       "killValue": 12,
@@ -7237,47 +7245,15 @@
       "total": 5
     },
     {
-      "id": 605,
-      "charName": "Mine1",
+      "id": 610,
+      "charName": "EZODYA",
       "winCount": 1,
-      "killValue": null,
+      "killValue": 5,
       "deathValue": null,
       "total": 5
     },
     {
-      "id": 592,
-      "charName": "HoraDooShow",
-      "winCount": 4,
-      "killValue": 4,
-      "deathValue": null,
-      "total": 5
-    },
-    {
-      "id": 406,
-      "charName": "-StarWade",
-      "winCount": 4,
-      "killValue": 36,
-      "deathValue": null,
-      "total": 4
-    },
-    {
-      "id": 665,
-      "charName": "-Tucano-",
-      "winCount": 2,
-      "killValue": 39,
-      "deathValue": null,
-      "total": 4
-    },
-    {
-      "id": 607,
-      "charName": "NicolasG",
-      "winCount": 2,
-      "killValue": null,
-      "deathValue": null,
-      "total": 4
-    },
-    {
-      "id": 608,
+      "id": 609,
       "charName": "M43L",
       "winCount": 3,
       "killValue": 4,
@@ -7285,7 +7261,15 @@
       "total": 4
     },
     {
-      "id": 611,
+      "id": 404,
+      "charName": "-StarWade",
+      "winCount": 4,
+      "killValue": 36,
+      "deathValue": null,
+      "total": 4
+    },
+    {
+      "id": 612,
       "charName": "BlackDanger",
       "winCount": 1,
       "killValue": 10,
@@ -7293,7 +7277,7 @@
       "total": 4
     },
     {
-      "id": 614,
+      "id": 613,
       "charName": "-PRETORIUSS-",
       "winCount": 3,
       "killValue": 11,
@@ -7301,7 +7285,23 @@
       "total": 4
     },
     {
-      "id": 440,
+      "id": 664,
+      "charName": "-Tucano-",
+      "winCount": 2,
+      "killValue": 39,
+      "deathValue": null,
+      "total": 4
+    },
+    {
+      "id": 608,
+      "charName": "NicolasG",
+      "winCount": 2,
+      "killValue": null,
+      "deathValue": null,
+      "total": 4
+    },
+    {
+      "id": 438,
       "charName": "Panjura-",
       "winCount": 1,
       "killValue": null,
@@ -7309,7 +7309,7 @@
       "total": 3
     },
     {
-      "id": 664,
+      "id": 663,
       "charName": "TTCO",
       "winCount": null,
       "killValue": 16,
@@ -7317,18 +7317,18 @@
       "total": 2
     },
     {
-      "id": 641,
-      "charName": "-Juniiior-",
-      "winCount": null,
-      "killValue": 16,
+      "id": 361,
+      "charName": "-4cerorA-",
+      "winCount": 1,
+      "killValue": 20,
       "deathValue": null,
       "total": 2
     },
     {
-      "id": 221,
-      "charName": "-EcstasyPT-",
+      "id": 640,
+      "charName": "-Juniiior-",
       "winCount": null,
-      "killValue": 20,
+      "killValue": 16,
       "deathValue": null,
       "total": 2
     },
@@ -7341,14 +7341,6 @@
       "total": 2
     },
     {
-      "id": 363,
-      "charName": "-4cerorA-",
-      "winCount": 1,
-      "killValue": 20,
-      "deathValue": null,
-      "total": 2
-    },
-    {
       "id": 615,
       "charName": "gueroba",
       "winCount": 1,
@@ -7357,23 +7349,15 @@
       "total": 2
     },
     {
-      "id": 659,
-      "charName": "Blastoise-",
+      "id": 219,
+      "charName": "-EcstasyPT-",
       "winCount": null,
-      "killValue": 12,
+      "killValue": 20,
       "deathValue": null,
-      "total": 1
+      "total": 2
     },
     {
-      "id": 666,
-      "charName": "Underline",
-      "winCount": null,
-      "killValue": 6,
-      "deathValue": null,
-      "total": 1
-    },
-    {
-      "id": 625,
+      "id": 623,
       "charName": "-PIVA-",
       "winCount": null,
       "killValue": 6,
@@ -7381,31 +7365,23 @@
       "total": 1
     },
     {
-      "id": 647,
-      "charName": "1818",
+      "id": 665,
+      "charName": "Underline",
       "winCount": null,
-      "killValue": 3,
+      "killValue": 6,
       "deathValue": null,
-      "total": 0
+      "total": 1
     },
     {
-      "id": 352,
-      "charName": "Goudenlionn",
+      "id": 658,
+      "charName": "Blastoise-",
       "winCount": null,
-      "killValue": 3,
+      "killValue": 12,
       "deathValue": null,
-      "total": 0
+      "total": 1
     },
     {
-      "id": 348,
-      "charName": "-NETERO-",
-      "winCount": null,
-      "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 268,
+      "id": 266,
       "charName": "OutroNick",
       "winCount": null,
       "killValue": null,
@@ -7413,239 +7389,7 @@
       "total": 0
     },
     {
-      "id": 213,
-      "charName": "-GalloS-",
-      "winCount": null,
-      "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 381,
-      "charName": "sokete",
-      "winCount": 2,
-      "killValue": 2,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 618,
-      "charName": "XxNaNxX",
-      "winCount": null,
-      "killValue": 3,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 620,
-      "charName": "Sr-Mauricio",
-      "winCount": null,
-      "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 621,
-      "charName": "RogerioCeni",
-      "winCount": null,
-      "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 622,
-      "charName": "ht-bb",
-      "winCount": null,
-      "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 623,
-      "charName": "-SmokeWeeD-",
-      "winCount": null,
-      "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 624,
-      "charName": "ZeGoTas",
-      "winCount": null,
-      "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 626,
-      "charName": "Caba",
-      "winCount": null,
-      "killValue": 1,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 627,
-      "charName": "CptCavernaa",
-      "winCount": null,
-      "killValue": 1,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 628,
-      "charName": "SeuCastelox",
-      "winCount": null,
-      "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 629,
-      "charName": "Lolo-CE",
-      "winCount": null,
-      "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 630,
-      "charName": "Aphromoo",
-      "winCount": null,
-      "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 631,
-      "charName": "BlackEvv",
-      "winCount": null,
-      "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 632,
-      "charName": "II-FISCAO-II",
-      "winCount": null,
-      "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 633,
-      "charName": "boobby",
-      "winCount": null,
-      "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 634,
-      "charName": "Constantino1",
-      "winCount": null,
-      "killValue": 1,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 635,
-      "charName": "Yumisashi",
-      "winCount": null,
-      "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 636,
-      "charName": "AIATHUS",
-      "winCount": null,
-      "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 637,
-      "charName": "GigaBlack",
-      "winCount": null,
-      "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 638,
-      "charName": "Vysache",
-      "winCount": null,
-      "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 639,
-      "charName": "neyhehexd",
-      "winCount": null,
-      "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 640,
-      "charName": "-BravoMike-",
-      "winCount": null,
-      "killValue": 2,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 642,
-      "charName": "xxXKauanXxx",
-      "winCount": null,
-      "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 643,
-      "charName": "ServoDeDeus",
-      "winCount": null,
-      "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 644,
-      "charName": "KrauL",
-      "winCount": null,
-      "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 645,
-      "charName": "lcastelar",
-      "winCount": null,
-      "killValue": 1,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 646,
-      "charName": "LebraoJames",
-      "winCount": null,
-      "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
       "id": 648,
-      "charName": "L1ND1NH4",
-      "winCount": null,
-      "killValue": null,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 649,
       "charName": "Lordtoxico",
       "winCount": null,
       "killValue": null,
@@ -7653,7 +7397,7 @@
       "total": 0
     },
     {
-      "id": 650,
+      "id": 649,
       "charName": "Matungo",
       "winCount": null,
       "killValue": null,
@@ -7661,7 +7405,7 @@
       "total": 0
     },
     {
-      "id": 651,
+      "id": 650,
       "charName": "TK-MaggotsPK",
       "winCount": 2,
       "killValue": null,
@@ -7669,7 +7413,15 @@
       "total": 0
     },
     {
-      "id": 652,
+      "id": 211,
+      "charName": "-GalloS-",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 651,
       "charName": "bNN0",
       "winCount": null,
       "killValue": 1,
@@ -7677,7 +7429,7 @@
       "total": 0
     },
     {
-      "id": 653,
+      "id": 652,
       "charName": "ColdFear",
       "winCount": null,
       "killValue": 3,
@@ -7685,7 +7437,7 @@
       "total": 0
     },
     {
-      "id": 654,
+      "id": 653,
       "charName": "-MULATO-BR-",
       "winCount": 2,
       "killValue": 4,
@@ -7694,14 +7446,6 @@
     },
     {
       "id": 655,
-      "charName": "-xFuuRy",
-      "winCount": null,
-      "killValue": 1,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 656,
       "charName": "OlimpuS",
       "winCount": null,
       "killValue": 2,
@@ -7709,7 +7453,7 @@
       "total": 0
     },
     {
-      "id": 657,
+      "id": 656,
       "charName": "PainNyx",
       "winCount": null,
       "killValue": null,
@@ -7717,7 +7461,7 @@
       "total": 0
     },
     {
-      "id": 658,
+      "id": 657,
       "charName": "Miku-Meru",
       "winCount": null,
       "killValue": 1,
@@ -7725,7 +7469,15 @@
       "total": 0
     },
     {
-      "id": 660,
+      "id": 379,
+      "charName": "sokete",
+      "winCount": 2,
+      "killValue": 2,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 659,
       "charName": "EDworld777",
       "winCount": null,
       "killValue": null,
@@ -7733,7 +7485,7 @@
       "total": 0
     },
     {
-      "id": 661,
+      "id": 660,
       "charName": "Best-Toinha",
       "winCount": null,
       "killValue": null,
@@ -7741,7 +7493,7 @@
       "total": 0
     },
     {
-      "id": 662,
+      "id": 661,
       "charName": "Blazed-",
       "winCount": null,
       "killValue": null,
@@ -7749,7 +7501,7 @@
       "total": 0
     },
     {
-      "id": 663,
+      "id": 662,
       "charName": "FSharmanlanD",
       "winCount": null,
       "killValue": null,
@@ -7757,7 +7509,7 @@
       "total": 0
     },
     {
-      "id": 667,
+      "id": 666,
       "charName": "Kevenny-HT",
       "winCount": null,
       "killValue": 2,
@@ -7765,7 +7517,7 @@
       "total": 0
     },
     {
-      "id": 668,
+      "id": 667,
       "charName": "BISNAGUINH4",
       "winCount": null,
       "killValue": 1,
@@ -7773,7 +7525,7 @@
       "total": 0
     },
     {
-      "id": 669,
+      "id": 668,
       "charName": "Guerreeiro",
       "winCount": 1,
       "killValue": 2,
@@ -7781,7 +7533,7 @@
       "total": 0
     },
     {
-      "id": 670,
+      "id": 669,
       "charName": "bmbrank0",
       "winCount": null,
       "killValue": null,
@@ -7789,15 +7541,7 @@
       "total": 0
     },
     {
-      "id": 675,
-      "charName": "-Fuster-",
-      "winCount": null,
-      "killValue": 1,
-      "deathValue": null,
-      "total": 0
-    },
-    {
-      "id": 678,
+      "id": 670,
       "charName": "Yuuka",
       "winCount": null,
       "killValue": null,
@@ -7805,23 +7549,287 @@
       "total": 0
     },
     {
-      "id": 676,
-      "charName": "MulleKinhO",
-      "winCount": 1,
-      "killValue": null,
+      "id": 654,
+      "charName": "-xFuuRy",
+      "winCount": null,
+      "killValue": 1,
       "deathValue": null,
-      "total": -1
+      "total": 0
     },
     {
-      "id": 677,
-      "charName": "Ericonha",
+      "id": 617,
+      "charName": "XxNaNxX",
+      "winCount": null,
+      "killValue": 3,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 618,
+      "charName": "Sr-Mauricio",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 619,
+      "charName": "RogerioCeni",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 620,
+      "charName": "ht-bb",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 621,
+      "charName": "-SmokeWeeD-",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 622,
+      "charName": "ZeGoTas",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 624,
+      "charName": "Caba",
+      "winCount": null,
+      "killValue": 1,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 625,
+      "charName": "CptCavernaa",
+      "winCount": null,
+      "killValue": 1,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 626,
+      "charName": "SeuCastelox",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 349,
+      "charName": "Goudenlionn",
+      "winCount": null,
+      "killValue": 3,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 627,
+      "charName": "Lolo-CE",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 628,
+      "charName": "Aphromoo",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 629,
+      "charName": "BlackEvv",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 630,
+      "charName": "II-FISCAO-II",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 631,
+      "charName": "boobby",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 632,
+      "charName": "Constantino1",
+      "winCount": null,
+      "killValue": 1,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 633,
+      "charName": "Yumisashi",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 634,
+      "charName": "AIATHUS",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 635,
+      "charName": "GigaBlack",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 636,
+      "charName": "Vysache",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 637,
+      "charName": "neyhehexd",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 638,
+      "charName": "-BravoMike-",
+      "winCount": null,
+      "killValue": 2,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 346,
+      "charName": "-NETERO-",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 639,
+      "charName": "-Fuster-",
+      "winCount": null,
+      "killValue": 1,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 641,
+      "charName": "xxXKauanXxx",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 642,
+      "charName": "ServoDeDeus",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 643,
+      "charName": "KrauL",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 644,
+      "charName": "lcastelar",
+      "winCount": null,
+      "killValue": 1,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 645,
+      "charName": "LebraoJames",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 646,
+      "charName": "1818",
+      "winCount": null,
+      "killValue": 3,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 647,
+      "charName": "L1ND1NH4",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": 0
+    },
+    {
+      "id": 155,
+      "charName": "CaIxForTe",
       "winCount": null,
       "killValue": 1,
       "deathValue": null,
       "total": -1
     },
     {
-      "id": 62,
+      "id": 671,
+      "charName": "Arelwen",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": -1
+    },
+    {
+      "id": 672,
+      "charName": "ITALIANINHOO",
+      "winCount": null,
+      "killValue": null,
+      "deathValue": null,
+      "total": -1
+    },
+    {
+      "id": 60,
       "charName": "VeridaS",
       "winCount": 1,
       "killValue": 5,
@@ -7829,15 +7837,7 @@
       "total": -1
     },
     {
-      "id": 679,
-      "charName": "ZeninMaki",
-      "winCount": 1,
-      "killValue": 2,
-      "deathValue": null,
-      "total": -1
-    },
-    {
-      "id": 219,
+      "id": 217,
       "charName": "Cnut",
       "winCount": null,
       "killValue": null,
@@ -7845,7 +7845,7 @@
       "total": -1
     },
     {
-      "id": 414,
+      "id": 412,
       "charName": "ESSILOR",
       "winCount": null,
       "killValue": 4,
@@ -7853,23 +7853,15 @@
       "total": -1
     },
     {
-      "id": 222,
-      "charName": "LevYzao",
+      "id": 492,
+      "charName": "Gorin",
       "winCount": null,
-      "killValue": 3,
-      "deathValue": null,
-      "total": -1
-    },
-    {
-      "id": 316,
-      "charName": "PuroVoodoo",
-      "winCount": 2,
       "killValue": 5,
       "deathValue": null,
       "total": -1
     },
     {
-      "id": 57,
+      "id": 55,
       "charName": "Hespert",
       "winCount": null,
       "killValue": 4,
@@ -7885,66 +7877,10 @@
       "total": -1
     },
     {
-      "id": 672,
-      "charName": "ITALIANINHOO",
-      "winCount": null,
-      "killValue": null,
-      "deathValue": null,
-      "total": -1
-    },
-    {
-      "id": 671,
-      "charName": "Arelwen",
-      "winCount": null,
-      "killValue": null,
-      "deathValue": null,
-      "total": -1
-    },
-    {
-      "id": 494,
-      "charName": "Gorin",
-      "winCount": null,
-      "killValue": 5,
-      "deathValue": null,
-      "total": -1
-    },
-    {
-      "id": 529,
-      "charName": "KAOS",
-      "winCount": 3,
-      "killValue": 12,
-      "deathValue": null,
-      "total": -1
-    },
-    {
-      "id": 526,
+      "id": 524,
       "charName": "Nazg�ll",
       "winCount": null,
       "killValue": 4,
-      "deathValue": null,
-      "total": -1
-    },
-    {
-      "id": 518,
-      "charName": "paulGOD",
-      "winCount": 5,
-      "killValue": 14,
-      "deathValue": null,
-      "total": -1
-    },
-    {
-      "id": 506,
-      "charName": "ChupaOuCospe",
-      "winCount": 2,
-      "killValue": null,
-      "deathValue": null,
-      "total": -1
-    },
-    {
-      "id": 504,
-      "charName": "Mododoy",
-      "winCount": 1,
-      "killValue": 8,
       "deathValue": null,
       "total": -1
     },
@@ -7957,13 +7893,77 @@
       "total": -1
     },
     {
-      "id": 157,
-      "charName": "CaIxForTe",
+      "id": 527,
+      "charName": "KAOS",
+      "winCount": 3,
+      "killValue": 12,
+      "deathValue": null,
+      "total": -1
+    },
+    {
+      "id": 220,
+      "charName": "LevYzao",
+      "winCount": null,
+      "killValue": 3,
+      "deathValue": null,
+      "total": -1
+    },
+    {
+      "id": 503,
+      "charName": "Mododoy",
+      "winCount": 1,
+      "killValue": 8,
+      "deathValue": null,
+      "total": -1
+    },
+    {
+      "id": 675,
+      "charName": "MulleKinhO",
+      "winCount": 1,
+      "killValue": null,
+      "deathValue": null,
+      "total": -1
+    },
+    {
+      "id": 516,
+      "charName": "paulGOD",
+      "winCount": 5,
+      "killValue": 14,
+      "deathValue": null,
+      "total": -1
+    },
+    {
+      "id": 505,
+      "charName": "ChupaOuCospe",
+      "winCount": 2,
+      "killValue": null,
+      "deathValue": null,
+      "total": -1
+    },
+    {
+      "id": 677,
+      "charName": "ZeninMaki",
+      "winCount": 1,
+      "killValue": 2,
+      "deathValue": null,
+      "total": -1
+    },
+    {
+      "id": 676,
+      "charName": "Ericonha",
       "winCount": null,
       "killValue": 1,
       "deathValue": null,
       "total": -1
+    },
+    {
+      "id": 314,
+      "charName": "PuroVoodoo",
+      "winCount": 2,
+      "killValue": 5,
+      "deathValue": null,
+      "total": -1
     }
   ],
-  "last_update": "2026-03-15 17:44:05"
+  "last_update": "2026-03-15 18:42:35"
 }

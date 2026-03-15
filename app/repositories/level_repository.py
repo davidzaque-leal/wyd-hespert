@@ -30,7 +30,7 @@ class LevelRepository:
             if sub_lineage:
                 subclass_lineage_name = sub_lineage.name
         
-        from app.services.ranking_history_service import get_formatted_now
+        from app.utils.datetime_utils import get_formatted_now
         snapshot_date = get_formatted_now()
         ranking = LevelRanking(
             player_id=player.id,

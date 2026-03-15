@@ -1,3 +1,4 @@
+
 """
 Serviço para manter histórico de rankings e posições
 Salva snapshots periódicos dos rankings para análise de evolução
@@ -6,18 +7,11 @@ Salva snapshots periódicos dos rankings para análise de evolução
 from sqlalchemy.orm import Session
 from app.models import LevelRankingHistory, ArenaRankingHistory
 from datetime import datetime, timedelta
+from app.utils.datetime_utils import get_formatted_now
 
 
 
 
-def get_formatted_now():
-    """
-    Retorna a hora atual formatada como string 'DD/MM/YYYY HH:MM'.
-    """
-    from pytz import timezone
-    brasilia_tz = timezone('America/Sao_Paulo')
-    now = datetime.now(brasilia_tz)
-    return now.strftime('%d/%m/%Y %H:%M')
 
 def get_season():
     """
@@ -42,8 +36,8 @@ def get_arena_number_by_time() -> int:
     Returns:
         int: 1, 2, 3 ou 4 correspondendo às arenas do dia
     """
-    now_str = get_formatted_now()
-    now = datetime.strptime(now_str, '%d/%m/%Y %H:%M')
+    from app.utils.datetime_utils import get_brasilia_now
+    now = get_brasilia_now()
     hour = now.hour
     minute = now.minute
     

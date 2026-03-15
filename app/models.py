@@ -1,8 +1,8 @@
 from sqlalchemy import Column, Integer, String, SmallInteger, ForeignKey, CheckConstraint, Enum
 from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
-from datetime import datetime
 from app.database import Base
+from app.utils.datetime_utils import get_formatted_now
 
 # Enums para campos
 import enum
@@ -18,12 +18,6 @@ class KingdomEnum(enum.Enum):
 
 
 
-def get_formatted_now():
-    """
-    Retorna a hora atual formatada como string 'DD/MM/YYYY HH:MM'.
-    """
-    now = datetime.now()
-    return now.strftime('%d/%m/%Y %H:%M')
 
 
 class Class(Base):

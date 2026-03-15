@@ -249,7 +249,7 @@ class PlayerRepository:
 
         # ===== TOUCHED TIMESTAMP =====
         if updated:
-            from app.models import get_formatted_now
+            from app.utils.datetime_utils import get_formatted_now
             player.updated_at = get_formatted_now()
             # ensure player is attached to session
             if player not in session:

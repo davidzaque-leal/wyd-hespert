@@ -1,5 +1,6 @@
 from sqlalchemy.orm import Session
-from app.models import ArenaRanking, Player, ArenaCategoryEnum, get_formatted_now
+from app.models import ArenaRanking, Player, ArenaCategoryEnum
+from app.utils.datetime_utils import get_formatted_now
 
 class ArenaRepository:
 
