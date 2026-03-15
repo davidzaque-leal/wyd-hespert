@@ -19,7 +19,7 @@ def test_serialize_level_ranking(mock_session, mock_player):
     ranking.player = mock_player
     ranking.level_celestial = 10
     ranking.celestial_lineage_name = "Celestial"
-    ranking.level_subclass = 5
+    ranking.level_sub_celestial = 5
     ranking.subclass_lineage_name = "SubClass"
     ranking.level_total = 15
     with patch('app.utils.lineage_utils.LineageUtils.get_all_lineages', return_value={"celestial": "Celestial", "subclass": "SubClass"}):

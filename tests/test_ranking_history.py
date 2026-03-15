@@ -4,7 +4,7 @@ from app.services import ranking_history_service
 def test_get_level_changes_no_snapshot():
     session = MagicMock()
     session.query().filter().first.return_value = None
-    result = ranking_history_service.get_level_changes(session, "TestPlayer", {"level_celestial": 100, "level_subclass": 50})
+    result = ranking_history_service.get_level_changes(session, "TestPlayer", {"level_celestial": 100, "level_sub_celestial": 50})
     assert result['celestial_change'] == 0
     assert result['subclass_change'] == 0
     assert result['celestial_arrow'] == ''
@@ -14,9 +14,9 @@ def test_get_level_changes_with_snapshot():
     session = MagicMock()
     mock_record = MagicMock()
     mock_record.level_celestial = 90
-    mock_record.level_subclass = 40
+    mock_record.level_sub_celestial = 40
     session.query().filter().first.return_value = mock_record
-    result = ranking_history_service.get_level_changes(session, "TestPlayer", {"level_celestial": 100, "level_subclass": 50})
+    result = ranking_history_service.get_level_changes(session, "TestPlayer", {"level_celestial": 100, "level_sub_celestial": 50})
     assert result['celestial_change'] == 10
     assert result['subclass_change'] == 10
     assert result['celestial_arrow'] == '↑'
@@ -60,7 +60,6 @@ from app.services.ranking_history_service import (
     save_arena_ranking_history,
     save_level_ranking_history,
     get_arena_number_by_time,
-    get_brasilia_now,
 )
 
 class TestRankingHistory(unittest.TestCase):
@@ -95,7 +94,7 @@ class TestRankingHistory(unittest.TestCase):
     def test_level_ranking_history_single_day(self):
         # Simula dados de ranking de level
         players_data = [
-            {"id": 1, "name": "TestPlayer", "Soma Level": 200, "points": 80, "level": 100, "levelSub": 50, "celestial_lineage": "A", "subclass_lineage": "B"}
+            {"id": 1, "name": "TestPlayer", "Soma Level": 200, "points": 80, "celestial_lineage": "A", "subclass_lineage": "B"}
         ]
         # Simula não existir registro hoje
         self.session.query().filter().first.return_value = None
@@ -117,8 +116,8 @@ class TestRankingHistory(unittest.TestCase):
 def test_get_arena_number_by_time_pytest(monkeypatch):
     from app.services import ranking_history_service
     def fake_now():
-        return datetime(2026, 3, 10, 13, 31, tzinfo=timezone(timedelta(hours=-3)))
-    monkeypatch.setattr(ranking_history_service, "get_brasilia_now", fake_now)
+        return "10/03/2026 13:31"
+    monkeypatch.setattr(ranking_history_service, "get_formatted_now", fake_now)
     assert ranking_history_service.get_arena_number_by_time() == 1
 
 if __name__ == '__main__':

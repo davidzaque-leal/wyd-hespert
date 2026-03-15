@@ -1,20 +1,34 @@
-from sqlalchemy import Column, Integer, String, SmallInteger, ForeignKey, DateTime, CheckConstraint
+from sqlalchemy import Column, Integer, String, SmallInteger, ForeignKey, CheckConstraint, Enum
 from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
-from datetime import datetime, timezone, timedelta
+from datetime import datetime
 from app.database import Base
 
+# Enums para campos
+import enum
 
-def get_brasilia_time():
+class ArenaCategoryEnum(enum.Enum):
+    champion = "champion"
+    aspirant = "aspirant"
+
+class KingdomEnum(enum.Enum):
+    blue = "blue"
+    red = "red"
+    none = "none"
+
+class ArenaNumberEnum(enum.Enum):
+    one = 1
+    two = 2
+    three = 3
+    four = 4
+
+
+def get_formatted_now():
     """
-    Retorna a hora atual no fuso horário de Brasília (GMT-3).
-    Esta função deve ser usada em todos os server_default para garantir
-    que os timestamps sejam salvos no horário de Brasília.
+    Retorna a hora atual formatada como string 'DD/MM/YYYY HH:MM'.
     """
-    brasilia_tz = timezone(timedelta(hours=-3))
-    now = datetime.now(brasilia_tz)
-    # Truncar segundos e microsegundos
-    return now.replace(second=0, microsecond=0)
+    now = datetime.now()
+    return now.strftime('%d/%m/%Y %H:%M')
 
 
 class Class(Base):
@@ -46,10 +60,10 @@ class Player(Base):
     class_lineage = Column(SmallInteger)
     subclass_lineage = Column(SmallInteger)
 
-    kingdom = Column(String(20))
+    kingdom = Column(Enum(KingdomEnum))
 
-    created_at = Column(DateTime(timezone=True), default=get_brasilia_time)
-    updated_at = Column(DateTime(timezone=True), onupdate=get_brasilia_time)
+    created_at = Column(String(16), default=get_formatted_now)
+    updated_at = Column(String(16), onupdate=get_formatted_now)
 
     guild = relationship("Guild")
     level_rankings = relationship("LevelRanking", back_populates="player")
@@ -76,11 +90,11 @@ class LevelRanking(Base):
     points = Column(Integer)
     level_celestial = Column(Integer)  # Renamed from 'level'
     celestial_lineage_name = Column(String(100))  # Name of celestial class lineage
-    level_subclass = Column(Integer)  # Renamed from 'level_sub'
+    level_sub_celestial = Column(Integer)  # Renamed from 'level_sub'
     subclass_lineage_name = Column(String(100))  # Name of subclass lineage
     level_total = Column(Integer)
 
-    snapshot_date = Column(DateTime(timezone=True), default=get_brasilia_time)
+    snapshot_date = Column(String(16), default=get_formatted_now)
 
     player = relationship("Player", back_populates="level_rankings")
 
@@ -91,7 +105,7 @@ class ArenaRanking(Base):
     id = Column(Integer, primary_key=True)
     player_id = Column(Integer, ForeignKey("players.id", ondelete="CASCADE"))
 
-    category = Column(String(20))
+    category = Column(Enum(ArenaCategoryEnum), nullable=False)
     register_count = Column(Integer)
     kill_value = Column(Integer)
     death_value = Column(Integer)
@@ -100,7 +114,7 @@ class ArenaRanking(Base):
     bonus_kill = Column(Integer)
     total = Column(Integer)
 
-    snapshot_date = Column(DateTime(timezone=True), default=get_brasilia_time)
+    snapshot_date = Column(String(16), default=get_formatted_now)
 
     player = relationship("Player", back_populates="arena_rankings")
 
@@ -119,11 +133,11 @@ class LevelRankingHistory(Base):
     level_total = Column(Integer)
     points = Column(Integer)
     level_celestial = Column(Integer)
-    level_subclass = Column(Integer)
+    level_sub_celestial = Column(Integer)
     celestial_lineage_name = Column(String(100))
     subclass_lineage_name = Column(String(100))
 
-    recorded_at = Column(DateTime(timezone=True), default=get_brasilia_time, index=True)
+    recorded_at = Column(String(16), default=get_formatted_now, index=True)
 
     player = relationship("Player", foreign_keys=[player_id])
 
@@ -133,9 +147,9 @@ class ArenaRankingHistory(Base):
 
     id = Column(Integer, primary_key=True)
     player_id = Column(Integer, ForeignKey("players.id", ondelete="CASCADE"))
-    player_name = Column(String(100), nullable=False)
-    category = Column(String(20))  # champion ou aspirant
-    arena_number = Column(Integer, default=1)  # 1, 2, 3, ou 4 (qual arena do dia)
+    season = Column(String(5), nullable=False)  # MM/YY
+    category = Column(Enum(ArenaCategoryEnum), nullable=False)  # champion ou aspirant
+    arena_number = Column(Enum(ArenaNumberEnum), default=ArenaNumberEnum.one, nullable=False)  # 1, 2, 3, ou 4
     rank_position = Column(Integer)  # Posição no ranking
     total = Column(Integer)
     points = Column(Integer)
@@ -143,7 +157,7 @@ class ArenaRankingHistory(Base):
     kill_value = Column(Integer)
     death_value = Column(Integer)
 
-    recorded_at = Column(DateTime(timezone=True), default=get_brasilia_time, index=True)
+    recorded_at = Column(String(16), default=get_formatted_now, index=True)
 
     player = relationship("Player", foreign_keys=[player_id])
 
@@ -162,5 +176,5 @@ class User(Base):
     is_admin = Column(Integer, default=1)  # 1 = admin, 0 = não admin
     is_active = Column(Integer, default=1)  # 1 = ativo, 0 = desativado
 
-    created_at = Column(DateTime(timezone=True), default=get_brasilia_time)
-    updated_at = Column(DateTime(timezone=True), onupdate=get_brasilia_time)
+    created_at = Column(String(16), default=get_formatted_now)
+    updated_at = Column(String(16), onupdate=get_formatted_now)

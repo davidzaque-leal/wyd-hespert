@@ -1,6 +1,7 @@
 import pytest
 from unittest.mock import MagicMock
 from app.repositories.arena_repository import ArenaRepository
+from app.models import ArenaCategoryEnum
 
 @pytest.fixture
 def mock_session():
@@ -13,7 +14,7 @@ def mock_player():
     return player
 
 def test_clear_category(mock_session):
-    ArenaRepository.clear_category(mock_session, "champion")
+    ArenaRepository.clear_category(mock_session, ArenaCategoryEnum.champion)
     mock_session.query().filter().delete.assert_called_once()
 
 def test_save_arena(mock_session, mock_player):
@@ -26,5 +27,5 @@ def test_save_arena(mock_session, mock_player):
         "bonusKill": 0,
         "total": 21
     }
-    ArenaRepository.save(mock_session, mock_player, arena_data, "champion")
+    ArenaRepository.save(mock_session, mock_player, arena_data, ArenaCategoryEnum.champion)
     mock_session.add.assert_called_once()

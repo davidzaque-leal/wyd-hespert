@@ -11,3 +11,4 @@ python-multipart==0.0.9
 pytest
 pytest-cov
 python-dotenv
+pytz>=2023.3

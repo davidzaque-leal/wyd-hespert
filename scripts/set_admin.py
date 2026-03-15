@@ -11,7 +11,7 @@ from app.services.auth_service import get_user, hash_password, create_user_admin
 from app.models import User
 
 
-def set_admin(username: str = "lider_supermo", password: str = "Imperi0", email: str = "admin@wyd.com"):
+def set_admin(username: str = "lider", password: str = "Imperi0", email: str = "admin@wyd.com"):
     session = SessionLocal()
     try:
         # Ensure target user exists or create it
@@ -45,6 +45,6 @@ def set_admin(username: str = "lider_supermo", password: str = "Imperi0", email:
 if __name__ == "__main__":
     # Usage: python scripts/set_admin.py [username] [password]
     args = sys.argv[1:]
-    username = args[0] if len(args) >= 1 else "lider_supermo"
+    username = args[0] if len(args) >= 1 else "lider"
     password = args[1] if len(args) >= 2 else "Imperi0"
     set_admin(username, password)

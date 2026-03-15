@@ -1,16 +1,19 @@
 from sqlalchemy.orm import Session
-from app.models import ArenaRanking, Player
+from app.models import ArenaRanking, Player, ArenaCategoryEnum, get_formatted_now
 
 class ArenaRepository:
 
     @staticmethod
-    def clear_category(session: Session, category: str):
+    def clear_category(session: Session, category):
+        if isinstance(category, str):
+            category = ArenaCategoryEnum(category)
         session.query(ArenaRanking).filter(ArenaRanking.category == category).delete(synchronize_session=False)
 
     @staticmethod
-    def save(session: Session, player: Player, arena_data: dict, category: str):
-        from app.models import get_brasilia_time
-        snapshot_date = get_brasilia_time()
+    def save(session: Session, player: Player, arena_data: dict, category):
+        if isinstance(category, str):
+            category = ArenaCategoryEnum(category)
+        snapshot_date = get_formatted_now()
         ranking = ArenaRanking(
             player_id=player.id,
             category=category,

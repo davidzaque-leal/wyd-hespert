@@ -21,7 +21,8 @@ def test_sync_all_runs():
             session.execute.return_value.scalar.return_value = 1
             SyncService.sync_all()
             level_clear_mock.assert_called_once()
-            arena_clear_mock.assert_any_call(session, "champion")
-            arena_clear_mock.assert_any_call(session, "aspirant")
+            from app.models import ArenaCategoryEnum
+            arena_clear_mock.assert_any_call(session, ArenaCategoryEnum.champion)
+            arena_clear_mock.assert_any_call(session, ArenaCategoryEnum.aspirant)
             level_save_mock.assert_called()
             arena_save_mock.assert_called()

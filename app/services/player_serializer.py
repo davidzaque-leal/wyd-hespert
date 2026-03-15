@@ -32,7 +32,7 @@ class PlayerSerializer:
             "name": ranking.player.name,
             "level": ranking.level_celestial,
             "celestial_lineage": ranking.celestial_lineage_name or lineages.get("celestial"),
-            "levelSub": ranking.level_subclass,
+            "levelSub": ranking.level_sub_celestial,
             "subclass_lineage": ranking.subclass_lineage_name or lineages.get("subclass"),
             "Soma Level": ranking.level_total,
             "guild": ranking.player.guild.external_id if ranking.player.guild else None,

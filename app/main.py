@@ -171,7 +171,7 @@ def startup_event():
     # Create default admin user if doesn't exist
     session = SessionLocal()
     try:
-        admin_username = os.environ.get("ADMIN_USERNAME", "lider_supermo")
+        admin_username = os.environ.get("ADMIN_USERNAME", "lider")
         admin_email = os.environ.get("ADMIN_EMAIL", "admin@wyd.com")
         admin_password = os.environ.get("ADMIN_PASSWORD", "Imperi0")
 
@@ -282,7 +282,7 @@ def ranking(request: Request):
             # Calcular mudanças de level
             level_changes = get_level_changes(session, player.get("name"), {
                 'level_celestial': player.get("level"),
-                'level_subclass': player.get("levelSub"),
+                'level_sub_celestial': player.get("levelSub"),
             })
             player["level_changes"] = level_changes
     finally:

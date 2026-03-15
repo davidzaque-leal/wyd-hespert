@@ -30,14 +30,14 @@ class LevelRepository:
             if sub_lineage:
                 subclass_lineage_name = sub_lineage.name
         
-        from app.models import get_brasilia_time
-        snapshot_date = get_brasilia_time()
+        from app.services.ranking_history_service import get_formatted_now
+        snapshot_date = get_formatted_now()
         ranking = LevelRanking(
             player_id=player.id,
             points=ranking_data.get("points"),
             level_celestial=ranking_data.get("level"),
             celestial_lineage_name=celestial_lineage_name,
-            level_subclass=ranking_data.get("levelSub"),
+            level_sub_celestial=ranking_data.get("levelSub"),
             subclass_lineage_name=subclass_lineage_name,
             level_total=ranking_data.get("Soma Level"),
             snapshot_date=snapshot_date

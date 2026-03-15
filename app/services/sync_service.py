@@ -24,8 +24,9 @@ class SyncService:
 
                 # clear previous level and arena data, then insert fresh
                 LevelRepository.clear(session)
-                ArenaRepository.clear_category(session, "champion")
-                ArenaRepository.clear_category(session, "aspirant")
+                from app.models import ArenaCategoryEnum
+                ArenaRepository.clear_category(session, ArenaCategoryEnum.champion)
+                ArenaRepository.clear_category(session, ArenaCategoryEnum.aspirant)
 
                 for player_data in level_data:
                     # debug: show which player and guild value we're processing
@@ -48,7 +49,7 @@ class SyncService:
                 for arena_data in champion_data:
                     player = PlayerRepository.get_or_create(session, {"name": arena_data.get("charName")})
                     PlayerRepository.update_from_data(session, player, arena_data)
-                    ArenaRepository.save(session, player, arena_data, "champion")
+                    ArenaRepository.save(session, player, arena_data, ArenaCategoryEnum.champion)
 
                 # ARENA ASPIRANT
                 aspirant_response = requests.get(f"{ARENA_URL}?category=aspirant")
@@ -57,7 +58,7 @@ class SyncService:
                 for arena_data in aspirant_data:
                     player = PlayerRepository.get_or_create(session, {"name": arena_data.get("charName")})
                     PlayerRepository.update_from_data(session, player, arena_data)
-                    ArenaRepository.save(session, player, arena_data, "aspirant")
+                    ArenaRepository.save(session, player, arena_data, ArenaCategoryEnum.aspirant)
 
                 # flush to push inserts to DB so we can count
                 session.flush()
