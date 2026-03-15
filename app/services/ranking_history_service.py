@@ -120,11 +120,9 @@ def save_level_ranking_history(session: Session, players_data: list):
         
         # Inserir novo snapshot de hoje usando horário de Brasília
         # Receber snapshot_date dos registros principais
-        snapshot_date = None
-        if players_data and "snapshot_date" in players_data[0]:
-            snapshot_date = players_data[0]["snapshot_date"]
-        else:
-            snapshot_date = get_brasilia_now().replace(second=0, microsecond=0)
+        # Sempre usar horário de Brasília
+        from app.models import get_brasilia_time
+        snapshot_date = get_brasilia_time()
 
         for rank_pos, player_data in enumerate(players_data, 1):
             history = LevelRankingHistory(
@@ -193,11 +191,9 @@ def save_arena_ranking_history(session: Session, players_data: list, category: s
         
         # Inserir novo snapshot usando horário de Brasília
         # Receber snapshot_date dos registros principais
-        snapshot_date = None
-        if players_data and "snapshot_date" in players_data[0]:
-            snapshot_date = players_data[0]["snapshot_date"]
-        else:
-            snapshot_date = get_brasilia_now().replace(second=0, microsecond=0)
+        # Sempre usar horário de Brasília
+        from app.models import get_brasilia_time
+        snapshot_date = get_brasilia_time()
 
         for rank_pos, player_data in enumerate(players_data, 1):
             history = ArenaRankingHistory(
