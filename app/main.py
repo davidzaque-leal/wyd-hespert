@@ -16,6 +16,10 @@ from app.services.session_service import get_current_user, require_admin
 
 app = FastAPI()
 
+# Registrar rotas customizadas
+from app.routers import ranking_router
+app.include_router(ranking_router.router)
+
 templates = Jinja2Templates(directory="app/templates")
 app.mount("/static", StaticFiles(directory="app/static"), name="static")
 
