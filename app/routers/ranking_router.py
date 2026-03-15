@@ -16,7 +16,8 @@ def update_arena_manual(category: str = Body(..., embed=True)):
     if category not in ["champion", "aspirant"]:
         return Response(content="Categoria inválida. Use 'champion' ou 'aspirant'", status_code=400)
     try:
-        # Atualiza apenas a categoria informada
+        # Atualiza dados principais (arena_rankings)
+        data_store.update_data(sync=True)
         from app.database import SessionLocal
         session = SessionLocal()
         if category == "champion":
