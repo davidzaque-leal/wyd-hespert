@@ -46,45 +46,29 @@ def background_updater():
     # Aguardar próximo horário de sincronização
     time.sleep(60)
     
-    last_level_update_date = None
+    from app.services.sync_service import SyncService
     while True:
         try:
             now = datetime.now(brasilia_tz)
-            hour = now.hour
             minute = now.minute
+            second = now.second
 
-            # Arena schedule nos minutos específicos com janela de tolerância
-            arena_times = [13, 19, 21, 23]
-            arena_minutes = {13: 31, 19: 31, 21: 1, 23: 31}
-            tolerance = 2
+            # Consulta rápida nos minutos 00-05 e 30-35 (a cada 30s)
+            if (0 <= minute <= 5) or (30 <= minute <= 35):
+                interval = 30
+            else:
+                interval = 300
 
-            # Atualização de arena
-            is_arena_time = False
-            for h in arena_times:
-                arena_min = arena_minutes.get(h, 31)
-                if hour == h and (arena_min - tolerance) <= minute <= (arena_min + tolerance):
-                    is_arena_time = True
-                    break
-
-            if is_arena_time:
-                print(f"⏰ Sincronizando em horário de arena: {hour:02d}:{minute:02d}")
-                data_store.update_data()
-
-            # Atualização de ranking de level às 00:01
-            if hour == 0 and minute == 1:
-                today = now.date()
-                if last_level_update_date != today:
-                    print(f"⏰ Sincronizando ranking de level: {today} 00:01")
-                    session = SessionLocal()
-                    from app.services.ranking_history_service import ensure_today_level_ranking_snapshot
-                    ensure_today_level_ranking_snapshot(session)
-                    session.close()
-                    last_level_update_date = today
+            updated = SyncService.sync_all()
+            if updated:
+                print(f"⏰ Dados sincronizados às {now.strftime('%H:%M:%S')}")
+            else:
+                print(f"ℹ️ Nenhuma alteração detectada às {now.strftime('%H:%M:%S')}")
 
         except Exception as e:
             print(f"⚠ Erro no background_updater: {e}")
 
-        time.sleep(60)
+        time.sleep(interval)
 
 
 # ===============================

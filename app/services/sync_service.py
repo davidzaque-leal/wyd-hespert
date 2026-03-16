@@ -1,3 +1,4 @@
+from app.services.hash_manager import HashManager
 import requests
 from sqlalchemy import text
 from app.database import SessionLocal
@@ -14,14 +15,28 @@ class SyncService:
     @staticmethod
     def sync_all():
         session = SessionLocal()
-
         try:
+            # LEVEL
+            level_response = requests.post(LEVEL_URL, json={"options": {}})
+            level_data = level_response.json()
+            # ARENA CHAMPION
+            champion_response = requests.get(f"{ARENA_URL}?category=champion")
+            champion_data = champion_response.json()
+            # ARENA ASPIRANT
+            aspirant_response = requests.get(f"{ARENA_URL}?category=aspirant")
+            aspirant_data = aspirant_response.json()
+
+            # Só atualiza se algum hash mudou
+            level_changed = HashManager.check_and_update_hash("level", level_data)
+            champion_changed = HashManager.check_and_update_hash("champion", champion_data)
+            aspirant_changed = HashManager.check_and_update_hash("aspirant", aspirant_data)
+
+            if not (level_changed or champion_changed or aspirant_changed):
+                print("SyncService: Nenhuma alteração detectada nos dados, ignorando sync.")
+                return False
+
             # run inside a transaction for safety
             with session.begin():
-                # LEVEL
-                level_response = requests.post(LEVEL_URL, json={"options": {}})
-                level_data = level_response.json()
-
                 # clear previous level and arena data, then insert fresh
                 LevelRepository.clear(session)
                 from app.models import ArenaCategoryEnum
@@ -29,52 +44,36 @@ class SyncService:
                 ArenaRepository.clear_category(session, ArenaCategoryEnum.aspirant)
 
                 for player_data in level_data:
-                    # debug: show which player and guild value we're processing
                     try:
                         pname = player_data.get("name") or player_data.get("charName")
                         pguild = player_data.get("guild")
                         print(f"Processing level entry: {pname!r}, guild={pguild}")
                     except Exception:
                         pass
-
                     player = PlayerRepository.get_or_create(session, player_data)
-                    # ensure player fields (including guild) are updated from level payload
                     PlayerRepository.update_from_data(session, player, player_data)
                     LevelRepository.save(session, player, player_data)
-
-                # ARENA CHAMPION
-                champion_response = requests.get(f"{ARENA_URL}?category=champion")
-                champion_data = champion_response.json()
 
                 for arena_data in champion_data:
                     player = PlayerRepository.get_or_create(session, {"name": arena_data.get("charName")})
                     PlayerRepository.update_from_data(session, player, arena_data)
                     ArenaRepository.save(session, player, arena_data, ArenaCategoryEnum.champion)
 
-                # ARENA ASPIRANT
-                aspirant_response = requests.get(f"{ARENA_URL}?category=aspirant")
-                aspirant_data = aspirant_response.json()
-
                 for arena_data in aspirant_data:
                     player = PlayerRepository.get_or_create(session, {"name": arena_data.get("charName")})
                     PlayerRepository.update_from_data(session, player, arena_data)
                     ArenaRepository.save(session, player, arena_data, ArenaCategoryEnum.aspirant)
 
-                # flush to push inserts to DB so we can count
                 session.flush()
-
-                # Simple counts via SQL to help debugging
                 try:
                     lvl_rows = session.execute(text("SELECT COUNT(*) FROM level_rankings")).scalar()
                 except Exception:
                     lvl_rows = "n/a"
-
                 try:
                     arena_rows = session.execute(text("SELECT COUNT(*) FROM arena_rankings")).scalar()
                 except Exception:
                     arena_rows = "n/a"
-
                 print(f"Sync debug: level_rankings={lvl_rows}, arena_rankings={arena_rows}")
-
+            return True
         finally:
             session.close()
