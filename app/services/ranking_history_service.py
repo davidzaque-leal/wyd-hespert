@@ -102,9 +102,10 @@ def get_latest_arena_indicators(session: Session, player_id: int, category: str)
     try:
         from sqlalchemy import desc
         from app.models import ArenaRankingHistory
-        # Busca os dois registros mais recentes
+        # Busca os dois registros mais recentes da categoria correta
         records = session.query(ArenaRankingHistory).filter(
-            ArenaRankingHistory.player_id == player_id
+            ArenaRankingHistory.player_id == player_id,
+            ArenaRankingHistory.category == category
         ).order_by(desc(ArenaRankingHistory.recorded_at)).limit(2).all()
         if len(records) < 2:
             return {
@@ -119,19 +120,6 @@ def get_latest_arena_indicators(session: Session, player_id: int, category: str)
                 'win_active': False,
             }
         latest, previous = records[0], records[1]
-        # Garante que ambos os registros sejam da categoria correta
-        if latest.category != category or previous.category != category:
-            return {
-                'position_change': 0,
-                'direction': 'neutral',
-                'active': False,
-                'kill_change': 0,
-                'kill_arrow': '',
-                'kill_active': False,
-                'win_change': 0,
-                'win_arrow': '',
-                'win_active': False,
-            }
         pos_diff = (previous.rank_position or 0) - (latest.rank_position or 0)
         kill_change = (latest.kill_value or 0) - (previous.kill_value or 0)
         win_change = (latest.win_count or 0) - (previous.win_count or 0)
