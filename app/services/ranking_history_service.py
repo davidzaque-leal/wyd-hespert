@@ -1,4 +1,4 @@
-
+from sqlalchemy.orm import Session
 """
 Serviço para manter histórico de rankings e posições
 Salva snapshots periódicos dos rankings para análise de evolução
@@ -88,6 +88,65 @@ def get_arena_number_by_time() -> int:
     else:
         return 1  # Antes de 13:31, retorna arena 1 (do dia anterior ainda em andamento)
 
+def get_latest_arena_indicators(session: Session, player_id: int, category: str):
+    """
+    Compara a última arena com a penúltima para exibir indicadores.
+    Não depende de horário, sempre pega os dois registros mais recentes.
+    Args:
+        session: SQLAlchemy Session
+        player_id: ID do player
+        category: 'champion' ou 'aspirant'
+    Returns:
+        dict com indicadores de diferença entre arenas
+    """
+    try:
+        from sqlalchemy import desc
+        from app.models import ArenaRankingHistory
+        # Busca os dois registros mais recentes
+        records = session.query(ArenaRankingHistory).filter(
+            ArenaRankingHistory.player_id == player_id,
+            ArenaRankingHistory.category == category
+        ).order_by(desc(ArenaRankingHistory.recorded_at)).limit(2).all()
+        if len(records) < 2:
+            return {
+                'position_change': 0,
+                'direction': 'neutral',
+                'active': False,
+                'kill_change': 0,
+                'kill_arrow': '',
+                'kill_active': False,
+                'win_change': 0,
+                'win_arrow': '',
+                'win_active': False,
+            }
+        latest, previous = records[0], records[1]
+        pos_diff = (previous.rank_position or 0) - (latest.rank_position or 0)
+        kill_change = (latest.kill_value or 0) - (previous.kill_value or 0)
+        win_change = (latest.win_count or 0) - (previous.win_count or 0)
+        return {
+            'position_change': abs(pos_diff),
+            'direction': 'up' if pos_diff > 0 else ('down' if pos_diff < 0 else 'neutral'),
+            'active': pos_diff != 0,
+            'kill_change': kill_change,
+            'kill_arrow': '↑' if kill_change > 0 else ('↓' if kill_change < 0 else ''),
+            'kill_active': kill_change != 0,
+            'win_change': win_change,
+            'win_arrow': '↑' if win_change > 0 else ('↓' if win_change < 0 else ''),
+            'win_active': win_change != 0,
+        }
+    except Exception as e:
+        print(f"⚠ Erro ao comparar arenas mais recentes: {e}")
+        return {
+            'position_change': 0,
+            'direction': 'neutral',
+            'active': False,
+            'kill_change': 0,
+            'kill_arrow': '',
+            'kill_active': False,
+            'win_change': 0,
+            'win_arrow': '',
+            'win_active': False,
+        }
 
 def save_level_ranking_history(session: Session, players_data: list):
     """
@@ -287,10 +346,9 @@ def get_level_changes(session: Session, player_name: str, current_data: dict) ->
         # Buscar snapshot de ontem (em horário de Brasília)
         today_str = get_formatted_now().split()[0]  # pega apenas a data
         yesterday = datetime.now() - timedelta(days=1)
-        yesterday_str = yesterday.strftime('%d/%m/%Y')
-        
+        yesterday_str = yesterday.strftime('%Y-%m-%d')
+
         # Busca por string de data
-        
         yesterday_record = session.query(LevelRankingHistory).filter(
             LevelRankingHistory.player_name == player_name,
             LevelRankingHistory.recorded_at.like(f'{yesterday_str}%')
@@ -351,10 +409,9 @@ def get_position_changes(session: Session, player_name: str, current_position: i
     try:
         today_str = get_formatted_now().split()[0]
         yesterday = datetime.now() - timedelta(days=1)
-        yesterday_str = yesterday.strftime('%d/%m/%Y')
-        
+        yesterday_str = yesterday.strftime('%Y-%m-%d')
+
         # Busca por string de data
-        
         yesterday_record = session.query(LevelRankingHistory).filter(
             LevelRankingHistory.player_name == player_name,
             LevelRankingHistory.recorded_at.like(f'{yesterday_str}%')
@@ -420,7 +477,7 @@ def get_arena_changes(session: Session, player_name: str, current_data: dict, ca
         # Simplificação: compara arenas por data e arena_number
         today_str = get_formatted_now().split()[0]
         yesterday = datetime.now() - timedelta(days=1)
-        yesterday_str = yesterday.strftime('%d/%m/%Y')
+        yesterday_str = yesterday.strftime('%Y-%m-%d')
 
         # Detecta arena atual
         current_arena = current_data.get('arena_number')

@@ -23,9 +23,10 @@ class DataStore:
 
     def update_data(self, sync: bool = True):
         try:
+            updated = False
             if sync:
                 print("🔄 Sincronizando e atualizando dados no banco...")
-                SyncService.sync_all()
+                updated = SyncService.sync_all()
 
             # Sempre carrega os dados atuais do banco
             session = SessionLocal()
@@ -51,7 +52,8 @@ class DataStore:
                         PlayerSerializer.serialize_arena_ranking(a)
                         for a in aspirant_rows
                     ]
-                    self.last_update = time.strftime("%Y-%m-%d %H:%M:%S")
+                    if updated:
+                        self.last_update = time.strftime("%Y-%m-%d %H:%M:%S")
 
                 if sync:
                     try:

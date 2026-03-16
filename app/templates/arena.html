@@ -61,14 +61,14 @@
         <div class="arena-row-flex" style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
             <span style="display: flex; align-items: center; gap: 8px;">
                 {{ components.render_stat(p.winCount, 'Vitórias') }}
-                {% if p.arena_stat_changes and p.arena_stat_changes.win_active %}
-                    {{ components.render_small_change_indicator(p.arena_stat_changes.win_change, p.arena_stat_changes.win_arrow, p.arena_stat_changes.win_active) }}
+                {% if p.arena_indicators and p.arena_indicators.win_active %}
+                    {{ components.render_small_change_indicator(p.arena_indicators.win_change, p.arena_indicators.win_arrow, p.arena_indicators.win_active) }}
                 {% endif %}
             </span>
             <span style="display: flex; align-items: center; gap: 8px;">
                 {{ components.render_stat(p.killValue, 'Kills', '--success-color') }}
-                {% if p.arena_stat_changes and p.arena_stat_changes.kill_active %}
-                    {{ components.render_small_change_indicator(p.arena_stat_changes.kill_change, p.arena_stat_changes.kill_arrow, p.arena_stat_changes.kill_active) }}
+                {% if p.arena_indicators and p.arena_indicators.kill_active %}
+                    {{ components.render_small_change_indicator(p.arena_indicators.kill_change, p.arena_indicators.kill_arrow, p.arena_indicators.kill_active) }}
                 {% endif %}
             </span>
             <span style="display: flex; align-items: center; gap: 8px;">

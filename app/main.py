@@ -297,34 +297,14 @@ def arena(request: Request, category: str):
     )
 
     players = sorted(players, key=lambda x: x.get("total", 0), reverse=True)
-    
     session = SessionLocal()
     try:
-        # Adicionar índices de posição e mudanças de posição/kills/vitórias
         for idx, player in enumerate(players, 1):
             player["rank_position"] = idx
-
-            # Calcular mudanças de posição (usando histórico de arena) e stat changes
-            arena_changes = get_arena_changes(session, player.get("charName"), {
-                'kill_value': player.get('killValue', 0),
-                'win_count': player.get('winCount', 0)
-            }, category, idx)
-
-            # mapear para compatibilidade com templates
-            player["position_change"] = {
-                'position_change': arena_changes.get('position_change', 0),
-                'direction': arena_changes.get('direction', 'neutral'),
-                'active': arena_changes.get('active', False),
-            }
-
-            player['arena_stat_changes'] = {
-                'kill_change': arena_changes.get('kill_change', 0),
-                'kill_arrow': arena_changes.get('kill_arrow', ''),
-                'kill_active': arena_changes.get('kill_active', False),
-                'win_change': arena_changes.get('win_change', 0),
-                'win_arrow': arena_changes.get('win_arrow', ''),
-                'win_active': arena_changes.get('win_active', False),
-            }
+            # Centraliza indicadores usando get_latest_arena_indicators
+            from app.services.ranking_history_service import get_latest_arena_indicators
+            indicators = get_latest_arena_indicators(session, player.get("id"), category)
+            player["arena_indicators"] = indicators
     finally:
         session.close()
 
