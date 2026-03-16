@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, SmallInteger, ForeignKey, CheckConstraint, Enum
+from sqlalchemy import Column, Integer, String, SmallInteger, ForeignKey, CheckConstraint, Enum, UniqueConstraint
 from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
 from app.database import Base
@@ -152,6 +152,7 @@ class ArenaRankingHistory(Base):
 
     __table_args__ = (
         CheckConstraint("category IN ('champion','aspirant')"),
+        UniqueConstraint('player_id', 'category', 'arena_number', 'recorded_at', name='uq_arena_history'),
     )
 
 

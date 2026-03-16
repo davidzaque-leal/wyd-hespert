@@ -164,30 +164,27 @@ def save_arena_ranking_history(session: Session, players_data: list, category: s
         
         # Detectar qual arena está sendo feita agora
         arena_num = get_arena_number_by_time()
-        # Verificar se já existe snapshot de ESTA ARENA ESPECÍFICA hoje (em horário de Brasília)
-        today = get_today()
-        today_str = today.strftime('%d/%m/%Y')
+        # Padronizar data/hora para validação (usar apenas data no formato YYYY-MM-DD)
+        snapshot_date = get_formatted_now()
+        today_str = snapshot_date.split()[0]  # pega apenas a data
+        # Corrige para o formato YYYY-MM-DD
+        if '/' in today_str:
+            # Caso esteja no formato dd/mm/yyyy, converte
+            today_obj = datetime.strptime(today_str, '%d/%m/%Y')
+            today_str = today_obj.strftime('%Y-%m-%d')
         existing_arena = session.query(ArenaRankingHistory).filter(
             ArenaRankingHistory.recorded_at.like(f'{today_str}%'),
             ArenaRankingHistory.category == category,
             ArenaRankingHistory.arena_number == arena_num
         ).first()
-        
+
         if existing_arena:
             print(f"✓ Histórico de Arena {category} #{arena_num} já salvo hoje (pulando)")
             return True
-        
-        # Limpar registros antigos (manter apenas últimos 30 dias)
-        cutoff_date = (datetime.now() - timedelta(days=30)).strftime('%d/%m/%Y %H:%M')
-        session.query(ArenaRankingHistory).filter(
-            ArenaRankingHistory.recorded_at < cutoff_date,
-            ArenaRankingHistory.category == category
-        ).delete()
-        
+
         # Inserir novo snapshot usando horário de Brasília
         # Receber snapshot_date dos registros principais
         # Sempre usar horário de Brasília
-        snapshot_date = get_formatted_now()
         season = get_season()
 
         for rank_pos, player_data in enumerate(players_data, 1):
