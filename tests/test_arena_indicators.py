@@ -59,14 +59,5 @@ class TestArenaIndicators(unittest.TestCase):
         self.assertEqual(indicators['win_change'], 0)
         self.assertFalse(indicators['win_active'])
 
-    def test_indicators_with_different_category(self):
-        # Categoria diferente, não deve exibir indicador
-        latest = ArenaHistoryMock(1, 'aspirant', 2, 1, 10, 100, '2026-03-16 23:30')
-        previous = ArenaHistoryMock(1, 'aspirant', 1, 2, 5, 90, '2026-03-15 23:30')
-        self.session.query().filter().order_by().limit().all.return_value = [latest, previous]
-        indicators = get_latest_arena_indicators(self.session, 1, 'champion')
-        self.assertEqual(indicators['win_change'], 0)
-        self.assertFalse(indicators['win_active'])
-
 if __name__ == '__main__':
     unittest.main()

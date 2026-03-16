@@ -51,7 +51,6 @@ def background_updater():
         try:
             now = datetime.now(brasilia_tz)
             minute = now.minute
-            second = now.second
 
             # Consulta rápida nos minutos 00-05 e 30-35 (a cada 30s)
             if (0 <= minute <= 5) or (30 <= minute <= 35):
@@ -59,15 +58,12 @@ def background_updater():
             else:
                 interval = 300
 
-            updated = SyncService.sync_all()
-            if updated:
-                print(f"⏰ Dados sincronizados às {now.strftime('%H:%M:%S')}")
-            else:
-                print(f"ℹ️ Nenhuma alteração detectada às {now.strftime('%H:%M:%S')}")
+            SyncService.check_hashes()
+            print(f"⏰ background_updater executado às {now.strftime('%H:%M:%S')}")
 
         except Exception as e:
             print(f"⚠ Erro no background_updater: {e}")
-
+            
         time.sleep(interval)
 
 

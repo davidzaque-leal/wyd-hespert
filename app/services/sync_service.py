@@ -13,37 +13,46 @@ ARENA_URL = "https://rn3xfhamppsetddkod6vwc24lu0lhcek.lambda-url.us-east-1.on.aw
 class SyncService:
 
     @staticmethod
+    def check_hashes():
+        """
+        Checa os hashes das arenas e chama sync_all se algum hash mudou.
+        """
+        champion_response = requests.get(f"{ARENA_URL}?category=champion")
+        champion_data = champion_response.json()
+        aspirant_response = requests.get(f"{ARENA_URL}?category=aspirant")
+        aspirant_data = aspirant_response.json()
+        champion_changed = HashManager.check_and_update_hash("champion", champion_data)
+        aspirant_changed = HashManager.check_and_update_hash("aspirant", aspirant_data)
+        if champion_changed or aspirant_changed:
+            SyncService.sync_all()
+        else:
+            print("SyncService: Nenhuma alteração detectada nos dados de arena, ignorando sync.")
+
+    @staticmethod
     def sync_all():
+        """
+        Sincroniza rankings de level e arena.
+        """
+        SyncService.update_level()
+        SyncService.update_arenas()
+        return True
+
+    @staticmethod
+    def update_level():
+        """
+        Atualiza ranking de level se necessário.
+        """
         from datetime import datetime, timezone, timedelta
         session = SessionLocal()
         try:
-            # LEVEL
             now = datetime.now(timezone(timedelta(hours=-3)))  # Brasília
             level_should_update = False
-            # Check if it's 00:01 or if no snapshot exists for today
             from app.services.ranking_history_service import ensure_today_level_ranking_snapshot
             today_snapshot_exists = ensure_today_level_ranking_snapshot(session)
             if not today_snapshot_exists:
                 level_should_update = True
             elif now.hour == 0 and now.minute == 1:
                 level_should_update = True
-
-            # ARENA CHAMPION
-            champion_response = requests.get(f"{ARENA_URL}?category=champion")
-            champion_data = champion_response.json()
-            # ARENA ASPIRANT
-            aspirant_response = requests.get(f"{ARENA_URL}?category=aspirant")
-            aspirant_data = aspirant_response.json()
-
-            # Só atualiza se algum hash mudou (apenas arena)
-            champion_changed = HashManager.check_and_update_hash("champion", champion_data)
-            aspirant_changed = HashManager.check_and_update_hash("aspirant", aspirant_data)
-
-            # Arena só atualiza se hash mudar
-            if not (champion_changed or aspirant_changed):
-                print("SyncService: Nenhuma alteração detectada nos dados de arena, ignorando sync de arena.")
-
-            # Level ranking só atualiza uma vez por dia
             if level_should_update:
                 level_response = requests.post(LEVEL_URL, json={"options": {}})
                 level_data = level_response.json()
@@ -63,8 +72,20 @@ class SyncService:
                 print("✓ Level ranking atualizado para o dia.")
             else:
                 print("ℹ️ Level ranking já atualizado hoje, pulando.")
+        finally:
+            session.close()
 
-            # Arena update
+    @staticmethod
+    def update_arenas():
+        """
+        Atualiza ranking das arenas.
+        """
+        champion_response = requests.get(f"{ARENA_URL}?category=champion")
+        champion_data = champion_response.json()
+        aspirant_response = requests.get(f"{ARENA_URL}?category=aspirant")
+        aspirant_data = aspirant_response.json()
+        session = SessionLocal()
+        try:
             with session.begin():
                 from app.models import ArenaCategoryEnum
                 ArenaRepository.clear_category(session, ArenaCategoryEnum.champion)
@@ -87,6 +108,5 @@ class SyncService:
                 except Exception:
                     arena_rows = "n/a"
                 print(f"Sync debug: level_rankings={lvl_rows}, arena_rankings={arena_rows}")
-            return True
         finally:
             session.close()

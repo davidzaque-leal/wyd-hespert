@@ -115,10 +115,8 @@ class TestRankingHistory(unittest.TestCase):
 
 def test_get_arena_number_by_time_pytest(monkeypatch):
     from app.services import ranking_history_service
-    def fake_now():
-        return "10/03/2026 13:31"
-    monkeypatch.setattr(ranking_history_service, "get_formatted_now", fake_now)
-    assert ranking_history_service.get_arena_number_by_time() == 1
+    from datetime import datetime
+    assert ranking_history_service.get_arena_number_by_time(datetime.strptime('2026-03-10 13:31', '%Y-%m-%d %H:%M')) == 1
 
 if __name__ == '__main__':
     unittest.main()

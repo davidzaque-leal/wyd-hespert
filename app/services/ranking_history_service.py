@@ -26,67 +26,18 @@ def get_today():
     Retorna a data de hoje (local).
     """
     return datetime.now().date()
+    
+def get_arena_number_by_time(now: datetime) -> int:
+    minutes = now.hour * 60 + now.minute
 
-
-def get_arena_number_by_time() -> int:
-    """
-    Detecta qual número de arena está sendo jogada baseado na hora GMT-3 (Brasília)
-    Horários: 13:31, 19:31, 21:01, 23:31
-    
-    Returns:
-        int: 1, 2, 3 ou 4 correspondendo às arenas do dia
-    """
-    from app.utils.datetime_utils import get_brasilia_now
-    now = get_brasilia_now()
-    hour = now.hour
-    minute = now.minute
-    
-    # Definir quais horários correspondem a cada arena
-    # Arena 1: 13:31
-    # Arena 2: 19:31
-    # Arena 3: 21:01
-    # Arena 4: 23:31
-    
-    # Considerar uma janela de ±5 minutos para sincronizar após a arena
-    arena_times = [
-        (13, 31),  # Arena 1
-        (19, 31),  # Arena 2
-        (21, 1),   # Arena 3
-        (23, 31),  # Arena 4
-    ]
-    
-    # Verificar qual arena está acontecendo (considerando janela de 10 minutos após)
-    for idx, (arena_hour, arena_minute) in enumerate(arena_times, 1):
-        # Janela: ±5 minutos do horário
-        start_minute = arena_minute - 5
-        end_minute = arena_minute + 5
-        
-        if start_minute < 0:
-            # Se passar para hora anterior
-            if (hour == arena_hour - 1 and minute >= 60 + start_minute) or \
-               (hour == arena_hour and minute <= end_minute):
-                return idx
-        elif end_minute >= 60:
-            # Se passar para próxima hora
-            if (hour == arena_hour and minute >= start_minute) or \
-               (hour == arena_hour + 1 and minute <= end_minute - 60):
-                return idx
-        else:
-            # Normal
-            if hour == arena_hour and start_minute <= minute <= end_minute:
-                return idx
-    
-    # Se não está em nenhuma janela, retornar arena mais recente do dia
-    if now.hour >= 23:
-        return 4
-    elif now.hour >= 21:
-        return 3
-    elif now.hour >= 19:
-        return 2
-    elif now.hour >= 13:
+    if 780 <= minutes <= 1139:   # 13:00–18:59
         return 1
-    else:
-        return 1  # Antes de 13:31, retorna arena 1 (do dia anterior ainda em andamento)
+    elif 1140 <= minutes <= 1229:  # 19:00–20:29
+        return 2
+    elif 1230 <= minutes <= 1379:  # 20:30–22:59
+        return 3
+    else:  # 23:00–12:59
+        return 4
 
 def get_latest_arena_indicators(session: Session, player_id: int, category: str):
     """
@@ -158,7 +109,7 @@ def save_level_ranking_history(session: Session, players_data: list):
     """
     try:
         from sqlalchemy import delete, func
-        
+        from app.utils.datetime_utils import get_brasilia_now
         # Verificar se já existe snapshot de hoje (em horário de Brasília)
         today = get_brasilia_now()
         today_str = today.strftime('%Y-%m-%d')
@@ -215,7 +166,9 @@ def save_arena_ranking_history(session: Session, players_data: list, category: s
         from sqlalchemy import delete
         
         # Detectar qual arena está sendo feita agora
-        arena_num = get_arena_number_by_time()
+        from app.utils.datetime_utils import get_brasilia_now
+        now = get_brasilia_now()
+        arena_num = get_arena_number_by_time(now)
         # Padronizar data/hora para validação (usar apenas data no formato YYYY-MM-DD)
         snapshot_date = get_formatted_now()
         today_str = snapshot_date.split()[0]  # pega apenas a data
@@ -656,8 +609,9 @@ def ensure_today_arena_ranking_snapshot(session: Session, category: str) -> bool
         from sqlalchemy.orm import joinedload
         
         # Detectar qual arena está sendo feita agora
-        arena_num = get_arena_number_by_time()
-        # Verificar se já existe snapshot desta arena específica hoje (em horário de Brasília)
+        from app.utils.datetime_utils import get_brasilia_now
+        now = get_brasilia_now()
+        arena_num = get_arena_number_by_time(now)        # Verificar se já existe snapshot desta arena específica hoje (em horário de Brasília)
         today = get_brasilia_date()
         today_start = datetime(today.year, today.month, today.day, 0, 0, 0, tzinfo=BRASILIA_TZ)
         today_end = datetime(today.year, today.month, today.day, 23, 59, 59, tzinfo=BRASILIA_TZ)
