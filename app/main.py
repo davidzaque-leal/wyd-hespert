@@ -294,13 +294,25 @@ def arena(request: Request, category: str):
 
     players = sorted(players, key=lambda x: x.get("total", 0), reverse=True)
     session = SessionLocal()
+    winner_list = []
     try:
         for idx, player in enumerate(players, 1):
             player["rank_position"] = idx
-            # Centraliza indicadores usando get_latest_arena_indicators
             from app.services.ranking_history_service import get_latest_arena_indicators
             indicators = get_latest_arena_indicators(session, player.get("id"), category)
             player["arena_indicators"] = indicators
+            # Coletar vencedores da última arena
+            if indicators.get("win_change") == 1:
+                winner_list.append({
+                    "id": player.get("id"),
+                    "rank_position": idx,
+                    "name": player.get("charName") or player.get("name") or f"ID {player.get('id')}"
+                })
+        # Ordenar vencedores por rank_position
+        winner_list.sort(key=lambda x: x["rank_position"])
+        
+        # Montar título dinâmico
+        congrats_title = f"Time vencedor da última Arena {category.capitalize()}! (Jogadores que viveram mais de 1 minuto)"
     finally:
         session.close()
 
@@ -309,7 +321,9 @@ def arena(request: Request, category: str):
         "players": players,
         "category": category,
         "last_update": data_store.last_update,
-        "user": get_current_user(request)
+        "user": get_current_user(request),
+        "arena_winners": winner_list,
+        "congrats_title": congrats_title
     })
 
 
