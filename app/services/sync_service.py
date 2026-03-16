@@ -14,11 +14,20 @@ class SyncService:
 
     @staticmethod
     def sync_all():
+        from datetime import datetime, timezone, timedelta
         session = SessionLocal()
         try:
             # LEVEL
-            level_response = requests.post(LEVEL_URL, json={"options": {}})
-            level_data = level_response.json()
+            now = datetime.now(timezone(timedelta(hours=-3)))  # Brasília
+            level_should_update = False
+            # Check if it's 00:01 or if no snapshot exists for today
+            from app.services.ranking_history_service import ensure_today_level_ranking_snapshot
+            today_snapshot_exists = ensure_today_level_ranking_snapshot(session)
+            if not today_snapshot_exists:
+                level_should_update = True
+            elif now.hour == 0 and now.minute == 1:
+                level_should_update = True
+
             # ARENA CHAMPION
             champion_response = requests.get(f"{ARENA_URL}?category=champion")
             champion_data = champion_response.json()
@@ -30,41 +39,44 @@ class SyncService:
             champion_changed = HashManager.check_and_update_hash("champion", champion_data)
             aspirant_changed = HashManager.check_and_update_hash("aspirant", aspirant_data)
 
-            # Ranking de level sempre atualiza uma vez por dia (agendado para 00:05)
             # Arena só atualiza se hash mudar
             if not (champion_changed or aspirant_changed):
                 print("SyncService: Nenhuma alteração detectada nos dados de arena, ignorando sync de arena.")
-            # Level sempre atualiza
 
-            # run inside a transaction for safety
+            # Level ranking só atualiza uma vez por dia
+            if level_should_update:
+                level_response = requests.post(LEVEL_URL, json={"options": {}})
+                level_data = level_response.json()
+                with session.begin():
+                    LevelRepository.clear(session)
+                    for player_data in level_data:
+                        try:
+                            pname = player_data.get("name") or player_data.get("charName")
+                            pguild = player_data.get("guild")
+                            print(f"Processing level entry: {pname!r}, guild={pguild}")
+                        except Exception:
+                            pass
+                        player = PlayerRepository.get_or_create(session, player_data)
+                        PlayerRepository.update_from_data(session, player, player_data)
+                        LevelRepository.save(session, player, player_data)
+                    session.flush()
+                print("✓ Level ranking atualizado para o dia.")
+            else:
+                print("ℹ️ Level ranking já atualizado hoje, pulando.")
+
+            # Arena update
             with session.begin():
-                # clear previous level and arena data, then insert fresh
-                LevelRepository.clear(session)
                 from app.models import ArenaCategoryEnum
                 ArenaRepository.clear_category(session, ArenaCategoryEnum.champion)
                 ArenaRepository.clear_category(session, ArenaCategoryEnum.aspirant)
-
-                for player_data in level_data:
-                    try:
-                        pname = player_data.get("name") or player_data.get("charName")
-                        pguild = player_data.get("guild")
-                        print(f"Processing level entry: {pname!r}, guild={pguild}")
-                    except Exception:
-                        pass
-                    player = PlayerRepository.get_or_create(session, player_data)
-                    PlayerRepository.update_from_data(session, player, player_data)
-                    LevelRepository.save(session, player, player_data)
-
                 for arena_data in champion_data:
                     player = PlayerRepository.get_or_create(session, {"name": arena_data.get("charName")})
                     PlayerRepository.update_from_data(session, player, arena_data)
                     ArenaRepository.save(session, player, arena_data, ArenaCategoryEnum.champion)
-
                 for arena_data in aspirant_data:
                     player = PlayerRepository.get_or_create(session, {"name": arena_data.get("charName")})
                     PlayerRepository.update_from_data(session, player, arena_data)
                     ArenaRepository.save(session, player, arena_data, ArenaCategoryEnum.aspirant)
-
                 session.flush()
                 try:
                     lvl_rows = session.execute(text("SELECT COUNT(*) FROM level_rankings")).scalar()
