@@ -249,7 +249,7 @@ def home(request: Request):
 # ===============================
 @app.get("/ranking")
 def ranking(request: Request):
-    from app.services.ranking_history_service import get_level_changes
+    from app.services.ranking_history_service import get_latest_level_indicators
     
     players = sorted(
         data_store.level_ranking,
@@ -262,12 +262,8 @@ def ranking(request: Request):
         # Adicionar índices de posição e mudanças de level
         for idx, player in enumerate(players, 1):
             player["rank_position"] = idx
-            
-            # Calcular mudanças de level
-            level_changes = get_level_changes(session, player.get("name"), {
-                'level_celestial': player.get("level"),
-                'level_sub_celestial': player.get("levelSub"),
-            })
+            # Calcular mudanças de level usando os dois registros mais recentes
+            level_changes = get_latest_level_indicators(session, player.get("id"))
             player["level_changes"] = level_changes
     finally:
         session.close()

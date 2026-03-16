@@ -160,8 +160,8 @@ def save_level_ranking_history(session: Session, players_data: list):
         from sqlalchemy import delete, func
         
         # Verificar se já existe snapshot de hoje (em horário de Brasília)
-        today = get_today()
-        today_str = today.strftime('%d/%m/%Y')
+        today = get_brasilia_now()
+        today_str = today.strftime('%Y-%m-%d')
         existing_today = session.query(LevelRankingHistory).filter(
             LevelRankingHistory.recorded_at.like(f'{today_str}%')
         ).first()
@@ -169,13 +169,6 @@ def save_level_ranking_history(session: Session, players_data: list):
         if existing_today:
             print(f"✓ Histórico de Level Ranking já salvo hoje (pulando)")
             return True
-        
-        # Limpar registros com mais de 30 dias
-        # Limpar registros com mais de 30 dias
-        cutoff_date = (datetime.now() - timedelta(days=30)).strftime('%d/%m/%Y %H:%M')
-        session.query(LevelRankingHistory).filter(
-            LevelRankingHistory.recorded_at < cutoff_date
-        ).delete()
         
         # Inserir novo snapshot de hoje usando horário de Brasília
         # Receber snapshot_date dos registros principais

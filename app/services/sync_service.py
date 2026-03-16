@@ -26,14 +26,15 @@ class SyncService:
             aspirant_response = requests.get(f"{ARENA_URL}?category=aspirant")
             aspirant_data = aspirant_response.json()
 
-            # Só atualiza se algum hash mudou
-            level_changed = HashManager.check_and_update_hash("level", level_data)
+            # Só atualiza se algum hash mudou (apenas arena)
             champion_changed = HashManager.check_and_update_hash("champion", champion_data)
             aspirant_changed = HashManager.check_and_update_hash("aspirant", aspirant_data)
 
-            if not (level_changed or champion_changed or aspirant_changed):
-                print("SyncService: Nenhuma alteração detectada nos dados, ignorando sync.")
-                return False
+            # Ranking de level sempre atualiza uma vez por dia (agendado para 00:05)
+            # Arena só atualiza se hash mudar
+            if not (champion_changed or aspirant_changed):
+                print("SyncService: Nenhuma alteração detectada nos dados de arena, ignorando sync de arena.")
+            # Level sempre atualiza
 
             # run inside a transaction for safety
             with session.begin():
