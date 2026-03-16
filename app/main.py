@@ -312,7 +312,7 @@ def arena(request: Request, category: str):
         winner_list.sort(key=lambda x: x["rank_position"])
         
         # Montar título dinâmico
-        congrats_title = f"Time vencedor da última Arena {category.capitalize()}! (Jogadores que viveram mais de 1 minuto)"
+        congrats_title = f"Time vencedor da última Arena {category.capitalize()}!"
     finally:
         session.close()
 
