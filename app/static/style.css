@@ -1,3 +1,13 @@
+/* Accordion styles */
+.arena-winners-accordion .accordion-title {
+    transition: background 0.2s;
+}
+.arena-winners-accordion .accordion-title:hover {
+    background: linear-gradient(135deg, #3a2a23 60%, #232a3a 100%);
+}
+.arena-winners-accordion .arena-winners-list {
+    transition: max-height 0.3s, opacity 0.3s;
+}
 * {
     margin: 0;
     padding: 0;

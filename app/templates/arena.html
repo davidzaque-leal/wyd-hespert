@@ -35,25 +35,44 @@
 
 
 
-<div class="arena-winners-list" style="margin: 24px 0; padding: 18px 16px 8px 16px; background: linear-gradient(135deg, #232a3a 60%, #3a2a23 100%); border-radius: 16px; border: 2px solid #a87c2a; text-align: center; box-shadow: 0 2px 12px #0002;">
-    <h3 style="color: #ffe082; margin-bottom: 16px; font-size: 1.25em;">🏆 {{ congrats_title }}</h3>
-    {% if arena_winners and arena_winners|length > 0 %}
-        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; justify-items: center; margin-bottom: 8px;">
-            {% for winner in arena_winners %}
-                <div style="background: #2a232a; color: #ffe082; padding: 10px 22px; border-radius: 10px; font-weight: bold; font-size: 1.08em; box-shadow: 0 2px 8px #0002; display: flex; align-items: center; gap: 10px; border: 1px solid #a87c2a;">
-                    <span>{{ winner.name }}</span>
-                    <span style="color: #ffe082; font-size: 1.15em;">{{ winner.rank_position }}º</span>
+
+<div class="arena-winners-accordion">
+    <div class="accordion-title" onclick="toggleWinnersAccordion()" style="cursor:pointer; background: linear-gradient(135deg, #232a3a 60%, #3a2a23 100%); color: #ffe082; border-radius: 16px; border: 2px solid #a87c2a; text-align: center; font-size: 1.1em; font-weight: bold; padding: 8px 0; box-shadow: 0 2px 8px #0002; margin-bottom: 6px;">
+        Clique para ver o time vencedor
+    </div>
+    <div id="winnersAccordionContent" style="display:none;">
+        <div class="arena-winners-list" style="margin: 0; padding: 9px 8px 4px 8px; background: linear-gradient(135deg, #232a3a 60%, #3a2a23 100%); border-radius: 16px; border: 2px solid #a87c2a; text-align: center; box-shadow: 0 2px 8px #0002;">
+            <h3 style="color: #ffe082; margin-bottom: 8px; font-size: 1em;">🏆 {{ congrats_title }}</h3>
+            {% if arena_winners and arena_winners|length > 0 %}
+                <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; justify-items: center; margin-bottom: 8px;">
+                    {% for winner in arena_winners %}
+                        <div style="background: #2a232a; color: #ffe082; padding: 10px 22px; border-radius: 10px; font-weight: bold; font-size: 1.08em; box-shadow: 0 2px 8px #0002; display: flex; align-items: center; gap: 10px; border: 1px solid #a87c2a;">
+                            <span>{{ winner.name }}</span>
+                            <span style="color: #ffe082; font-size: 1.15em;">{{ winner.rank_position }}º</span>
+                        </div>
+                    {% endfor %}
                 </div>
-            {% endfor %}
+            {% else %}
+                <span style="color: #aaa;">Nenhum vencedor detectado nesta arena.</span>
+            {% endif %}
+            <!-- Rodapé explicativo -->
+            <div style="text-align: right; font-size: 0.92em; color: #888; margin-top: 6px; font-style: italic;">
+                Jogadores que viveram mais de 1 minuto
+            </div>
         </div>
-    {% else %}
-        <span style="color: #aaa;">Nenhum vencedor detectado nesta arena.</span>
-    {% endif %}
-    <!-- Rodapé explicativo -->
-    <div style="text-align: right; font-size: 0.92em; color: #888; margin-top: 12px; font-style: italic;">
-        Jogadores que viveram mais de 1 minuto
     </div>
 </div>
+
+<script>
+function toggleWinnersAccordion() {
+    var content = document.getElementById('winnersAccordionContent');
+    if (content.style.display === 'none') {
+        content.style.display = 'block';
+    } else {
+        content.style.display = 'none';
+    }
+}
+</script>
 
 <div class="ranking-container">
     {% for p in players %}
