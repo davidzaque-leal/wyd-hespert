@@ -44,11 +44,11 @@
         <div class="arena-winners-list" style="margin: 0; padding: 9px 8px 4px 8px; background: linear-gradient(135deg, #232a3a 60%, #3a2a23 100%); border-radius: 16px; border: 2px solid #a87c2a; text-align: center; box-shadow: 0 2px 8px #0002;">
             <h3 style="color: #ffe082; margin-bottom: 8px; font-size: 1em;">🏆 {{ congrats_title }}</h3>
             {% if arena_winners and arena_winners|length > 0 %}
-                <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; justify-items: center; margin-bottom: 8px;">
+                <div class="winners-grid">
                     {% for winner in arena_winners %}
-                        <div style="background: #2a232a; color: #ffe082; padding: 10px 22px; border-radius: 10px; font-weight: bold; font-size: 1.08em; box-shadow: 0 2px 8px #0002; display: flex; align-items: center; gap: 10px; border: 1px solid #a87c2a;">
+                        <div class="winner-item">
                             <span>{{ winner.name }}</span>
-                            <span style="color: #ffe082; font-size: 1.15em;">{{ winner.rank_position }}º</span>
+                            <span class="winner-rank">{{ winner.rank_position }}º</span>
                         </div>
                     {% endfor %}
                 </div>

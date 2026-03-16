@@ -1,3 +1,88 @@
+.arena-winners-list .winners-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    justify-items: center;
+    margin-bottom: 8px;
+}
+.arena-winners-list .winner-item {
+    background: #2a232a;
+    color: #ffe082;
+    padding: 10px 22px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1.08em;
+    box-shadow: 0 2px 8px #0002;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #a87c2a;
+}
+.arena-winners-list .winner-rank {
+    color: #ffe082;
+    font-size: 1.15em;
+}
+
+@media (max-width: 900px) {
+    .arena-winners-list .winners-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .arena-winners-list .winners-grid {
+        grid-template-columns: 1fr;
+    }
+    .arena-winners-list .winner-item {
+        width: 100%;
+        justify-content: center;
+        font-size: 0.85em;
+        padding: 8px 0;
+    }
+}
+/* Responsive winners grid */
+.arena-winners-list .winners-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    justify-items: center;
+    margin-bottom: 8px;
+}
+.arena-winners-list .winner-item {
+    background: #2a232a;
+    color: #ffe082;
+    padding: 10px 22px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1.08em;
+    box-shadow: 0 2px 8px #0002;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #a87c2a;
+}
+.arena-winners-list .winner-rank {
+    color: #ffe082;
+    font-size: 1.15em;
+}
+
+@media (max-width: 900px) {
+    .arena-winners-list .winners-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .arena-winners-list .winners-grid {
+        grid-template-columns: 1fr;
+    }
+    .arena-winners-list .winner-item {
+        width: 100%;
+        justify-content: center;
+        font-size: 0.95em;
+        padding: 12px 0;
+    }
+}
 /* Accordion styles */
 .arena-winners-accordion .accordion-title {
     transition: background 0.2s;
