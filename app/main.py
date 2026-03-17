@@ -2,6 +2,7 @@ import threading
 import time
 import os
 from fastapi import FastAPI, Request, HTTPException, Response, Form
+from sqlalchemy import desc
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import RedirectResponse
@@ -240,6 +241,7 @@ def ranking(request: Request):
 @app.get("/arena/{category}")
 def arena(request: Request, category: str):
     from app.services.ranking_history_service import get_position_changes, get_arena_changes
+    from app.models import ArenaRankingHistory
     
     if category not in ["champion", "aspirant"]:
         raise HTTPException(status_code=404, detail="Categoria inválida")
@@ -254,6 +256,7 @@ def arena(request: Request, category: str):
     session = SessionLocal()
     winner_list = []
     try:
+        session2 = SessionLocal()
         for idx, player in enumerate(players, 1):
             player["rank_position"] = idx
             from app.services.ranking_history_service import get_latest_arena_indicators
@@ -271,6 +274,38 @@ def arena(request: Request, category: str):
         
         # Montar título dinâmico
         congrats_title = f"Time vencedor da última Arena {category.capitalize()}!"
+        # Buscar o valor máximo de recorded_at para a categoria
+        try:
+            max_record = session2.query(ArenaRankingHistory.recorded_at)\
+                .filter(ArenaRankingHistory.category == category)\
+                .order_by(desc(ArenaRankingHistory.recorded_at))\
+                .first()
+            max_recorded_at = max_record[0] if max_record else None
+        finally:
+            session2.close()
+        
+        import datetime
+        def parse_dt(dt_str):
+            try:
+                return datetime.datetime.strptime(dt_str, "%Y-%m-%d %H:%M")
+            except Exception:
+                try:
+                    return datetime.datetime.strptime(dt_str, "%Y-%m-%d %H:%M:%S")
+                except Exception:
+                    return None
+        
+        dt_last_update = parse_dt(data_store.last_update) if data_store.last_update else None
+        dt_max_recorded = parse_dt(max_recorded_at) if max_recorded_at else None
+        
+        if dt_last_update and dt_max_recorded:
+            most_recent = max(dt_last_update, dt_max_recorded)
+            most_recent_str = most_recent.strftime("%Y-%m-%d %H:%M")
+        elif dt_last_update:
+            most_recent_str = data_store.last_update
+        elif dt_max_recorded:
+            most_recent_str = max_recorded_at
+        else:
+            most_recent_str = None
     finally:
         session.close()
 
@@ -278,7 +313,7 @@ def arena(request: Request, category: str):
         "request": request,
         "players": players,
         "category": category,
-        "last_update": data_store.last_update,
+        "last_update": most_recent_str,
         "user": get_current_user(request),
         "arena_winners": winner_list,
         "congrats_title": congrats_title

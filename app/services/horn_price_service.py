@@ -36,7 +36,7 @@ class HornPriceService:
             "fury_qtd": 5,
             "fury_total": fury_total,
             "pl_unit": p["pl_30"],
-            "pl_qtd": 20,
+            "pl_qtd": 30,
             "pl_total": pl_total,
             "total": total
         }

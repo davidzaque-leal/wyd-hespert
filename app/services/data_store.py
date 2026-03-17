@@ -53,7 +53,8 @@ class DataStore:
                         for a in aspirant_rows
                     ]
                     if updated:
-                        self.last_update = time.strftime("%Y-%m-%d %H:%M:%S")
+                        from app.utils.datetime_utils import get_formatted_now
+                        self.last_update = get_formatted_now()
 
                 if sync:
                     try:
