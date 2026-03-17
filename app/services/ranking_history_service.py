@@ -123,6 +123,12 @@ def save_level_ranking_history(session: Session, players_data: list):
         season = get_season()
 
         for rank_pos, player_data in enumerate(players_data, 1):
+            # Garantir que recorded_at seja string
+            rec_at = player_data.get("recorded_at")
+            if isinstance(rec_at, datetime):
+                rec_at = rec_at.strftime('%Y-%m-%d %H:%M')
+            elif not rec_at:
+                rec_at = snapshot_date
             history = LevelRankingHistory(
                 player_id=player_data.get("id"),
                 player_name=player_data.get("name") or player_data.get("charName") or "Unknown",
@@ -133,17 +139,14 @@ def save_level_ranking_history(session: Session, players_data: list):
                 level_sub_celestial=player_data.get("levelSub", 0),
                 celestial_lineage_name=player_data.get("celestial_lineage", ""),
                 subclass_lineage_name=player_data.get("subclass_lineage", ""),
-                recorded_at=snapshot_date
+                recorded_at=rec_at
             )
             session.add(history)
-        
-        session.commit()
+    
         print(f"✓ Histórico de Level Ranking salvo ({len(players_data)} players)")
         return True
-        
     except Exception as e:
         print(f"⚠ Erro ao salvar histórico: {e}")
-        session.rollback()
         return False
 
 def save_arena_ranking_history(session: Session, players_data: list, category: str):
@@ -203,13 +206,10 @@ def save_arena_ranking_history(session: Session, players_data: list, category: s
             )
             session.add(history)
         
-        session.commit()
         print(f"✓ Histórico de Arena {category} salvo ({len(players_data)} players)")
         return True
-        
     except Exception as e:
         print(f"⚠ Erro ao salvar histórico de arena: {e}")
-        session.rollback()
         return False
 
 def get_level_ranking_history(session: Session, limit: int = 100):
@@ -504,12 +504,15 @@ def ensure_today_level_ranking_snapshot(session: Session) -> bool:
         today = get_brasilia_date()
         today_start = datetime(today.year, today.month, today.day, tzinfo=BRASILIA_TZ)
         tomorrow_start = today_start + timedelta(days=1)
+        # Converter para string no formato do banco
+        today_start_str = today_start.strftime('%Y-%m-%d %H:%M')
+        tomorrow_start_str = tomorrow_start.strftime('%Y-%m-%d %H:%M')
 
         # Verifica se já existe snapshot hoje
         snapshot_exists = session.query(
             exists().where(
-                LevelRankingHistory.recorded_at >= today_start,
-                LevelRankingHistory.recorded_at < tomorrow_start
+                LevelRankingHistory.recorded_at >= today_start_str,
+                LevelRankingHistory.recorded_at < tomorrow_start_str
             )
         ).scalar()
 
@@ -529,7 +532,8 @@ def ensure_today_level_ranking_snapshot(session: Session) -> bool:
             print("⚠ Nenhum dado de ranking de level encontrado")
             return False
 
-        brasilia_now = datetime.now(BRASILIA_TZ)
+        from app.utils.datetime_utils import get_formatted_now
+        brasilia_now_str = get_formatted_now()
 
         history_rows = []
 
@@ -551,7 +555,7 @@ def ensure_today_level_ranking_snapshot(session: Session) -> bool:
                     level_sub_celestial=getattr(level_row, "level_sub_celestial", 0),
                     celestial_lineage_name=level_row.celestial_lineage_name or "",
                     subclass_lineage_name=level_row.subclass_lineage_name or "",
-                    recorded_at=brasilia_now,
+                    recorded_at=brasilia_now_str,
                 )
             )
 
@@ -614,7 +618,8 @@ def ensure_today_arena_ranking_snapshot(session: Session, category: str) -> bool
             return False
         
         # Criar snapshot para os dados atuais usando horário de Brasília
-        brasilia_now = datetime.now()
+        from app.utils.datetime_utils import get_formatted_now
+        brasilia_now_str = get_formatted_now()
         
         for rank_pos, arena_row in enumerate(arena_rows, 1):
             player_name = arena_row.player.name if arena_row.player else f"Player_{arena_row.player_id}"
@@ -630,7 +635,7 @@ def ensure_today_arena_ranking_snapshot(session: Session, category: str) -> bool
                 win_count=arena_row.win_count,
                 kill_value=arena_row.kill_value,
                 death_value=arena_row.death_value,
-                recorded_at=brasilia_now,
+                recorded_at=brasilia_now_str,
             )
             session.add(history)
         

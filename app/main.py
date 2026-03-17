@@ -27,43 +27,14 @@ app.mount("/static", StaticFiles(directory="app/static"), name="static")
 # Background updater
 # ===============================
 def background_updater():
-    """
-    Background updater com timer para as arenas
-    Horários de atualização GMT-3 (Brasília):
-    - 13:31 - Arena 1
-    - 19:31 - Arena 2
-    - 21:01 - Arena 3
-    - 23:31 - Arena 4
-    
-    Level ranking atualiza apenas uma vez por dia
-    """
-    from datetime import datetime, timezone, timedelta
-    
-    # timezone de Brasília (GMT-3)
-    brasilia_tz = timezone(timedelta(hours=-3))
-    
-    # Aguardar próximo horário de sincronização
-    time.sleep(60)
-    
     from app.services.sync_service import SyncService
     while True:
         try:
-            now = datetime.now(brasilia_tz)
-            minute = now.minute
-
-            # Consulta rápida nos minutos 00-05 e 30-35 (a cada 30s)
-            if (0 <= minute <= 5) or (30 <= minute <= 35):
-                interval = 30
-            else:
-                interval = 300
-
             SyncService.check_hashes()
-            print(f"⏰ background_updater executado às {now.strftime('%H:%M:%S')}")
-
+            print(f"⏰ background_updater executado")
         except Exception as e:
             print(f"⚠ Erro no background_updater: {e}")
-            
-        time.sleep(interval)
+        time.sleep(30)
 
 # ===============================
 # Authentication Routes

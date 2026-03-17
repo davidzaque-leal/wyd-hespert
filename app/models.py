@@ -1,8 +1,17 @@
+
 from sqlalchemy import Column, Integer, String, SmallInteger, ForeignKey, CheckConstraint, Enum, UniqueConstraint
 from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
 from app.database import Base
 from app.utils.datetime_utils import get_formatted_now
+
+# --- Hash persistence table ---
+class SyncHash(Base):
+    __tablename__ = "sync_hash"
+    id = Column(Integer, primary_key=True)
+    name = Column(String(32), unique=True, nullable=False, index=True)
+    hash_value = Column(String(128), nullable=False)
+    updated_at = Column(String(16), default=get_formatted_now, onupdate=get_formatted_now)
 
 # Enums para campos
 import enum
