@@ -1,0 +1,123 @@
+{% extends "base.html" %}
+
+{% block title %}Calculadora de Horn{% endblock %}
+
+{% block hero %}
+<div class="hero">
+    <h1>🛠️ Calculadora de Horn</h1>
+    <p>Descubra rapidamente o custo por Horn com base nas suas lanças e recursos.</p>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="card" style="margin-top: 24px; max-width: 760px; margin-left: auto; margin-right: auto;">
+    
+    <form method="post" style="padding: 24px;">
+        
+        <!-- CONFIG PRINCIPAL -->
+        <div style="margin-bottom: 24px;">
+            <h3 style="color: rgb(12, 11, 11); margin-bottom: 12px;">⚙️ Configuração</h3>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px;">
+                <div>
+                    <label class="label">Nível da Lança</label>
+                    <select name="spear_level" class="form-control">
+                        <option value="5">Nível 5</option>
+                        <option value="10">Nível 10</option>
+                        <option value="15">Nível 15</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="label">Qtd. de Lanças</label>
+                    <input type="number" name="qtd_lancas" min="1" value="1" class="form-control">
+                </div>
+
+            </div>
+        </div>
+
+        <!-- RECURSOS CONS -->
+        <div style="margin-bottom: 24px; padding: 16px; border-radius: 12px; background: #1e293b;">
+            <div style="display:flex; justify-content: space-between; align-items:center; margin-bottom:10px;">
+                <h3 style="color: #ffd700; margin:0;">💰 Recursos obtidos no CONS</h3>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px;">
+                <div>
+                    <label class="label">Medalha Roxa</label>
+                    <input type="number" name="medalha_roxa" min="0" value="0" class="form-control">
+                </div>
+                <div>
+                    <label class="label">Medalha Dourada</label>
+                    <input type="number" name="medalha_dourada" min="0" value="0" class="form-control">
+                </div>
+                <div>
+                    <label class="label">Medalha Vermelha</label>
+                    <input type="number" name="medalha_vermelha" min="0" value="0" class="form-control">
+                </div>
+                <div>
+                    <label class="label">Valk +0</label>
+                    <input type="number" name="valk_0" min="0" value="0" class="form-control">
+                </div>
+                <div>
+                    <label class="label">Crystal x20</label>
+                    <input type="number" name="bahamut_crystal_20" min="0" value="0" class="form-control">
+                </div>
+                <div>
+                    <label class="label">Rune x10</label>
+                    <input type="number" name="bahamut_rune_10" min="0" value="0" class="form-control">
+                </div>
+
+                <div>
+                    <label class="label">Qtd. de Horns</label>
+                    <input type="number" name="qtd_horn" min="0" value="0" class="form-control">
+                </div>
+            </div>
+        </div>
+
+        <!-- BOTÃO -->
+        <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1.1em;">
+            🧮 Calcular
+        </button>
+
+        <!-- RESULTADO -->
+        {% if result %}
+        {% set parts = result.split('<br>') %}
+        <div style="margin-top: 24px; padding: 20px; border-radius: 16px; background: linear-gradient(135deg, #1e293b, #334155); box-shadow: 0 4px 12px #0004;">
+            
+            <h3 style="color: #ffd700; margin-bottom: 16px;">📊 Resultado</h3>
+
+            <div style="display: flex; justify-content: space-between; align-items: center; font-size: 1.3em;">
+                <span style="color: #aaa;">Preço por Horn</span>
+                <span style="color: #00ffae; font-weight: bold;">{{ parts[1]|safe }}</span>
+            </div>
+        </div>
+        {% endif %}
+
+    </form>
+</div>
+
+<style>
+.label {
+    display:block;
+    color:#aaa;
+    margin-bottom:4px;
+    font-size:0.9em;
+}
+
+.form-control {
+    width:100%;
+    background:#0f172a;
+    color:#fff;
+    border:1px solid #334155;
+    border-radius:8px;
+    padding:6px 10px;
+}
+
+.form-control:focus {
+    outline:none;
+    border-color:#3b82f6;
+}
+</style>
+
+{% endblock %}

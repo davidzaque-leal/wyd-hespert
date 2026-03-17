@@ -461,3 +461,67 @@ def health():
         "status": "ok",
         "last_update": data_store.last_update
     }
+
+# ===============================
+# Menu de Ferramentas
+# ===============================
+@app.get("/tools")
+def tools_menu(request: Request):
+    return templates.TemplateResponse("tools.html", {"request": request})
+
+# ===============================
+# Calculadora de Horn
+# ===============================
+@app.get("/tools/horn-calculator")
+def horn_calculator_get(request: Request):
+    return templates.TemplateResponse("horn_calculator.html", {"request": request})
+
+@app.post("/tools/horn-calculator")
+def horn_calculator_post(
+    request: Request,
+    spear_level: int = Form(...),
+    qtd_lancas: int = Form(1),
+    qtd_horn: int = Form(1),
+    medalha_roxa: int = Form(0),
+    medalha_dourada: int = Form(0),
+    medalha_vermelha: int = Form(0),
+    valk_0: int = Form(0),
+    bahamut_crystal_20: int = Form(0),
+    bahamut_rune_10: int = Form(0)
+):
+    from app.services.horn_price_service import HornPriceService
+    custo_cons = 5 * HornPriceService.MATERIAL_PRICES["bahamut_fury"] + 30 * HornPriceService.MATERIAL_PRICES["pl_30"]
+    recursos = {
+        "medalha_roxa": medalha_roxa,
+        "medalha_dourada": medalha_dourada,
+        "medalha_vermelha": medalha_vermelha,
+        "valk_0": valk_0,
+        "bahamut_crystal_20": bahamut_crystal_20,
+        "bahamut_rune_10": bahamut_rune_10,
+    }
+    spear_cost = HornPriceService.spear_cost(spear_level)
+    recursos_cons = sum(v * HornPriceService.MATERIAL_PRICES.get(k, 0) for k, v in recursos.items())
+    result = f"Custo da lança nível {spear_level}: <b>{spear_cost}</b>"
+    horn_price = HornPriceService.horn_price(qtd_lancas, spear_cost, custo_cons, recursos_cons, qtd_horn)
+    result += f"<br>Preço por Horn: <b>{horn_price:.2f}</b>"
+    # Descrição dos recursos obtidos
+    recursos_descricao = []
+    for k, v in recursos.items():
+        if v > 0:
+            nome = k.replace("medalha_", "Medalha ").replace("valk_0", "Valk +0").replace("bahamut_crystal_20", "Crystal x20").replace("bahamut_rune_10", "Rune x10")
+            recursos_descricao.append(f"{nome}: {v} × {HornPriceService.MATERIAL_PRICES.get(k,0)} = {v*HornPriceService.MATERIAL_PRICES.get(k,0)}")
+    recursos_descricao = ", ".join(recursos_descricao) if recursos_descricao else "Nenhum recurso obtido"
+
+    return templates.TemplateResponse(
+        "horn_calculator.html",
+        {
+            "request": request,
+            "result": result,
+            "qtd_lancas": qtd_lancas,
+            "spear_cost": spear_cost,
+            "custo_cons": custo_cons,
+            "recursos_cons": recursos_cons,
+            "recursos_descricao": recursos_descricao,
+            "qtd_horn": qtd_horn,
+        }
+    )
