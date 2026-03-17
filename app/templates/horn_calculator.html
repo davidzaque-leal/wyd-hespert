@@ -22,15 +22,15 @@
                 <div>
                     <label class="label">Nível da Lança</label>
                     <select name="spear_level" class="form-control">
-                        <option value="5">Nível 5</option>
-                        <option value="10">Nível 10</option>
-                        <option value="15">Nível 15</option>
+                        <option value="5" {% if form_data and form_data.spear_level == 5 %}selected{% endif %}>Nível 5</option>
+                        <option value="10" {% if form_data and form_data.spear_level == 10 %}selected{% endif %}>Nível 10</option>
+                        <option value="15" {% if form_data and form_data.spear_level == 15 %}selected{% endif %}>Nível 15</option>
                     </select>
                 </div>
 
                 <div>
                     <label class="label">Qtd. de Lanças</label>
-                    <input type="number" name="qtd_lancas" min="1" value="1" class="form-control">
+                    <input type="number" name="qtd_lancas" min="1" value="{{ form_data.qtd_lancas if form_data else 1 }}" class="form-control">
                 </div>
 
             </div>
@@ -45,32 +45,32 @@
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px;">
                 <div>
                     <label class="label">Medalha Roxa</label>
-                    <input type="number" name="medalha_roxa" min="0" value="0" class="form-control">
+                    <input type="number" name="medalha_roxa" min="0" value="{{ form_data.medalha_roxa if form_data else 0 }}" class="form-control">
                 </div>
                 <div>
                     <label class="label">Medalha Dourada</label>
-                    <input type="number" name="medalha_dourada" min="0" value="0" class="form-control">
+                    <input type="number" name="medalha_dourada" min="0" value="{{ form_data.medalha_dourada if form_data else 0 }}" class="form-control">
                 </div>
                 <div>
                     <label class="label">Medalha Vermelha</label>
-                    <input type="number" name="medalha_vermelha" min="0" value="0" class="form-control">
+                    <input type="number" name="medalha_vermelha" min="0" value="{{ form_data.medalha_vermelha if form_data else 0 }}" class="form-control">
                 </div>
                 <div>
                     <label class="label">Valk +0</label>
-                    <input type="number" name="valk_0" min="0" value="0" class="form-control">
+                    <input type="number" name="valk_0" min="0" value="{{ form_data.valk_0 if form_data else 0 }}" class="form-control">
                 </div>
                 <div>
                     <label class="label">Crystal x20</label>
-                    <input type="number" name="bahamut_crystal_20" min="0" value="0" class="form-control">
+                    <input type="number" name="bahamut_crystal_20" min="0" value="{{ form_data.bahamut_crystal_20 if form_data else 0 }}" class="form-control">
                 </div>
                 <div>
                     <label class="label">Rune x10</label>
-                    <input type="number" name="bahamut_rune_10" min="0" value="0" class="form-control">
+                    <input type="number" name="bahamut_rune_10" min="0" value="{{ form_data.bahamut_rune_10 if form_data else 0 }}" class="form-control">
                 </div>
 
                 <div>
                     <label class="label">Qtd. de Horns</label>
-                    <input type="number" name="qtd_horn" min="0" value="0" class="form-control">
+                    <input type="number" name="qtd_horn" min="0" value="{{ form_data.qtd_horn if form_data else 0 }}" class="form-control">
                 </div>
             </div>
         </div>
@@ -80,17 +80,86 @@
             🧮 Calcular
         </button>
 
-        <!-- RESULTADO -->
-        {% if result %}
-        {% set parts = result.split('<br>') %}
-        <div style="margin-top: 24px; padding: 20px; border-radius: 16px; background: linear-gradient(135deg, #1e293b, #334155); box-shadow: 0 4px 12px #0004;">
+       {% if result %}
+        <!-- RECIBO -->
+        <div style="margin-top: 24px; padding: 20px; border-radius: 16px; background: #0f172a; box-shadow: 0 4px 12px #0005; font-family: monospace;">
             
-            <h3 style="color: #ffd700; margin-bottom: 16px;">📊 Resultado</h3>
+            <h3 style="color: #22c55e; text-align:center; margin-bottom: 16px;">
+                🧾 RECIBO DO CÁLCULO
+            </h3>
 
-            <div style="display: flex; justify-content: space-between; align-items: center; font-size: 1.3em;">
-                <span style="color: #aaa;">Preço por Horn</span>
-                <span style="color: #00ffae; font-weight: bold;">{{ parts[1]|safe }}</span>
+            <!-- LANÇAS -->
+            <div style="border-bottom:1px dashed #334155; padding-bottom:12px; margin-bottom:12px;">
+                <div style="display:flex; justify-content:space-between;">
+                    <span>Lança +{{ result.spear.level }}</span>
+                    <span>{{ result.spear.qtd }} x {{ result.spear.unit }}</span>
+                </div>
+
+                <div style="display:flex; justify-content:space-between; font-weight:bold; color:#fff;">
+                    <span>Total Lanças</span>
+                    <span>{{ result.spear.total }}</span>
+                </div>
             </div>
+
+            <!-- CONS -->
+            <div style="border-bottom:1px dashed #334155; padding-bottom:12px; margin-bottom:12px;">
+                <div style="display:flex; justify-content:space-between;">
+                    <span>Bahamut Fury</span>
+                    <span>{{ result.cons.fury_qtd }} x {{ result.cons.fury_unit }}</span>
+                </div>
+
+                <div style="display:flex; justify-content:space-between;">
+                    <span>PL</span>
+                    <span>{{ result.cons.pl_qtd }} x {{ result.cons.pl_unit }}</span>
+                </div>
+
+                <div style="display:flex; justify-content:space-between; font-weight:bold; color:#fff;">
+                    <span>Total CONS</span>
+                    <span>{{ result.cons.total }}</span>
+                </div>
+            </div>
+
+            <!-- DESCONTO -->
+            {% if result.recursos.itens %}
+            <div style="border-bottom:1px dashed #334155; padding-bottom:12px; margin-bottom:12px;">
+                
+                <div style="color:#f87171; font-weight:bold; margin-bottom:6px;">
+                    (-) Recursos obtidos
+                </div>
+
+                {% for item in result.recursos.itens %}
+                <div style="display:flex; justify-content:space-between;">
+                    <span>{{ item.nome }}</span>
+                    <span>{{ item.qtd }} x {{ item.unit }}</span>
+                </div>
+                {% endfor %}
+
+                <div style="display:flex; justify-content:space-between; font-weight:bold; color:#f87171;">
+                    <span>Total Desconto</span>
+                    <span>-{{ result.recursos.total }}</span>
+                </div>
+            </div>
+            {% endif %}
+
+            <!-- TOTAL -->
+            <div style="border-bottom:1px dashed #334155; padding-bottom:12px; margin-bottom:12px;">
+                <div style="display:flex; justify-content:space-between; font-weight:bold;">
+                    <span>Custo Total</span>
+                    <span>{{ result.total_cost }}</span>
+                </div>
+            </div>
+
+            <!-- FINAL -->
+            <div style="text-align:center;">
+                <div style="color:#aaa;">
+                    {{ result.total_cost }} ÷ {{ result.qtd_horn }} Horn(s)
+                </div>
+
+                <div style="font-size:1.6em; color:#00ffae; font-weight:bold; margin-top:6px;">
+                    {{ result.price_per_horn }}
+                </div>
+            </div>
+
         </div>
         {% endif %}
 
