@@ -34,7 +34,7 @@ def background_updater():
             print(f"⏰ background_updater executado")
         except Exception as e:
             print(f"⚠ Erro no background_updater: {e}")
-        time.sleep(30)
+        time.sleep(300)
 
 # ===============================
 # Authentication Routes

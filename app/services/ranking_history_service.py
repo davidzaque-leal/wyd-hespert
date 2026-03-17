@@ -149,50 +149,24 @@ def save_level_ranking_history(session: Session, players_data: list):
         print(f"⚠ Erro ao salvar histórico: {e}")
         return False
 
+from sqlalchemy.exc import IntegrityError
+
 def save_arena_ranking_history(session: Session, players_data: list, category: str):
-    """
-    Salva snapshot do ranking de arena (4 vezes ao dia nos horários específicos)
-    Horários: 13:31, 19:31, 21:01 e 23:31 GMT-3
-    
-    Args:
-        session: SQLAlchemy Session
-        players_data: Lista de dicts com dados dos players
-        category: 'champion' ou 'aspirant'
-    """
+
     try:
-        from sqlalchemy import delete
-        
-        # Detectar qual arena está sendo feita agora
         from app.utils.datetime_utils import get_brasilia_now
         now = get_brasilia_now()
+
         arena_num = get_arena_number_by_time(now)
-        # Padronizar data/hora para validação (usar apenas data no formato YYYY-MM-DD)
+
         snapshot_date = get_formatted_now()
-        today_str = snapshot_date.split()[0]  # pega apenas a data
-        # Corrige para o formato YYYY-MM-DD
-        if '/' in today_str:
-            # Caso esteja no formato dd/mm/yyyy, converte
-            today_obj = datetime.strptime(today_str, '%d/%m/%Y')
-            today_str = today_obj.strftime('%Y-%m-%d')
-        existing_arena = session.query(ArenaRankingHistory).filter(
-            ArenaRankingHistory.recorded_at.like(f'{today_str}%'),
-            ArenaRankingHistory.category == category,
-            ArenaRankingHistory.arena_number == arena_num
-        ).first()
 
-        if existing_arena:
-            print(f"✓ Histórico de Arena {category} #{arena_num} já salvo hoje (pulando)")
-            return True
-
-        # Inserir novo snapshot usando horário de Brasília
-        # Receber snapshot_date dos registros principais
-        # Sempre usar horário de Brasília
         season = get_season()
 
         for rank_pos, player_data in enumerate(players_data, 1):
-            player_id = player_data.get("id")
+
             history = ArenaRankingHistory(
-                player_id=player_id,
+                player_id=player_data.get("id"),
                 category=category,
                 arena_number=arena_num,
                 rank_position=rank_pos,
@@ -204,11 +178,20 @@ def save_arena_ranking_history(session: Session, players_data: list, category: s
                 recorded_at=snapshot_date,
                 season=season
             )
+
             session.add(history)
-        
+
         print(f"✓ Histórico de Arena {category} salvo ({len(players_data)} players)")
+
         return True
+
+    except IntegrityError:
+        session.rollback()
+        print(f"✓ Snapshot de arena {category} já existe (ignorado)")
+        return True
+
     except Exception as e:
+        session.rollback()
         print(f"⚠ Erro ao salvar histórico de arena: {e}")
         return False
 
