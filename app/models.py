@@ -17,9 +17,6 @@ class KingdomEnum(enum.Enum):
     none = "none"
 
 
-
-
-
 class Class(Base):
     __tablename__ = "classes"
 

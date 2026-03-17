@@ -23,7 +23,6 @@ app.include_router(ranking_router.router)
 templates = Jinja2Templates(directory="app/templates")
 app.mount("/static", StaticFiles(directory="app/static"), name="static")
 
-
 # ===============================
 # Background updater
 # ===============================
@@ -66,7 +65,6 @@ def background_updater():
             
         time.sleep(interval)
 
-
 # ===============================
 # Authentication Routes
 # ===============================
@@ -82,7 +80,6 @@ def login_page(request: Request):
         "request": request,
         "error": None
     })
-
 
 @app.post("/login")
 def login(request: Request, username: str = Form(...), password: str = Form(...)):
@@ -131,15 +128,12 @@ def login(request: Request, username: str = Form(...), password: str = Form(...)
     finally:
         session.close()
 
-
 @app.get("/logout")
 def logout():
     """Faz logout do usuário"""
     response = RedirectResponse(url="/", status_code=302)
     response.delete_cookie(key="user_id", httponly=True, secure=True, samesite="Strict")
     return response
-
-
 
 def startup_event():
     # Ensure DB tables exist and perform first sync
@@ -182,7 +176,6 @@ def startup_event():
 
 # Registrar startup event
 app.add_event_handler("startup", startup_event)
-
 
 # ===============================
 # HOME
@@ -236,7 +229,6 @@ def home(request: Request):
     finally:
         session.close()
 
-
 # ===============================
 # Ranking de Level
 # ===============================
@@ -270,7 +262,6 @@ def ranking(request: Request):
         "last_update": data_store.last_update,
         "user": get_current_user(request)
     })
-
 
 # ===============================
 # Arena
@@ -322,7 +313,6 @@ def arena(request: Request, category: str):
         "congrats_title": congrats_title
     })
 
-
 # ===============================
 # Ranking Combinado (Level + Arena)
 # ===============================
@@ -335,7 +325,6 @@ def ranking_combined(request: Request):
         "players": players,
         "last_update": data_store.last_update
     })
-
 
 # ===============================
 # Buscar Players
@@ -358,7 +347,6 @@ def _get_search_context(session, results=None, search_performed=False):
         "search_performed": search_performed,
     }
 
-
 @app.get("/search")
 def search_page(request: Request):
     """Página de busca com formulários - APENAS ADMIN"""
@@ -377,7 +365,6 @@ def search_page(request: Request):
         })
     finally:
         session.close()
-
 
 @app.get("/search-lineage")
 def search_lineage(request: Request, lineage: str = None):
@@ -417,7 +404,6 @@ def search_lineage(request: Request, lineage: str = None):
     finally:
         session.close()
 
-
 @app.get("/search-guild")
 def search_guild(request: Request, guild_id: int = None):
     """Buscar players por guilda - APENAS ADMIN"""
@@ -455,7 +441,6 @@ def search_guild(request: Request, guild_id: int = None):
         })
     finally:
         session.close()
-
 
 @app.get("/search-guild-lineage")
 def search_guild_lineage(request: Request, guild_id: int = None, lineage: str = None):
@@ -495,7 +480,6 @@ def search_guild_lineage(request: Request, guild_id: int = None, lineage: str = 
         })
     finally:
         session.close()
-
 
 # ===============================
 # Health Check

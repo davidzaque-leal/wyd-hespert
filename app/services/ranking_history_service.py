@@ -9,17 +9,12 @@ from app.models import LevelRankingHistory, ArenaRankingHistory
 from datetime import datetime, timedelta
 from app.utils.datetime_utils import get_formatted_now
 
-
-
-
-
 def get_season():
     """
     Retorna a season atual no formato MM/YY.
     """
     now = datetime.now()
     return now.strftime('%m/%y')
-
 
 def get_today():
     """
@@ -151,7 +146,6 @@ def save_level_ranking_history(session: Session, players_data: list):
         session.rollback()
         return False
 
-
 def save_arena_ranking_history(session: Session, players_data: list, category: str):
     """
     Salva snapshot do ranking de arena (4 vezes ao dia nos horários específicos)
@@ -218,7 +212,6 @@ def save_arena_ranking_history(session: Session, players_data: list, category: s
         session.rollback()
         return False
 
-
 def get_level_ranking_history(session: Session, limit: int = 100):
     """
     Recupera histórico de ranking de level
@@ -241,7 +234,6 @@ def get_level_ranking_history(session: Session, limit: int = 100):
     except Exception as e:
         print(f"⚠ Erro ao recuperar histórico: {e}")
         return []
-
 
 def get_player_level_history(session: Session, player_id: int, limit: int = 30):
     """
@@ -267,7 +259,6 @@ def get_player_level_history(session: Session, player_id: int, limit: int = 30):
     except Exception as e:
         print(f"⚠ Erro ao recuperar histórico do player: {e}")
         return []
-
 
 def get_level_changes(session: Session, player_name: str, current_data: dict) -> dict:
     """
@@ -334,7 +325,6 @@ def get_level_changes(session: Session, player_name: str, current_data: dict) ->
             'subclass_active': False,
         }
 
-
 def get_position_changes(session: Session, player_name: str, current_position: int) -> dict:
     """
     Compara posição atual com snapshot de ontem (em horário de Brasília)
@@ -392,7 +382,6 @@ def get_position_changes(session: Session, player_name: str, current_position: i
             'active': False,
             'direction': 'neutral',
         }
-
 
 def get_arena_changes(session: Session, player_name: str, current_data: dict, category: str, current_position: int) -> dict:
     """
@@ -494,103 +483,90 @@ def get_arena_changes(session: Session, player_name: str, current_data: dict, ca
         }
 
 def ensure_today_level_ranking_snapshot(session: Session) -> bool:
+    from datetime import datetime, timedelta
+    from sqlalchemy.orm import joinedload
+    from sqlalchemy import exists
+    from app.utils.datetime_utils import get_brasilia_date, BRASILIA_TZ
     """
-    Garante que existe um snapshot de LevelRankingHistory para hoje
-    Se não existir, cria um a partir dos dados atuais do banco
-    
+    Garante que existe um snapshot de LevelRankingHistory para hoje.
+    Se não existir, cria um a partir dos dados atuais do banco.
+
     Args:
         session: SQLAlchemy Session
-        
+
     Returns:
         True se snapshot existe ou foi criado, False se falhou
     """
     try:
-        from app.models import LevelRanking, Player
-        from sqlalchemy.orm import joinedload
-        
-        # Verificar se já existe snapshot de hoje (em horário de Brasília)
-        today = get_brasilia_date()
-        today_start = datetime(today.year, today.month, today.day, 0, 0, 0, tzinfo=BRASILIA_TZ)
-        today_end = datetime(today.year, today.month, today.day, 23, 59, 59, tzinfo=BRASILIA_TZ)
-        
-        existing_today = session.query(LevelRankingHistory).filter(
-            LevelRankingHistory.recorded_at >= today_start,
-            LevelRankingHistory.recorded_at <= today_end
-        ).first()
+        from app.models import LevelRanking, LevelRankingHistory
 
-        if existing_today:
+        # Data de hoje no horário de Brasília
+        today = get_brasilia_date()
+        today_start = datetime(today.year, today.month, today.day, tzinfo=BRASILIA_TZ)
+        tomorrow_start = today_start + timedelta(days=1)
+
+        # Verifica se já existe snapshot hoje
+        snapshot_exists = session.query(
+            exists().where(
+                LevelRankingHistory.recorded_at >= today_start,
+                LevelRankingHistory.recorded_at < tomorrow_start
+            )
+        ).scalar()
+
+        if snapshot_exists:
             print("✓ Snapshot de Level Ranking para hoje já existe")
             return True
 
-        # Se não existe snapshot, força atualização dos rankings e histórico
-        from app.models import LevelRanking, Player
-        from sqlalchemy.orm import joinedload
-        level_rows = session.query(LevelRanking)\
-            .options(joinedload(LevelRanking.player))\
-            .order_by(LevelRanking.level_total.desc())\
+        # Buscar ranking atual
+        level_rows = (
+            session.query(LevelRanking)
+            .options(joinedload(LevelRanking.player))
+            .order_by(LevelRanking.level_total.desc())
             .all()
+        )
+
         if not level_rows:
             print("⚠ Nenhum dado de ranking de level encontrado")
             return False
-        brasilia_now = datetime.now()
-        for rank_pos, level_row in enumerate(level_rows, 1):
-            player_name = level_row.player.name if level_row.player else f"Player_{level_row.player_id}"
-            history = LevelRankingHistory(
-                player_id=level_row.player_id,
-                player_name=player_name,
-                rank_position=rank_pos,
-                level_total=level_row.level_total,
-                points=level_row.points,
-                level_celestial=getattr(level_row, "level_celestial", 0),
-                level_sub_celestial=getattr(level_row, "level_sub_celestial", 0),
-                celestial_lineage_name=level_row.celestial_lineage_name or "",
-                subclass_lineage_name=level_row.subclass_lineage_name or "",
-                recorded_at=brasilia_now,
+
+        brasilia_now = datetime.now(BRASILIA_TZ)
+
+        history_rows = []
+
+        for rank_pos, level_row in enumerate(level_rows, start=1):
+            player_name = (
+                level_row.player.name
+                if level_row.player
+                else f"Player_{level_row.player_id}"
             )
-            session.add(history)
-        session.commit()
-        print(f"✓ Snapshot de Level Ranking criado para hoje ({len(level_rows)} players)")
-        return True
-        
-        # Buscar dados atuais do ranking com player relacionado
-        level_rows = session.query(LevelRanking)\
-            .options(joinedload(LevelRanking.player))\
-            .order_by(LevelRanking.level_total.desc())\
-            .all()
-        
-        if not level_rows:
-            print("⚠ Nenhum dado de ranking de level encontrado")
-            return False
-        
-        # Criar snapshot para os dados atuais usando horário de Brasília
-        brasilia_now = datetime.now()
-        
-        for rank_pos, level_row in enumerate(level_rows, 1):
-            player_name = level_row.player.name if level_row.player else f"Player_{level_row.player_id}"
-            
-            history = LevelRankingHistory(
-                player_id=level_row.player_id,
-                player_name=player_name,
-                rank_position=rank_pos,
-                level_total=level_row.level_total,
-                points=level_row.points,
-                celestial_lineage_name=level_row.celestial_lineage_name or "",
-                subclass_lineage_name=level_row.subclass_lineage_name or "",
-                recorded_at=brasilia_now,
+
+            history_rows.append(
+                LevelRankingHistory(
+                    player_id=level_row.player_id,
+                    player_name=player_name,
+                    rank_position=rank_pos,
+                    level_total=level_row.level_total,
+                    points=level_row.points,
+                    level_celestial=getattr(level_row, "level_celestial", 0),
+                    level_sub_celestial=getattr(level_row, "level_sub_celestial", 0),
+                    celestial_lineage_name=level_row.celestial_lineage_name or "",
+                    subclass_lineage_name=level_row.subclass_lineage_name or "",
+                    recorded_at=brasilia_now,
+                )
             )
-            session.add(history)
-        
+
+        session.bulk_save_objects(history_rows)
         session.commit()
-        print(f"✓ Snapshot de Level Ranking criado para hoje ({len(level_rows)} players)")
+
+        print(f"✓ Snapshot de Level Ranking criado para hoje ({len(history_rows)} players)")
         return True
-        
+
     except Exception as e:
         print(f"⚠ Erro ao garantir snapshot de level ranking: {e}")
         import traceback
         traceback.print_exc()
         session.rollback()
         return False
-
 
 def ensure_today_arena_ranking_snapshot(session: Session, category: str) -> bool:
     """

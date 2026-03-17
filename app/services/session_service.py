@@ -2,9 +2,7 @@ from fastapi import Request, HTTPException
 from app.database import SessionLocal
 from app.models import User
 
-
 SESSION_TIMEOUT = 86400  # 24 horas em segundos
-
 
 def get_current_user(request: Request):
     """Get current user from session cookie"""
