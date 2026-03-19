@@ -38,15 +38,23 @@
             {{ components.render_lineages(p.celestial_lineage_name, p.subclass_lineage_name) }}
         </div>
         <div class="level-row-flex" style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
-            <span style="display: flex; align-items: center; gap: 8px;">
-                {{ components.render_stat(p.level_celestial, 'Nível Celestial') }}
-            </span>
-            <span style="display: flex; align-items: center; gap: 8px;">
-                {{ components.render_stat(p.level_sub_celestial, 'Nível Sub') }}
-            </span>
-            <span style="display: flex; align-items: center; gap: 8px;">
-                {{ components.render_stat(p.level_total, 'Total', '--success-color') }}
-            </span>
+                <span style="display: flex; align-items: center; gap: 8px;">
+                    {{ components.render_stat(p.level_celestial, 'Nível Celestial') }}
+                    {# Indicador de mudança de level celestial #}
+                    {% if p.level_changes is defined %}
+                        {{ components.render_level_change_indicator(p.level_changes.celestial_change, p.level_changes.celestial_arrow, p.level_changes.celestial_active) }}
+                    {% endif %}
+                </span>
+                <span style="display: flex; align-items: center; gap: 8px;">
+                    {{ components.render_stat(p.level_sub_celestial, 'Nível Sub') }}
+                    {# Indicador de mudança de level sub #}
+                    {% if p.level_changes is defined %}
+                        {{ components.render_level_change_indicator(p.level_changes.subclass_change, p.level_changes.subclass_arrow, p.level_changes.subclass_active) }}
+                    {% endif %}
+                </span>
+                <span style="display: flex; align-items: center; gap: 8px;">
+                    {{ components.render_stat(p.level_total, 'Total', '--success-color') }}
+                </span>
         </div>
         {{ components.render_guild(p.player.guild_id) }}
     </div>

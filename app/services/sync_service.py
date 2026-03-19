@@ -60,16 +60,11 @@ class SyncService:
         try:
             now = datetime.now(timezone(timedelta(hours=-3)))
 
-            level_should_update = False
+            # Verifica se já existe snapshot hoje
             today_snapshot_exists = ensure_today_level_ranking_snapshot(session)
-
-            if not today_snapshot_exists:
-                level_should_update = True
-            elif now.hour == 0 and now.minute == 1:
-                level_should_update = True
-
-            if not level_should_update:
+            if today_snapshot_exists:
                 print("ℹ️ Level ranking já atualizado hoje, pulando.")
+                session.close()
                 return
 
             print("🔄 Atualizando ranking de level...")
@@ -81,7 +76,6 @@ class SyncService:
             players_history = []
 
             for player_data in level_data:
-
                 try:
                     pname = player_data.get("name") or player_data.get("charName")
                     pguild = player_data.get("guild")
