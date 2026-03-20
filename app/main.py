@@ -29,13 +29,20 @@ app.mount("/static", StaticFiles(directory="app/static"), name="static")
 # ===============================
 def background_updater():
     from app.services.sync_service import SyncService
+    import datetime
     while True:
-        try:
-            SyncService.check_hashes()
-            print(f"⏰ background_updater executado")
-        except Exception as e:
-            print(f"⚠ Erro no background_updater: {e}")
-        time.sleep(300)
+        now = datetime.datetime.now()
+        if now.minute in [1, 31]:
+            try:
+                SyncService.check_hashes()
+                print(f"⏰ background_updater executado no minuto {now.minute}")
+            except Exception as e:
+                print(f"⚠ Erro no background_updater: {e}")
+            # Aguarda sair do minuto atual para evitar múltiplas execuções
+            while datetime.datetime.now().minute == now.minute:
+                time.sleep(15)
+        else:
+            time.sleep(30)
 
 # ===============================
 # Authentication Routes
