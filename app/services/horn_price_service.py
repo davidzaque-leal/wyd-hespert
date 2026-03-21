@@ -1,14 +1,14 @@
 class HornPriceService:
     MATERIAL_PRICES = {
         "valk_0": 160,
-        "valk_9": 300,
+        "valk_9": 350,
         "medalha_roxa": 300,
-        "bahamut_crystal_20": 200,
+        "bahamut_crystal_20": 70,
         "bahamut_rune_10": 60,
         "medalha_dourada": 300,
         "medalha_vermelha": 700,
         "pl_30": 20,
-        "bahamut_fury": 360,
+        "bahamut_fury": 230,
     }
 
     @staticmethod
